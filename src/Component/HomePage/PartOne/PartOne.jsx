@@ -12,13 +12,13 @@ import Brand from './Brand';
 
 const PartOne = () => {
     return (
-        <div className='mt-28'>
+        <div className='mt-20'>
             <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-14 pb-14 gap-4'>
                 <div className='col-span-2 leading-'>
-                    <h1 className='text-5xl leading-normal'>Your life is work, <br />
+                    <h1 className='text-3xl lg:text-5xl leading-normal'>Your life is work, <br />
                         powered by our life is work</h1>
 
-                    <p className='text-2xl mt-6'>A unique and powerful software suite to transform <br /> the way you work. Designed for businesses of all sizes, built <br /> by a company that <span className='border-b border-dashed border-black hover:text-[#03a9f5]  ease-linear duration-300 hover:border-[#03a9f5]'><a href="#">values your privacy.</a></span></p>
+                    <p className='text-lg lg:text-2xl mt-6'>A unique and powerful software suite to transform <br /> the way you work. Designed for businesses of all sizes, built <br /> by a company that <span className='border-b border-dashed border-black hover:text-[#03a9f5]  ease-linear duration-300 hover:border-[#03a9f5]'><a href="#">values your privacy.</a></span></p>
 
                     <button className='mt-7 bg-[#f60014] px-7 py-4 text-white flex text-sm'>GET STARTED FOR FREE <Image className='ms-4 hover:translate-x-[10px] transition-transform duration-1000'
                         src="/icons8-right-arrow-90.png"
@@ -32,7 +32,7 @@ const PartOne = () => {
                         className='lg:max-w-5xl h-auto lg:-ms-44'
                     />
                 </div>
-                <div className="bg-[#fff] border border-[#e7ebf0] w-full px-8">
+                <div className="bg-[#fff] border border-[#e7ebf0] w-full lg:px-8">
                     <p className='text-base font-bold mt-6'>FEATURED APPS</p>
                     <div className='mt-8'>
                         <div className='flex justify-center items-center'>
