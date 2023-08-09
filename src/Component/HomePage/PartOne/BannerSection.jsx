@@ -78,7 +78,7 @@ const BannerSection = () => {
                                 alt="Image"
                                 className='w-16 h-auto bg-white p-3 rounded-full mx-auto lg:mx-0'
                             />
-                            <h1 className='text-2xl mt-8'>"Zoho One has brought our <br /> company closer together."</h1>
+                            <h1 className='text-2xl mt-8'>Zoho One has brought our <br /> company closer together.</h1>
                             <div className='flex justify-between items-center mt-10'>
                                 <div>
                                     <Image

@@ -15,8 +15,8 @@ const PartOne = () => {
         <div className='mt-28'>
             <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-14 pb-14 gap-4'>
                 <div className='col-span-2 leading-'>
-                    <h1 className='text-5xl leading-normal'>Your life's work, <br />
-                        powered by our life's work</h1>
+                    <h1 className='text-5xl leading-normal'>Your life is work, <br />
+                        powered by our life is work</h1>
 
                     <p className='text-2xl mt-6'>A unique and powerful software suite to transform <br /> the way you work. Designed for businesses of all sizes, built <br /> by a company that <span className='border-b border-dashed border-black hover:text-[#03a9f5]  ease-linear duration-300 hover:border-[#03a9f5]'><a href="#">values your privacy.</a></span></p>
 
@@ -128,6 +128,7 @@ const PartOne = () => {
                     </div>
                 </div>
             </div>
+            {/* part by part  */}
             <BannerSection/>
             <Brand/>
         </div>
