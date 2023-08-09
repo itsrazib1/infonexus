@@ -40,10 +40,10 @@ const PartTwo = () => {
               <div className="flex justify-evenly">
                 <p className="max-w-[312px] text-[22px] text-start">
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  "Infonexu's operating system is very robust and contains the
+                  "Infonexus operating system is very robust and contains the
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  collective memory of Selectra's entire business."
-                  
+                  collective memory of Selectras entire business."
+
                 </p>
                 <div>
                   <Image
