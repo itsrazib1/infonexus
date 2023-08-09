@@ -43,6 +43,7 @@ const PartTwo = () => {
                   "Infonexu's operating system is very robust and contains the
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
                   collective memory of Selectra's entire business."
+                  
                 </p>
                 <div>
                   <Image
