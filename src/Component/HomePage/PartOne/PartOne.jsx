@@ -1,18 +1,135 @@
+import Image from 'next/image';
+import Arrow from '../../../../public/icons8-right-arrow-dark-100.png'
+import Banner from '../../../../public/zh-homev2-banner.webp'
+import CRM from '../../../../public/crm.jpg'
+import Mail from '../../../../public/mail.png'
+import Books from '../../../../public/books.png'
+import Desk from '../../../../public/desk.png'
+import Campaigns from '../../../../public/campaigns.png'
 import React from 'react';
+import BannerSection from './BannerSection';
+import Brand from './Brand';
 
 const PartOne = () => {
     return (
-        <div>
-             <div className="hero min-h-screen border-2" style={{ backgroundImage: 'url(public/imgOne.jpg)' }}>
-                <div className="hero-overlay bg-opacity-60"></div>
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">PartOne</h1>
-                        {/* <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p> */}
-                        {/* <button className="btn btn-primary">Get Started</button> */}
+        <div className='mt-28'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-14 pb-14 gap-4'>
+                <div className='col-span-2 leading-'>
+                    <h1 className='text-5xl leading-normal'>Your life's work, <br />
+                        powered by our life's work</h1>
+
+                    <p className='text-2xl mt-6'>A unique and powerful software suite to transform <br /> the way you work. Designed for businesses of all sizes, built <br /> by a company that <span className='border-b border-dashed border-black hover:text-[#03a9f5]  ease-linear duration-300 hover:border-[#03a9f5]'><a href="#">values your privacy.</a></span></p>
+
+                    <button className='mt-7 bg-[#f60014] px-7 py-4 text-white flex text-sm'>GET STARTED FOR FREE <Image className='ms-4 hover:translate-x-[10px] transition-transform duration-1000'
+                        src="/icons8-right-arrow-90.png"
+                        alt=""
+                        width={20}
+                        height={20}
+                    /> </button>
+                    <Image
+                        src={Banner}
+                        alt="Image"
+                        className='lg:max-w-5xl h-auto lg:-ms-44'
+                    />
+                </div>
+                <div className="bg-[#fff] border border-[#e7ebf0] w-full px-8">
+                    <p className='text-base font-bold mt-6'>FEATURED APPS</p>
+                    <div className='mt-8'>
+                        <div className='flex justify-center items-center'>
+                            <Image
+                                src={CRM}
+                                alt="Image"
+                                className='w-10 h-auto'
+                            />
+                            <div className='ms-3'>
+                                <h1 className='text-2xl font-semibold'>CRM</h1>
+                                <p>Convert leads and close sales deals faster.</p>
+                            </div>
+                            <Image
+                                src={Arrow}
+                                alt="Image"
+                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                            />
+                        </div>
+                        <div className='flex justify-center items-center mt-6'>
+                            <Image
+                                src={Mail}
+                                alt="Image"
+                                className='w-10 h-auto'
+                            />
+                            <div className='ms-3'>
+                                <h1 className='text-2xl font-semibold'>Mail</h1>
+                                <p>Secure email service for your business.</p>
+                            </div>
+                            <Image
+                                src={Arrow}
+                                alt="Image"
+                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                            />
+                        </div>
+                        <div className='flex justify-center items-center mt-6'>
+                            <Image
+                                src={Books}
+                                alt="Image"
+                                className='w-10 h-auto'
+                            />
+                            <div className='ms-3'>
+                                <h1 className='text-2xl font-semibold'>Books</h1>
+                                <p>Powerful financial platform for growing businesses.</p>
+                            </div>
+                            <Image
+                                src={Arrow}
+                                alt="Image"
+                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                            />
+                        </div>
+                        <div className='flex justify-center items-center mt-6'>
+                            <Image
+                                src={Desk}
+                                alt="Image"
+                                className='w-10 h-auto'
+                            />
+                            <div className='ms-3'>
+                                <h1 className='text-2xl font-semibold'>Desk</h1>
+                                <p>Helpdesk software to deliver great customer support.</p>
+                            </div>
+                            <Image
+                                src={Arrow}
+                                alt="Image"
+                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                            />
+                        </div>
+                        <div className='flex justify-center items-center mt-6'>
+                            <Image
+                                src={Campaigns}
+                                alt="Image"
+                                className='w-10 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                            />
+                            <div className='ms-3'>
+                                <h1 className='text-2xl font-semibold'>Campaigns</h1>
+                                <p>Create, send, and track targeted email campaigns that drive sales.</p>
+                            </div>
+                            <Image
+                                src={Arrow}
+                                alt="Image"
+                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                            />
+                        </div>
+                    </div>
+                    <div className='mt-14 text-center bg-[#fff] border border-[#e7ebf0] px-10 py-6'>
+                        <a className='flex justify-between text-blue-500 font-bold' href="#">
+                        <h1>EXPLORE ALL PRODUCTS</h1>
+                        <Image
+                                src={Arrow}
+                                alt="Image"
+                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                            />
+                        </a>
                     </div>
                 </div>
             </div>
+            <BannerSection/>
+            <Brand/>
         </div>
     );
 };
