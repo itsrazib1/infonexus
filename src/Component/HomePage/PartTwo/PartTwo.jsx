@@ -43,24 +43,13 @@ const PartTwo = () => {
                   "Infonexus operating system is very robust and contains the
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
                   collective memory of Selectras entire business."
-
                 </p>
                 <div>
-                  <Image
-                    width={105}
-                    height={124}
-                    src={imgFive}
-                    alt=""
-                  />
+                  <Image width={105} height={124} src={imgFive} alt="" />
                   <button className="flex items-center text-[14px] gap-2 mt-3 watch-btn-img">
                     {" "}
-                    <Image
-                      width={35}
-                      height={35}
-                      src={imgSix}
-                      alt=""
-                    />{" "}
-                    Watch Video
+                    <Image width={35} height={35} src={imgSix} alt="" /> Watch
+                    Video
                   </button>
                 </div>
               </div>
@@ -95,83 +84,80 @@ const PartTwo = () => {
         </div>
       </div>
       {/* 2nd part for part two */}
-      <div className="bg-[#0a73c0] md:flex justify-end items-center md:p-0 p-7">
-        <div className="text-white">
+      <div className="bg-[#0a73c0] grid md:grid-cols-5 grid-row-2 items-center md:p-0 p-7">
+        <div></div>
+        <div className="text-white md:col-start-2 col-span-2">
           <h1 className="md:text-[50px] text-[30px]">
             Business Software. <br /> Our Craft. Our Passion.
           </h1>
-          <div className="grid grid-cols-2 gap-x-10 gap-y-7">
-            <div className="flex items-center justify-evenly">
-              <h1 className="md:text-[45px] text-[20px]">
+          <div className="grid md:grid-cols-2 grid-col-1 gap-x-10 gap-y-7">
+            <div className="grid md:grid-cols-2 grid-cols-3 items-center">
+              <h1 className="md:text-[45px] text-[30px] col-span-1">
                 <CountUp end={90} duration={5} />
                 M+
               </h1>
-              <p className="md:text-[18px]">
-                Users <br /> Globally
+              <p className=" md:text-[18px] md:w-[40%] md:col-span-1 col-span-2">
+                Users Globally
               </p>
             </div>
-            <div className="flex items-center justify-evenly">
-              <h1 className="md:text-[45px] text-[20px]">
+            <div className="grid md:grid-cols-2 grid-cols-3 items-center">
+              <h1 className="md:text-[45px] text-[30px] col-span-1">
                 <CountUp end={150} duration={5} />+
               </h1>
-              <p className="md:text-[18px]">
-                Countries <br /> Served
+              <p className="md:text-[18px] md:w-[40%] md:col-span-1 col-span-2">
+                Countries Served
               </p>
             </div>
-            <div className="flex items-center justify-evenly">
-              <h1 className="md:text-[45px] text-[20px]">
+            <div className="grid md:grid-cols-2 grid-cols-3 items-center">
+              <h1 className="md:text-[45px] text-[30px] col-span-1">
                 <CountUp end={12} duration={5} />
                 K+
               </h1>
-              <p className="md:text-[18px]">
-                Employees <br /> Worldwide
+              <p className=" md:text-[18px] md:w-[40%] md:col-span-1 col-span-2">
+                Employees Worldwide
               </p>
             </div>
-            <div className="flex items-center justify-evenly">
-              <h1 className="md:text-[45px] text-[20px]">
+            <div className="grid md:grid-cols-2 grid-cols-3 items-center">
+              <h1 className="md:text-[45px] text-[30px] col-span-1">
                 <CountUp end={25} duration={5} />+
               </h1>
-              <p className="md:text-[18px]">
-                Years in <br /> Business
+              <p className="md:text-[18px] md:w-[40%] md:col-span-1 col-span-2">
+                Years in Business
               </p>
             </div>
-            <div className="flex items-center justify-evenly">
-              <h1 className="md:text-[45px] text-[20px]">
+            <div className="grid md:grid-cols-2 grid-cols-3 items-center">
+              <h1 className="md:text-[45px] text-[30px] col-span-1">
                 <CountUp end={2} duration={5} />
                 K+
               </h1>
-              <p className="md:text-[18px]">
-                Partners <br /> Worldwide
+              <p className="md:text-[18px] md:w-[40%] md:col-span-1 col-span-2">
+                Partners Worldwide
               </p>
             </div>
-            <button className="about-btn flex gap-2 items-center justify-center">More about Infonexu's
-            <Image
-                src={Arrow}
-                alt="Image"
-                className="w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000"
-              />
-            </button>
+            <div>
+              <button className="about-btn flex gap-2 items-center justify-center px-[25px] py-[20px]">
+                More about Infonexu's
+                <Image
+                  src={Arrow}
+                  alt="Image"
+                  className="w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000"
+                />
+              </button>
+            </div>
           </div>
         </div>
-        <div>
+        <div className="col-span-2">
           <Image
-            className="users-section-img"
-            width={1046.64}
-            height={707.125}
+            className="users-section-img "
             src={imgThree}
+            width={700}
             alt=""
           />
         </div>
       </div>
       {/* 3nd part for part three */}
       <div className="md:pt-[130px] pt-[50px] md:pb-[160px] pb-[80px]">
-        <Image
-          className="m-auto"
-          width={59}
-          height={70}
-          src={imgTwo}
-          alt=""
-        />
+        <Image className="m-auto" width={59} height={70} src={imgTwo} alt="" />
         <div className="text-center">
           <h1 className="text-[44px] mb-[15px]">
             Your privacy is our responsibility
@@ -184,13 +170,7 @@ const PartTwo = () => {
           </p>
           <button className="flex items-center text-[14px] m-auto gap-2 mt-3 video-btn watch-btn-img">
             {" "}
-            <Image
-              width={35}
-              height={35}
-              src={imgSix}
-              alt=""
-            />{" "}
-            Watch Video
+            <Image width={35} height={35} src={imgSix} alt="" /> Watch Video
           </button>
           {/* <button className="video-btn flex items-center m-auto watch-btn-img">
             <Image
