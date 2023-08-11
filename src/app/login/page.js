@@ -10,6 +10,7 @@ import Image4 from "../../../public/zoho-logo-web.png";
 import Image5 from "../../../public/social.jpg";
 import Image6 from "../../../public/images.png";
 import Image7 from "../../../public/lock.png";
+import Link from "next/link";
 
 const LoginPage = () => {
   // const handleLogin = event => {
@@ -82,6 +83,7 @@ const LoginPage = () => {
                     <Image src={Image3} alt="Image" className='h-10 w-10 rounded-full' />
                   </div>
                 </form>
+                <div className=""><span className="text-sm">Dont have a Zoho account?</span> <Link className="text-sm text-sky-400 font-semibold" href='/singin' >Sign Up Now</Link></div>
               </div>
 
 
@@ -129,8 +131,11 @@ const LoginPage = () => {
               <a href="#item3" className="btn btn-xs">3</a>
             </div>
           </div>
+          
         </div>
+        
       </div>
+      <div className="bg-base-200 text-center pt-10">© 2023, InfoNexus Corporation Pvt. Ltd. All Rights Reserved. </div>
     </div>
   );
 };
