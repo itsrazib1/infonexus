@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Image1 from "../../../public/google.webp";
+import Link from "next/link";
 const SinginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,9 +33,9 @@ const SinginPage = () => {
         </div>
         <div className="flex-none">
           <span className="font-semibold text-sm">Have a Zoho Account?</span>{" "}
-          <span className="text-red-500 text-sm font-semibold ps-3 underline">
+          <Link href='/login' className="text-red-500 text-sm font-semibold ps-3 underline">
             SIGN IN
-          </span>
+          </Link>
         </div>
       </div>
       <hr />
