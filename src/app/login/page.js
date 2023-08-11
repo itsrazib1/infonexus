@@ -41,6 +41,7 @@ const LoginPage = () => {
     <div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content  flex-col lg:flex-row">
+          {/* Caucel section  */}
 
           <div className="card w-full h-screen flex-shrink-0  max-w-md shadow-2xl bg-base-100">
             <div className="card-body">
@@ -131,9 +132,9 @@ const LoginPage = () => {
               <a href="#item3" className="btn btn-xs">3</a>
             </div>
           </div>
-          
+
         </div>
-        
+
       </div>
       <div className="bg-base-200 text-center pt-10">© 2023, InfoNexus Corporation Pvt. Ltd. All Rights Reserved. </div>
     </div>
