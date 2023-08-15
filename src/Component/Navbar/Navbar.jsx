@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import {
-   FaAd,
+   FaWindowClose,
    FaBars,
    FaBullhorn,
    FaEllipsisH,
@@ -57,9 +57,9 @@ const Navbar = () => {
          <div className="max-w-7xl mx-auto px-4 py-4 md:py-2">
             <div className={`flex items-center justify-between`}>
                <div className="flex items-center">
-                  <h2>
-                     <Image src={img1} alt="Image" className="h-12 w-12" />
-                  </h2>
+                  <Link href="/">
+                     <Image  src={img1} alt="Image" className="h-12 w-12" />
+                  </Link>
                   <div className="hidden md:block">
                      <ul className="md:flex md:ml-9 md:space-x-9 md:items-center">
                         <li className="flex items-center space-x-1">
@@ -82,9 +82,9 @@ const Navbar = () => {
                         className="hidden md:block"
                         onClick={() => setIsOpen(!isOpen)}>
                         {isOpen ? (
-                           <FaTimes
+                           <FaWindowClose
                               onClick={handleSearch}
-                              className="text-2xl"></FaTimes>
+                              className="text-2xl"></FaWindowClose>
                         ) : (
                            <GoSearch
                               onClick={handleSearch}
@@ -117,16 +117,16 @@ const Navbar = () => {
                            <span>ENG</span>
                         </span>
                      </div>
-                     <Link href="#" className="hidden md:block">
+                     <Link href="/login" className="hidden md:block">
                         Sign in
                      </Link>
-                     <button
+                     <Link href='/singin'
                         className={`fixed md:text-[14px] bottom-0 h-[50px] md:h-[35px] flex items-center justify-center
                        md:border md:text-[#f72637]  font-semibold z-50 left-0 w-full md:w-[90px] md:relative p-2 md:border-[#f72637]  bg-[#f72637] md:bg-transparent hover:text-white hover:bg-[#f72637] duration-500 ${
                           isMobile ? "mobile" : "desktop"
                        }`}>
                         {isMobile ? "Sign up for free" : "Sign up"}
-                     </button>
+                     </Link>
                   </div>
                </div>
                {/* mobile device responsive */}
@@ -262,9 +262,9 @@ const Navbar = () => {
                      </div>
                   </div>
                   <div className="p-3 font-semibold">
-                     <a href="#" className="text-orange-600">
+                     <Link href="/login" className="text-orange-600">
                         Sign in
-                     </a>
+                     </Link>
                      <p className="py-2">All nexus products</p>
                   </div>
                </div>
