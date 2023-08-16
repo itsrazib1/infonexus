@@ -10,7 +10,7 @@ import Arrow from '../../../../public/icons8-right-arrow-dark-100.png'
 
 const Brand = () => {
     return (
-        <div className='mt-16 pb-20'>
+        <div className='mt-16'>
             <div className='w-52 mx-auto text-center font-medium'>
                 <h3 className='border-b-2 border-[#f60014] pb-4'>BRANDS THAT TRUST US</h3>
             </div>
