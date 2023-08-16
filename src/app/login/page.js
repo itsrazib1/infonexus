@@ -1,18 +1,15 @@
 
 import Image from "next/image";
-
 import React from "react";
-import Image1 from "../../../public/google-logo.png";
-import Image2 from "../../../public/facebook-logo.png";
-import Image3 from "../../../public/LinkedIn_logo640px-s.png";
-
 import Image4 from "../../../public/zoho-logo-web.png";
 import Image5 from "../../../public/social.jpg";
 import Image6 from "../../../public/images.png";
 import Image7 from "../../../public/lock.png";
 import Link from "next/link";
+import LoginPage2 from "./login";
 
 const LoginPage = () => {
+  
   // const handleLogin = event => {
   //   event.preventDefault();
   //   const form = event.target;
@@ -52,37 +49,8 @@ const LoginPage = () => {
                 </div>
 
                 <h1 className="text-2xl mt-4">Sign in </h1>
-                <h1> <h1>to access Zoho Home</h1></h1>
-                <form className="card-body" >
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text">Email</span>
-                    </label>
-                    <input type="email" name="email" placeholder="email" className="input input-bordered" />
-                  </div>
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text">Password</span>
-                    </label>
-                    <input type="password" name="password" placeholder="password" className="input input-bordered" />
-                    <label className="label">
-                      <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                    </label>
-                  </div>
-
-                  <div className="form-control mt-1">
-                    <input disabled={false} className="btn btn-info" type="submit" value="Next" />
-                  </div>
-                  <p className="divider">OR</p>
-                  <div>
-                    <h1>sign in using</h1>
-                  </div>
-                  <div className="flex gap-4 ">
-                    <Image src={Image1} alt="Image" className='h-10 w-10  rounded-full' />
-                    <Image src={Image2} alt="Image" className='h-10 w-10 rounded-full ' />
-                    <Image src={Image3} alt="Image" className='h-10 w-10 rounded-full' />
-                  </div>
-                </form>
+                 <h1>to access Zoho Home</h1>
+               <LoginPage2></LoginPage2>
                 <div className=""><span className="text-sm">Dont have a Zoho account?</span> <Link className="text-sm text-sky-400 font-semibold" href='/singin' >Sign Up Now</Link></div>
               </div>
 
@@ -118,7 +86,7 @@ const LoginPage = () => {
                 <div>
                   <Image src={Image7} className="h-80 w-full" alt="Image" />
                   <h1 className="text-center text-xl mt-9">Enhanced sign-in security</h1>
-                  <h1 className="text-center px-6 mt-3">Using only a password to sign in? To strengthen the security of your account, we’re introducing additional verification for any unusual sign-in attempt.</h1>
+                  <h1 className="text-center px-6 mt-3">Using only a password to sign in? To strengthen the security of your account, we are introducing additional verification for any unusual sign-in attempt.</h1>
                   <div className="flex flex-col items-center justify-center mt-4">
                     <button className="btn btn-info  btn-sm ">learn more</button>
                   </div>
