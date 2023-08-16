@@ -14,6 +14,7 @@ import { GoChevronDown, GoSearch } from "react-icons/go";
 import Link from "next/link";
 import Image from "next/image";
 import img1 from "../../../public/logo.png";
+import NavbarTwo from "./Navbar2";
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -37,20 +38,9 @@ const Navbar = () => {
       setIsOpen(!isOpen);
    };
 
-   const [isMobile, setIsMobile] = useState(false);
+   
 
-   useEffect(() => {
-      const checkScreenWidth = () => {
-         setIsMobile(window.innerWidth < 768);
-      };
-
-      checkScreenWidth();
-      window.addEventListener("resize", checkScreenWidth);
-
-      return () => {
-         window.removeEventListener("resize", checkScreenWidth);
-      };
-   }, []);
+   
 
    return (
       <nav className="bg-base-200 md:sticky z-50 top-0 left-0 right-0 text-black">
@@ -116,17 +106,9 @@ const Navbar = () => {
                            <FaGlobe className="w-[20px] h-[20px]" />
                            <span>ENG</span>
                         </span>
+                        <NavbarTwo></NavbarTwo>
                      </div>
-                     <Link href="/login" className="hidden md:block">
-                        Sign in
-                     </Link>
-                     <Link href='/singin'
-                        className={`fixed md:text-[14px] bottom-0 h-[50px] md:h-[35px] flex items-center justify-center
-                       md:border md:text-[#f72637]  font-semibold z-50 left-0 w-full md:w-[90px] md:relative p-2 md:border-[#f72637]  bg-[#f72637] md:bg-transparent hover:text-white hover:bg-[#f72637] duration-500 ${
-                          isMobile ? "mobile" : "desktop"
-                       }`}>
-                        {isMobile ? "Sign up for free" : "Sign up"}
-                     </Link>
+                     
                   </div>
                </div>
                {/* mobile device responsive */}
@@ -262,7 +244,7 @@ const Navbar = () => {
                      </div>
                   </div>
                   <div className="p-3 font-semibold">
-                     <Link href="/login" className="text-orange-600">
+                     <Link href="/singin" className="text-orange-600">
                         Sign in
                      </Link>
                      <p className="py-2">All nexus products</p>
