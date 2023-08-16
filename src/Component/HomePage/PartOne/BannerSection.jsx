@@ -47,7 +47,7 @@ const BannerSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className=' bg-yellow-400'>
+                <div className=' bg-[#fed600]'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center items-start gap-9 pb-28 pt-10 lg:pt-60 mt-10'>
                         <div className='lg:flex justify-center text-center lg:text-left'>
                             <div>
