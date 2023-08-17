@@ -11,7 +11,7 @@ const BannerSection = () => {
     return (
         <div className='lg:mt-40'>
             <div className='lg:relative'>
-                <div className='lg:absolute lg:-top-28'>
+                <div className='lg:absolute lg:-top-28 lg:left-0 lg:right-0'>
                     <div className='bg-[#fff] border border-[#e7ebf0] w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-3 justify-items-center items-center gap-9 relative'>
                         <div>
                             <div className='text-white bg-green-700 px-2 text-sm absolute top-0 left-0'>
@@ -47,7 +47,7 @@ const BannerSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className=' bg-yellow-400'>
+                <div className=' bg-[#fed600]'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center items-start gap-9 pb-28 pt-10 lg:pt-60 mt-10'>
                         <div className='lg:flex justify-center text-center lg:text-left'>
                             <div>

@@ -14,8 +14,8 @@ import Link from 'next/link';
 const PartOne = () => {
     return (
         <div className='mt-20'>
-            <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-14 pb-14 gap-4'>
-                <div className='col-span-2 leading-'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-4 lg:px-14 pb-14 gap-4 lg:container lg:mx-auto'>
+                <div className='col-span-2 leading-tight'>
                     <h1 className='text-3xl lg:text-5xl leading-normal'>Your life is work, <br />
                         powered by our life is work</h1>
 
@@ -33,7 +33,7 @@ const PartOne = () => {
                         className='lg:max-w-5xl h-auto lg:-ms-44'
                     />
                 </div>
-                <div className="bg-[#fff] border border-[#e7ebf0] w-full lg:px-8">
+                <div className="bg-[#fff] border border-[#e7ebf0] px-6 lg:w-full lg:px-8">
                     <p className='text-base font-bold mt-6'>FEATURED APPS</p>
                     <div className='mt-8'>
                         <div className='flex justify-center items-center'>
@@ -72,7 +72,7 @@ const PartOne = () => {
                             <Image
                                 src={Books}
                                 alt="Image"
-                                className='w-10 h-auto'
+                                className='w-8 h-auto'
                             />
                             <div className='ms-3'>
                                 <h1 className='text-2xl font-semibold'>Books</h1>
@@ -117,7 +117,7 @@ const PartOne = () => {
                             />
                         </div>
                     </div>
-                    <div className='mt-14 text-center bg-[#fff] border border-[#e7ebf0] px-10 py-6'>
+                    <div className='mt-14 text-center bg-[#fff] border border-[#e7ebf0] px-4 lg:px-10 py-6'>
                         <a className='flex justify-between text-blue-500 font-bold' href="#">
                             <h1>EXPLORE ALL PRODUCTS</h1>
                             <Image
