@@ -9,30 +9,31 @@ import Campaigns from '../../../../public/campaigns.png'
 import React from 'react';
 import BannerSection from './BannerSection';
 import Brand from './Brand';
+import Link from 'next/link';
 
 const PartOne = () => {
     return (
         <div className='mt-20'>
-            <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-14 pb-14 gap-4'>
-                <div className='col-span-2 leading-'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-4 lg:px-14 pb-14 gap-4 lg:container lg:mx-auto'>
+                <div className='col-span-2 leading-tight'>
                     <h1 className='text-3xl lg:text-5xl leading-normal'>Your life is work, <br />
                         powered by our life is work</h1>
 
                     <p className='text-lg lg:text-2xl mt-6'>A unique and powerful software suite to transform <br /> the way you work. Designed for businesses of all sizes, built <br /> by a company that <span className='border-b border-dashed border-black hover:text-[#03a9f5]  ease-linear duration-300 hover:border-[#03a9f5]'><a href="#">values your privacy.</a></span></p>
-
-                    <button className='mt-7 bg-[#f60014] px-7 py-4 text-white flex text-sm'>GET STARTED FOR FREE <Image className='ms-4 hover:translate-x-[10px] transition-transform duration-1000'
+                    <Link href='/all-product'><button className='mt-7 bg-[#f60014] px-7 py-4 text-white flex text-sm'>GET STARTED FOR FREE <Image className='ms-4 hover:translate-x-[10px] transition-transform duration-1000'
                         src="/icons8-right-arrow-90.png"
                         alt=""
                         width={20}
                         height={20}
-                    /> </button>
+                    /> </button></Link>
+
                     <Image
                         src={Banner}
                         alt="Image"
                         className='lg:max-w-5xl h-auto lg:-ms-44'
                     />
                 </div>
-                <div className="bg-[#fff] border border-[#e7ebf0] w-full lg:px-8">
+                <div className="bg-[#fff] border border-[#e7ebf0] px-6 lg:w-full lg:px-8">
                     <p className='text-base font-bold mt-6'>FEATURED APPS</p>
                     <div className='mt-8'>
                         <div className='flex justify-center items-center'>
@@ -71,7 +72,7 @@ const PartOne = () => {
                             <Image
                                 src={Books}
                                 alt="Image"
-                                className='w-10 h-auto'
+                                className='w-8 h-auto'
                             />
                             <div className='ms-3'>
                                 <h1 className='text-2xl font-semibold'>Books</h1>
@@ -116,10 +117,10 @@ const PartOne = () => {
                             />
                         </div>
                     </div>
-                    <div className='mt-14 text-center bg-[#fff] border border-[#e7ebf0] px-10 py-6'>
+                    <div className='mt-14 text-center bg-[#fff] border border-[#e7ebf0] px-4 lg:px-10 py-6'>
                         <a className='flex justify-between text-blue-500 font-bold' href="#">
-                        <h1>EXPLORE ALL PRODUCTS</h1>
-                        <Image
+                            <h1>EXPLORE ALL PRODUCTS</h1>
+                            <Image
                                 src={Arrow}
                                 alt="Image"
                                 className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
@@ -129,8 +130,8 @@ const PartOne = () => {
                 </div>
             </div>
             {/* part by part  */}
-            <BannerSection/>
-            <Brand/>
+            <BannerSection />
+            <Brand />
         </div>
     );
 };
