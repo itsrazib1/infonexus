@@ -1,21 +1,22 @@
-
-import PartThree from "./Fullpage/PartThree/PartThree";
-import PartFour from "./Fullpage/PartFour/PartFour";
 import Partfive from "./Fullpage/PartFive/Partfive";
-import PartOne from "./Fullpage/PartTwo/PartOne";
-import Partwo from "./Fullpage/Partone/Partwo";
+import PartFour from "./Fullpage/PartFour/PartFour";
+import PartThree from "./Fullpage/PartThree/PartThree";
+import PartTwo from "./Fullpage/PartTwo/PartTwo";
+import PartOne from "./Fullpage/Partone/PartOne";
+
+
 
 
 
 const page = () => {
     return (
         <div>
-            All product
             <PartOne></PartOne>
-            <Partwo></Partwo>
+            <PartTwo></PartTwo>
             <PartThree></PartThree>
             <PartFour></PartFour>
             <Partfive></Partfive>
+
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Partwo = () => {
+const PartOne = () => {
     return (
         <div>
             Partone
@@ -8,4 +8,4 @@ const Partwo = () => {
     );
 };
 
-export default Partwo;
+export default PartOne;

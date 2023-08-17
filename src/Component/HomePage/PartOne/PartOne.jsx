@@ -9,9 +9,10 @@ import Campaigns from '../../../../public/campaigns.png'
 import React from 'react';
 import BannerSection from './BannerSection';
 import Brand from './Brand';
-import Link from 'next/link';
+import Buttonp1 from './buttonp1';
 
 const PartOne = () => {
+    
     return (
         <div className='mt-20'>
             <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-4 lg:px-14 pb-14 gap-4 lg:container lg:mx-auto'>
@@ -20,12 +21,7 @@ const PartOne = () => {
                         powered by our life is work</h1>
 
                     <p className='text-lg lg:text-2xl mt-6'>A unique and powerful software suite to transform <br /> the way you work. Designed for businesses of all sizes, built <br /> by a company that <span className='border-b border-dashed border-black hover:text-[#03a9f5]  ease-linear duration-300 hover:border-[#03a9f5]'><a href="#">values your privacy.</a></span></p>
-                    <Link href='/all-product'><button className='mt-7 bg-[#f60014] px-7 py-4 text-white flex text-sm'>GET STARTED FOR FREE <Image className='ms-4 hover:translate-x-[10px] transition-transform duration-1000'
-                        src="/icons8-right-arrow-90.png"
-                        alt=""
-                        width={20}
-                        height={20}
-                    /> </button></Link>
+                    <Buttonp1></Buttonp1>
 
                     <Image
                         src={Banner}
