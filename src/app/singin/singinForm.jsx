@@ -5,16 +5,12 @@ import { UserAuth } from "../Context/AuthContext";
 
 const SinginForm = () => {
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const [agree, setAgree] = useState(false);
     const {  googleSignIn  } = UserAuth();
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     };
 
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
     const handleSignIn = async () => {
         try {
             await googleSignIn();
@@ -26,12 +22,7 @@ const SinginForm = () => {
         setAgree(!agree);
     };
     
-    const handleSignup = () => {
-        // Perform signup logic here, e.g. send data to an API
-        console.log("Signup clicked");
-        console.log("Email:", email);
-        console.log("Password:", password);
-    };
+    
 
     return (
         <form className="flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">

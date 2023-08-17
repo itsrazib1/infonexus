@@ -4,7 +4,8 @@ import {
   signOut,
   onAuthStateChanged,
   GoogleAuthProvider,
-  GithubAuthProvider
+  GithubAuthProvider,
+  FacebookAuthProvider
 } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -17,7 +18,6 @@ export const AuthContextProvider = ({ children }) => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .catch((error) => {
-        // Handle the error here
         console.error('Authentication error:', error);
       });
   };
@@ -25,7 +25,13 @@ export const AuthContextProvider = ({ children }) => {
     const provider = new GithubAuthProvider();
     signInWithPopup(auth, provider)
       .catch((error) => {
-        // Handle the error here
+        console.error('Authentication error:', error);
+      });
+  };
+  const FbSignIn = () => {
+    const provider = new FacebookAuthProvider();
+    signInWithPopup(auth, provider)
+      .catch((error) => {
         console.error('Authentication error:', error);
       });
   };
@@ -42,7 +48,7 @@ export const AuthContextProvider = ({ children }) => {
   }, [user]);
 
   return (
-    <AuthContext.Provider value={{ user, googleSignIn, logOut,gitHubSignIn }}>
+    <AuthContext.Provider value={{ user,FbSignIn, googleSignIn, logOut,gitHubSignIn }}>
       {children}
     </AuthContext.Provider>
   );
