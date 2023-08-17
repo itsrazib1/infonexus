@@ -1,40 +1,26 @@
-import React from 'react';
+import React from "react";
+import Link from "next/link";
+import SinginForm from "./singinForm"; // Import the SinginForm component
 
-const SinginPage = () => {
-    return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">SingIn Now</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-    </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <div className="card-body">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input type="text" placeholder="email" className="input input-bordered" />
+const Page = () => {
+  return (
+    <div>
+      <div className="navbar flex justify-between sm:px-0 md:px-10 bg-base-100">
+      <div className="  -px-2">
+          <a className="btn btn-ghost normal-case text-xl">InfoNexus</a>
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password</span>
-          </label>
-          <input type="text" placeholder="password" className="input input-bordered" />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
-        </div>
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+        <div className="flex-none">
+          <span className="font-semibold text-sm">Have a Zoho Account?</span>{" "}
+          <Link href='/login' className="text-red-500 text-sm font-semibold ps-3 underline">
+            SIGN IN
+          </Link>
         </div>
       </div>
+      <hr />
+      {/* Use the SinginForm component */}
+      <SinginForm />
     </div>
-  </div>
-</div>
-        </div>
-    );
+  );
 };
 
-export default SinginPage;
+export default Page;
