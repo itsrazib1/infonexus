@@ -4,6 +4,7 @@ const Partwo = () => {
     return (
         <div>
             Partone
+            {/* Partone */}
         </div>
     );
 };
