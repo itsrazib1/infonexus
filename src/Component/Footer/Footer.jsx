@@ -1,45 +1,200 @@
-import React from 'react'
-
+import React from "react";
+import logo from "../../../public/logo.png";
+import rightArrow from "../../../public/icons8-right-arrow-90.png";
+import instagram from "../../../public/instagram.png";
+import Image from "next/image";
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
-  <div>
-    <span className="footer-title">Services</span> 
-    <a className="link link-hover">Branding</a> 
-    <a className="link link-hover">Design</a> 
-    <a className="link link-hover">Marketing</a> 
-    <a className="link link-hover">Advertisement</a>
-  </div> 
-  <div>
-    <span className="footer-title">Company</span> 
-    <a className="link link-hover">About us</a> 
-    <a className="link link-hover">Contact</a> 
-    <a className="link link-hover">Jobs</a> 
-    <a className="link link-hover">Press kit</a>
-  </div> 
-  <div>
-    <span className="footer-title">Legal</span> 
-    <a className="link link-hover">Terms of use</a> 
-    <a className="link link-hover">Privacy policy</a> 
-    <a className="link link-hover">Cookie policy</a>
-  </div>
-</footer> 
-<footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
-  <div className="items-center grid-flow-col">
-    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" className="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
-    <p>ACME Industries Ltd. <br/>Providing reliable tech since 1992</p>
-  </div> 
-  <div className="md:place-self-center md:justify-self-end">
-    <div className="grid grid-flow-col gap-4">
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a> 
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+      <footer className="bg-[#F3F5F9]">
+        <div className="text-center mb-14 pt-12 px-2">
+          <h1 className="md:text-[44px] mb-1 md:mb-2 text-[25px]">Ready to do your best work?</h1>
+          <p className="md:text-[32px] text-[20px] max-w-[720px] m-auto mb-[20px] text-[#333333]">
+            Let's get you started.
+          </p>
+          <button className="uppercase mt-7 rounded-sm bg-[#f60014] md:px-7 px-6 py-3 md:py-4 text-white flex text-xs md:text-sm mx-auto font-semibold">
+            sign up now
+            <Image
+              src={rightArrow}
+              alt="Image"
+              className="md:w-6 w-4 h-auto hover:translate-x-[10px] transition-transform duration-1000"
+            />
+          </button>
+        </div>
+        <div className="join join-vertical w-full md:hidden">
+          <div className="collapse collapse-arrow join-item border border-base-300">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div className="collapse-title text-xl font-medium">
+              Apps and Extentions
+            </div>
+            <div className="collapse-content">
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Branding</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Mobile Apps</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Google Workspace Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Microsoft 365 Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Product Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Marketplace</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Browser Extentions</a></p>
+            </div>
+          </div>
+          <div className="collapse collapse-arrow join-item border border-base-300">
+            <input type="radio" name="my-accordion-4" />
+            <div className="collapse-title text-xl font-medium">
+              Learn
+            </div>
+            <div className="collapse-content">
+            <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Branding</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Mobile Apps</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Google Workspace Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Microsoft 365 Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Product Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Marketplace</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Browser Extentions</a></p>
+            </div>
+          </div>
+          <div className="collapse collapse-arrow join-item border border-base-300">
+            <input type="radio" name="my-accordion-4" />
+            <div className="collapse-title text-xl font-medium">
+              Community
+            </div>
+            <div className="collapse-content">
+            <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Branding</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Mobile Apps</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Google Workspace Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Microsoft 365 Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Product Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Marketplace</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Browser Extentions</a></p>
+            </div>
+          </div>
+          <div className="collapse collapse-arrow join-item border border-base-300">
+            <input type="radio" name="my-accordion-4" />
+            <div className="collapse-title text-xl font-medium">
+              products
+            </div>
+            <div className="collapse-content">
+            <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Branding</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Mobile Apps</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Google Workspace Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Microsoft 365 Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Product Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Marketplace</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Browser Extentions</a></p>
+            </div>
+          </div>
+          <div className="collapse collapse-arrow join-item border border-base-300">
+            <input type="radio" name="my-accordion-4" />
+            <div className="collapse-title text-xl font-medium">
+              Company
+            </div>
+            <div className="collapse-content">
+            <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Branding</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Mobile Apps</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Google Workspace Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Microsoft 365 Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Product Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Marketplace</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Browser Extentions</a></p>
+            </div>
+          </div>
+          <div className="collapse collapse-arrow join-item border border-base-300">
+            <input type="radio" name="my-accordion-4" />
+            <div className="collapse-title text-xl font-medium">
+              Security and Privacy
+            </div>
+            <div className="collapse-content">
+            <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Branding</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Mobile Apps</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Google Workspace Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Microsoft 365 Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Product Integration</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Marketplace</a></p>
+              <p className="mb-5 ml-1"><a className="text-[#333] text-lg">Browser Extentions</a></p>
+            </div>
+          </div>
+        </div>
+        <div className="footer p-10 justify-between hidden md:flex ">
+          <div>
+            <h2 className="text-2xl mb-3">Apps and Extensions</h2>
+            <a className="text-[#333] text-lg">Branding</a>
+            <a className="text-[#333] text-lg">Mobile Apps</a>
+            <a className="text-[#333] text-lg">Google Workspace Integration</a>
+            <a className="text-[#333] text-lg">Microsoft 365 Integration</a>
+            <a className="text-[#333] text-lg">Product Integration</a>
+            <a className="text-[#333] text-lg">Marketplace</a>
+            <a className="text-[#333] text-lg">Browser Extentions</a>
+          </div>
+          <div>
+            <h2 className="text-2xl mb-3">Learn</h2>
+            <a className="text-[#333] text-lg">Training & Certification</a>
+            <a className="text-[#333] text-lg">Academy</a>
+            <a className="text-[#333] text-lg">Blog</a>
+            <a className="text-[#333] text-lg">Zia</a>
+            <a className="text-[#333] text-lg">Humans of infonexus</a>
+            <a className="text-[#333] text-lg">The Long Game</a>
+          </div>
+          <div>
+            <h2 className="text-2xl mb-3">Commujnity</h2>
+            <a className="text-[#333] text-lg">User Community</a>
+            <a className="text-[#333] text-lg">Influence</a>
+            <a className="text-[#333] text-lg">Partner with Us</a>
+            <a className="text-[#333] text-lg">Affiliate Program</a>
+          </div>
+          <div>
+            <h2 className="text-2xl mb-3" >Company</h2>
+            <a className=" text-[#333] text-lg">About Us</a>
+            <a className=" text-[#333] text-lg">Press</a>
+            <a className=" text-[#333] text-lg">Events</a>
+            <a className=" text-[#333] text-lg">Newsroom</a>
+            <a className=" text-[#333] text-lg">Branding Assets</a> 
+            <a className=" text-[#333] text-lg">InfoNexus Schools</a> 
+            <a className=" text-[#333] text-lg">Service Status</a> 
+          </div> 
+        </div> 
+        <div> 
+          <div className="flex gap-5 justify-center items-center mt-12 mb-6">
+            <span className="text-4xl text-[#ED2201]">
+              <FaYoutube />
+            </span>
+            <span className="text-3xl text-[#3D77F2]">
+              <FaFacebook />
+            </span>
+            <span className="text-3xl text-[#3266C2]">
+              <FaLinkedin />
+            </span>
+            <span className="text-3xl text-[ED2201] w-7">
+              <Image src={instagram} alt="" />
+            </span>
+          </div>
+          <div className="text-center text-sm md:block hidden">
+            <span className="border-e pl-2 border-gray-400">Zoho Home  </span>
+            <span className="border-e pl-2 border-gray-400"> Contact Us  </span>
+            <span className="border-e pl-2 border-gray-400">Security  </span>
+            <span className="border-e pl-2 border-gray-400">IPR Complaints  </span>
+            <span className="border-e pl-2 border-gray-400">Anti-spam Policy  </span>
+            <span className="border-e pl-2 border-gray-400">Terms of Service  </span>
+            <span className="pl-2">Privacy Policy</span>
+          </div>
+          <div className="text-center text-sm md:hidden pb-12">
+            <span className="border-e pl-2 border-gray-400">Zoho Home  </span>
+            <span className="pl-2"> Contact Us  </span>
+          </div>
+          <div className="text-center pb-12 mt-3 text-sm md:block hidden">
+            <span className="border-e pl-2 border-gray-400">Cookie Policy </span>
+            <span className="border-e pl-2 border-gray-400">GDPR Compliance  </span>
+            <span className="pl-2">Abuse Policy</span>
+          </div>
+        </div>
+      </footer>
+      <footer className="footer footer-center p-10 bg-[#0B0D1F] text-primary-content">
+        <div>
+          <Image className="w-1/5" src={logo} alt="" />
+          <p className="text-white">© 2023, infonexus Corporation Pvt. Ltd. All Rights Reserved.</p>
+        </div>
+      </footer>
     </div>
-  </div>
-</footer>
-    </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
