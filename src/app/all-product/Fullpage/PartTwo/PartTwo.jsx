@@ -105,14 +105,14 @@ const appAccessed = [
   },
 ];
 
-const PartOne = () => {
+const PartTwo = () => {
   const [view, setView] = useState(false);
   const toggleCart = () => {
     setView(!view);
   };
   return (
     <div className="accessed-app-fill-container">
-      <h1 className="accessed-app-header">Apps you’ve accessed</h1>
+      <h1 className="accessed-app-header">Apps you Have accessed</h1>
       <div className="accessed-app-header-line"></div>
       {view ? (
         <div>
@@ -174,4 +174,4 @@ const PartOne = () => {
   );
 };
 
-export default PartOne;
+export default PartTwo;
