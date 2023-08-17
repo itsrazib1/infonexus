@@ -2,12 +2,11 @@
 import  { useState } from "react";
 import Googlelogin from "./googlesingin";
 import { UserAuth } from "../Context/AuthContext";
-import createJWT from "../utils/createJWT";
 
 const SinginForm = () => {
     const [email, setEmail] = useState("");
     const [agree, setAgree] = useState(false);
-    const {  googleSignIn,user  } = UserAuth();
+    const {  googleSignIn  } = UserAuth();
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     };
@@ -15,7 +14,6 @@ const SinginForm = () => {
     const handleSignIn = async () => {
         try {
             await googleSignIn();
-            createJWT({ email: user.email });
         } catch (error) {
             console.log(error);
         }

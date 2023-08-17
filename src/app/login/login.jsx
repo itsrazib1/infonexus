@@ -3,17 +3,22 @@
 import React from 'react';
 import { UserAuth } from '../Context/AuthContext';
 import Image from 'next/image';
-
 import Image1 from "../../../public/google-logo.png";
 import Image2 from "../../../public/github2.png";
-import createJWT from '../utils/createJWT';
+import Image3 from "../../../public/facebook-logo.png";
 
 const LoginPage2 = () => {
-    const {  googleSignIn, gitHubSignIn } = UserAuth();
+    const {  googleSignIn, gitHubSignIn , FbSignIn } = UserAuth();
   const handleSignIn = async () => {
     try {
         await googleSignIn();
-        createJWT({ email: user.email });
+    } catch (error) {
+        console.log(error);
+    }
+};
+  const handelFbSignIn = async () => {
+    try {
+        await FbSignIn();
     } catch (error) {
         console.log(error);
     }
@@ -21,7 +26,6 @@ const LoginPage2 = () => {
 const handleGitSignIn = async () => {
     try {
         await gitHubSignIn();
-        createJWT({ email: user.email });
     } catch (error) {
         console.log(error);
     }
@@ -56,7 +60,7 @@ const handleGitSignIn = async () => {
                   <div className="flex gap-4 ">
                     <Image onClick={handleSignIn} src={Image1} alt="Image" className='h-10 border border-red-500 w-10  rounded-full' />
                     <Image onClick={handleGitSignIn} src={Image2} alt="Image" className='h-10 border border-red-500 w-10 rounded-full ' />
-                    {/* <Image src={Image3} alt="Image" className='h-10 w-10 rounded-full' /> */}
+                    <Image onClick={handelFbSignIn} src={Image3} alt="Image" className='h-10 w-10 rounded-full' />
                   </div>
                   </div>
                   
