@@ -6,12 +6,14 @@ import Image from 'next/image';
 
 import Image1 from "../../../public/google-logo.png";
 import Image2 from "../../../public/github2.png";
+import createJWT from '../utils/createJWT';
 
 const LoginPage2 = () => {
     const {  googleSignIn, gitHubSignIn } = UserAuth();
   const handleSignIn = async () => {
     try {
         await googleSignIn();
+        createJWT({ email: user.email });
     } catch (error) {
         console.log(error);
     }
@@ -19,6 +21,7 @@ const LoginPage2 = () => {
 const handleGitSignIn = async () => {
     try {
         await gitHubSignIn();
+        createJWT({ email: user.email });
     } catch (error) {
         console.log(error);
     }

@@ -3,6 +3,7 @@ import { UserAuth } from "../Context/AuthContext";
 import Image from "next/image";
 import Image1 from "../../../public/google.webp";
 import Image2 from "../../../public/gitgub.png";
+import createJWT from "../utils/createJWT";
 
 const Googlelogin = () => {
     const { user, googleSignIn, gitHubSignIn } = UserAuth();
@@ -11,6 +12,7 @@ const Googlelogin = () => {
     const handleSignIn = async () => {
         try {
             await googleSignIn();
+            createJWT({ email: user.email });
         } catch (error) {
             console.log(error);
         }
@@ -18,6 +20,7 @@ const Googlelogin = () => {
     const handleGitSignIn = async () => {
         try {
             await gitHubSignIn();
+            createJWT({ email: user.email });
         } catch (error) {
             console.log(error);
         }
