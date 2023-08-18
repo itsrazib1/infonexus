@@ -7,12 +7,11 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      {/* Testing */}
       <footer className="bg-[#F3F5F9]">
         <div className="text-center mb-14 pt-12 px-2">
           <h1 className="md:text-[44px] mb-1 md:mb-2 text-[25px]">Ready to do your best work?</h1>
           <p className="md:text-[32px] text-[20px] max-w-[720px] m-auto mb-[20px] text-[#333333]">
-            Let's get you started.
+            Let us get you started.
           </p>
           <button className="uppercase mt-7 rounded-sm bg-[#f60014] md:px-7 px-6 py-3 md:py-4 text-white flex text-xs md:text-sm mx-auto font-semibold">
             sign up now
