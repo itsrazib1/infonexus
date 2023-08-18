@@ -14,8 +14,8 @@ import Info_One from './Info_One';
 
 const PartFour = () => {
     useEffect(() => {
-        AOS.init({duration :2000});
-      }, []);
+        AOS.init({ duration: 2000 });
+    }, []);
 
     return (
         <>
@@ -53,7 +53,7 @@ const PartFour = () => {
                             <Image
                                 src={Finance}
                                 alt="Image"
-                                className='w-24 h-auto'
+                                z className='w-24 h-auto'
                             />
                         </figure>
                         <div className="card-body">
@@ -165,7 +165,7 @@ const PartFour = () => {
                         </div>
                     </div>
                 </div>
-                <Info_One/>
+                <Info_One />
             </div>
         </>
     );
