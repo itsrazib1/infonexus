@@ -7,6 +7,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
+      {/* Testing */}
       <footer className="bg-[#F3F5F9]">
         <div className="text-center mb-14 pt-12 px-2">
           <h1 className="md:text-[44px] mb-1 md:mb-2 text-[25px]">Ready to do your best work?</h1>
