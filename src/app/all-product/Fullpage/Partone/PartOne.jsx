@@ -18,7 +18,7 @@ const PartOne = () => {
 
             </div>
             <div className='md:absolute  grid grid-cols-1 md:grid-cols-4 h-auto  mx-auto w-10/12 border-solid border-2 border-inherit mt-12 left-0 right-0 top-32  '>
-                <div className="flex card-side bg-base-100 shadow-xl bg-[#ecf8f9fa]">
+                <div className="flex card-side bg-base-100 shadow-xl bg-[#e8f7f8fa]">
                     <div className='h-24 w-24 mt-8 ps-4'>
                         <figure><Image className='' src={CRM} alt="Movie" /></figure>
 
@@ -41,7 +41,7 @@ const PartOne = () => {
 
                     </div>
                 </div>
-                <div className="flex card-side bg-base-100 shadow-xl bg-[#ecf8f9fa]">
+                <div className="flex card-side bg-base-100 shadow-xl bg-[#e8f7f8fa]">
                     <div className='h-24 w-24 mt-8 ps-4'>
                         <figure><Image className='' src={Mail} alt="Movie" /></figure>
 
@@ -64,7 +64,7 @@ const PartOne = () => {
 
                     </div>
                 </div>
-                <div className="flex card-side bg-base-100 shadow-xl bg-[#ecf8f9fa]">
+                <div className="flex card-side bg-base-100 shadow-xl bg-[#e8f7f8fa]">
                     <div className='h-24 w-24 mt-8 ps-4'>
                         <figure><Image className='' src={Desk} alt="Movie" /></figure>
 
@@ -87,7 +87,7 @@ const PartOne = () => {
 
                     </div>
                 </div>
-                <div className="flex card-side bg-base-100 shadow-xl bg-[#ecf8f9fa]">
+                <div className="flex card-side bg-base-100 shadow-xl bg-[#e8f7f8fa]">
                     <div className='h-24 w-24 mt-8 ps-4'>
                         <figure><Image className='' src={CRM} alt="Movie" /></figure>
 
@@ -111,7 +111,7 @@ const PartOne = () => {
                     </div>
 
                 </div>
-                <div className="flex card-side bg-base-100 shadow-xl bg-[#ecf8f9fa]">
+                <div className="flex card-side bg-base-100 shadow-xl bg-[#e8f7f8fa]">
                     <div className='h-24 w-24 mt-8 ps-4'>
                         <figure><Image className='' src={Books} alt="Movie" /></figure>
 
@@ -135,7 +135,7 @@ const PartOne = () => {
                     </div>
 
                 </div>
-                <div className="flex card-side bg-base-100 shadow-xl bg-[#ecf8f9fa]">
+                <div className="flex card-side bg-base-100 shadow-xl bg-[#e8f7f8fa]">
                     <div className='h-24 w-24 mt-8 ps-4'>
                         <figure><Image className='' src={Analytics} alt="Movie" /></figure>
 
@@ -159,7 +159,7 @@ const PartOne = () => {
                     </div>
 
                 </div>
-                <div className="flex card-side bg-base-100 shadow-xl bg-[#ecf8f9fa]">
+                <div className="flex card-side bg-base-100 shadow-xl bg-[#e8f7f8fa]">
                     <div className='h-24 w-24 mt-8 ps-4'>
                         <figure><Image className='' src={Analytics} alt="Movie" /></figure>
 
@@ -183,7 +183,7 @@ const PartOne = () => {
                     </div>
 
                 </div>
-                <div className="flex card-side bg-base-100 shadow-xl bg-[#ecf8f9fa]">
+                <div className="flex card-side bg-base-100 shadow-xl bg-[#e8f7f8fa]">
                     <div className='h-24 w-24 mt-8 ps-4'>
                         <figure><Image className='' src={Social} alt="Movie" /></figure>
 
