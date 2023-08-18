@@ -6,12 +6,15 @@ import Image from 'next/image';
 import Image1 from "../../../public/google-logo.png";
 import Image2 from "../../../public/github2.png";
 import Image3 from "../../../public/facebook-logo.png";
+import { useRouter } from "next/navigation";
 
 const LoginPage2 = () => {
     const {  googleSignIn, gitHubSignIn , FbSignIn } = UserAuth();
+    const router = useRouter();
   const handleSignIn = async () => {
     try {
         await googleSignIn();
+        router.push("/")
     } catch (error) {
         console.log(error);
     }
@@ -19,6 +22,7 @@ const LoginPage2 = () => {
   const handelFbSignIn = async () => {
     try {
         await FbSignIn();
+        router.push("/")
     } catch (error) {
         console.log(error);
     }
@@ -26,6 +30,7 @@ const LoginPage2 = () => {
 const handleGitSignIn = async () => {
     try {
         await gitHubSignIn();
+        router.push("/")
     } catch (error) {
         console.log(error);
     }
