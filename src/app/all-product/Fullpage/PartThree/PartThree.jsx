@@ -3,9 +3,7 @@ import React from 'react';
 const PartThree = () => {
     return (
         <div>
-            <div>
-                <h1 className='text-center text-5xl p-12'>Or, choose from over 55+ different <br /> business applications</h1>
-            </div>
+            
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center">
