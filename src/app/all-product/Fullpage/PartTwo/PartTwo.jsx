@@ -111,44 +111,46 @@ const PartTwo = () => {
     setView(!view);
   };
   return (
-    <div className="accessed-app-fill-container">
-      <h1 className="accessed-app-header">Apps you Have accessed</h1>
-      <div className="accessed-app-header-line"></div>
-      {view ? (
-        <div>
-          <ul className="accessed-app-container">
-            {appAccessed.map(({ img, name, link, id }) => (
-              <li key={id}>
-                <Link className="accessed-app-link" href={link}>
-                  <Image className="accessed-app-img" src={img} alt="" />
-                  <h3>{name}</h3>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="view-btn">
-          <button className="view"  onClick={toggleCart}>View Less <Image className="view-up"src={viewDirection} alt="" /></button>
+    <div>
+      
+      <div className="accessed-app-fill-container">
+        <h1 className="accessed-app-header">Apps you Have accessed</h1>
+        <div className="accessed-app-header-line"></div>
+        {view ? (
+          <div>
+            <ul className="accessed-app-container">
+              {appAccessed.map(({ img, name, link, id }) => (
+                <li key={id}>
+                  <Link className="accessed-app-link" href={link}>
+                    <Image className="accessed-app-img" src={img} alt="" />
+                    <h3>{name}</h3>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="view-btn">
+              <button className="view" onClick={toggleCart}>View Less <Image className="view-up" src={viewDirection} alt="" /></button>
+            </div>
           </div>
-        </div>
-      ) : (
-        <div>
-          <ul className="accessed-app-container">
-            {appAccessed.slice(0,4).map(({ img, name, link, id }) => (
-              <li key={id}>
-                <Link className="accessed-app-link" href={link}>
-                  <Image className="accessed-app-img" src={img} alt="" />
-                  <h3>{name}</h3>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div  className="view-btn">
-          {appAccessed.length>4 && <button className="view" onClick={toggleCart}>View More <Image className="view-down"src={viewDirection} alt="" /></button>}
+        ) : (
+          <div>
+            <ul className="accessed-app-container">
+              {appAccessed.slice(0, 4).map(({ img, name, link, id }) => (
+                <li key={id}>
+                  <Link className="accessed-app-link" href={link}>
+                    <Image className="accessed-app-img" src={img} alt="" />
+                    <h3>{name}</h3>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="view-btn">
+              {appAccessed.length > 4 && <button className="view" onClick={toggleCart}>View More <Image className="view-down" src={viewDirection} alt="" /></button>}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* <div>
+        {/* <div>
           <ul className="accessed-app-container">
             {appAccessed.slice(0,4).map(({img, name, link, id}) => (
               <li key={id}>
@@ -162,7 +164,7 @@ const PartTwo = () => {
           {appAccessed.length > 4 && <button onClick={toggleCart}>Show More</button>}
         </div> */}
 
-      {/* {appAccessed.map(({ img, name, link, id }) => (
+        {/* {appAccessed.map(({ img, name, link, id }) => (
           <li key={id}>
             <Link className="accessed-app-link" href={link}>
               <Image className="accessed-app-img" src={img} alt="" />
@@ -170,7 +172,12 @@ const PartTwo = () => {
             </Link>
           </li>
         ))} */}
+      </div>
+      <div>
+      <h1 className='text-center text-5xl p-12'>Or, choose from over 55+ different <br /> business applications</h1>
     </div>
+    </div>
+
   );
 };
 

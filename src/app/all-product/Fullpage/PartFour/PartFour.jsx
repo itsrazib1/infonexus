@@ -20,7 +20,7 @@ const PartFour = () => {
     return (
         <>
             <div className='mt-10 px-4 lg:px-14'>
-                <div>
+                <div className='px-4 lg:px-14'>
                     <h1 className='text-2xl'>Suites</h1>
                     <p>The perfect combination of apps to help you with every aspect of your business.</p>
                 </div>
