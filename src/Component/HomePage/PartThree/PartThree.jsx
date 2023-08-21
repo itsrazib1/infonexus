@@ -10,7 +10,7 @@ import arrow from '../../../../public/right-arrow.png';
 const PartThree = () => {
     return (
         <div>
-            <div className=" sm:h-[1980px] md:h-[950px] bg-slate-100  ">
+            <div className=" sm:h-[1980px] md:h-[950px] bg-base-100  ">
 
                 <div className="w-full  ">
                     <Image
@@ -21,7 +21,7 @@ const PartThree = () => {
                         className=' h-2/3 '
                     />
                     <div className=' justify-center items-center flex'>
-                        <div className=" py-5  h-full    w-2/3 sm:-mt-20 md:-mt-80 bg-white   z-10">
+                        <div className=" py-5  h-full    w-2/3 sm:-mt-20 md:-mt-80 bg-base-100    z-10">
                             <h1 className=' text-center md:py-16 sm:text-3xl md:text-5xl'>The core values and <br /> principles that drive us</h1>
                             <div className=" sm:grid-cols-none  md:grid md:grid-cols-3 gap-7 sm:px-0 md:px-10">
                                 {/* Column 1 */}
@@ -70,7 +70,7 @@ const PartThree = () => {
                                     <div className='bg-blue-700 pr-4 '><Image
                                         src={arrow}
                                         alt="Image"
-                                        className=' h-5 w-5 mt-[14px] hover:translate-x-[8px] transition-transform duration-1000'
+                                        className=' h-5 w-5 pt-[14px] hover:translate-x-[8px] transition-transform duration-1000'
                                     /> </div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ const PartThree = () => {
 
 
 
-            <div className=" md:mt-0 pt-[10px] bg-slate-100  md:h-[650px]">
+            <div className=" md:mt-0  bg-slate-100  md:h-[650px]">
                 <div className="hero  min-h-screen bg-base-200">
                     <div className="hero-content  flex-col md:flex-row-reverse">
                         <div className='w-1/3'>
@@ -99,7 +99,7 @@ const PartThree = () => {
                         <div className='sm:w-4/5 md:w-2/3'>
                             <h3 className='bg-gray-800 text-white w-24 mb-12 px-2 text-2xl'>Forbes</h3>
                             <h1 className="text-5xl ">Vision from a village</h1>
-                            <p className="py-6">Why Zoho is CEO moved from California to a hamlet in Tamil Nadu: <br /> The lessons this holds for an economy that wants to be self-reliant; for <br /> corporations headquartered in big cities; and a country with a high <br /> density of urban and migrant workers coming to grips with a <br /> pandemic.</p>
+                            <p className="py-6">Why InfoNexus is CEO moved from California to a hamlet in Tamil Nadu: <br /> The lessons this holds for an economy that wants to be self-reliant; for <br /> corporations headquartered in big cities; and a country with a high <br /> density of urban and migrant workers coming to grips with a <br /> pandemic.</p>
 
                             <div className=' flex'>
                                 <div className=' flex border-2 py-2 border-blue-700  text-blue-600 px-4'>

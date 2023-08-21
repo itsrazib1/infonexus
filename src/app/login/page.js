@@ -50,9 +50,9 @@ const LoginPage = () => {
                 </div>
 
                 <h1 className="text-2xl mt-4">Sign in </h1>
-                 <h1>to access Zoho Home</h1>
+                 <h1>to access InfoNexus Home</h1>
                <LoginPage2></LoginPage2>
-                <div className=""><span className="text-sm">Dont have a Zoho account?</span> <Link className="text-sm text-sky-400 font-semibold" href='/singin' >Sign Up Now</Link></div>
+                <div className=""><span className="text-sm">Dont have a InfoNexus account?</span> <Link className="text-sm text-sky-400 font-semibold" href='/singin' >Sign Up Now</Link></div>
               </div>
 
 
@@ -65,7 +65,7 @@ const LoginPage = () => {
                 <div>
                   <Image src={Image6} className="h-80 w-full" alt="Image" />
                   <h1 className="text-center text-xl mt-9">Password less sign-in</h1>
-                  <h1 className="text-center px-6 mt-3">Move away from risky passwords and experience one-tap access to Zoho. Download and install OneAuth.</h1>
+                  <h1 className="text-center px-6 mt-3">Move away from risky passwords and experience one-tap access to InfoNexus. Download and install OneAuth.</h1>
                   <div className="flex flex-col items-center justify-center mt-4">
                     <button className="btn btn-info  btn-sm ">learn more</button>
                   </div>

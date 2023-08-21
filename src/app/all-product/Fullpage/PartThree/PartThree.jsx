@@ -37,7 +37,7 @@ const PartThree = () => {
                     {/* <label htmlFor="my-drawer-2" className="drawer-overlay text-xl md:ms-12">Suites</label> */}
                     <ul className='menu ms-8 text-base'>
                         <li><a>Suites</a></li>
-                        <li><a>Zoho One</a></li>
+                        <li><a>InfoNexus One</a></li>
                         <li><a>Marketplace</a></li>
                         <li><a>Mobile Apps</a></li>
                         <li><a>Browser Extensions</a></li>
