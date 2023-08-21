@@ -29,7 +29,7 @@ const Footer = () => {
               Apps and Extentions
             </div>
             <div className="collapse-content">
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Branding</a></p>
+              <p className="mb-5 ml-1"><a className="text-base-content  text-lg">Branding</a></p>
               <p className="mb-5 ml-1"><a className="text-base-content text-lg">Mobile Apps</a></p>
               <p className="mb-5 ml-1"><a className="text-base-content text-lg">Google Workspace Integration</a></p>
               <p className="mb-5 ml-1"><a className="text-base-content text-lg">Microsoft 365 Integration</a></p>
