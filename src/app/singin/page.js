@@ -10,7 +10,7 @@ const Page = () => {
           <a className="btn btn-ghost normal-case text-xl">InfoNexus</a>
         </div>
         <div className="flex-none">
-          <span className="font-semibold text-sm">Have a Zoho Account?</span>{" "}
+          <span className="font-semibold text-sm">Have a InfoNexus Account?</span>{" "}
           <Link href='/login' className="text-red-500 text-sm font-semibold ps-3 underline">
             SIGN IN
           </Link>

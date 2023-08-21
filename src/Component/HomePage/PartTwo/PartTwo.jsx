@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import React from "react";
 import "./PartTwo.css";
@@ -55,17 +54,17 @@ const PartTwo = () => {
               </div>
             </div>
             <div className="text-start">
-              <h1 className="font-semibold text-[18px]">Aurian De Maupeou</h1>
+              <h1 className="font-semibold text-[18px]">AB Ohi</h1>
               <p className="text-[14px]">Co-Founder, Selectra</p>
             </div>
           </div>
         </div>
         <div className="right-site">
           <h1 className="header">
-            Infonexu's for <br /> Enterprises
+            Infonexu for <br /> Enterprises
           </h1>
           <p className="details max-w-[400px]">
-            Experience the breadth and depth of the Infonexu's ecosystem, with
+            Experience the breadth and depth of the Infonexu  ecosystem, with
             the professional services, infrastructure, support, and security
             that a large business needs. Streamline complex business processes,
             build strong relationships with your customers, and drive growth at
@@ -136,7 +135,7 @@ const PartTwo = () => {
             </div>
             <div>
               <button className="about-btn flex gap-2 items-center justify-center px-[25px] py-[20px]">
-                More about Infonexu's
+                More about Infonexu 
                 <Image
                   src={Arrow}
                   alt="Image"

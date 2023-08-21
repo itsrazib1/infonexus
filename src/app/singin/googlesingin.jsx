@@ -13,7 +13,7 @@ const Googlelogin = () => {
     const handleSignIn = async () => {
         try {
             await googleSignIn();
-            router.push("/")
+            router.push("/all-product")
         } catch (error) {
             console.log(error);
         }
@@ -21,7 +21,7 @@ const Googlelogin = () => {
     const handelFbSignIn = async () => {
         try {
             await FbSignIn();
-            router.push("/")
+            router.push("/all-product")
         } catch (error) {
             console.log(error);
         }
@@ -29,7 +29,7 @@ const Googlelogin = () => {
     const handleGitSignIn = async () => {
         try {
             await gitHubSignIn();
-            router.push("/")
+            router.push("/all-product")
         } catch (error) {
             console.log(error);
         }

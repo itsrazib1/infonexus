@@ -4,7 +4,7 @@ import Workplace from '../../../../public/workplace.png'
 import Arrow from '../../../../public/icons8-right-arrow-90.png'
 import One from '../../../../public/One.png'
 import Icon from '../../../../public/left-quotes.png'
-import Dolan from '../../../../public/poster-amanda.png'
+import Dolan from '../../../../public/partonetambuli.png'
 import React from 'react';
 
 const BannerSection = () => {
@@ -61,7 +61,7 @@ const BannerSection = () => {
                                 <p>All-in-one suite</p>
                                 <h1 className='text-5xl'>Info-Nexus One</h1>
                                 <p className='text-lg'>The operating system for business</p>
-                                <p className='font-normal mt-10'>Run your entire business on Zoho with our unified cloud <br /> software, designed to help you break down silos between <br /> departments and increase organizational efficiency.</p>
+                                <p className='font-normal mt-10'>Run your entire business on InfoNexus with our unified cloud <br /> software, designed to help you break down silos between <br /> departments and increase organizational efficiency.</p>
                                 <button className='flex justify-between text-white bg-[#f60014] px-5 py-3 mt-10 mx-auto lg:mx-0'>
                                     <p>TRY INFO-NEXUS ONE </p>
                                     <Image
@@ -78,7 +78,7 @@ const BannerSection = () => {
                                 alt="Image"
                                 className='w-16 h-auto bg-white p-3 rounded-full mx-auto lg:mx-0'
                             />
-                            <h1 className='text-2xl mt-8'>Zoho One has brought our <br /> company closer together.</h1>
+                            <h1 className='text-2xl mt-8'>InfoNexus One has brought our <br /> company closer together.</h1>
                             <div className='flex justify-between items-center mt-10'>
                                 <div>
                                     <Image
@@ -88,7 +88,7 @@ const BannerSection = () => {
                                     />
                                 </div>
                                 <div>
-                                    <h1 className='text-xl font-medium'>Amanda Dolan</h1>
+                                    <h1 className='text-xl font-medium'>Shrabon Tambuli</h1>
                                     <p>Head of CRM, Purolite</p>
                                 </div>
                             </div>

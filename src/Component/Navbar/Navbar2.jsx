@@ -6,6 +6,8 @@ import Image from "next/image";
 const NavbarTwo = () => {
     const { user, logOut } = UserAuth();
     const [loading, setLoading] = useState(true);
+    
+    const [isHovered, setIsHovered] = useState(false);
 
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
@@ -26,6 +28,14 @@ const NavbarTwo = () => {
         } catch (error) {
             console.log(error);
         }
+    };
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
     };
 
     useEffect(() => {
@@ -55,14 +65,31 @@ const NavbarTwo = () => {
                 </ul>
             ) : (
                 <div className="flex gap-2">
-                    <p>
-                        <Image src={user.photoURL} width={40} height={40} className='rounded-full' alt="" />
-                    </p>
-
-                    <p className=" text-yellow-50 mt-1 btn btn-sm cursor-pointer text-xs px-2 py-1 bg-red-600" onClick={handleSignOut}>
-                        Sign out
-                    </p>
-                </div>
+                <p>
+                    <div
+                        className="relative"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                        <Image
+                            src={user.photoURL}
+                            width={40}
+                            height={40}
+                            className="rounded-full cursor-pointer"
+                            alt=""
+                        />
+                        
+                        {isHovered && (
+                            <p
+                                className="absolute bottom-0 top-10 text-black btn btn-xs md:btn-sm cursor-pointer text-xs px-2 py-1 bg-red-600"
+                                onClick={handleSignOut}
+                            >
+                                <span className="text-xs ">Logout</span>
+                            </p>
+                        )}
+                    </div>
+                </p>
+            </div>
             )}
         </div>
     );

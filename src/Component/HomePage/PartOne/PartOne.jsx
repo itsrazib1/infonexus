@@ -29,7 +29,7 @@ const PartOne = () => {
                         className='lg:max-w-5xl h-auto lg:-ms-44'
                     />
                 </div>
-                <div className="bg-[#fff] border border-[#e7ebf0] px-6 lg:w-full lg:px-8">
+                <div className="bg-base-100 border border-[#e7ebf0] px-6 lg:w-full lg:px-8">
                     <p className='text-base font-bold mt-6'>FEATURED APPS</p>
                     <div className='mt-8'>
                         <div className='flex justify-center items-center'>
@@ -113,7 +113,7 @@ const PartOne = () => {
                             />
                         </div>
                     </div>
-                    <div className='mt-14 text-center bg-[#fff] border border-[#e7ebf0] px-4 lg:px-10 py-6'>
+                    <div className='mt-14 text-center bg-base mb-2 border border-[#e7ebf0] px-4 lg:px-10 py-6'>
                         <a className='flex justify-between text-blue-500 font-bold' href="#">
                             <h1>EXPLORE ALL PRODUCTS</h1>
                             <Image
