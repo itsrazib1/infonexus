@@ -1,4 +1,5 @@
-export const UserData = [
+export const UserData = 
+[
     {
       "id": 1,
       "image":"https://i.ibb.co/b7P0qDN/crm.png",
