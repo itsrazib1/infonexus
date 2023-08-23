@@ -11,15 +11,19 @@ const page = () => {
       <PartOne></PartOne>
       <PartTwo></PartTwo>
       <div className="flex">
-        <div className="md:block hidden sm:block">
+        <div className=" md:block  sm:block ">
           <PartThree></PartThree>
+
+
         </div>
         <div>
+          <PartFour></PartFour>
+          <Partfive></Partfive>
           <PartSix />
         </div>
       </div>
-      <PartFour></PartFour>
-      <Partfive></Partfive>
+
+
     </div>
   );
 };
