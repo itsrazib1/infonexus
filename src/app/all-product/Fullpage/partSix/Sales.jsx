@@ -1,6 +1,9 @@
 
-import { UserData } from "@/app/data/Sales";
+import { salesData } from "@/app/data/Sales";
+// import getSales from "@/app/utils/getsales";
 import Image from "next/image";
+
+
 
 const UserCard = ({  name, discription, btn,image }) => (
     <div className="md:w-1/3 sm:w-full p-4 ">
@@ -12,8 +15,10 @@ const UserCard = ({  name, discription, btn,image }) => (
         </div>
     </div>
 );
-
-const PartSix = () => {
+const Sales = async () => {
+    
+// const sales = await getSales();
+// console.log(sales);
     return (
         <div className="container mx-auto p-8">
             <div>
@@ -21,7 +26,7 @@ const PartSix = () => {
                 <div>Help your sales team be more productive with tools they love.</div>
             </div>
             <div className="flex flex-wrap ">
-                {UserData.map(({ id, name, discription, btn,image }) => (
+                {salesData.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}
@@ -36,4 +41,4 @@ const PartSix = () => {
     );
 };
 
-export default PartSix;
+export default Sales;
