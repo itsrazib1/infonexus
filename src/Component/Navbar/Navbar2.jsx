@@ -6,7 +6,7 @@ import Image from "next/image";
 const NavbarTwo = () => {
     const { user, logOut } = UserAuth();
     const [loading, setLoading] = useState(true);
-    
+
     const [isHovered, setIsHovered] = useState(false);
 
     const [isMobile, setIsMobile] = useState(false);
@@ -64,32 +64,35 @@ const NavbarTwo = () => {
 
                 </ul>
             ) : (
-                <div className="flex gap-2">
-                <p>
-                    <div
-                        className="relative"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                    >
-                        <Image
-                            src={user.photoURL}
-                            width={40}
-                            height={40}
-                            className="rounded-full cursor-pointer"
-                            alt=""
-                        />
-                        
-                        {isHovered && (
-                            <p
-                                className="absolute bottom-0 top-10 text-black btn btn-xs md:btn-sm cursor-pointer text-xs px-2 py-1 bg-red-600"
-                                onClick={handleSignOut}
-                            >
-                                <span className="text-xs ">Logout</span>
-                            </p>
-                        )}
-                    </div>
-                </p>
-            </div>
+                <div className="flex items-center gap-2">
+                    <p>
+                        <a href="/dashboard">Dashboard</a>
+                    </p>
+                    <p>
+                        <div
+                            className="relative"
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <Image
+                                src={user.photoURL}
+                                width={40}
+                                height={40}
+                                className="rounded-full cursor-pointer"
+                                alt=""
+                            />
+
+                            {isHovered && (
+                                <p
+                                    className="absolute bottom-0 top-10 text-black btn btn-xs md:btn-sm cursor-pointer text-xs px-2 py-1 bg-red-600"
+                                    onClick={handleSignOut}
+                                >
+                                    <span className="text-xs ">Logout</span>
+                                </p>
+                            )}
+                        </div>
+                    </p>
+                </div>
             )}
         </div>
     );
