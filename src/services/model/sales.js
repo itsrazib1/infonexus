@@ -7,3 +7,5 @@ const salesModel = new mongoose.Schema({
 });
 
 export const Sales = mongoose.models.sales || mongoose.model("sales", salesModel)
+
+
