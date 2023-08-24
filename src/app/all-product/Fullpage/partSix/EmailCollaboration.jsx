@@ -1,5 +1,5 @@
 
-import { EmailCollaborationData } from "@/app/data/EmailCollaboration";
+import getEmailCollaboration from "@/app/utils/getEmailCollaboration";
 import Image from "next/image";
 
 
@@ -16,6 +16,9 @@ const UserCard = ({  name, discription, btn,image }) => (
 );
 const EmailCollaboration = async () => {
     
+    const EmailCollaboration = await getEmailCollaboration();
+    console.log(EmailCollaboration);
+    
     return (
         <div className="container mx-auto p-8">
             <div>
@@ -23,7 +26,7 @@ const EmailCollaboration = async () => {
                 <div>Create, collaborate, and communicate with your teams and customers.</div>
             </div>
             <div className="flex flex-wrap ">
-                {EmailCollaborationData.map(({ id, name, discription, btn,image }) => (
+                {EmailCollaboration.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}
