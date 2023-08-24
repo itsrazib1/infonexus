@@ -1,6 +1,8 @@
 
-import { UserData } from "@/app/data/Sales";
+import getEmailCollaboration from "@/app/utils/getEmailCollaboration";
 import Image from "next/image";
+
+
 
 const UserCard = ({  name, discription, btn,image }) => (
     <div className="md:w-1/3 sm:w-full p-4 ">
@@ -12,16 +14,19 @@ const UserCard = ({  name, discription, btn,image }) => (
         </div>
     </div>
 );
-
-const PartSix = () => {
+const EmailCollaboration = async () => {
+    
+    const EmailCollaboration = await getEmailCollaboration();
+    console.log(EmailCollaboration);
+    
     return (
         <div className="container mx-auto p-8">
             <div>
-                <div className="text-3xl">Sales</div>
-                <div>Help your sales team be more productive with tools they love.</div>
+                <div className="text-3xl">Email & Collaboration</div>
+                <div>Create, collaborate, and communicate with your teams and customers.</div>
             </div>
             <div className="flex flex-wrap ">
-                {UserData.map(({ id, name, discription, btn,image }) => (
+                {EmailCollaboration.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}
@@ -36,4 +41,4 @@ const PartSix = () => {
     );
 };
 
-export default PartSix;
+export default EmailCollaboration;
