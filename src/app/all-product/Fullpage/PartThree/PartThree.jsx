@@ -15,7 +15,7 @@ const PartThree = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay text-2xl md:ms-12"></label>
                     <div className='ms-8 menu text-base'>
                         <ul>
-                            <li><a>App</a></li>
+                            <li><>App</></li>
                         </ul>
                     </div>
 
@@ -36,7 +36,7 @@ const PartThree = () => {
                     </ul>
                     {/* <label htmlFor="my-drawer-2" className="drawer-overlay text-xl md:ms-12">Suites</label> */}
                     <ul className='menu ms-8 text-base'>
-                        <li><a>Suites</a></li>
+                        <li>Suites</li>
                         <li><a>InfoNexus One</a></li>
                         <li><a>Marketplace</a></li>
                         <li><a>Mobile Apps</a></li>
