@@ -9,7 +9,7 @@ const Footer = () => {
     <div>
       <footer className="bg-base-100 text-base-100">
         <div className="text-center mb-14 pt-12 px-2">
-          <h1 className="md:text-[44px] mb-1 md:mb-2 text-[25px]">Ready to do your best work?</h1>
+          <h1 className="md:text-[44px] mb-1 md:mb-2 text-[25px] text-base-content">Ready to do your best work?</h1>
           <p className="md:text-[32px] text-[20px] max-w-[720px] m-auto mb-[20px] text-base-content">
             Let us get you started.
           </p>
@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="join join-vertical w-full md:hidden">
           <div className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name="my-accordion-4" checked="checked" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-xl font-medium text-base-content">
               Apps and Extentions
             </div>
             <div className="collapse-content">
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-xl font-medium text-base-content">
               Learn
             </div>
             <div className="collapse-content">
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-xl font-medium text-base-content ">
               Community
             </div>
             <div className="collapse-content">
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-xl font-medium text-base-content">
               products
             </div>
             <div className="collapse-content">
@@ -85,7 +85,7 @@ const Footer = () => {
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-xl font-medium text-base-content">
               Company
             </div>
             <div className="collapse-content">
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-xl font-medium text-base-content">
               Security and Privacy
             </div>
             <div className="collapse-content">
