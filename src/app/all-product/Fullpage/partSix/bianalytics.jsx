@@ -20,7 +20,7 @@ const Bianalytics = async () => {
     console.log(Bianalytics);
     
     return (
-        <div className="container mx-auto p-8">
+        <div id="BI" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">BI & Analytics</div>
                 <div>Bring data to life with appealing visuals and insightful dashboards.</div>

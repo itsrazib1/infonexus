@@ -12,19 +12,20 @@ import Service from "./Fullpage/partSix/Service";
 import Bianalytics from "./Fullpage/partSix/bianalytics";
 import Developerplatform from "./Fullpage/partSix/developerplatform";
 import Hr from "./Fullpage/partSix/hr";
+import ProjectManagement from "./Fullpage/partSix/projectManagement";
 import SecurityITManagement from "./Fullpage/partSix/securityITManagement";
-import ProjectManagement from "./Fullpage/projectManagement";
 
 const page = () => {
+  
   return (
     <div>
       <PartOne></PartOne>
       <PartTwo></PartTwo>
       <div className="flex">
         <div className="md:block hidden sm:block">
-          <PartThree></PartThree>
+          <div className="top-5 sticky"><PartThree></PartThree></div>
         </div>
-        <div>
+        <div className="">
           <Sales />
           <Marketing />
           <Service />

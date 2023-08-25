@@ -20,7 +20,7 @@ const Legal = async () => {
     console.log(Legal);
     
     return (
-        <div className="container mx-auto p-8">
+        <div id="Legal" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">Legal</div>
                 <div>Streamline contract processes, mitigate risks, and improve your legal operations efficiency.</div>

@@ -20,7 +20,7 @@ const ProjectManagement = async () => {
     console.log(ProjectManagement);
     
     return (
-        <div className="container mx-auto p-8">
+        <div id="Project" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">Project Management</div>
                 <div>Choose a project management style that suits your business the best.</div>
