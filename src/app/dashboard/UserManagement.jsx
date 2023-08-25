@@ -1,9 +1,9 @@
 import React from 'react';
-import getUser from '../utils/getUser';
 import { FaUserGraduate } from 'react-icons/fa';
+import getusers from '../utils/getusers';
 
 const UserManagement = async () => {
-    const user = await getUser();
+    const user = await getusers();
     return (
         <div className='mt-16' id='userManagement'>
             <div>
