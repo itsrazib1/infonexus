@@ -36,7 +36,7 @@ const AllServices = async () => {
                                             width={45}
                                             height={45}
                                             className="rounded-full cursor-pointer me-2"
-                                            alt=""
+                                            alt={`${p?.name} Icon`}
                                         />
                                     </td>
                                     <td>{p?.name}</td>
