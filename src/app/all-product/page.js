@@ -5,9 +5,15 @@ import PartTwo from "./Fullpage/PartTwo/PartTwo";
 import PartOne from "./Fullpage/Partone/PartOne";
 import EmailCollaboration from "./Fullpage/partSix/EmailCollaboration";
 import Finance from "./Fullpage/partSix/Finance";
+import Legal from "./Fullpage/partSix/Legal";
 import Marketing from "./Fullpage/partSix/Marketing";
 import Sales from "./Fullpage/partSix/Sales";
 import Service from "./Fullpage/partSix/Service";
+import Bianalytics from "./Fullpage/partSix/bianalytics";
+import Developerplatform from "./Fullpage/partSix/developerplatform";
+import Hr from "./Fullpage/partSix/hr";
+import SecurityITManagement from "./Fullpage/partSix/securityITManagement";
+import ProjectManagement from "./Fullpage/projectManagement";
 
 const page = () => {
   return (
@@ -20,14 +26,20 @@ const page = () => {
         </div>
         <div>
           <Sales />
-          <Marketing/>
-          <Service/>
-          <Finance/>
-          <EmailCollaboration/>
+          <Marketing />
+          <Service />
+          <Finance />
+          <EmailCollaboration />
+          <Hr />
+          <Legal />
+          <SecurityITManagement />
+          <Bianalytics />
+          <ProjectManagement />
+          <Developerplatform />
+          <PartFour></PartFour>
+          <Partfive></Partfive>
         </div>
       </div>
-      <PartFour></PartFour>
-      <Partfive></Partfive>
     </div>
   );
 };
