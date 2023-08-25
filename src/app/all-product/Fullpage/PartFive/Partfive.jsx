@@ -7,7 +7,7 @@ import mobileImg from "../../../../../public/zh-mobileapp.png"
 const Partfive = () => {
   return (
     <div>
-    <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-y-9 bg-[#2E60B3] text-white py-16">
+    <div id="Mobile" className="mt-20 grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-y-9 bg-[#2E60B3] text-white py-16">
         <div className="text-center lg:text-left">
           <h1 className="mt-4 text-2xl font-semibold">Marketplace</h1>
           <p className="mt-4 lg:text-xl">
@@ -29,7 +29,7 @@ const Partfive = () => {
         </div>
       </div>
 
-      <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-y-9 md:py-16">
+      <div id="Browser" className="mt-20 grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-y-9 md:py-16">
         <div className="text-center lg:text-left">
           <h1 className="mt-4 text-2xl font-semibold">Marketplace</h1>
           <p className="mt-4 lg:text-xl">
