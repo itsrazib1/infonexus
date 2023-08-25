@@ -19,7 +19,7 @@ const Marketing = async () => {
     console.log(Marketing);
     
     return (
-        <div className="container mx-auto p-8">
+        <div id="Marketing" className="container  mx-auto p-8">
             <div>
                 <div className="text-3xl">Marketing</div>
                 <div>Engage with prospects using multi-channel marketing tools that help you personalize experiences at scale.</div>

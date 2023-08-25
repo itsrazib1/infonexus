@@ -20,7 +20,7 @@ const Developerplatform = async () => {
     console.log(Developerplatform);
     
     return (
-        <div className="container mx-auto p-8">
+        <div id="Developer" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">Developer Platforms</div>
                 <div>Automate business processes, manage custom workflows, and build apps with a choice of no, low, and pro-code tools.</div>

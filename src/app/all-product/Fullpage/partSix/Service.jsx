@@ -19,7 +19,7 @@ const Service = async () => {
     const Service = await getServices();
     console.log(Service);
     return (
-        <div className="container mx-auto p-8">
+        <div id="Service" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">Service</div>
                 <div>Empower your customer and field service teams to deliver happiness and win trust.</div>

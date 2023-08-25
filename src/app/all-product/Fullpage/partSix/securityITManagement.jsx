@@ -21,7 +21,7 @@ const SecurityITManagement = async () => {
     console.log(SecurityITManagement);
     
     return (
-        <div className="container mx-auto p-8">
+        <div id="Security" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">Security & IT Management</div>
                 <div>Manage IT assets using ready tools or create a custom application to suit your needs.</div>

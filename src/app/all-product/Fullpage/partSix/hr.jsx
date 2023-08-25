@@ -20,7 +20,7 @@ const Hr = async () => {
     console.log(Hr);
     
     return (
-        <div className="container mx-auto p-8">
+        <div id="HR" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">HR</div>
                 <div>Hire new employees, run training sessions, and manage all HR operations with ease.</div>
