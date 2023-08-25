@@ -21,10 +21,10 @@ const Sidebar = () => {
             <hr className='mt-10' />
             <div className='mt-14'>
                 <ul>
-                    <li className='mt-5 hover:bg-[#b1b8b1] hover:text-black w-40 mx-auto'><a href="#">Admin Home</a></li>
-                    <li className='mt-5 hover:bg-[#b1b8b1] hover:text-black w-40 mx-auto'><a href="#">User Management</a></li>
-                    <li className='mt-5 hover:bg-[#b1b8b1] hover:text-black w-40 mx-auto'><a href="#">All User</a></li>
-                    <li className='mt-5 hover:bg-[#b1b8b1] hover:text-black w-40 mx-auto'><a href="#">Service</a></li>
+                    <li className='mt-5 hover:bg-[#b1b8b1] hover:text-black w-40 mx-auto'><a href="#dashHome">Admin Home</a></li>
+                    <li className='mt-5 hover:bg-[#b1b8b1] hover:text-black w-40 mx-auto'><a href="#dashAllUser">All User</a></li>
+                    <li className='mt-5 hover:bg-[#b1b8b1] hover:text-black w-40 mx-auto'><a href="#dashAllService">Service</a></li>
+                    <li className='mt-5 hover:bg-[#b1b8b1] hover:text-black w-40 mx-auto'><a href="#userManagement">User Management</a></li>
                 </ul>
             </div>
         </div>
