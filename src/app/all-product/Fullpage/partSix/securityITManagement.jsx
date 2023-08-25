@@ -1,5 +1,6 @@
 
-import getServices from "@/app/utils/getServices";
+import getLegal from "@/app/utils/getLegal";
+import getsecurityITManagement from "@/app/utils/getsecurityITManagement";
 import Image from "next/image";
 
 
@@ -14,18 +15,19 @@ const UserCard = ({  name, discription, btn,image }) => (
         </div>
     </div>
 );
-const Service = async () => {
+const SecurityITManagement = async () => {
     
-    const Service = await getServices();
-    console.log(Service);
+    const SecurityITManagement = await getsecurityITManagement();
+    console.log(SecurityITManagement);
+    
     return (
-        <div id="Service" className="container mx-auto p-8">
+        <div id="Security" className="container mx-auto p-8">
             <div>
-                <div className="text-3xl">Service</div>
-                <div>Empower your customer and field service teams to deliver happiness and win trust.</div>
+                <div className="text-3xl">Security & IT Management</div>
+                <div>Manage IT assets using ready tools or create a custom application to suit your needs.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Service.map(({ id, name, discription, btn,image }) => (
+                {SecurityITManagement.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}
@@ -40,4 +42,4 @@ const Service = async () => {
     );
 };
 
-export default Service;
+export default SecurityITManagement;

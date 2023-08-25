@@ -1,5 +1,5 @@
 
-import getServices from "@/app/utils/getServices";
+import getprojectManagement from "@/app/utils/getprojectManagement";
 import Image from "next/image";
 
 
@@ -14,18 +14,19 @@ const UserCard = ({  name, discription, btn,image }) => (
         </div>
     </div>
 );
-const Service = async () => {
+const ProjectManagement = async () => {
     
-    const Service = await getServices();
-    console.log(Service);
+    const ProjectManagement = await getprojectManagement();
+    console.log(ProjectManagement);
+    
     return (
-        <div id="Service" className="container mx-auto p-8">
+        <div id="Project" className="container mx-auto p-8">
             <div>
-                <div className="text-3xl">Service</div>
-                <div>Empower your customer and field service teams to deliver happiness and win trust.</div>
+                <div className="text-3xl">Project Management</div>
+                <div>Choose a project management style that suits your business the best.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Service.map(({ id, name, discription, btn,image }) => (
+                {ProjectManagement.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}
@@ -40,4 +41,4 @@ const Service = async () => {
     );
 };
 
-export default Service;
+export default ProjectManagement;

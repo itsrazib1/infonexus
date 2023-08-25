@@ -1,5 +1,5 @@
 
-import getServices from "@/app/utils/getServices";
+import gethr from "@/app/utils/gethr";
 import Image from "next/image";
 
 
@@ -14,18 +14,19 @@ const UserCard = ({  name, discription, btn,image }) => (
         </div>
     </div>
 );
-const Service = async () => {
+const Hr = async () => {
     
-    const Service = await getServices();
-    console.log(Service);
+    const Hr = await gethr();
+    console.log(Hr);
+    
     return (
-        <div id="Service" className="container mx-auto p-8">
+        <div id="HR" className="container mx-auto p-8">
             <div>
-                <div className="text-3xl">Service</div>
-                <div>Empower your customer and field service teams to deliver happiness and win trust.</div>
+                <div className="text-3xl">HR</div>
+                <div>Hire new employees, run training sessions, and manage all HR operations with ease.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Service.map(({ id, name, discription, btn,image }) => (
+                {Hr.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}
@@ -40,4 +41,4 @@ const Service = async () => {
     );
 };
 
-export default Service;
+export default Hr;

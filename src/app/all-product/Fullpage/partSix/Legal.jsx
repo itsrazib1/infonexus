@@ -1,5 +1,5 @@
 
-import getServices from "@/app/utils/getServices";
+import getLegal from "@/app/utils/getLegal";
 import Image from "next/image";
 
 
@@ -14,18 +14,19 @@ const UserCard = ({  name, discription, btn,image }) => (
         </div>
     </div>
 );
-const Service = async () => {
+const Legal = async () => {
     
-    const Service = await getServices();
-    console.log(Service);
+    const Legal = await getLegal();
+    console.log(Legal);
+    
     return (
-        <div id="Service" className="container mx-auto p-8">
+        <div id="Legal" className="container mx-auto p-8">
             <div>
-                <div className="text-3xl">Service</div>
-                <div>Empower your customer and field service teams to deliver happiness and win trust.</div>
+                <div className="text-3xl">Legal</div>
+                <div>Streamline contract processes, mitigate risks, and improve your legal operations efficiency.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Service.map(({ id, name, discription, btn,image }) => (
+                {Legal.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}
@@ -40,4 +41,4 @@ const Service = async () => {
     );
 };
 
-export default Service;
+export default Legal;

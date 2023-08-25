@@ -19,7 +19,7 @@ const Sales = async () => {
 const sales = await getSales();
 console.log(sales);
     return (
-        <div className="container mx-auto p-8">
+        <div id="sales" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">Sales</div>
                 <div>Help your sales team be more productive with tools they love.</div>

@@ -1,5 +1,5 @@
 
-import getServices from "@/app/utils/getServices";
+import getbianalytics from "@/app/utils/getbianalytics";
 import Image from "next/image";
 
 
@@ -14,18 +14,19 @@ const UserCard = ({  name, discription, btn,image }) => (
         </div>
     </div>
 );
-const Service = async () => {
+const Bianalytics = async () => {
     
-    const Service = await getServices();
-    console.log(Service);
+    const Bianalytics = await getbianalytics();
+    console.log(Bianalytics);
+    
     return (
-        <div id="Service" className="container mx-auto p-8">
+        <div id="BI" className="container mx-auto p-8">
             <div>
-                <div className="text-3xl">Service</div>
-                <div>Empower your customer and field service teams to deliver happiness and win trust.</div>
+                <div className="text-3xl">BI & Analytics</div>
+                <div>Bring data to life with appealing visuals and insightful dashboards.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Service.map(({ id, name, discription, btn,image }) => (
+                {Bianalytics.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}
@@ -40,4 +41,4 @@ const Service = async () => {
     );
 };
 
-export default Service;
+export default Bianalytics;
