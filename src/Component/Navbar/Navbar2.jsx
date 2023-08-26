@@ -65,9 +65,7 @@ const NavbarTwo = () => {
                 </ul>
             ) : (
                 <div className="flex items-center gap-2">
-                    <p>
-                        <a href="/dashboard">Dashboard</a>
-                    </p>
+
                     <p>
                         <div
                             className="relative"
@@ -83,12 +81,32 @@ const NavbarTwo = () => {
                             />
 
                             {isHovered && (
-                                <p
-                                    className="absolute bottom-0 top-10 text-black btn btn-xs md:btn-sm cursor-pointer text-xs px-2 py-1 bg-red-600"
-                                    onClick={handleSignOut}
-                                >
-                                    <span className="text-xs ">Logout</span>
-                                </p>
+                                <>
+                                    <div class="absolute px-4 pt-1 top-0 -left-20 bg-white border-black border -ms-10 max-w-xs  shadow-lg">
+                                        <div className="flex gap-4 p-2">
+                                            <div><Image width={40} height={40}
+                                                src={user.photoURL} alt="user"></Image></div>
+                                            <div className="text-xs font-semibold">{user.displayName}</div>
+                                        </div>
+
+                                        <div class="    flex flex-row ">
+                                            <h2 ><p
+                                                className=" md:btn-sm text-blue-500 cursor-pointer text-xs px-2 py-1 ">
+                                                <a href="/dashboard">Dashboard</a>
+                                            </p></h2>
+                                            <h2>
+                                                <p
+                                                    className=" bottom-0  font-bold text-red-500   cursor-pointer text-xs px-2 py-1 "
+                                                    onClick={handleSignOut}
+                                                >
+                                                    <span className="text-xs ">Logout</span>
+                                                </p>
+                                            </h2>
+                                        </div>
+                                    </div>
+
+                                </>
+
                             )}
                         </div>
                     </p>
