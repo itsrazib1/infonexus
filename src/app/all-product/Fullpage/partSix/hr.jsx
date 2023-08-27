@@ -1,8 +1,10 @@
 
-import { UserData } from "@/app/data/Sales";
+import gethr from "@/app/utils/gethr";
 import Image from "next/image";
 
-const UserCard = ({ name, discription, btn, image }) => (
+
+
+const UserCard = ({  name, discription, btn,image }) => (
     <div className="md:w-1/3 sm:w-full p-4 ">
         <div className="bg-white rounded-lg shadow-lg h-48 p-4">
             <Image width={100} height={100} src={image} alt="Image" className='h-10 border  w-10  ' />
@@ -12,16 +14,19 @@ const UserCard = ({ name, discription, btn, image }) => (
         </div>
     </div>
 );
-
-const PartSix = () => {
+const Hr = async () => {
+    
+    const Hr = await gethr();
+    console.log(Hr);
+    
     return (
-        <div className="container mx-auto p-8">
+        <div id="HR" className="container mx-auto p-8">
             <div>
-                <div className="text-3xl">Sales</div>
-                <div>Help your sales team be more productive with tools they love.</div>
+                <div className="text-3xl">HR</div>
+                <div>Hire new employees, run training sessions, and manage all HR operations with ease.</div>
             </div>
             <div className="flex flex-wrap ">
-                {UserData.map(({ id, name, discription, btn, image }) => (
+                {Hr.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}
@@ -36,4 +41,4 @@ const PartSix = () => {
     );
 };
 
-export default PartSix;
+export default Hr;

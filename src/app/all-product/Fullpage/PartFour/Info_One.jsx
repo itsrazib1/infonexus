@@ -9,7 +9,7 @@ import Mark2 from '../../../../../public/marketplace3.png'
 const Info_One = () => {
     return (
         <div>
-            <div className='mt-20 bg-[#fed600]'>
+            <div id='InfoNexus' className='mt-20 bg-[#fed600]'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center items-start gap-9 py-14 lg:py-28'>
                     <div className='lg:flex justify-center text-center lg:text-left'>
                         <div>
@@ -43,7 +43,7 @@ const Info_One = () => {
                     </div>
                 </div>
             </div>
-            <div className='mt-20 grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-y-9'>
+            <div id='Marketplace' className='mt-20 grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-y-9'>
                 <div className='text-center lg:text-left'>
                     <Image
                         src={Mark2}
