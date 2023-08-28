@@ -1,5 +1,5 @@
 
-import { ServiceData } from "@/app/data/Service";
+import getServices from "@/app/utils/getServices";
 import Image from "next/image";
 
 
@@ -16,14 +16,16 @@ const UserCard = ({  name, discription, btn,image }) => (
 );
 const Service = async () => {
     
+    const Service = await getServices();
+    console.log(Service);
     return (
-        <div className="container mx-auto p-8">
+        <div id="Service" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">Service</div>
                 <div>Empower your customer and field service teams to deliver happiness and win trust.</div>
             </div>
             <div className="flex flex-wrap ">
-                {ServiceData.map(({ id, name, discription, btn,image }) => (
+                {Service.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}

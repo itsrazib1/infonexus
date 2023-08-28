@@ -1,5 +1,5 @@
 
-import { FinanceData } from "@/app/data/Finance";
+import getFinances from "@/app/utils/getFinances";
 import Image from "next/image";
 
 
@@ -16,14 +16,16 @@ const UserCard = ({  name, discription, btn,image }) => (
 );
 const Finance = async () => {
     
+    const Finance = await getFinances();
+    console.log(Finance);
     return (
-        <div className="container mx-auto p-8">
+        <div id="Finance" className="container mx-auto p-8">
             <div>
                 <div className="text-3xl">Finance</div>
                 <div>Keep a tab on your expenses and manage your back office operations smoothly.</div>
             </div>
             <div className="flex flex-wrap ">
-                {FinanceData.map(({ id, name, discription, btn,image }) => (
+                {Finance.map(({ id, name, discription, btn,image }) => (
                     <UserCard
                         key={id}
                         id={id}

@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import { Link } from 'react-scroll';
 
 const PartThree = () => {
     return (
@@ -22,25 +23,25 @@ const PartThree = () => {
 
                     <ul className="menu md:ms-14 p-4 w-64 h-auto bg-base-100 text-base-content">
                         {/* Sidebar content here */}
-                        <li><a>sales</a></li>
-                        <li><a>Marketing</a></li>
-                        <li><a>Service</a></li>
-                        <li><a>Finance</a></li>
-                        <li><a>Email & Collaboration</a></li>
-                        <li><a>HR</a></li>
-                        <li><a>Legal</a></li>
-                        <li><a>Security & IT Management</a></li>
-                        <li><a>BI & Analytics</a></li>
-                        <li><a>Project Management</a></li>
-                        <li><a>Developer Platforms</a></li>
+                        <li><Link to="sales" smooth>Sales</Link></li>
+                        <li><Link to="Marketing" smooth>Marketing</Link></li>
+                        <li><Link to="Service" smooth>Service</Link></li>
+                        <li><Link to="Finance" smooth>Finance</Link></li>
+                        <li><Link to="Email" smooth>Email & Collaboration</Link></li>
+                        <li><Link to="HR" smooth>HR</Link></li>
+                        <li><Link to="Legal" smooth>Legal</Link></li>
+                        <li><Link to="Security" smooth>Security & IT Management</Link></li>
+                        <li><Link to="BI" smooth>BI & Analytics</Link></li>
+                        <li><Link to="Project" smooth>Project Management</Link></li>
+                        <li><Link to="Developer" smooth>Developer Platforms</Link></li>
                     </ul>
                     {/* <label htmlFor="my-drawer-2" className="drawer-overlay text-xl md:ms-12">Suites</label> */}
                     <ul className='menu ms-8 text-base'>
                         <li>Suites</li>
-                        <li><a>InfoNexus One</a></li>
-                        <li><a>Marketplace</a></li>
-                        <li><a>Mobile Apps</a></li>
-                        <li><a>Browser Extensions</a></li>
+                        <li><Link to="InfoNexus" smooth>InfoNexus One</Link></li>
+                        <li><Link to="Marketplace" smooth>Marketplace</Link></li>
+                        <li><Link to="Mobile" smooth>Mobile Apps</Link></li>
+                        <li><Link to="Browser" smooth>Browser Extensions</Link></li>
                     </ul>
 
 

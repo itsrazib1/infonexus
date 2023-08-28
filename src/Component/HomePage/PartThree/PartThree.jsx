@@ -70,7 +70,7 @@ const PartThree = () => {
                                     <div className='bg-blue-700 pr-4 '><Image
                                         src={arrow}
                                         alt="Image"
-                                        className=' h-5 w-5 pt-[14px] hover:translate-x-[8px] transition-transform duration-1000'
+                                        className=' h-8 w-5 pt-[14px] hover:translate-x-[8px] transition-transform duration-1000'
                                     /> </div>
                                 </div>
                             </div>
