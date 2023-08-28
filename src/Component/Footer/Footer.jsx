@@ -168,10 +168,10 @@ const Footer = () => {
             </span>
           </div>
           <div className="text-center text-sm md:block hidden text-base-content">
-            <span className="border-e pl-2 border-gray-400">InfoNexus Home  </span>
-            <span className="border-e pl-2 border-gray-400"> Contact Us  </span>
-            <span className="border-e pl-2 border-gray-400">Security  </span>
-            <span className="border-e pl-2 border-gray-400">IPR Complaints  </span>
+            <span className="border-e pl-2 border-gray-400"><a href="/">InfoNexus Home</a>   </span>
+            <span className="border-e pl-2 border-gray-400"> <a href="/link#Contact">Contact Us</a>   </span>
+            <span className="border-e pl-2 border-gray-400"><a href="/link#Security">Security</a>   </span>
+            <span className="border-e pl-2 border-gray-400"><a href="/link#Complaints">IPR Complaints</a>   </span>
             <span className="border-e pl-2 border-gray-400">Anti-spam Policy  </span>
             <span className="border-e pl-2 border-gray-400">Terms of Service  </span>
             <span className="pl-2">Privacy Policy</span>

@@ -9,3 +9,8 @@ export async function GET() {
     console.log(data)
     return NextResponse.json(data)
 }
+
+// export async function post(req) {
+//     const serviceData = await req.Json()
+
+// }

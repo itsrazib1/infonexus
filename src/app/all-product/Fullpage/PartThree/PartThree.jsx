@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import { Link } from 'react-scroll';
 
 const PartThree = () => {
     return (
@@ -22,25 +23,25 @@ const PartThree = () => {
 
                     <ul className="menu md:ms-14 p-4 w-64 h-auto bg-base-100 text-base-content">
                         {/* Sidebar content here */}
-                        <li><a href='#sales' >sales</a></li>
-                        <li><a href='#Marketing'>Marketing</a></li>
-                        <li><a href='#Service'>Service</a></li>
-                        <li><a href='#Finance'>Finance</a></li>
-                        <li><a href='#Email'>Email & Collaboration</a></li>
-                        <li><a href='#HR'>HR</a></li>
-                        <li><a href='#Legal'>Legal</a></li>
-                        <li><a href='#Security'>Security & IT Management</a></li>
-                        <li><a href='#BI'>BI & Analytics</a></li>
-                        <li><a href='#Project'>Project Management</a></li>
-                        <li><a href='#Developer'>Developer Platforms</a></li>
+                        <li><Link to="sales" smooth>Sales</Link></li>
+                        <li><Link to="Marketing" smooth>Marketing</Link></li>
+                        <li><Link to="Service" smooth>Service</Link></li>
+                        <li><Link to="Finance" smooth>Finance</Link></li>
+                        <li><Link to="Email" smooth>Email & Collaboration</Link></li>
+                        <li><Link to="HR" smooth>HR</Link></li>
+                        <li><Link to="Legal" smooth>Legal</Link></li>
+                        <li><Link to="Security" smooth>Security & IT Management</Link></li>
+                        <li><Link to="BI" smooth>BI & Analytics</Link></li>
+                        <li><Link to="Project" smooth>Project Management</Link></li>
+                        <li><Link to="Developer" smooth>Developer Platforms</Link></li>
                     </ul>
                     {/* <label htmlFor="my-drawer-2" className="drawer-overlay text-xl md:ms-12">Suites</label> */}
                     <ul className='menu ms-8 text-base'>
                         <li>Suites</li>
-                        <li><a href='#InfoNexus'>InfoNexus One</a></li>
-                        <li><a href='#Marketplace'>Marketplace</a></li>
-                        <li><a href='#Mobile'>Mobile Apps</a></li>
-                        <li><a href='#Browser'>Browser Extensions</a></li>
+                        <li><Link to="InfoNexus" smooth>InfoNexus One</Link></li>
+                        <li><Link to="Marketplace" smooth>Marketplace</Link></li>
+                        <li><Link to="Mobile" smooth>Mobile Apps</Link></li>
+                        <li><Link to="Browser" smooth>Browser Extensions</Link></li>
                     </ul>
 
 

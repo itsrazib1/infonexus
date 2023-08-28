@@ -7,9 +7,9 @@ const AllUser = async () => {
     return (
         <div id='dashAllUser'>
             <div className='mt-28'>
-                <hr className='w-80 mx-auto mt-5 mb-5' />
+                <hr className='sm:w-[70%] md:w-80 mx-auto mt-5 mb-5' />
                 <p className='text-[#c75633] font-serif font-bold text-3xl'>All User: {user?.length} !!!</p>
-                <hr className='w-80 mx-auto mt-5' />
+                <hr className='sm:w-[70%] md:w-80 mx-auto mt-5' />
             </div>
             <div className='w-5/6 mx-auto mt-20'>
                 <div className="overflow-x-auto">
