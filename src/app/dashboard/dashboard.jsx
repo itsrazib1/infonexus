@@ -7,7 +7,7 @@ import UserManagement from './UserManagement';
 const Dashboard = () => {
     return (
         <div>
-            <div>
+            <div className='w-[70%]' >
                 <DashBoardHome />
             </div>
             <div>
