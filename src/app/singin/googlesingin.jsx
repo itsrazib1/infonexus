@@ -13,7 +13,7 @@ const Googlelogin = () => {
     const handleSignIn = async () => {
         try {
             await googleSignIn();
-            router.push("/all-product")
+                router.push("/all-product")
         } catch (error) {
             console.log(error);
         }

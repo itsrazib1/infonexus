@@ -24,6 +24,21 @@ const NavbarTwo = () => {
     }, []);
     const handleSignOut = async () => {
         try {
+            const userData = {
+                name: user.displayName,
+                email: user.email,
+                photo: user.photoURL,
+            };
+            console.log(userData)
+
+            await fetch('http://localhost:3000/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData),
+            });
+
             await logOut();
         } catch (error) {
             console.log(error);
@@ -45,7 +60,7 @@ const NavbarTwo = () => {
         };
         checkAuthentication();
     }, [user]);
-    console.log(user)
+    // console.log(user)
     return (
         <div className=" ">
 
