@@ -40,11 +40,11 @@ const DashBoardHome = () => {
 
 
     return (
-        <div className='mt-6' id='dashHome'>
-            <div>
-                <hr className='w-80 mx-auto mt-5 mb-5' />
+        <div className='mt-6 hidden md:block' id='dashHome'>
+            <div className=''>
+                <hr className='w-[90%] mx-auto mt-5 mb-5' />
                 <p className='text-[#e4da4b] font-serif font-bold text-4xl'><span className='text-[#df3737]'>{user?.displayName}</span> Dashboard !!!</p>
-                <hr className='w-80 mx-auto mt-5' />
+                <hr className='w-[90%] mx-auto mt-5' />
             </div>
             <div className='ms-36 mt-28'>
                 <AreaChart width={730} height={250} data={data}
