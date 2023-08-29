@@ -1,5 +1,5 @@
 export const getusers = async () => {
-    const url = "http://localhost:3000/api/users";
+    const url = "/api/users";
     try {
         const res = await fetch(url);
         const data = await res.json();
