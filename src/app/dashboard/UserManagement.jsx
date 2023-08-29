@@ -1,15 +1,30 @@
-import React from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import { FaUserGraduate } from 'react-icons/fa';
-import getusers from '../utils/getusers';
+import { getusers } from '../utils/getusers';
 
-const UserManagement = async () => {
-    const user = await getusers();
+const UserManagement = () => {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const userData = await getusers();
+                console.log("User data in component:", userData); 
+                setUsers(userData);
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
     return (
         <div className='mt-16' id='userManagement'>
             <div>
-                <hr className='w-80 mx-auto mt-5 mb-5' />
-                <p className='text-[#c75633] font-serif font-bold text-3xl'>User Management {user?.length} !!!</p>
-                <hr className='w-80 mx-auto mt-5' />
+                <hr className='w-full mx-auto mt-5 mb-5' />
+                <p className='text-[#c75633] font-serif font-bold text-3xl'>User Management {users?.length} !!!</p>
+                <hr className='w-full mx-auto mt-5' />
             </div>
             <div className='w-5/6 mx-auto mt-20'>
                 <div className="overflow-x-auto">
@@ -27,7 +42,7 @@ const UserManagement = async () => {
                         <tbody>
                             {/* row 1 */}
                             {
-                                user?.map((p, index) => <tr key={p._id}>
+                                users?.map((p, index) => <tr key={p._id}>
                                     <th>{index + 1}</th>
                                     <td>{p?.name}</td>
                                     <td>{p?.email}</td>
