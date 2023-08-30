@@ -1,4 +1,3 @@
-
 "use client"
 import React from 'react';
 import { UserAuth } from '../Context/AuthContext';
@@ -11,7 +10,7 @@ const LoginPage2 = () => {
     const {  googleSignIn, gitHubSignIn , FbSignIn } = UserAuth();
   const handleSignIn = async () => {
     try {
-        await googleSignIn();
+       await googleSignIn();
     } catch (error) {
         console.log(error);
     }
