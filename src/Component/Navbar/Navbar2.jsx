@@ -29,9 +29,9 @@ const NavbarTwo = () => {
                 email: user.email,
                 photo: user.photoURL,
             };
-            console.log(userData)
+            // console.log(userData)
 
-            await fetch('http://localhost:3000/api/users', {
+            await fetch('/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const NavbarTwo = () => {
 
             await logOut();
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
 

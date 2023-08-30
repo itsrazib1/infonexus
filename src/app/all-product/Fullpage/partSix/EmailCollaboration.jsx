@@ -17,7 +17,7 @@ const UserCard = ({  name, discription, btn,image }) => (
 const EmailCollaboration = async () => {
     
     const EmailCollaboration = await getEmailCollaboration();
-    console.log(EmailCollaboration);
+    // console.log(EmailCollaboration);
     
     return (
         <div id="Email" className="container mx-auto p-8">

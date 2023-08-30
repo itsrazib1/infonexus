@@ -24,7 +24,7 @@ const AllServices = async () => {
     const bianalytics = await getbianalytics();
     const projectManagement = await getprojectManagement();
     const developerplatform = await getdeveloperplatform();
-    console.log(service);
+    // console.log(service);
     return (
         <>
         <div id='Sales'>

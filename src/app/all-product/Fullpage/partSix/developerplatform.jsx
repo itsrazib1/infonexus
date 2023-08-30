@@ -17,7 +17,7 @@ const UserCard = ({  name, description, btn,image }) => (
 const Developerplatform = async () => {
     
     const Developerplatform = await getdeveloperplatform();
-    console.log(Developerplatform);
+    // console.log(Developerplatform);
     
     return (
         <div id="Developer" className="container mx-auto p-8">

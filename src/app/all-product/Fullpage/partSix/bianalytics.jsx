@@ -17,7 +17,7 @@ const UserCard = ({  name, description, btn,image }) => (
 const Bianalytics = async () => {
     
     const Bianalytics = await getbianalytics();
-    console.log(Bianalytics);
+    // console.log(Bianalytics);
     
     return (
         <div id="BI" className="container mx-auto p-8">
