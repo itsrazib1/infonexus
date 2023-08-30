@@ -16,7 +16,7 @@ const UserCard = ({ name, discription, btn, image }) => (
 );
 const Marketing = async () => {
     const Marketing = await getMarketings();
-    console.log(Marketing);
+    // console.log(Marketing);
     
     return (
         <div id="Marketing" className="container  mx-auto p-8">

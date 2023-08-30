@@ -17,7 +17,7 @@ const UserCard = ({  name, description, btn,image }) => (
 const Legal = async () => {
     
     const Legal = await getLegal();
-    console.log(Legal);
+    // console.log(Legal);
     
     return (
         <div id="Legal" className="container mx-auto p-8">

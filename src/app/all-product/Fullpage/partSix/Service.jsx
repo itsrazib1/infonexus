@@ -17,7 +17,7 @@ const UserCard = ({  name, discription, btn,image }) => (
 const Service = async () => {
     
     const Service = await getServices();
-    console.log(Service);
+    // console.log(Service);
     return (
         <div id="Service" className="container mx-auto p-8">
             <div>

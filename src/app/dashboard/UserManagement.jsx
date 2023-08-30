@@ -10,7 +10,7 @@ const UserManagement = () => {
         const fetchData = async () => {
             try {
                 const userData = await getusers();
-                console.log("User data in component:", userData); 
+                // console.log("User data in component:", userData); 
                 setUsers(userData);
             } catch (error) {
                 console.error("Error fetching user data:", error);

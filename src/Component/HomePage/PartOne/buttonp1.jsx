@@ -6,7 +6,7 @@ import React from 'react';
 
 const Buttonp1 = () => {
     const {user} = UserAuth();
-    console.log(user)
+    // console.log(user)
     return (
         <div>
             {  !user ? (<Link href='/all-product'>
