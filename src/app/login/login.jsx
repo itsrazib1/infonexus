@@ -12,21 +12,21 @@ const LoginPage2 = () => {
     try {
        await googleSignIn();
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 };
   const handelFbSignIn = async () => {
     try {
         await FbSignIn();
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 };
 const handleGitSignIn = async () => {
     try {
         await gitHubSignIn();
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 };
     return (

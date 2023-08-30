@@ -17,7 +17,7 @@ const UserCard = ({  name, description, btn,image }) => (
 const ProjectManagement = async () => {
     
     const ProjectManagement = await getprojectManagement();
-    console.log(ProjectManagement);
+    // console.log(ProjectManagement);
     
     return (
         <div id="Project" className="container mx-auto p-8">

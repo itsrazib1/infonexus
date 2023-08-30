@@ -15,7 +15,7 @@ const SinginForm = () => {
         try {
             await googleSignIn();
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
     const handleAgreeChange = () => {

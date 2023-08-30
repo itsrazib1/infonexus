@@ -17,7 +17,7 @@ const UserCard = ({  name, description, btn,image }) => (
 const SecurityITManagement = async () => {
     
     const SecurityITManagement = await getsecurityITManagement();
-    console.log(SecurityITManagement);
+    // console.log(SecurityITManagement);
     
     return (
         <div id="Security" className="container mx-auto p-8">
