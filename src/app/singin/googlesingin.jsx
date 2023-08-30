@@ -11,20 +11,6 @@ const Googlelogin = () => {
     const handleSignIn = async () => {
         try {
             await googleSignIn();
-            const userData = {
-                name: user.displayName,
-                email: user.email,
-                photo: user.photoURL,
-            };
-            console.log(userData)
-
-            await fetch('http://localhost:3000/api/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(userData),
-            });
         } catch (error) {
             console.log(error);
         }

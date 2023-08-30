@@ -10,19 +10,7 @@ const LoginPage2 = () => {
     const {  googleSignIn, gitHubSignIn , FbSignIn } = UserAuth();
   const handleSignIn = async () => {
     try {
-      const user = await googleSignIn();
-      const userData = {
-          name: user.displayName,
-          email: user.email,
-          photo: user.photoURL,
-      };
-      await fetch('http://localhost:3000/api/users', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(userData),
-      });
+       await googleSignIn();
     } catch (error) {
         console.log(error);
     }

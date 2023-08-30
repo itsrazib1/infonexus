@@ -1,10 +1,10 @@
 'use client'
 import Image from 'next/image';
 import { Link } from 'react-scroll';
-import { getusers } from '../utils/getusers';
+import { UserAuth } from '../Context/AuthContext';
 
 const Sidebar = () => {
-    const { user } = getusers();
+    const { user } = UserAuth();
     return (
         <div>
             <div className='flex justify-center items-center  mt-5'>
