@@ -32,7 +32,7 @@ const Sidebar = () => {
             <div className='mx-0'>
                 <ul className='grid md:grid-cols-2 sm:grid-cols-1 text-center md:text-base sm:text-xs md:px-0 sm:px-0 mr-2'>
                     
-                    {loading ? null : !isAdmin ?(
+                    {loading ? null : isAdmin ?(
                         <>
                             <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="dashHome" smooth>Admin Home</Link></li>
                             <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><a href="/" >Home</a></li>

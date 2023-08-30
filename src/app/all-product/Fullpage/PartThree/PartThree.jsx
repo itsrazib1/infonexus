@@ -1,4 +1,5 @@
-import Link from "next/link";
+'use client'
+import { Link } from 'react-scroll';
 
 const PartThree = () => {
     return (
