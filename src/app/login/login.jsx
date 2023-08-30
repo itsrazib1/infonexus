@@ -1,4 +1,3 @@
-
 "use client"
 import React from 'react';
 import { UserAuth } from '../Context/AuthContext';
@@ -11,7 +10,19 @@ const LoginPage2 = () => {
     const {  googleSignIn, gitHubSignIn , FbSignIn } = UserAuth();
   const handleSignIn = async () => {
     try {
-        await googleSignIn();
+      const user = await googleSignIn();
+      const userData = {
+          name: user.displayName,
+          email: user.email,
+          photo: user.photoURL,
+      };
+      await fetch('http://localhost:3000/api/users', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
+      });
     } catch (error) {
         console.log(error);
     }

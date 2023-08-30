@@ -6,12 +6,25 @@ import Image2 from "../../../public/gitgub.png";
 import Image3 from "../../../public/Facebookl.png";
 
 const Googlelogin = () => {
-    const { user, googleSignIn, gitHubSignIn ,FbSignIn } = UserAuth();
+    const { user, googleSignIn, gitHubSignIn, FbSignIn } = UserAuth();
     const [loading, setLoading] = useState(true);
     const handleSignIn = async () => {
         try {
             await googleSignIn();
-            
+            const userData = {
+                name: user.displayName,
+                email: user.email,
+                photo: user.photoURL,
+            };
+            console.log(userData)
+
+            await fetch('http://localhost:3000/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData),
+            });
         } catch (error) {
             console.log(error);
         }
@@ -19,7 +32,7 @@ const Googlelogin = () => {
     const handelFbSignIn = async () => {
         try {
             await FbSignIn();
-            
+
         } catch (error) {
             console.log(error);
         }
@@ -27,13 +40,13 @@ const Googlelogin = () => {
     const handleGitSignIn = async () => {
         try {
             await gitHubSignIn();
-            
+
         } catch (error) {
             console.log(error);
         }
     };
 
-    
+
 
     useEffect(() => {
         const checkAuthentication = async () => {
