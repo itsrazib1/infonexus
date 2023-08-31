@@ -5,7 +5,7 @@ import UserCard from "./UserCard/UserCard";
 import getdeveloperplatform from "@/app/utils/getdeveloperplatform";
 
 const Developerplatform = async () => {
-    
+
     const Developerplatform = await getdeveloperplatform();
 
     return (
@@ -15,7 +15,7 @@ const Developerplatform = async () => {
                 <div>Automate business processes, manage custom workflows, and build apps with a choice of no, low, and pro-code tools.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Developerplatform.map(({ _id, name, description, btn,image }) => (
+                {Developerplatform.map(({ _id, name, description, btn, image }) => (
                     <UserCard
                         key={_id}
                         id={_id}

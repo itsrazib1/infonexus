@@ -8,8 +8,8 @@ import getSales from "@/app/utils/getsales";
 
 
 const Sales = async () => {
-    
-const sales = await getSales();
+
+    const sales = await getSales();
 
     return (
         <div id="sales" className="container mx-auto p-8">
@@ -18,7 +18,7 @@ const sales = await getSales();
                 <div>Help your sales team be more productive with tools they love.</div>
             </div>
             <div className="flex flex-wrap ">
-                {sales.map(({ _id, name, description, btn,image }) => (
+                {sales.map(({ _id, name, description, btn, image }) => (
                     <UserCard
                         key={_id}
                         id={_id}
