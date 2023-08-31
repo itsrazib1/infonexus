@@ -10,7 +10,4 @@ export async function GET() {
     return NextResponse.json(data)
 }
 
-// export async function post(req) {
-//     const serviceData = await req.Json()
 
-// }

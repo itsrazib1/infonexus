@@ -4,7 +4,7 @@ import Image from "next/image";
 
 
 
-const UserCard = ({  name, description, btn,image }) => (
+const UserCard = ({ name, description, btn, image }) => (
     <div className="md:w-1/3 sm:w-full p-4 ">
         <div className="bg-white rounded-lg shadow-lg h-48 p-4">
             <Image width={100} height={100} src={image} alt="Image" className='h-10 border  w-10  ' />
@@ -15,10 +15,10 @@ const UserCard = ({  name, description, btn,image }) => (
     </div>
 );
 const Legal = async () => {
-    
+
     const Legal = await getLegal();
-    console.log(Legal);
-    
+    // console.log(Legal);
+
     return (
         <div id="Legal" className="container mx-auto p-8">
             <div>
@@ -26,7 +26,7 @@ const Legal = async () => {
                 <div>Streamline contract processes, mitigate risks, and improve your legal operations efficiency.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Legal.map(({ id, name, description, btn,image }) => (
+                {Legal.map(({ id, name, description, btn, image }) => (
                     <UserCard
                         key={id}
                         id={id}
