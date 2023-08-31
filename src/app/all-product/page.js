@@ -17,7 +17,7 @@ import ProjectManagement from "./Fullpage/partSix/projectManagement";
 import SecurityITManagement from "./Fullpage/partSix/securityITManagement";
 
 const page = () => {
-  
+
   return (
     <div>
       <PartOne></PartOne>

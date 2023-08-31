@@ -13,7 +13,7 @@ const DynamicButton = ({ name, image, description, id }) => {
     const email = user.email
     const cartItem = { name, image, description, id, email };
     console.log(cartItem)
-    fetch("http//localhost:3000/api/trynow", {
+    fetch("http://localhost:3000/api/trynow", {
       method: "POST",
       headers: {
         'content-type': 'application/json'

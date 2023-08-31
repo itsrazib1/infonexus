@@ -6,7 +6,7 @@ import getFinances from "@/app/utils/getFinances";
 
 
 const Finance = async () => {
-    
+
     const Finance = await getFinances();
 
     return (
@@ -16,7 +16,7 @@ const Finance = async () => {
                 <div>Keep a tab on your expenses and manage your back office operations smoothly.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Finance.map(({ _id, name, description, btn,image }) => (
+                {Finance.map(({ _id, name, description, btn, image }) => (
                     <UserCard
                         key={_id}
                         id={_id}
