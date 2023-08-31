@@ -10,7 +10,7 @@ import gethr from "@/app/utils/gethr";
 const Hr = async () => {
     
     const Hr = await gethr();
-    
+  
     return (
         <div id="HR" className="container mx-auto p-8">
             <div>

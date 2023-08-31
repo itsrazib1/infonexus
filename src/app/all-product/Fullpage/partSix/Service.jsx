@@ -10,6 +10,7 @@ import getServices from "@/app/utils/getServices";
 const Service = async () => {
     
     const Service = await getServices();
+    
     return (
         <div id="Service" className="container mx-auto p-8">
             <div>

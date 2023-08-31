@@ -1,13 +1,17 @@
 "use client"
 
+import { UserAuth } from "@/app/Context/AuthContext";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
 
 const DynamicButton = ({ name, image, description, id }) => {
+  const {user} = UserAuth()
+  // console.log(user, "user Data")
     const [clicked, setClicked] = useState(false);  
   const handelAddToCart = () => {
-    const cartItem = { name, image, description, id };
+    const email = user.email
+    const cartItem = { name, image, description, id, email };
     console.log(cartItem)
     fetch("http//localhost:3000/api/trynow", {
       method: "POST",

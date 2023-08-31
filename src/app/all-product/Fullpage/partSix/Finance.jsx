@@ -8,6 +8,7 @@ import getFinances from "@/app/utils/getFinances";
 const Finance = async () => {
     
     const Finance = await getFinances();
+
     return (
         <div id="Finance" className="container mx-auto p-8">
             <div>

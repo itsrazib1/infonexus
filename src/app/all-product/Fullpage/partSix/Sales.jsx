@@ -10,6 +10,7 @@ import getSales from "@/app/utils/getsales";
 const Sales = async () => {
     
 const sales = await getSales();
+
     return (
         <div id="sales" className="container mx-auto p-8">
             <div>

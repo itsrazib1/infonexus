@@ -8,7 +8,7 @@ import getMarketings from "@/app/utils/getMarketings";
 
 const Marketing = async () => {
     const Marketing = await getMarketings();
-    
+   
     return (
         <div id="Marketing" className="container  mx-auto p-8">
             <div>

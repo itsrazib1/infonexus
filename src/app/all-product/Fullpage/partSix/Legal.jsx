@@ -9,8 +9,7 @@ import gethr from "@/app/utils/gethr";
 const Legal = async () => {
     
     const Legal = await getLegal();
-    // const Legal = await gethr();
-    
+   
     return (
         <div id="Legal" className="container mx-auto p-8">
             <div>

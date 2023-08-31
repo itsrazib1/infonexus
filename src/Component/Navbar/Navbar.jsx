@@ -57,7 +57,7 @@ const Navbar = () => {
                            <Link href="#">Products</Link>
                            <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" />
                         </li>
-                        <li>Customers</li>
+                        <li><a href="/customer">Customers</a></li>
                         <li className="flex items-center space-x-1">
                            <Link href="#">Company</Link>
                            <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" />

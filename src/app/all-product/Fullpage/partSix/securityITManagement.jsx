@@ -9,7 +9,7 @@ import getsecurityITManagement from "@/app/utils/getsecurityITManagement";
 const SecurityITManagement = async () => {
     
     const SecurityITManagement = await getsecurityITManagement();
-    
+  
     return (
         <div id="Security" className="container mx-auto p-8">
             <div>

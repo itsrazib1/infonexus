@@ -6,34 +6,33 @@ import Image2 from "../../../public/gitgub.png";
 import Image3 from "../../../public/Facebookl.png";
 
 const Googlelogin = () => {
-    const { user, googleSignIn, gitHubSignIn ,FbSignIn } = UserAuth();
+    const { user, googleSignIn, gitHubSignIn, FbSignIn } = UserAuth();
     const [loading, setLoading] = useState(true);
     const handleSignIn = async () => {
         try {
             await googleSignIn();
-            
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
     const handelFbSignIn = async () => {
         try {
             await FbSignIn();
-            
+
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
     const handleGitSignIn = async () => {
         try {
             await gitHubSignIn();
-            
+
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
 
-    
+
 
     useEffect(() => {
         const checkAuthentication = async () => {

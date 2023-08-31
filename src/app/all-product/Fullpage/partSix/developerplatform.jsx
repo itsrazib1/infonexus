@@ -7,7 +7,7 @@ import getdeveloperplatform from "@/app/utils/getdeveloperplatform";
 const Developerplatform = async () => {
     
     const Developerplatform = await getdeveloperplatform();
-    
+
     return (
         <div id="Developer" className="container mx-auto p-8">
             <div>

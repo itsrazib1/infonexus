@@ -8,7 +8,6 @@ import getbianalytics from "@/app/utils/getbianalytics";
 const Bianalytics = async () => {
     
     const Bianalytics = await getbianalytics();
-
     
     return (
         <div id="BI" className="container mx-auto p-8">

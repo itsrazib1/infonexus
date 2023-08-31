@@ -8,7 +8,7 @@ import getprojectManagement from "@/app/utils/getprojectManagement";
 const ProjectManagement = async () => {
     
     const ProjectManagement = await getprojectManagement();
-    
+ 
     return (
         <div id="Project" className="container mx-auto p-8">
             <div>
