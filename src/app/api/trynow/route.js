@@ -20,9 +20,9 @@ export async function POST(req) {
         await mongoose.connect(uri);
 
         const existingUser = await tryNow.findOne({ email: userLode.email });
-        const existingUserName = await tryNow.findOne({ name: userLode.name });
+        // const existingUserName = await tryNow.findOne({ name: userLode.name });
 
-        if (existingUser || existingUserName) {
+        if (existingUser) {
             console.log('User already exists:', existingUser);
             return NextResponse.json({ message: 'User already exists' }, { status: 400 });
         }

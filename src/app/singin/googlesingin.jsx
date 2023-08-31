@@ -6,34 +6,33 @@ import Image2 from "../../../public/gitgub.png";
 import Image3 from "../../../public/Facebookl.png";
 
 const Googlelogin = () => {
-    const { user, googleSignIn, gitHubSignIn ,FbSignIn } = UserAuth();
+    const { user, googleSignIn, gitHubSignIn, FbSignIn } = UserAuth();
     const [loading, setLoading] = useState(true);
     const handleSignIn = async () => {
         try {
             await googleSignIn();
-            
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
     const handelFbSignIn = async () => {
         try {
             await FbSignIn();
-            
+
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
     const handleGitSignIn = async () => {
         try {
             await gitHubSignIn();
-            
+
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
 
-    
+
 
     useEffect(() => {
         const checkAuthentication = async () => {
@@ -49,7 +48,7 @@ const Googlelogin = () => {
 
             {loading ? null : !user ? (
                 <ul className="flex gap-5">
-                    <li onClick={handleSignIn} ><Image
+                    <li onClick={()=>handleSignIn(user)} ><Image
                         src={Image1}
                         alt="Image"
                         className="border rounded-md border-blue-500 h-12 w-20 px-4 py-2 bg-white"
