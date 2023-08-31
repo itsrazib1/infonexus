@@ -1,7 +1,7 @@
 
 
 const getusers = async() => {
-    const url = "https://infonexus.netlify.app/api/users"
+    const url = "http://localhost:3000/api/users"
     const res = await fetch (url);
     return res.json();
 };

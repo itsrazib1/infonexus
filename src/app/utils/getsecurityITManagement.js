@@ -1,7 +1,7 @@
 
 
 const getsecurityITManagement = async() => {
-    const url = "https://infonexus.netlify.app/api/securityITManagement"
+    const url = "http://localhost:3000/api/securityITManagement"
     const res = await fetch (url);
     return res.json();
 };

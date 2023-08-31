@@ -1,7 +1,7 @@
 
 
 const getMarketings = async() => {
-    const url = "https://infonexus.netlify.app/api/marketings"
+    const url = "http://localhost:3000/api/marketings"
     const res = await fetch (url);
     return res.json();
 };
