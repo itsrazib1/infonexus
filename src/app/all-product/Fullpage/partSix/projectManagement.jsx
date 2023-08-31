@@ -6,9 +6,9 @@ import getprojectManagement from "@/app/utils/getprojectManagement";
 
 
 const ProjectManagement = async () => {
-    
+
     const ProjectManagement = await getprojectManagement();
- 
+
     return (
         <div id="Project" className="container mx-auto p-8">
             <div>
@@ -16,7 +16,7 @@ const ProjectManagement = async () => {
                 <div>Choose a project management style that suits your business the best.</div>
             </div>
             <div className="flex flex-wrap ">
-                {ProjectManagement.map(({ _id, name, description, btn,image }) => (
+                {ProjectManagement.map(({ _id, name, description, btn, image }) => (
                     <UserCard
                         key={_id}
                         id={_id}

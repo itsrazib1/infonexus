@@ -7,9 +7,9 @@ import getsecurityITManagement from "@/app/utils/getsecurityITManagement";
 
 
 const SecurityITManagement = async () => {
-    
+
     const SecurityITManagement = await getsecurityITManagement();
-  
+
     return (
         <div id="Security" className="container mx-auto p-8">
             <div>
@@ -17,7 +17,7 @@ const SecurityITManagement = async () => {
                 <div>Manage IT assets using ready tools or create a custom application to suit your needs.</div>
             </div>
             <div className="flex flex-wrap ">
-                {SecurityITManagement.map(({ _id, name, description, btn,image }) => (
+                {SecurityITManagement.map(({ _id, name, description, btn, image }) => (
                     <UserCard
                         key={_id}
                         id={_id}

@@ -8,9 +8,9 @@ import getServices from "@/app/utils/getServices";
 
 
 const Service = async () => {
-    
+
     const Service = await getServices();
-    
+
     return (
         <div id="Service" className="container mx-auto p-8">
             <div>
@@ -18,7 +18,7 @@ const Service = async () => {
                 <div>Empower your customer and field service teams to deliver happiness and win trust.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Service.map(({ _id, name, description, btn,image }) => (
+                {Service.map(({ _id, name, description, btn, image }) => (
                     <UserCard
                         key={_id}
                         id={_id}
