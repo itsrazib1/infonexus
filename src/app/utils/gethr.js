@@ -1,7 +1,7 @@
 
 
 const gethr = async() => {
-    const url = "https://infonexus.netlify.app/api/hr"
+    const url = "http://localhost:3000/api/hr"
     const res = await fetch (url);
     return res.json();
 };

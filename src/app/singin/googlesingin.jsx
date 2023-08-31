@@ -48,7 +48,7 @@ const Googlelogin = () => {
 
             {loading ? null : !user ? (
                 <ul className="flex gap-5">
-                    <li onClick={handleSignIn} ><Image
+                    <li onClick={()=>handleSignIn(user)} ><Image
                         src={Image1}
                         alt="Image"
                         className="border rounded-md border-blue-500 h-12 w-20 px-4 py-2 bg-white"

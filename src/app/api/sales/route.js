@@ -6,6 +6,5 @@ import { NextResponse } from 'next/server';
 export async function  GET () {
     mongoose.connect(uri)
     const data = await Sales.find()
-    // console.log(data);
    return NextResponse.json(data)
 };
