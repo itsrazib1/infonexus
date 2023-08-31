@@ -9,6 +9,7 @@ export async function GET() {
     mongoose.connect(uri)
     const data = await tryNow.find()
     // console.log(data);
+    // console.log(data);
     return NextResponse.json(data)
 };
 
