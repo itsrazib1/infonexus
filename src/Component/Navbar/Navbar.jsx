@@ -54,13 +54,13 @@ const Navbar = () => {
                   <div className="hidden md:block">
                      <ul className="md:flex md:ml-9 md:space-x-9 md:items-center">
                         <li className="flex items-center space-x-1">
-                           <Link href="#">Products</Link>
+                           <Link href="/all-product#sales">Products</Link>
                            <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" />
                         </li>
                         <li><a href="/customer">Customers</a></li>
                         <li className="flex items-center space-x-1">
-                           <Link href="#">Company</Link>
-                           <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" />
+                        <a href="/all-product">All Product</a>
+                           {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         <FaEllipsisH className="w-[50px] h-[20px]" />
                      </ul>
@@ -220,7 +220,7 @@ const Navbar = () => {
                            className="flex items-center cursor-pointer"
                            onClick={toggleMonsurAccordion}>
                            <div className="flex-grow font-semibold">
-                              Company
+                              <a href="/all-product">Company</a>
                            </div>
                            {/* Accordion arrow */}
                            <svg

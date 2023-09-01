@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import UserCard from "./UserCard/UserCard";
-import getprojectManagement from "@/app/utils/getprojectManagement";
+import { getprojectManagement } from "@/app/utils/getprojectManagement";
 
 
 const ProjectManagement = async () => {

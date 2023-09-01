@@ -1,9 +1,7 @@
 
 
-import getLegal from "@/app/utils/getLegal";
+import {getLegal} from "@/app/utils/getLegal";
 import UserCard from "./UserCard/UserCard";
-import gethr from "@/app/utils/gethr";
-
 
 
 const Legal = async () => {

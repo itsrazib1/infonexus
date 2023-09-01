@@ -2,7 +2,7 @@
 
 
 import UserCard from "./UserCard/UserCard";
-import getServices from "@/app/utils/getServices";
+import {getServices} from "@/app/utils/getServices";
 
 
 
