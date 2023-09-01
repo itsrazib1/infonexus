@@ -1,13 +1,26 @@
-
-import Image from "next/image";
+"use client"
 import UserCard from "./UserCard/UserCard";
 import {getFinances} from "@/app/utils/getFinances";
+import { useEffect, useState } from "react";
 
 
 
-const Finance = async () => {
+const Finance =  () => {
 
-    const Finance = await getFinances();
+    const [Finance, setFinanceData] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const data = await getFinances();
+          setFinanceData(data);
+        } catch (error) {
+          console.error('Error fetching Finance data:', error);
+        }
+      };
+  
+      fetchData();
+    }, []);
 
     return (
         <div id="Finance" className="container mx-auto p-8">

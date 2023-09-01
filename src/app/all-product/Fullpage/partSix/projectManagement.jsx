@@ -1,13 +1,26 @@
-
-
-import Image from "next/image";
+"use client"
 import UserCard from "./UserCard/UserCard";
 import { getprojectManagement } from "@/app/utils/getprojectManagement";
+import { useEffect, useState } from "react";
 
 
-const ProjectManagement = async () => {
+const ProjectManagement =  () => {
 
-    const ProjectManagement = await getprojectManagement();
+    const [ProjectManagement, setMarketingData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getprojectManagement();
+        setMarketingData(data);
+      } catch (error) {
+        console.error('Error fetching Marketing data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
 
     return (
         <div id="Project" className="container mx-auto p-8">
