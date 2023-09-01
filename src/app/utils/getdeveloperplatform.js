@@ -1,6 +1,6 @@
 
 export const getdeveloperplatform = async () => {
-    const url = "/api/developerplatform";
+    const url = "http://localhost:3000/api/developerplatform";
     try {
         const res = await fetch(url);
         const data = await res.json();

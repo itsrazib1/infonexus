@@ -1,6 +1,6 @@
 
 export const gethr = async () => {
-    const url = "/api/hr";
+    const url = "http://localhost:3000/api/hr";
     try {
         const res = await fetch(url);
         const data = await res.json();

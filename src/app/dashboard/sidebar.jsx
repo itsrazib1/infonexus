@@ -1,29 +1,29 @@
-
+'use client'
 import Image from 'next/image';
 import { Link } from 'react-scroll';
-// import { UserAuth } from '../Context/AuthContext';
-// import { getusers } from '../utils/getusers';
-// import { useEffect, useState } from 'react';
+import { UserAuth } from '../Context/AuthContext';
+import { getusers } from '../utils/getusers';
+import { useEffect, useState } from 'react';
 
-const Sidebar = ({users , user}) => {
-    // const { user } = UserAuth();
-    // const [users, setUsers] = useState([]);
+const Sidebar = () => {
+    const { user } = UserAuth();
+    const [users, setUsers] = useState([]);
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const userData = await getusers();
-    //             console.log("User data in component:", userData);
-    //             // Add this line to log the user data from the database
-    //             console.log("DatabaseUser:", userData);
-    //             setUsers(userData);
-    //         } catch (error) {
-    //             console.error("Error fetching user data:", error);
-    //         }
-    //     };
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const userData = await getusers();
+                console.log("User data in component:", userData);
+                // Add this line to log the user data from the database
+                console.log("DatabaseUser:", userData);
+                setUsers(userData);
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+            }
+        };
 
-    //     fetchData();
-    // }, []);
+        fetchData();
+    }, []);
     const adminUsers = users.filter(u => u.role === 'admin');
     const isAdmin = adminUsers.some(u => u.email === user?.email);
     console.log("Userdata", user, users, adminUsers, isAdmin)
@@ -37,7 +37,7 @@ const Sidebar = ({users , user}) => {
                     className="rounded-full cursor-pointer me-2"
                     alt=""
                 />
-                <h1 className='text-xl'> Admin Panel</h1>
+                <h1 className='text-xl'>{isAdmin ? "Admin Panel" : "User Panel"}</h1>
             </div>
             <hr className='mt-0' />
             <div className='mx-0'>

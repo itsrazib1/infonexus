@@ -3,7 +3,7 @@
 
 
 export const getSales = async () => {
-    const url = "/api/sales";
+    const url = "http://localhost:3000/api/sales";
     try {
         const res = await fetch(url);
         const data = await res.json();

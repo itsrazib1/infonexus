@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { getusers } from "../utils/getusers";
+import Image from "next/image";
 
 const AllUser = () => {
     const [users, setUsers] = useState([]);

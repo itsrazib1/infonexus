@@ -1,6 +1,6 @@
 
 export const getLegal = async () => {
-    const url = "/api/Legal";
+    const url = "http://localhost:3000/api/Legal";
     try {
         const res = await fetch(url);
         const data = await res.json();

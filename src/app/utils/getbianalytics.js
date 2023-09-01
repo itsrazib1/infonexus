@@ -1,7 +1,7 @@
 
 
 export const getbianalytics = async () => {
-    const url = "/api/bianalytics";
+    const url = "http://localhost:3000/api/bianalytics";
     try {
         const res = await fetch(url);
         const data = await res.json();

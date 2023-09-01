@@ -2,7 +2,7 @@
 
 
 export const getsecurityITManagement = async () => {
-    const url = "/api/securityITManagement";
+    const url = "http://localhost:3000/api/securityITManagement";
     try {
         const res = await fetch(url);
         const data = await res.json();

@@ -1,7 +1,7 @@
 
 
 export const getFinances = async () => {
-    const url = "/api/finances";
+    const url = "http://localhost:3000/api/finances";
     try {
         const res = await fetch(url);
         const data = await res.json();

@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import UserCard from "./UserCard/UserCard";
-import getsecurityITManagement from "@/app/utils/getsecurityITManagement";
+import {getsecurityITManagement} from "@/app/utils/getsecurityITManagement";
 
 
 

@@ -2,7 +2,7 @@
 
 
 export const getEmailCollaboration = async () => {
-    const url = "/api/EmailCollaboration";
+    const url = "http://localhost:3000/api/EmailCollaboration";
     try {
         const res = await fetch(url);
         const data = await res.json();
