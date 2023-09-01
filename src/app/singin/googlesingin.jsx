@@ -11,8 +11,10 @@ const Googlelogin = () => {
     const handleSignIn = async () => {
         try {
             await googleSignIn();
+            // After successful authentication with Firebase, send user data to your API
+            
         } catch (error) {
-            // console.log(error);
+            console.error(error);
         }
     };
     const handelFbSignIn = async () => {
