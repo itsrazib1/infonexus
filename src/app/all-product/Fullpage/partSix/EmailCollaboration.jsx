@@ -1,6 +1,6 @@
 
 
-import getEmailCollaboration from "@/app/utils/getEmailCollaboration";
+import { getEmailCollaboration } from "@/app/utils/getEmailCollaboration";
 import UserCard from "./UserCard/UserCard";
 
 

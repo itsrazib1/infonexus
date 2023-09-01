@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import UserCard from "./UserCard/UserCard";
-import getSales from "@/app/utils/getsales";
+import { getSales } from "@/app/utils/getsales";
 
 
 

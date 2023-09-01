@@ -1,6 +1,6 @@
 
 import UserCard from "./UserCard/UserCard";
-import getbianalytics from "@/app/utils/getbianalytics";
+import {getbianalytics} from "@/app/utils/getbianalytics";
 
 
 
