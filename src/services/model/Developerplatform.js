@@ -1,6 +1,12 @@
-
 import mongoose from 'mongoose';
 
-const developerplatformModel = new mongoose.Schema() 
+const developerplatformSchema = new mongoose.Schema({
+  _id: mongoose.Types.ObjectId,
+  image: String,
+  name: String,
+  description: String,
+  btnRoute: String,
+  btn: String,
+});
 
-export const developerplatform = mongoose.models.developerplatforms || mongoose.model("developerplatform",developerplatformModel)
+export const developerplatform = mongoose.models.developerplatform || mongoose.model('developerplatform', developerplatformSchema);

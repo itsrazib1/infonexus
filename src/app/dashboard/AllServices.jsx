@@ -1,16 +1,16 @@
 import React from 'react';
-import getServices from '../utils/getServices';
+import {getServices} from '../utils/getServices';
 import Image from 'next/image';
-import getSales from '../utils/getsales';
-import getMarketings from '../utils/getMarketings';
-import getFinances from '../utils/getFinances';
-import getEmailCollaboration from '../utils/getEmailCollaboration';
-import gethr from '../utils/gethr';
-import getLegal from '../utils/getLegal';
-import getsecurityITManagement from '../utils/getsecurityITManagement';
-import getbianalytics from '../utils/getbianalytics';
-import getprojectManagement from '../utils/getprojectManagement';
-import getdeveloperplatform from '../utils/getdeveloperplatform';
+import {getFinances} from '../utils/getFinances';
+import {getEmailCollaboration} from '../utils/getEmailCollaboration';
+import {gethr} from '../utils/gethr';
+import {getLegal} from '../utils/getLegal';
+import {getsecurityITManagement} from '../utils/getsecurityITManagement';
+import {getbianalytics} from '../utils/getbianalytics';
+import {getprojectManagement} from '../utils/getprojectManagement';
+import {getdeveloperplatform} from '../utils/getdeveloperplatform';
+import { getSales } from '../utils/getsales';
+import { getMarketings } from '../utils/getMarketings';
 
 const AllServices = async () => {
     const Sales = await getSales();
@@ -425,7 +425,7 @@ const AllServices = async () => {
                         <tbody>
                             {/* row 1 */}
                             {
-                                bianalytics?.map((p, index) => <tr key={p._id}>
+                                Array.isArray(bianalytics) && bianalytics.map((p, index) => <tr key={p._id}>
                                     <th>{index + 1}</th>
                                     <td>
                                         <Image
