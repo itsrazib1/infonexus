@@ -6,11 +6,11 @@ import Swal from "sweetalert2";
 
 
 const DynamicButton = ({ name, image, description, id }) => {
-  const { user } = UserAuth()
+  const {user} = UserAuth()
   // console.log(user, "user Data")
-  const [clicked, setClicked] = useState(false);
+    const [clicked, setClicked] = useState(false);  
   const handelAddToCart = () => {
-    const email = user?.email
+    const email = user.email
     const cartItem = { name, image, description, id, email };
     console.log(cartItem)
     fetch("http://localhost:3000/api/trynow", {
@@ -20,16 +20,16 @@ const DynamicButton = ({ name, image, description, id }) => {
       },
       body: JSON.stringify(cartItem)
     })
-      .then(() => {
+    .then(() => {
         setClicked(true);
         Swal.fire({
           icon: "success",
           title: "Added to Cart",
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500 
         });
-      })
-      .catch((error) => {
+    })
+    .catch((error) => {
         Swal.fire({
           icon: "error",
           title: error,
@@ -40,7 +40,7 @@ const DynamicButton = ({ name, image, description, id }) => {
   };
 
   return (
-    <button onClick={handelAddToCart} className={`${clicked ? "text-white mt-3 font-semibold opacity-50 bg-blue-500 rounded-lg py-[8px] px-[20px]" : "text-blue-500 mt-3 font-semibold rounded-lg border-solid border-2 border-blue-500 py-[8px] px-[20px]"}`} disabled={clicked} >
+    <button onClick={handelAddToCart} className={`${clicked? "text-white mt-3 font-semibold opacity-50 bg-blue-500 rounded-lg py-[8px] px-[20px]":"text-blue-500 mt-3 font-semibold rounded-lg border-solid border-2 border-blue-500 py-[8px] px-[20px]"}`} disabled={clicked} >
       {clicked ? "Added to Cart" : "Try Now"}
     </button>
   );
