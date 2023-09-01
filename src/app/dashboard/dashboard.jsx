@@ -9,9 +9,25 @@ import { UserAuth } from '../Context/AuthContext';
 const Dashboard = () => {
 
     const { user } = UserAuth();
+    const [users, setUsers] = useState([]);
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const userData = await getusers();
+                console.log("User data in component:", userData);
+                // Add this line to log the user data from the database
+                console.log("DatabaseUser:", userData);
+                setUsers(userData);
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+            }
+        };
 
-    const isAdmin = user && user.role === "admin";
+        fetchData();
+    }, []);
+    const adminUsers = users.filter(u => u.role === 'admin');
+    const isAdmin = adminUsers.some(u => u.email === user?.email);
     return (
         <div>
             {
@@ -25,6 +41,9 @@ const Dashboard = () => {
                         </div>
                         <div>
                             <AllServices />
+                        </div>
+                        <div>
+                            <UserManagement />
                         </div>
                     </> :
                     <>
