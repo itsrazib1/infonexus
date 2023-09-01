@@ -1,13 +1,25 @@
-
+"use client"
+import { useEffect, useState } from "react";
 import UserCard from "./UserCard/UserCard";
 import {getbianalytics} from "@/app/utils/getbianalytics";
 
+const Bianalytics =  () => {
 
+    const [Bianalytics, setBianalyticsData] = useState([]);
 
-
-const Bianalytics = async () => {
-
-    const Bianalytics = await getbianalytics();
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const data = await getbianalytics();
+            console.log("Fetched data:", data); // Log the fetched data
+            setBianalyticsData(data);
+          } catch (error) {
+            console.error('Error fetching BI & Analytics data:', error);
+          }
+        };
+      
+        fetchData();
+      }, []);
 
     return (
         <div id="BI" className="container mx-auto p-8">

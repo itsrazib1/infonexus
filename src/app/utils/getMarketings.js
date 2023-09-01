@@ -1,6 +1,6 @@
 
 export const getMarketings = async () => {
-    const url = "http://localhost:3000/api/marketings";
+    const url = "/api/marketings";
     try {
         const res = await fetch(url);
         const data = await res.json();

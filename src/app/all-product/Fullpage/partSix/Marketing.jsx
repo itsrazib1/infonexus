@@ -1,13 +1,26 @@
 
-
-import Image from "next/image";
+"use client"
+import { useEffect, useState } from "react";
 import UserCard from "./UserCard/UserCard";
 import {getMarketings} from "@/app/utils/getMarketings";
 
 
 
-const Marketing = async () => {
-    const Marketing = await getMarketings();
+const Marketing =  () => {
+    const [Marketing, setMarketings] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getMarketings();
+        setMarketings(data);
+      } catch (error) {
+        console.error('Error fetching Legal data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
     return (
         <div id="Marketing" className="container  mx-auto p-8">

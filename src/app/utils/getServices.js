@@ -1,6 +1,6 @@
 
 export const getServices = async () => {
-    const url = "http://localhost:3000/api/services";
+    const url = "/api/services";
     try {
         const res = await fetch(url);
         const data = await res.json();
