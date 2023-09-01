@@ -1,12 +1,24 @@
 
-
-import Image from "next/image";
+"use client"
+import { useEffect, useState } from "react";
 import UserCard from "./UserCard/UserCard";
 import { getdeveloperplatform } from "@/app/utils/getdeveloperplatform";
 
-const Developerplatform = async () => {
+const Developerplatform =  () => {
+    const [Developerplatform, setDeveloperplatformData] = useState([]);
 
-    const Developerplatform = await getdeveloperplatform();
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const data = await getdeveloperplatform();
+          setDeveloperplatformData(data);
+        } catch (error) {
+          console.error('Error fetching Developerplatform data:', error);
+        }
+      };
+  
+      fetchData();
+    }, []);
 
     return (
         <div id="Developer" className="container mx-auto p-8">

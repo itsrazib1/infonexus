@@ -6,6 +6,7 @@ import AllServices from './AllServices';
 import UserManagement from './UserManagement';
 import { UserAuth } from '../Context/AuthContext';
 import { getusers } from '../utils/getusers';
+import UserCart from './UserCart';
 
 const Dashboard = () => {
     const { user } = UserAuth();
@@ -31,6 +32,7 @@ const Dashboard = () => {
     console.log("Userdata", user, users, adminUsers, isAdmin)
     return (
         <div>
+            <div></div>
             {
                 isAdmin ?
                     <>
@@ -50,9 +52,11 @@ const Dashboard = () => {
 
                     </> :
                     <>
-
+                        <div  >
+                            <DashBoardHome />
+                        </div>
                         <div>
-                            <AllUser />
+                            <UserCart />
                         </div>
 
                     </>

@@ -1,6 +1,6 @@
 
-export const getMarketings = async () => {
-    const url = "/api/marketings";
+export const getCarts = async () => {
+    const url = "/api/trynow";
     try {
         const res = await fetch(url);
         const data = await res.json();

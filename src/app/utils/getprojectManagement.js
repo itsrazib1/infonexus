@@ -4,7 +4,7 @@
 
 
 export const getprojectManagement = async () => {
-    const url = "http://localhost:3000/api/projectManagement";
+    const url = "/api/projectManagement";
     try {
         const res = await fetch(url);
         const data = await res.json();
