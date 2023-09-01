@@ -5,9 +5,15 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
     mongoose.connect(uri);
-    const data = await tryNow.find();
-    return NextResponse.json(data);
+    try {
+        const data = await tryNow.find();
+        return NextResponse.json(data);
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        return NextResponse.json({ error: 'Error fetching user data' }, { status: 500 });
+    }
 }
+
 
 export async function POST(req) {
     const userLode = await req.json();

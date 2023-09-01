@@ -1,5 +1,12 @@
 import mongoose from 'mongoose';
 
-const hrModel = new mongoose.Schema() 
+const hrSchema = new mongoose.Schema({
+  _id: mongoose.Types.ObjectId, // You can use ObjectId for _id field
+  image: String,
+  name: String,
+  description: String,
+  btnRoute: String,
+  btn: String,
+});
 
-export const hr = mongoose.models.hrs || mongoose.model("hr",hrModel)
+export const hr = mongoose.models.hr || mongoose.model('hr', hrSchema);

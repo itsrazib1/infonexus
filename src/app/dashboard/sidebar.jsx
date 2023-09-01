@@ -37,7 +37,7 @@ const Sidebar = () => {
                     className="rounded-full cursor-pointer me-2"
                     alt=""
                 />
-                <h1 className='text-xl'> Admin Panel</h1>
+                <h1 className='text-xl'>{isAdmin ? "Admin Panel" : "User Panel"}</h1>
             </div>
             <hr className='mt-0' />
             <div className='mx-0'>

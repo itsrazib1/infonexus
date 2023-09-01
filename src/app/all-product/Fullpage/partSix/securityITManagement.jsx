@@ -1,14 +1,28 @@
-
-import Image from "next/image";
+"use client"
 import UserCard from "./UserCard/UserCard";
-import getsecurityITManagement from "@/app/utils/getsecurityITManagement";
+import {getsecurityITManagement} from "@/app/utils/getsecurityITManagement";
+import { useEffect, useState } from "react";
 
 
 
 
-const SecurityITManagement = async () => {
+const SecurityITManagement =  () => {
 
-    const SecurityITManagement = await getsecurityITManagement();
+
+    const [SecurityITManagement, setMarketingData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getsecurityITManagement();
+        setMarketingData(data);
+      } catch (error) {
+        console.error('Error fetching Marketing data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
     return (
         <div id="Security" className="container mx-auto p-8">

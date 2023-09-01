@@ -1,15 +1,26 @@
 
 
-
+"use client"
+import { useEffect, useState } from "react";
 import UserCard from "./UserCard/UserCard";
-import getServices from "@/app/utils/getServices";
+import {getServices} from "@/app/utils/getServices";
 
+const Service =  () => {
+    const [Service, setMarketingData] = useState([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getServices();
+        setMarketingData(data);
+      } catch (error) {
+        console.error('Error fetching Marketing data:', error);
+      }
+    };
 
+    fetchData();
+  }, []);
 
-const Service = async () => {
-
-    const Service = await getServices();
 
     return (
         <div id="Service" className="container mx-auto p-8">
