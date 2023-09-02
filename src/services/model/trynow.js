@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 const tryNowModel = new mongoose.Schema(
     {
         name: String,
-        email: String
+        email: String,
+        image: String,
 
     }
 );

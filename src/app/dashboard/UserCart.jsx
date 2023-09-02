@@ -2,9 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { getCarts, deleteCart } from '../utils/getCarts'; // Import getCarts and deleteCart from your API or service
 import { UserAuth } from '../Context/AuthContext';
+import Image from 'next/image';
 
 const UserCart = () => {
     const [carts, setCarts] = useState([]);
+
     const { user } = UserAuth();
 
     useEffect(() => {
@@ -12,6 +14,7 @@ const UserCart = () => {
             try {
                 const cartsData = await getCarts();
                 setCarts(cartsData);
+
             } catch (error) {
                 console.error("Error fetching cart data:", error);
             }
@@ -34,7 +37,7 @@ const UserCart = () => {
         }
     };
     const singlecart = carts.filter(u => u.email === user?.email);
-console.log("users cart",singlecart)
+    console.log("users cart", singlecart)
     return (
         <div className='min-h-screen  ' id="usercart" >
             <div className='mt-16  ' id='userManagement'>
@@ -50,7 +53,10 @@ console.log("users cart",singlecart)
                             <thead>
                                 <tr className='text-[#222324] text-base'>
                                     <th>Index</th>
+
                                     <th>Service Name</th>
+
+                                    <th>Image</th>
                                     <th>Email</th>
                                     <th>Delete</th>
                                 </tr>
@@ -59,10 +65,18 @@ console.log("users cart",singlecart)
                                 {/* rows */}
                                 {Array.isArray(filteredCarts) ? (
                                     filteredCarts.map((c, index) => (
-                                        <tr className='bg-white rounded-lg border-2  border-black '  key={c._id}>
+                                        <tr className='bg-white rounded-lg border-2  border-black ' key={c._id}>
                                             <th>{index + 1}</th>
                                             <td>{c?.name}</td>
+                                            <Image
+                                                className='rounded-full mt-2'
+                                                src={c?.image}
+                                                height={60}
+                                                width={60}
+                                                alt={`${c.name}'s Profile Photo`}
+                                            />
                                             <td>{c?.email}</td>
+
                                             <td>
                                                 <button
                                                     className="btn btn-circle btn-outline btn-error"

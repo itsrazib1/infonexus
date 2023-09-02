@@ -14,8 +14,17 @@ const DynamicButton = ({ name, image, description, id }) => {
       // Handle the case where user.email is missing
       return;
     }
+    // const formData = new FormData();
+    // formData.append("name", name);
+    // formData.append("email", email);
+    // formData.append("description", description);
+    // formData.append("id", id);
+    // formData.append("image", image);
 
     const cartItem = { name, image, description, id, email };
+    console.log(image)
+    console.log(description)
+
 
     fetch("/api/trynow", {
       method: "POST",
@@ -23,6 +32,11 @@ const DynamicButton = ({ name, image, description, id }) => {
         "content-type": "application/json",
       },
       body: JSON.stringify(cartItem),
+
+      // fetch("/api/trynow", {
+      //   method: "POST",
+
+      //   body: formData,
     })
       .then(() => {
         setClicked(true);
@@ -47,11 +61,10 @@ const DynamicButton = ({ name, image, description, id }) => {
   return (
     <button
       onClick={handelAddToCart}
-      className={`${
-        clicked
-          ? "text-white mt-3 font-semibold opacity-50 bg-blue-500 rounded-lg py-[8px] px-[20px]"
-          : "text-blue-500 mt-3 font-semibold rounded-lg border-solid border-2 border-blue-500 py-[8px] px-[20px]"
-      }`}
+      className={`${clicked
+        ? "text-white mt-3 font-semibold opacity-50 bg-blue-500 rounded-lg py-[8px] px-[20px]"
+        : "text-blue-500 mt-3 font-semibold rounded-lg border-solid border-2 border-blue-500 py-[8px] px-[20px]"
+        }`}
       disabled={clicked}
       aria-label={clicked ? "Added to Cart" : "Try Now"}
     >
