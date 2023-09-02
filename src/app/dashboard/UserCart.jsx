@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { getCarts, deleteCart } from '../utils/getCarts'; // Import getCarts and deleteCart from your API or service
 import { UserAuth } from '../Context/AuthContext';
 import Image from 'next/image';
+import { checkout } from '@/checkout';
+
 
 const UserCart = () => {
     const [carts, setCarts] = useState([]);
@@ -37,7 +39,9 @@ const UserCart = () => {
         }
     };
     const singlecart = carts.filter(u => u.email === user?.email);
+    const cartQuantity = filteredCarts.length;
     console.log("users cart", singlecart)
+
     return (
         <div className='min-h-screen  ' id="usercart" >
             <div className='mt-16  ' id='userManagement'>
@@ -106,6 +110,11 @@ const UserCart = () => {
                     </div>
                 </div>
             </div>
+            <div className='flex justify-evenly'>
+                <div className='mt-5 pt-2 text-xl font-bold bg-white px-5 py-1'>Total Price : <span className='text-yellow-500'>{cartQuantity*9.99}</span> $</div>
+                <div><button onClick={(()=>{checkout({lineItems:[{price:"price_1NlwH8DjTTkFwOYO5XypvHUW",quantity:cartQuantity}]})})} className='btn btn-secondary mt-4'>Pay Now</button></div>
+            </div>
+            
         </div>
     );
 };

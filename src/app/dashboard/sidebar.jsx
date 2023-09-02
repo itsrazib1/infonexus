@@ -24,7 +24,7 @@ const Sidebar = () => {
 
         fetchData();
     }, []);
-    const adminUsers = users.filter(u => u.role === 'admin');
+    const adminUsers = users?.filter(u => u.role === 'admin');
     const isAdmin = adminUsers.some(u => u.email === user?.email);
     console.log("Userdata", user, users, adminUsers, isAdmin)
     return (
