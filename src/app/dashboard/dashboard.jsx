@@ -6,6 +6,7 @@ import AllServices from './AllServices';
 import UserManagement from './UserManagement';
 import { UserAuth } from '../Context/AuthContext';
 import { getusers } from '../utils/getusers';
+import UserCart from './UserCart';
 
 const Dashboard = () => {
     const { user } = UserAuth();
@@ -28,16 +29,14 @@ const Dashboard = () => {
     }, []);
     const adminUsers = users.filter(u => u.role === 'admin');
     const isAdmin = adminUsers.some(u => u.email === user?.email);
-<<<<<<< HEAD
-=======
     console.log("Userdata", user, users, adminUsers, isAdmin)
->>>>>>> db7616d009f8dd1a2b0c7835ac49f20b74d3da3f
     return (
         <div>
+            <div></div>
             {
                 isAdmin ?
                     <>
-                        <div  >
+                        <div>
                             <DashBoardHome />
                         </div>
                         <div>
@@ -46,14 +45,6 @@ const Dashboard = () => {
                         <div>
                             <AllServices />
                         </div>
-<<<<<<< HEAD
-                        <div>
-                            <UserManagement />
-                        </div>
-                    </> :
-                    <>
-=======
->>>>>>> db7616d009f8dd1a2b0c7835ac49f20b74d3da3f
                         <div>
                             <UserManagement />
                         </div>
@@ -61,9 +52,11 @@ const Dashboard = () => {
 
                     </> :
                     <>
-
+                        <div  >
+                            <DashBoardHome />
+                        </div>
                         <div>
-                            <AllUser />
+                            <UserCart />
                         </div>
 
                     </>
