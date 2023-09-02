@@ -24,7 +24,7 @@ const Sidebar = () => {
 
         fetchData();
     }, []);
-    const adminUsers = users.filter(u => u.role === 'admin');
+    const adminUsers = users?.filter(u => u.role === 'admin');
     const isAdmin = adminUsers.some(u => u.email === user?.email);
     console.log("Userdata", user, users, adminUsers, isAdmin)
     return (
@@ -65,9 +65,9 @@ const Sidebar = () => {
 
                     </ul>) : (<ul className='grid md:grid-cols-1 sm:grid-cols-1 text-center  md:text-base sm:text-xs md:px-0 sm:px-0 mr-2'>
 
-                        <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><a href="/" >Home</a></li>
-                        <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><a href="#" >My Cart</a></li>
-                        <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><a href="#" >My Service</a></li>
+                        <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="/" smooth>Home</Link></li>
+                        <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="usercart" smooth>My Cart</Link></li>
+                        <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="#" smooth>My Service</Link></li>
 
                     </ul>)
                 }
