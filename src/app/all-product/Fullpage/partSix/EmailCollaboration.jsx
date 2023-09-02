@@ -1,15 +1,29 @@
+"use client"
 
-
-import getEmailCollaboration from "@/app/utils/getEmailCollaboration";
+import { getEmailCollaboration } from "@/app/utils/getEmailCollaboration";
 import UserCard from "./UserCard/UserCard";
+import { useEffect, useState } from "react";
 
 
 
 
 
-const EmailCollaboration = async () => {
+const EmailCollaboration =  () => {
 
-    const EmailCollaboration = await getEmailCollaboration();
+    const [EmailCollaboration, setEmailCollaborationData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getEmailCollaboration();
+        setEmailCollaborationData(data);
+      } catch (error) {
+        console.error('Error fetching EmailCollaboration data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
     return (
         <div id="Email" className="container mx-auto p-8">

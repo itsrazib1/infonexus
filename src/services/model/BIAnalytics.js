@@ -1,5 +1,12 @@
 import mongoose from 'mongoose';
 
-const bianalyticsModel = new mongoose.Schema() 
+const bianalyticsSchema = new mongoose.Schema({
+  _id: mongoose.Types.ObjectId,
+  image: String,
+  name: String,
+  description: String,
+  btnRoute: String,
+  btn: String,
+});
 
-export const bianalytics = mongoose.models.bianalyticss || mongoose.model("bianalytics",bianalyticsModel)
+export const bianalytics = mongoose.models.bianalytics || mongoose.model('bianalytics', bianalyticsSchema);

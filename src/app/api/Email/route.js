@@ -1,19 +1,23 @@
 import { uri } from "@/services/DbConnect";
 import { tryNow } from "@/services/model/trynow";
 import mongoose from "mongoose";
+import { NextResponse } from "next/server";
 
-
-export default async function handler(req, res) {
+export async function GET(req) {
   mongoose.connect(uri);
-  try {
-    let query = {};
-    if (req.query?.email) {
-      query = { email: req.query.email };
-    }
 
-    const result = await tryNow.find(query).toArray();
-    res.status(200).json(result);
+  try {
+      const { email } = req.query; 
+      let query = {};
+
+      if (email) {
+          query = { email };
+      }
+
+      const data = await tryNow.find(query);
+      return NextResponse.json(data);
   } catch (error) {
-    res.status(500).json({ error: 1, message: 'Internal server error' });
+      console.error('Error fetching user data:', error);
+      return NextResponse.json({ error: 'Error fetching user data' }, { status: 500 });
   }
 }

@@ -1,15 +1,28 @@
 
-
-import Image from "next/image";
+"use client"
 import UserCard from "./UserCard/UserCard";
-import getSales from "@/app/utils/getsales";
+import { getSales } from "@/app/utils/getsales";
+import { useEffect, useState } from "react";
 
 
 
 
-const Sales = async () => {
+const Sales =  () => {
 
-    const sales = await getSales();
+    const [sales, setSalesData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getSales();
+        setSalesData(data);
+      } catch (error) {
+        console.error('Error fetching sales data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
     return (
         <div id="sales" className="container mx-auto p-8">

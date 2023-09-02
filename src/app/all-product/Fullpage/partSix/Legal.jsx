@@ -1,14 +1,25 @@
 
-
-import getLegal from "@/app/utils/getLegal";
+"use client"
+import {getLegal} from "@/app/utils/getLegal";
 import UserCard from "./UserCard/UserCard";
-import gethr from "@/app/utils/gethr";
+import { useEffect, useState } from "react";
 
 
+const Legal =  () => {
+    const [Legal, setLegalData] = useState([]);
 
-const Legal = async () => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getLegal();
+        setLegalData(data);
+      } catch (error) {
+        console.error('Error fetching Legal data:', error);
+      }
+    };
 
-    const Legal = await getLegal();
+    fetchData();
+  }, []);
 
     return (
         <div id="Legal" className="container mx-auto p-8">

@@ -1,15 +1,28 @@
-
-
-import Image from "next/image";
+"use client"
 import UserCard from "./UserCard/UserCard";
-import gethr from "@/app/utils/gethr";
+import { gethr } from "@/app/utils/gethr";
+import { useEffect, useState } from "react";
 
 
 
 
-const Hr = async () => {
+const Hr =  () => {
 
-    const Hr = await gethr();
+    const [Hr, setHrData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await gethr();
+        setHrData(data);
+      } catch (error) {
+        console.error('Error fetching HR data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
 
     return (
         <div id="HR" className="container mx-auto p-8">
