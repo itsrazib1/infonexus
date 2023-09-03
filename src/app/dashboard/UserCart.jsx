@@ -43,19 +43,59 @@ const UserCart = () => {
     console.log("users cart", singlecart)
 
     return (
-        <div className='min-h-screen  ' id="usercart" >
-            <div className='mt-16  ' id='userManagement'>
-                <div>
+        <div className='min-h-screen box mt-28 ' id="usercart" >
+            <div className='' id='userManagement'>
+                <div className='shadow4'>
                     <hr className='w-full  mx-auto mt-5 mb-5' />
                     <p className='text-[#c75633] font-serif font-bold text-3xl'>MY Carts {filteredCarts.length} !!!</p>
                     <hr className='w-full mx-auto mt-5' />
                 </div>
-                <div className='w-5/6   mx-auto mt-20'>
+                <div className='mt-28 box3 grid grid-cols-1 md:grid-cols-2 justify-items-center gap-y-5 pb-20'>
+                    {Array.isArray(filteredCarts) ? (
+                        filteredCarts.map((c, index) => (<div key={c._id} className="card w-72 glass">
+                            <figure className="px-10 pt-10">
+                                <Image
+                                    className='rounded-full mt-2'
+                                    src={c?.image}
+                                    height={50}
+                                    width={50}
+                                    alt={`${c.name}'s Profile Photo`}
+                                />
+                            </figure>
+                            <p className='bg-[#2d778a] mt-4 text-xl'>{index + 1}</p>
+                            <div className="card-body items-center text-center">
+                                <h2 className="card-title">Service Name: {c?.name}</h2>
+                                <p>User Email: {c?.email}</p>
+                                <div className="card-actions mt-5">
+                                    <button
+                                        className="btn btn-circle btn-outline btn-error"
+                                        onClick={() => handleDelete(c._id)}
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-6 w-6"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>))
+                    ) : (
+                        <tr>
+                            <td colSpan="4">Loading...</td>
+                        </tr>
+                    )
+                    }
+                </div>
+                {/* <div className='w-full mx-auto mt-20 box3'>
                     <div className="overflow-x-auto">
                         <table className="table">
-                            {/* head */}
                             <thead>
-                                <tr className='text-[#222324] text-base'>
+                                <tr className='text-[#e4da4b] text-base'>
                                     <th>Index</th>
 
                                     <th>Service Name</th>
@@ -66,10 +106,9 @@ const UserCart = () => {
                                 </tr>
                             </thead>
                             <tbody className=''>
-                                {/* rows */}
                                 {Array.isArray(filteredCarts) ? (
                                     filteredCarts.map((c, index) => (
-                                        <tr className='bg-white rounded-lg border-2  border-black ' key={c._id}>
+                                        <tr className='  border-black ' key={c._id}>
                                             <th>{index + 1}</th>
                                             <td>{c?.name}</td>
                                             <Image
@@ -97,7 +136,6 @@ const UserCart = () => {
                                                     </svg>
                                                 </button>
                                             </td>
-                                            {/* Other table cells */}
                                         </tr>
                                     ))
                                 ) : (
@@ -108,13 +146,13 @@ const UserCart = () => {
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </div> */}
             </div>
-            <div className='flex justify-evenly'>
-                <div className='mt-5 pt-2 text-xl font-bold bg-white px-5 py-1'>Total Price : <span className='text-yellow-500'>{cartQuantity*9.99}</span> $</div>
-                <div><button onClick={(()=>{checkout({lineItems:[{price:"price_1NlwH8DjTTkFwOYO5XypvHUW",quantity:cartQuantity}]})})} className='btn btn-secondary mt-4'>Pay Now</button></div>
+            <div className='flex justify-evenly box3'>
+                <div className='mt-5 pt-2 text-xl font-bold box3 px-5 py-1'>Total Price : <span className='text-yellow-500'>{cartQuantity * 9.99}</span> $</div>
+                <div className='box3'><button onClick={(() => { checkout({ lineItems: [{ price: "price_1NlwH8DjTTkFwOYO5XypvHUW", quantity: cartQuantity }] }) })} className='btn btn-secondary mt-4'>Pay Now</button></div>
             </div>
-            
+
         </div>
     );
 };
