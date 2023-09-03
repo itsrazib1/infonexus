@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { UserAuth } from '../Context/AuthContext';
 import Image from 'next/image';
-import axios from 'axios';
+// import axios from 'axios';
 import { getPurchase } from '../utils/getPurchase';
 
 const MyService = () => {
@@ -38,13 +38,13 @@ const MyService = () => {
         }
     };
     const singlecart = carts.filter(u => u.email === user?.email);
-    
+
     console.log("users cart", singlecart)
 
-    
-    
-    
-      
+
+
+
+
 
     return (
         <div className='  ' id="myservice" >
@@ -112,7 +112,7 @@ const MyService = () => {
                     </div>
                 </div>
             </div>
-            
+
 
         </div>
     );

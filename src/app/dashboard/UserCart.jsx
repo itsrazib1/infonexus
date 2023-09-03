@@ -1,15 +1,18 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { getCarts, deleteCart } from '../utils/getCarts'; // Import getCarts and deleteCart from your API or service
+import { getCarts } from '../utils/getCarts';
 import { UserAuth } from '../Context/AuthContext';
 import Image from 'next/image';
 import { checkout } from '@/checkout';
 import axios from 'axios';
+import RemoveBtn from './RemoveBtn';
 
 const UserCart = () => {
     const [carts, setCarts] = useState([]);
 
+
     const { user } = UserAuth();
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,20 +27,7 @@ const UserCart = () => {
 
         fetchData();
     }, []);
-
     const filteredCarts = carts.filter((carts) => carts.email === user?.email);
-
-    const handleDelete = async (cartId) => {
-        try {
-            // Call your deleteCart function here with the cartId
-            await deleteCart(cartId);
-
-            // Update the state to reflect the removed cart item
-            setCarts((prevCarts) => prevCarts.filter((cart) => cart._id !== cartId));
-        } catch (error) {
-            console.error("Error deleting cart item:", error);
-        }
-    };
     const singlecart = carts.filter(u => u.email === user?.email);
     const cartQuantity = filteredCarts.length;
     console.log("users cart", singlecart)
@@ -47,7 +37,7 @@ const UserCart = () => {
         try {
             // Make a POST request to your API endpoint "/api/purchase"
             const response = await axios.post('/api/purchase', filteredCarts);
-    
+
             // Check the response for success or handle it accordingly
             if (response.status === 201) {
                 // Payment successful, you can show a success message or perform other actions
@@ -60,9 +50,9 @@ const UserCart = () => {
             console.error('Error making payment:', error);
         }
     };
-    
-    
-      
+
+
+
 
     return (
         <div className='  ' id="usercart" >
@@ -104,20 +94,7 @@ const UserCart = () => {
                                             <td>{c?.email}</td>
 
                                             <td>
-                                                <button
-                                                    className="btn btn-circle btn-outline btn-error"
-                                                    onClick={() => handleDelete(c._id)}
-                                                >
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        className="h-6 w-6"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                    >
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                                                    </svg>
-                                                </button>
+                                                <RemoveBtn id={c._id}></RemoveBtn>
                                             </td>
                                             {/* Other table cells */}
                                         </tr>
