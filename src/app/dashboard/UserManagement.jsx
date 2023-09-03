@@ -20,18 +20,18 @@ const UserManagement = () => {
         fetchData();
     }, []);
     return (
-        <div className='mt-16' id='userManagement'>
-            <div>
+        <div className='mt-28 box' id='userManagement'>
+            <div className='shadow4'>
                 <hr className='w-full mx-auto mt-5 mb-5' />
                 <p className='text-[#c75633] font-serif font-bold text-3xl'>User Management {users?.length} !!!</p>
                 <hr className='w-full mx-auto mt-5' />
             </div>
-            <div className='w-5/6 mx-auto mt-20'>
+            <div className='w-full mx-auto mt-16 box3 mb-10'>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
                         <thead>
-                            <tr className='text-[#222324] text-base'>
+                            <tr className='text-[#d8d65e] text-base'>
                                 <th>Index</th>
                                 <th>Name</th>
                                 <th>Email</th>
