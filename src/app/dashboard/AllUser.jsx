@@ -22,9 +22,9 @@ const AllUser = () => {
     return (
         <div className='mt-28 box' id='dashAllUser'>
             <div className=' shadow4'>
-                <hr className='w-full mx-auto mt-5 mb-5' />
+                <hr className='w-[70%] mx-auto mt-5 mb-5' />
                 <p className='text-[#c75633] font-serif font-bold text-3xl'>All User: {users.length} !!!</p>
-                <hr className='w-full mx-auto mt-5' />
+                <hr className='w-[70%] mx-auto mt-5' />
             </div>
             <div className='w-5/6 mx-auto mt-20 box3 mb-10'>
                 <div className="overflow-x-auto">
