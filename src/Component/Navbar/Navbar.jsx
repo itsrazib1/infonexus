@@ -15,6 +15,7 @@ import Image from "next/image";
 import img1 from "../../../public/logo.png";
 import NavbarTwo from "./Navbar2";
 import useTheme from "@/hooks/useTheme";
+import LiveTime from "../Livetime/Livietime";
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,7 @@ const Navbar = () => {
             <div className={`flex items-center justify-between`}>
                <div className="flex items-center">
                   <Link href="/">
-                     <Image src={img1} alt="Image" className="h-12 w-12" />
+                     <Image src={img1} alt="Image"  className="h-[60px] w-[60px]" />
                   </Link>
                   <div className="hidden md:block">
                      <ul className="md:flex md:ml-9 md:space-x-9 md:items-center">
@@ -201,8 +202,7 @@ const Navbar = () => {
                            </svg>
                         </label>
                         <span className="flex items-center space-x-[6px]">
-                           <FaGlobe className="w-[20px] h-[20px]" />
-                           <span>ENG</span>
+                           <LiveTime />
 
                         </span>
 
