@@ -4,7 +4,7 @@ import { getCarts, deleteCart } from '../utils/getCarts'; // Import getCarts and
 import { UserAuth } from '../Context/AuthContext';
 import Image from 'next/image';
 import { checkout } from '@/checkout';
-
+import axios from 'axios';
 
 const UserCart = () => {
     const [carts, setCarts] = useState([]);
@@ -41,6 +41,28 @@ const UserCart = () => {
     const singlecart = carts.filter(u => u.email === user?.email);
     const cartQuantity = filteredCarts.length;
     console.log("users cart", singlecart)
+
+    const handlePayment = async () => {
+        console.log('Filtered Carts:', filteredCarts);
+        try {
+            // Make a POST request to your API endpoint "/api/purchase"
+            const response = await axios.post('/api/purchase', filteredCarts);
+    
+            // Check the response for success or handle it accordingly
+            if (response.status === 201) {
+                // Payment successful, you can show a success message or perform other actions
+                console.log('Payment successful', response.data);
+            } else {
+                // Handle other response status codes as needed
+                console.error('Payment failed');
+            }
+        } catch (error) {
+            console.error('Error making payment:', error);
+        }
+    };
+    
+    
+      
 
     return (
         <div className='min-h-screen box mt-28 ' id="usercart" >
