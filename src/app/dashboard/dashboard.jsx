@@ -37,7 +37,7 @@ const Dashboard = () => {
             {
                 isAdmin ?
                     <>
-                        <div  >
+                        <div>
                             <DashBoardHome />
                         </div>
                         <div>
