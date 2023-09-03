@@ -5,7 +5,7 @@ import Sidebar from './sidebar';
 const page = () => {
 
     return (
-        <div className='flex text-center mb-96'>
+        <div className='flex min-h-screen text-center mb-96'>
             <div className='w-[25%] bg-[#003366] text-[#038fdd] h-screen fixed pt-12 top-0'>
                 <Sidebar />
             </div>
