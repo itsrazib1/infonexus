@@ -4,6 +4,7 @@ import { getCarts, deleteCart } from '../utils/getCarts'; // Import getCarts and
 import { UserAuth } from '../Context/AuthContext';
 import Image from 'next/image';
 import { checkout } from '@/checkout';
+import DeleteUserCart from './DeleteUserCart';
 
 
 const UserCart = () => {
@@ -27,17 +28,7 @@ const UserCart = () => {
 
     const filteredCarts = carts.filter((carts) => carts.email === user?.email);
 
-    const handleDelete = async (cartId) => {
-        try {
-            // Call your deleteCart function here with the cartId
-            await deleteCart(cartId);
-
-            // Update the state to reflect the removed cart item
-            setCarts((prevCarts) => prevCarts.filter((cart) => cart._id !== cartId));
-        } catch (error) {
-            console.error("Error deleting cart item:", error);
-        }
-    };
+   
     const singlecart = carts.filter(u => u.email === user?.email);
     const cartQuantity = filteredCarts.length;
     console.log("users cart", singlecart)
@@ -82,20 +73,7 @@ const UserCart = () => {
                                             <td>{c?.email}</td>
 
                                             <td>
-                                                <button
-                                                    className="btn btn-circle btn-outline btn-error"
-                                                    onClick={() => handleDelete(c._id)}
-                                                >
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        className="h-6 w-6"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                    >
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                                                    </svg>
-                                                </button>
+                                                <DeleteUserCart id={c._id}/>
                                             </td>
                                             {/* Other table cells */}
                                         </tr>
