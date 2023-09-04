@@ -141,7 +141,7 @@ const Navbar = () => {
                            <a href="/all-product">All Product</a>
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
-                        <FaEllipsisH className="w-[50px] h-[20px]" />
+                        {/* <FaEllipsisH className="w-[50px] h-[20px]" /> */}
                      </ul>
                   </div>
                </div>

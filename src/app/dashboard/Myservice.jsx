@@ -46,7 +46,7 @@ const MyService = () => {
       
 
     return (
-        <div className='  ' id="myservice" >
+        <div className=' text-white ' id="myservice" >
             <div className='mt-16  ' id='userManagement'>
                 <div>
                     <hr className='w-full  mx-auto mt-5 mb-5' />
@@ -58,24 +58,24 @@ const MyService = () => {
                         <table className="table">
                             {/* head */}
                             <thead>
-                                <tr className='text-[#222324] text-base'>
+                                <tr className='text-[#ffffff] text-base'>
                                     <th>Index</th>
 
-                                    <th>Service Name</th>
+                                    <th>Name</th>
 
                                     <th>Image</th>
-                                    <th>Delete</th>
+                                    <th>Go Service</th>
                                 </tr>
                             </thead>
                             <tbody className=''>
                                 {/* rows */}
                                 {Array.isArray(filteredCarts) ? (
                                     filteredCarts.map((c, index) => (
-                                        <tr className=' rounded-lg border-2  border-black ' key={c._id}>
+                                        <tr className='  rounded-lg border-2  border-black ' key={c._id}>
                                             <th>{index + 1}</th>
                                             <td>{c?.name}</td>
                                             <Image
-                                                className='rounded-full mt-5'
+                                                className=' mt-4'
                                                 src={c?.image}
                                                 height={40}
                                                 width={40}
@@ -84,21 +84,12 @@ const MyService = () => {
 
                                             <td>
                                                 <button
-                                                    className="btn btn-circle btn-outline btn-error"
+                                                    className="btn btn-circle btn-outline btn-success"
                                                     onClick={() => handleDelete(c._id)}
                                                 >
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        className="h-6 w-6"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                    >
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                                                    </svg>
+                                                    Go
                                                 </button>
                                             </td>
-                                            {/* Other table cells */}
                                         </tr>
                                     ))
                                 ) : (
