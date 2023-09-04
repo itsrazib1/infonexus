@@ -7,6 +7,7 @@ import UserManagement from './UserManagement';
 import { UserAuth } from '../Context/AuthContext';
 import { getusers } from '../utils/getusers';
 import UserCart from './UserCart';
+import MyService from './Myservice';
 
 const Dashboard = () => {
     const { user } = UserAuth();
@@ -36,7 +37,7 @@ const Dashboard = () => {
             {
                 isAdmin ?
                     <>
-                        <div  >
+                        <div>
                             <DashBoardHome />
                         </div>
                         <div>
@@ -57,6 +58,10 @@ const Dashboard = () => {
                         </div>
                         <div>
                             <UserCart />
+                        </div>
+                        
+                        <div>
+                            <MyService />
                         </div>
 
                     </>
