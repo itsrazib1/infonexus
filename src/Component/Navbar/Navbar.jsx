@@ -57,7 +57,7 @@ const Navbar = () => {
                            <Link href="#">Products</Link>
                            <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" />
                         </li>
-                        <li>Customers</li>
+                        <Link href="/customers"><li>Customers</li></Link>
                         <li className="flex items-center space-x-1">
                            <Link href="#">Company</Link>
                            <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" />
@@ -210,7 +210,7 @@ const Navbar = () => {
                            </div>
                         )}
                      </div>
-                     <a href="#" className="font-semibold p-3">
+                     <a href="/customer" className="font-semibold p-3">
                         Customers
                      </a>
 
