@@ -136,7 +136,7 @@ const Navbar = () => {
                               </div>
                            )}
                         </li>
-                        <li><a href="/customer">Customers</a></li>
+                        <Link href="/customers"><li>Customers</li></Link>
                         <li className="flex items-center space-x-1">
                            <a href="/all-product">All Product</a>
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
@@ -288,7 +288,7 @@ const Navbar = () => {
                            </div>
                         )}
                      </div>
-                     <a href="#" className="font-semibold p-3">
+                     <a href="/customer" className="font-semibold p-3">
                         Customers
                      </a>
 
