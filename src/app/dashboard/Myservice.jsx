@@ -46,14 +46,14 @@ const MyService = () => {
       
 
     return (
-        <div className='  ' id="myservice" >
-            <div className='mt-16  ' id='userManagement'>
-                <div>
-                    <hr className='w-full  mx-auto mt-5 mb-5' />
+        <div className='box mt-28' id="myService" >
+            <div className='' id='userManagement'>
+                <div className='shadow4'>
+                    <hr className='w-[70%]  mx-auto mt-5 mb-5' />
                     <p className='text-[#c75633] font-serif font-bold text-3xl'>MY Service {filteredCarts.length} !!!</p>
-                    <hr className='w-full mx-auto mt-5' />
+                    <hr className='w-[70%] mx-auto mt-5' />
                 </div>
-                <div className='w-5/6   mx-auto mt-20'>
+                <div className='w-full box3 mx-auto mt-20'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
