@@ -31,7 +31,7 @@ export default function Home() {
   if (!showChat) return <div />;
 
   return (
-    <div className="background  w-full p-0 m-0">
+    <div className="background pt-20 px-10 w-full p-0 m-0">
       <div className="shadow">
         <ChatEngine
           height="calc(100vh - 212px)"
