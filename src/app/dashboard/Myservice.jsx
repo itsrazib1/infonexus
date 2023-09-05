@@ -46,17 +46,10 @@ const MyService = () => {
       
 
     return (
-<<<<<<< HEAD
-        <div className=' text-white ' id="myservice" >
-            <div className='mt-16  ' id='userManagement'>
-                <div>
-                    <hr className='w-full  mx-auto mt-5 mb-5' />
-=======
         <div className='box mt-28' id="myService" >
             <div className='' id='userManagement'>
                 <div className='shadow4'>
                     <hr className='w-[70%]  mx-auto mt-5 mb-5' />
->>>>>>> 382f76fb88356ee052464c1d3e9a35c1247ba555
                     <p className='text-[#c75633] font-serif font-bold text-3xl'>MY Service {filteredCarts.length} !!!</p>
                     <hr className='w-[70%] mx-auto mt-5' />
                 </div>
@@ -65,10 +58,10 @@ const MyService = () => {
                         <table className="table">
                             {/* head */}
                             <thead>
-                                <tr className='text-[#ffffff] text-base'>
+                                <tr className=' text-orange-200'>
                                     <th>Index</th>
 
-                                    <th>Name</th>
+                                    <th>Service Name</th>
 
                                     <th>Image</th>
                                     <th>Go Service</th>
@@ -78,11 +71,11 @@ const MyService = () => {
                                 {/* rows */}
                                 {Array.isArray(filteredCarts) ? (
                                     filteredCarts.map((c, index) => (
-                                        <tr className='  rounded-lg border-2  border-black ' key={c._id}>
+                                        <tr className=' rounded-lg border-2  border-black ' key={c._id}>
                                             <th>{index + 1}</th>
                                             <td>{c?.name}</td>
                                             <Image
-                                                className=' mt-4'
+                                                className='rounded-full mt-5'
                                                 src={c?.image}
                                                 height={40}
                                                 width={40}
@@ -94,9 +87,10 @@ const MyService = () => {
                                                     className="btn btn-circle btn-outline btn-success"
                                                     onClick={() => handleDelete(c._id)}
                                                 >
-                                                    Go
+                                                   GO
                                                 </button>
                                             </td>
+                                            {/* Other table cells */}
                                         </tr>
                                     ))
                                 ) : (
