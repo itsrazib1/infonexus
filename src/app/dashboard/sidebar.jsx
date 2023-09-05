@@ -29,7 +29,7 @@ const Sidebar = () => {
     console.log("Userdata", user, users, adminUsers, isAdmin)
     return (
         <div>
-            <div className='flex justify-center items-center mt-5 box3'>
+            <div className='flex justify-center items-center mt-4 box3'>
                 <Image
                     src={user?.photoURL}
                     width={45}
@@ -49,7 +49,7 @@ const Sidebar = () => {
                             <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="dashHome" smooth>Admin Home</Link></li>
 
                             <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="dashAllUser" smooth>All User</Link></li>
-                            
+
                             <li className='mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto'><Link to="Sales" smooth>Sales</Link></li>
 
                             <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Marketings" smooth>Marketings</Link></li>
@@ -82,7 +82,11 @@ const Sidebar = () => {
 
                         <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="usercart" smooth>My Cart</Link></li>
 
+<<<<<<< HEAD
                         <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="myservice" smooth>My Service</Link></li>
+=======
+                        <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="myService" smooth>My Service</Link></li>
+>>>>>>> 382f76fb88356ee052464c1d3e9a35c1247ba555
 
 
                     </ul>)

@@ -141,7 +141,7 @@ const DashBoardHome = () => {
 
     return (
         <div className='mt-5 hidden md:block box' id='dashHome'>
-            <div className='shadow3'>
+            <div className='shadow4'>
                 <hr className='w-[90%] mx-auto mt-5 mb-5' />
                 <p className='text-[#e4da4b] font-serif font-bold text-4xl'><span className='text-[#df3737]'>{user?.displayName}</span> Dashboard !!!</p>
                 <hr className='w-[90%] mx-auto mt-5' />
