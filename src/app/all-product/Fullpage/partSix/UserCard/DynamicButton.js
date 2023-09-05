@@ -5,6 +5,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 const DynamicButton = ({ name, image, description, id }) => {
+
   const { user } = UserAuth();
   const [clicked, setClicked] = useState(false);
 
