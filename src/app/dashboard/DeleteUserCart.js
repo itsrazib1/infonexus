@@ -23,6 +23,7 @@ const DeleteUserCart = (props) => {
           text: "Failed to delete item",
         });
       }
+       props.onDelete(itemId);
     } catch (error) {
       console.error(error);
       Swal.fire({
