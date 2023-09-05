@@ -1,5 +1,12 @@
 import mongoose from 'mongoose';
 
-const securityITManagementModel = new mongoose.Schema() 
+const securityITManagementSchema = new mongoose.Schema({
+  _id: mongoose.Types.ObjectId,
+  image: String,
+  name: String,
+  description: String,
+  btnRoute: String,
+  btn: String,
+});
 
-export const securityITManagement = mongoose.models.securityITManagements || mongoose.model("securityITManagement",securityITManagementModel)
+export const securityITManagement = mongoose.models.securityITManagement || mongoose.model('securityITManagement', securityITManagementSchema);

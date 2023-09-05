@@ -11,8 +11,10 @@ const Googlelogin = () => {
     const handleSignIn = async () => {
         try {
             await googleSignIn();
+            // After successful authentication with Firebase, send user data to your API
+            
         } catch (error) {
-            console.log(error);
+            console.error(error);
         }
     };
     const handelFbSignIn = async () => {
@@ -20,7 +22,7 @@ const Googlelogin = () => {
             await FbSignIn();
 
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
     const handleGitSignIn = async () => {
@@ -28,7 +30,7 @@ const Googlelogin = () => {
             await gitHubSignIn();
 
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
 
@@ -48,7 +50,7 @@ const Googlelogin = () => {
 
             {loading ? null : !user ? (
                 <ul className="flex gap-5">
-                    <li onClick={handleSignIn} ><Image
+                    <li onClick={()=>handleSignIn(user)} ><Image
                         src={Image1}
                         alt="Image"
                         className="border rounded-md border-blue-500 h-12 w-20 px-4 py-2 bg-white"

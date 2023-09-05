@@ -1,24 +1,26 @@
+"use client"
+import { useEffect, useState } from "react";
+import UserCard from "./UserCard/UserCard";
+import {getbianalytics} from "@/app/utils/getbianalytics";
 
-import getbianalytics from "@/app/utils/getbianalytics";
-import Image from "next/image";
+const Bianalytics =  () => {
 
+    const [Bianalytics, setBianalyticsData] = useState([]);
 
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const data = await getbianalytics();
+            console.log("Fetched data:", data); // Log the fetched data
+            setBianalyticsData(data);
+          } catch (error) {
+            console.error('Error fetching BI & Analytics data:', error);
+          }
+        };
+      
+        fetchData();
+      }, []);
 
-const UserCard = ({  name, description, btn,image }) => (
-    <div className="md:w-1/3 sm:w-full p-4 ">
-        <div className="bg-white rounded-lg shadow-lg h-48 p-4">
-            <Image width={100} height={100} src={image} alt="Image" className='h-10 border  w-10  ' />
-            <h2 className="text-xl font-semibold">{name}</h2>
-            <p className="text-gray-600">{`${description}`}</p>
-            <p className="text-blue-500 font-semibold ">{btn}</p>
-        </div>
-    </div>
-);
-const Bianalytics = async () => {
-    
-    const Bianalytics = await getbianalytics();
-    console.log(Bianalytics);
-    
     return (
         <div id="BI" className="container mx-auto p-8">
             <div>
@@ -26,15 +28,17 @@ const Bianalytics = async () => {
                 <div>Bring data to life with appealing visuals and insightful dashboards.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Bianalytics.map(({ id, name, description, btn,image }) => (
+                {Bianalytics.map(({ _id, name, description, btn, image }) => (
+
                     <UserCard
-                        key={id}
-                        id={id}
+                        key={_id}
+                        id={_id}
                         name={name}
                         description={description}
                         btn={btn}
                         image={image}
                     />
+
                 ))}
             </div>
         </div>

@@ -1,23 +1,27 @@
 
-import getMarketings from "@/app/utils/getMarketings";
-import Image from "next/image";
+"use client"
+import { useEffect, useState } from "react";
+import UserCard from "./UserCard/UserCard";
+import {getMarketings} from "@/app/utils/getMarketings";
 
 
 
-const UserCard = ({ name, discription, btn, image }) => (
-    <div className="md:w-1/3 sm:w-full p-4 ">
-        <div className="bg-white rounded-lg shadow-lg h-48 p-4">
-            <Image width={100} height={100} src={image} alt="Image" className='h-10 border  w-10  ' />
-            <h2 className="text-xl font-semibold">{name}</h2>
-            <p className="text-gray-600">{`${discription}`}</p>
-            <p className="text-blue-500 font-semibold ">{btn}</p>
-        </div>
-    </div>
-);
-const Marketing = async () => {
-    const Marketing = await getMarketings();
-    console.log(Marketing);
-    
+const Marketing =  () => {
+    const [Marketing, setMarketings] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getMarketings();
+        setMarketings(data);
+      } catch (error) {
+        console.error('Error fetching Legal data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
     return (
         <div id="Marketing" className="container  mx-auto p-8">
             <div>
@@ -25,12 +29,12 @@ const Marketing = async () => {
                 <div>Engage with prospects using multi-channel marketing tools that help you personalize experiences at scale.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Marketing.map(({ id, name, discription, btn, image }) => (
+                {Marketing.map(({ _id, name, description, btn, image }) => (
                     <UserCard
-                        key={id}
-                        id={id}
+                        key={_id}
+                        id={_id}
                         name={name}
-                        discription={discription}
+                        description={description}
                         btn={btn}
                         image={image}
                     />

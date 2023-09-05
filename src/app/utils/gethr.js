@@ -1,9 +1,16 @@
 
-
-const gethr = async() => {
-    const url = "https://infonexus.netlify.app/api/hr"
-    const res = await fetch (url);
-    return res.json();
+export const gethr = async () => {
+    const url = "/api/hr";
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        // console.log("Fetched user data:", data); // Add this line
+        return data;
+    } catch (error) {
+        console.error("Fetch error:", error);
+        throw error;
+    }
 };
 
-export default gethr;
+
+

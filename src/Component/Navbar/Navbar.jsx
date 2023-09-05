@@ -15,6 +15,7 @@ import Image from "next/image";
 import img1 from "../../../public/logo.png";
 import NavbarTwo from "./Navbar2";
 import useTheme from "@/hooks/useTheme";
+import LiveTime from "../Livetime/Livietime";
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -49,18 +50,96 @@ const Navbar = () => {
             <div className={`flex items-center justify-between`}>
                <div className="flex items-center">
                   <Link href="/">
-                     <Image src={img1} alt="Image" className="h-12 w-12" />
+                     <Image src={img1} alt="Image"  className="h-[60px] w-[60px]" />
                   </Link>
                   <div className="hidden md:block">
                      <ul className="md:flex md:ml-9 md:space-x-9 md:items-center">
-                        <li className="flex items-center space-x-1">
-                           <Link href="#">Products</Link>
-                           <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" />
+
+                        <li><div
+                           className="text-slate-600 flex items-center cursor-pointer"
+                           onClick={toggleAccordion}>
+                           <div className="flex-grow font-semibold">
+                              Products
+                           </div>
+                           {/* Accordion arrow */}
+                           <svg
+                              className={`w-6 h-6 transition-transform ${isAccordionOpen ? "rotate-180" : ""
+                                 }`}
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 strokeLinecap="round"
+                                 strokeLinejoin="round"
+                                 strokeWidth="2"
+                                 d="M19 9l-7 7-7-7"></path>
+                           </svg>
+                        </div>
+                           {isAccordionOpen && (
+                              <div className=" bg-white border-black absolute ml-0 rounded-lg border px-3 mt-2 duration-300">
+                                 <a
+                                    href="/all-product#sales"
+                                    className="block py-1   hover:text-blue-400 duration-500 ">
+                                    Sales
+                                 </a>
+                                 <a
+                                    href="/all-product#Marketing"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Marketing
+                                 </a>
+                                 <a
+                                    href="/all-product#Service"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Service
+                                 </a>
+                                 <a
+                                    href="/all-product#Finance"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Finance
+                                 </a>
+                                 <a
+                                    href="/all-product#Email"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Email & Collaboration
+                                 </a>
+                                 <a
+                                    href="/all-product#HR"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    HR
+                                 </a>
+                                 <a
+                                    href="/all-product#Legal"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Legal
+                                 </a>
+                                 <a
+                                    href="/all-product#Security"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Security & IT Management
+                                 </a>
+                                 <a
+                                    href="/all-product#BI"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    BI & Analytics
+                                 </a>
+                                 <a
+                                    href="/all-product#Project"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Project Management
+                                 </a>
+                                 <a
+                                    href="/all-product#Developer"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Developer Platforms
+                                 </a>
+                              </div>
+                           )}
                         </li>
                         <Link href="/customers"><li>Customers</li></Link>
                         <li className="flex items-center space-x-1">
-                           <Link href="#">Company</Link>
-                           <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" />
+                           <a href="/all-product">All Product</a>
+                           {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         <FaEllipsisH className="w-[50px] h-[20px]" />
                      </ul>
@@ -123,8 +202,7 @@ const Navbar = () => {
                            </svg>
                         </label>
                         <span className="flex items-center space-x-[6px]">
-                           <FaGlobe className="w-[20px] h-[20px]" />
-                           <span>ENG</span>
+                           <LiveTime />
 
                         </span>
 
@@ -220,7 +298,7 @@ const Navbar = () => {
                            className="flex items-center cursor-pointer"
                            onClick={toggleMonsurAccordion}>
                            <div className="flex-grow font-semibold">
-                              Company
+                              <a href="/all-product">Company</a>
                            </div>
                            {/* Accordion arrow */}
                            <svg

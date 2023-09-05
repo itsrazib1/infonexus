@@ -24,24 +24,29 @@ const NavbarTwo = () => {
     }, []);
     const handleSignOut = async () => {
         try {
+            await logOut();
+        } catch (error) {
+            // console.log(error);
+        }
+    };
+    const addTodatabase  = async () => {
+        try {
             const userData = {
                 name: user.displayName,
                 email: user.email,
                 photo: user.photoURL,
             };
-            console.log(userData)
+            // console.log(userData)
 
-            await fetch('http://localhost:3000/api/users', {
+            await fetch('/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(userData),
             });
-
-            await logOut();
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
 
@@ -107,7 +112,7 @@ const NavbarTwo = () => {
                                         <div class="    flex flex-row ">
                                             <h2 ><p
                                                 className=" md:btn-sm text-blue-500 cursor-pointer text-xs px-2 py-1 ">
-                                                <a href="/dashboard">Dashboard</a>
+                                                <a onClick={addTodatabase} href="/dashboard">Dashboard</a>
                                             </p></h2>
                                             <h2>
                                                 <p

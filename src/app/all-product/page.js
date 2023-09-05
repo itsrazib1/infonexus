@@ -1,3 +1,4 @@
+
 import Partfive from "./Fullpage/PartFive/Partfive";
 import PartFour from "./Fullpage/PartFour/PartFour";
 import PartThree from "./Fullpage/PartThree/PartThree";
@@ -16,7 +17,7 @@ import ProjectManagement from "./Fullpage/partSix/projectManagement";
 import SecurityITManagement from "./Fullpage/partSix/securityITManagement";
 
 const page = () => {
-  
+
   return (
     <div>
       <PartOne></PartOne>

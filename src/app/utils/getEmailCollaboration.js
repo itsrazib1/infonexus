@@ -1,9 +1,18 @@
 
 
-const getEmailCollaboration = async() => {
-    const url = "https://infonexus.netlify.app/api/EmailCollaboration"
-    const res = await fetch (url);
-    return res.json();
+
+export const getEmailCollaboration = async () => {
+    const url = "/api/EmailCollaboration";
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        // console.log("Fetched user data:", data); // Add this line
+        return data;
+    } catch (error) {
+        console.error("Fetch error:", error);
+        throw error;
+    }
 };
 
-export default getEmailCollaboration;
+
+
