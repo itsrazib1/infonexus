@@ -72,9 +72,9 @@ const UserCart = () => {
                     <p className='text-[#c75633] font-serif font-bold text-3xl'>MY Carts {filteredCarts.length} !!!</p>
                     <hr className='w-full mx-auto mt-5' />
                 </div>
-                <div className='mt-28 box3 grid grid-cols-1 md:grid-cols-2 justify-items-center gap-y-5 pb-20'>
+                <div className='mt-28 box3 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-8 pb-20'>
                     {Array.isArray(filteredCarts) ? (
-                        filteredCarts.map((c, index) => (<div key={c._id} className="card w-72 glass">
+                        filteredCarts.map((c, index) => (<div key={c._id} className="card w-64 glass">
                             <figure className="px-10 pt-10">
                                 <Image
                                     className='rounded-full mt-2'
@@ -170,7 +170,7 @@ const UserCart = () => {
                     </div>
                 </div> */}
             </div>
-            <div className='flex justify-evenly box3'>
+            <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center gap-5 box3'>
                 <div className='mt-5 pt-2 text-xl font-bold box3 px-5 py-1'>Total Price : <span className='text-yellow-500'>{cartQuantity * 9.99}</span> $</div>
                 <div className='box3'><button onClick={(() => { checkout({ lineItems: [{ price: "price_1NlwH8DjTTkFwOYO5XypvHUW", quantity: cartQuantity }] }) })} className='btn btn-secondary mt-4'>Pay Now</button></div>
             </div>
