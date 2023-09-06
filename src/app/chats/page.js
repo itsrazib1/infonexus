@@ -26,7 +26,7 @@ export default function Home() {
   
   useEffect(() => {
     if (username === "" || secret === "") {
-      router.push("/");
+      // router.push("/");
     }
   }, [username, secret, router]); // Include 'router' in the dependency array
 
