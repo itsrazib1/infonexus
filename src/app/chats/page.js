@@ -21,7 +21,9 @@ export default function Home() {
       setShowChat(true);
     }
   }, []);
-
+  console.log("username:", username);
+  console.log("secret:", secret);
+  
   useEffect(() => {
     if (username === "" || secret === "") {
       router.push("/");

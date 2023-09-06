@@ -1,9 +1,6 @@
 "use client"
 import React, { useContext } from "react";
-
-
 import { useRouter } from 'next/navigation';
-
 import axios from "axios";
 import { Context } from "../Context";
 
@@ -16,14 +13,12 @@ const Auth = () => {
     e.preventDefault();
 
     if (username.length === 1 || secret.length === 1) return;
-
     axios
       .put(
         "https://api.chatengine.io/users/",
         { username, secret },
         { headers: { "Private-Key": "b9f553f3-cd9a-437f-a1c8-9ae3a00527ab" } }
       )
-
       .then((r) => {
         router.push("/chats");
       });
