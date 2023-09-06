@@ -142,7 +142,7 @@ const Navbar = () => {
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         <li className="flex items-center space-x-1">
-                           <a href="/messege">Live Chat</a>
+                           <a href="#">Live Chat</a>
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         {/* <FaEllipsisH className="w-[50px] h-[20px]" /> */}
@@ -302,7 +302,7 @@ const Navbar = () => {
                            className="flex items-center cursor-pointer"
                           >
                            <div className="flex-grow font-semibold">
-                           <a href="/messege">Live Chat</a>
+                           <a href="#">Live Chat</a>
                            </div>
                            {/* Accordion arrow */}
                            
