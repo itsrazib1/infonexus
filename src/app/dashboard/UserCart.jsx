@@ -9,89 +9,89 @@ import PostAndDeleteBtn from "./PostAndDeleteBtn";
 
 const UserCart = () => {
     const [carts, setCarts] = useState([]);
-    
+
     const { user } = UserAuth();
-    
+
     useEffect(() => {
         const fetchData = async () => {
-      try {
-          const cartsData = await getCarts();
-          setCarts(cartsData);
+            try {
+                const cartsData = await getCarts();
+                setCarts(cartsData);
+            } catch (error) {
+                console.error("Error fetching cart data:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    const filteredCarts = carts.filter((carts) => carts.email === user?.email);
+
+    const singlecart = carts.filter((u) => u.email === user?.email);
+    console.log("users cart", singlecart);
+    const cartQuantity = filteredCarts.length;
+
+    const handlePayment = async () => {
+        console.log("Filtered Carts:", filteredCarts);
+        try {
+            // Make a POST request to your API endpoint "/api/purchase"
+            const response = await axios.post("/api/purchase", filteredCarts);
+
+            // Check the response for success or handle it accordingly
+            if (response.status === 201) {
+                // Payment successful, you can show a success message or perform other actions
+                console.log("Payment successful", response.data);
+            } else {
+                // Handle other response status codes as needed
+                console.error("Payment failed");
+            }
         } catch (error) {
-            console.error("Error fetching cart data:", error);
+            console.error("Error making payment:", error);
         }
     };
 
-    fetchData();
-  }, []);
-
-  const filteredCarts = carts.filter((carts) => carts.email === user?.email);
-
-  const singlecart = carts.filter((u) => u.email === user?.email);
-  console.log("users cart", singlecart);
-  const  cartQuantity = filteredCarts.length;
-
-  const handlePayment = async () => {
-    console.log("Filtered Carts:", filteredCarts);
-    try {
-      // Make a POST request to your API endpoint "/api/purchase"
-      const response = await axios.post("/api/purchase", filteredCarts);
-
-      // Check the response for success or handle it accordingly
-      if (response.status === 201) {
-        // Payment successful, you can show a success message or perform other actions
-        console.log("Payment successful", response.data);
-      } else {
-        // Handle other response status codes as needed
-        console.error("Payment failed");
-      }
-    } catch (error) {
-      console.error("Error making payment:", error);
-    }
-  };
-
-  return (
-    <div className="min-h-screen box mt-28 " id="usercart">
-      <div className="" id="userManagement">
-        <div className="shadow4">
-          <hr className="w-full  mx-auto mt-5 mb-5" />
-          <p className="text-[#c75633] font-serif font-bold text-3xl">
-            MY Carts {filteredCarts.length} !!!
-          </p>
-          <hr className="w-full mx-auto mt-5" />
-        </div>
-        <div className="mt-28 box3 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-8 pb-20">
-          {Array.isArray(filteredCarts) ? (
-            filteredCarts.map((c, index) => (
-              <div key={c._id} className="card w-64 glass">
-                <figure className="px-10 pt-10">
-                  <Image
-                    className="rounded-full mt-2"
-                    src={c?.image}
-                    height={50}
-                    width={50}
-                    alt={`${c.name}'s Profile Photo`}
-                  />
-                </figure>
-                <p className="bg-[#2d778a] mt-4 text-xl">{index + 1}</p>
-                <div className="card-body items-center text-center">
-                  <h2 className="card-title">Service Name: {c?.name}</h2>
-                  <p>User Email: {c?.email}</p>
-                  <div className="card-actions mt-5">
-                    <DeleteUserCart id={c._id} />
-                    <PostAndDeleteBtn id={c._id} name={c.name} email={c.email} image={c.image} />
-                     
-                  </div>
+    return (
+        <div className="min-h-screen box mt-28 " id="usercart">
+            <div className="" id="userManagement">
+                <div className="shadow4">
+                    <hr className="w-full  mx-auto mt-5 mb-5" />
+                    <p className="text-[#c75633] font-serif font-bold text-3xl">
+                        MY Carts {filteredCarts.length} !!!
+                    </p>
+                    <hr className="w-full mx-auto mt-5" />
                 </div>
-              </div>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="4">Loading...</td>
-            </tr>
-          )}
-        </div>
-        {/* <div className='w-full mx-auto mt-20 box3'>
+                <div className="mt-28 box3 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-8 pb-20">
+                    {Array.isArray(filteredCarts) ? (
+                        filteredCarts.map((c, index) => (
+                            <div key={c._id} className="card w-64 glass">
+                                <figure className="px-10 pt-10">
+                                    <Image
+                                        className="rounded-full mt-2"
+                                        src={c?.image}
+                                        height={50}
+                                        width={50}
+                                        alt={`${c.name}'s Profile Photo`}
+                                    />
+                                </figure>
+                                <p className="bg-[#2d778a] mt-4 text-xl">{index + 1}</p>
+                                <div className="card-body items-center text-center">
+                                    <h2 className="card-title">Service Name: {c?.name}</h2>
+                                    <p>User Email: {c?.email}</p>
+                                    <div className="card-actions mt-5">
+                                        <DeleteUserCart id={c._id} />
+                                        <PostAndDeleteBtn id={c._id} name={c.name} email={c.email} image={c.image} />
+
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    ) : (
+                        <tr>
+                            <td colSpan="4">Loading...</td>
+                        </tr>
+                    )}
+                </div>
+                {/* <div className='w-full mx-auto mt-20 box3'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             <thead>
@@ -134,22 +134,22 @@ const UserCart = () => {
                         </table>
                     </div>
                 </div> */}
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-5 box3">
-        
-        <div className="">
-        <div className="mt-5 pt-2 text-xl font-bold box3 px-5 py-1">
-          Single Price :{" "}
-          <span className="text-yellow-500"> 9.99</span> $
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-5 box3">
+
+                <div className="">
+                    <div className="mt-5 pt-2 text-xl font-bold box3 px-5 py-1">
+                        Single Price :{" "}
+                        <span className="text-yellow-500"> 9.99</span> $
+                    </div>
+                </div>
+                <div className="mt-5 pt-2 text-xl font-bold box3 px-5 py-1">
+                    Total Price :{" "}
+                    <span className="text-yellow-500">{cartQuantity * 9.99}</span> $
+                </div>
+            </div>
         </div>
-        </div>
-        <div className="mt-5 pt-2 text-xl font-bold box3 px-5 py-1">
-          Total Price :{" "}
-          <span className="text-yellow-500">{cartQuantity * 9.99}</span> $
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default UserCart;
