@@ -2,7 +2,7 @@ import { FaRegCheckCircle } from "react-icons/fa";
 
 const Security = () => {
   return (
-    <div id="Security">
+    <div id="Security" className="text-black">
       <div className="md:p-16 p-5 bg-[#F1F3F4] border-2 border-[#dbdbdb]">
         <div className="md:w-2/3 mx-auto">
           <p className="text-right md:font-normal font-bold md:mb-2 mb-5"> Last updated on: 8th March 2023.</p>
@@ -67,7 +67,7 @@ const Security = () => {
           </div>
         </div>
       </div>
-      <div className="w-2/3 mx-auto py-16 hidden md:block">
+      <div className="w-2/3 mx-auto py-16 hidden md:block text-base-content">
         <h2 className="text-3xl font-bold mb-3 mt-16 ">Organizational Security</h2>
         <p className="mb-8">
           We have an Information Security Management System (ISMS) in place
