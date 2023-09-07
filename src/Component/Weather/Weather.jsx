@@ -11,22 +11,23 @@ const Weather = () => {
 
 
     useEffect(() => {
-        if (!city) {
-            // Do not make the API call if the city is not provided.
-            return;
-        }
+    if (!city) {
+        // Do not make the API call if the city is not provided.
+        return;
+    }
 
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
-        axios
-            .get(apiUrl)
-            .then((response) => {
-                setWeatherData(response.data);
-            })
-            .catch((error) => {
-                console.error('Error fetching weather data:', error);
-            });
-    }, [city]);
+    axios
+        .get(apiUrl)
+        .then((response) => {
+            setWeatherData(response.data);
+        })
+        .catch((error) => {
+            console.error('Error fetching weather data:', error);
+        });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [city]);
 
     const handleCityChange = (e) => {
         setCity(e.target.value);

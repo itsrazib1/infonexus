@@ -1,10 +1,10 @@
 import React from 'react';
-import Customer from './Customer';
+import SectionOne from './Sections/SectionOne/SectionOne';
 
 const page = () => {
     return (
         <div>
-            <Customer></Customer>
+            <SectionOne/>
         </div>
     );
 };

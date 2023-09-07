@@ -136,12 +136,16 @@ const Navbar = () => {
                               </div>
                            )}
                         </li>
-                        <li><a href="/customer">Customers</a></li>
+                        <Link href="/customers"><li>Customers</li></Link>
                         <li className="flex items-center space-x-1">
                            <a href="/all-product">All Product</a>
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
-                        <FaEllipsisH className="w-[50px] h-[20px]" />
+                        <li className="flex items-center space-x-1">
+                           <a href="#">Live Chat</a>
+                           {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
+                        </li>
+                        {/* <FaEllipsisH className="w-[50px] h-[20px]" /> */}
                      </ul>
                   </div>
                </div>
@@ -288,7 +292,7 @@ const Navbar = () => {
                            </div>
                         )}
                      </div>
-                     <a href="#" className="font-semibold p-3">
+                     <a href="/customer" className="font-semibold p-3">
                         Customers
                      </a>
 
@@ -296,24 +300,12 @@ const Navbar = () => {
                      <div className="p-3">
                         <div
                            className="flex items-center cursor-pointer"
-                           onClick={toggleMonsurAccordion}>
+                          >
                            <div className="flex-grow font-semibold">
-                              <a href="/all-product">Company</a>
+                           <a href="#">Live Chat</a>
                            </div>
                            {/* Accordion arrow */}
-                           <svg
-                              className={`w-6 h-6 transition-transform ${isMonsurAccordionOpen ? "rotate-180" : ""
-                                 }`}
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                 strokeLinecap="round"
-                                 strokeLinejoin="round"
-                                 strokeWidth="2"
-                                 d="M19 9l-7 7-7-7"></path>
-                           </svg>
+                           
                         </div>
                         {isMonsurAccordionOpen && (
                            <div className="ml-6 mt-2 cursor-pointer">
