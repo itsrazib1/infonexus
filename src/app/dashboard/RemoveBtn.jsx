@@ -18,7 +18,7 @@ const RemoveBtn = ({ id }) => {
 
         if (confirmed.isConfirmed) {
             try {
-                const res = await fetch(`http://localhost:3000/api/trynow?id=${id}`, {
+                const res = await fetch(`/api/trynow?id=${id}`, {
                     method: 'DELETE',
                 });
                 window.location.reload();

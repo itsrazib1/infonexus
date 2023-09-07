@@ -17,7 +17,7 @@ const PostAndDeleteBtn = ({id, name, email, image}) => {
             body: JSON.stringify(addToServices),
           })
         try {
-        let result = await fetch(`http://localhost:3000/api/trynow/${itemId}`, {
+        let result = await fetch(`/api/trynow/${itemId}`, {
             method: "DELETE",
         });
         result = await result.json();
