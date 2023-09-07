@@ -61,7 +61,7 @@ const MyService = () => {
                         <table className="table">
                             {/* head */}
                             <thead>
-                                <tr className='text-[#c8def4] text-base'>
+                                <tr className='text-[#101010] text-base'>
                                     <th>Index</th>
 
                                     <th>Service Name</th>
@@ -74,7 +74,7 @@ const MyService = () => {
                                 {/* rows */}
                                 {Array.isArray(filteredCarts) ? (
                                     filteredCarts.map((c, index) => (
-                                        <tr className=' text-[#c8def4] rounded-lg border-2  ' key={c._id}>
+                                        <tr className=' text-[#1b1b1c] rounded-lg border-2  ' key={c._id}>
                                             <th>{index + 1}</th>
                                             <td>{c?.name}</td>
                                             <Image
