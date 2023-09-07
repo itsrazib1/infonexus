@@ -12,7 +12,6 @@ const LoginPage2 = () => {
     try {
        await googleSignIn();
     } catch (error) {
-        // console.log(error);
     }
 };
   const handelFbSignIn = async () => {

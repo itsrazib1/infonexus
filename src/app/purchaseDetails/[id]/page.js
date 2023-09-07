@@ -33,17 +33,9 @@ export default function Page({ params }) {
                             width={300}
                             alt={`${c.name}'s Profile Photo`}
                         />
-
-
                     </div>
-
-
-
                 </div>))
-
             }
-
         </div>
-
     )
 }

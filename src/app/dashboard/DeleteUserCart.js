@@ -5,7 +5,7 @@ const DeleteUserCart = (props) => {
   const itemId = props.id;
   const handleDelete = async () => {
     try {
-      let result = await fetch(`http://localhost:3000/api/trynow/${itemId}`, {
+      let result = await fetch(`https://infonexus.netlify.app/api/trynow/${itemId}`, {
         method: "DELETE",
       });
       result = await result.json();
@@ -23,6 +23,7 @@ const DeleteUserCart = (props) => {
           text: "Failed to delete item",
         });
       }
+       props.onDelete(itemId);
     } catch (error) {
       console.error(error);
       Swal.fire({

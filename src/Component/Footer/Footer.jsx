@@ -4,23 +4,28 @@ import rightArrow from "../../../public/icons8-right-arrow-90.png";
 import instagram from "../../../public/instagram.png";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import Link from "next/link";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-base-100 text-base-100">
+      <footer className="bg-base-100 sm:pt-[500px] md:pt-1 text-base-100">
         <div className="text-center mb-14 pt-12 px-2">
-          <h1 className="md:text-[44px] mb-1 md:mb-2 text-[25px] text-base-content">Ready to do your best work?</h1>
+          <h1 className="md:text-[44px] mb-1 md:mb-2 text-[25px] text-base-content">
+            Ready to do your best work?
+          </h1>
           <p className="md:text-[32px] text-[20px] max-w-[720px] m-auto mb-[20px] text-base-content">
             Let us get you started.
           </p>
-          <button className="uppercase mt-7 rounded-sm bg-[#f60014] md:px-7 px-6 py-3 md:py-4 text-white flex text-xs md:text-sm mx-auto font-semibold">
-            sign up now
-            <Image
-              src={rightArrow}
-              alt="Image"
-              className="md:w-6 w-4 h-auto hover:translate-x-[10px] transition-transform duration-1000"
-            />
-          </button>
+          <Link href="/singin">
+            <button className="uppercase mt-7 rounded-sm bg-[#f60014] md:px-7 px-6 py-3 md:py-4 text-white flex text-xs md:text-sm mx-auto font-semibold">
+              sign up now
+              <Image
+                src={rightArrow}
+                alt="Image"
+                className="md:w-6 w-4 h-auto hover:translate-x-[10px] transition-transform duration-1000"
+              />
+            </button>
+          </Link>
         </div>
         <div className="join join-vertical w-full md:hidden">
           <div className="collapse collapse-arrow join-item border border-base-300">
@@ -29,13 +34,31 @@ const Footer = () => {
               Apps and Extentions
             </div>
             <div className="collapse-content">
-              <p className="mb-5 ml-1"><a className="text-base-content  text-lg">Branding</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Mobile Apps</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Google Workspace Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Microsoft 365 Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Product Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Marketplace</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Browser Extentions</a></p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content  text-lg">Branding</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Mobile Apps</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Google Workspace Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Microsoft 365 Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Product Integration</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Marketplace</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Browser Extentions</a>
+              </p>
             </div>
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
@@ -44,13 +67,31 @@ const Footer = () => {
               Learn
             </div>
             <div className="collapse-content">
-            <p className="mb-5 ml-1"><a className="text-base-content text-lg">Branding</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Mobile Apps</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Google Workspace Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Microsoft 365 Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Product Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Marketplace</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Browser Extentions</a></p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Branding</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Mobile Apps</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Google Workspace Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Microsoft 365 Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Product Integration</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Marketplace</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Browser Extentions</a>
+              </p>
             </div>
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
@@ -59,13 +100,31 @@ const Footer = () => {
               Community
             </div>
             <div className="collapse-content">
-            <p className="mb-5 ml-1"><a className="text-base-content text-lg">Branding</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Mobile Apps</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Google Workspace Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Microsoft 365 Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Product Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Marketplace</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Browser Extentions</a></p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Branding</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Mobile Apps</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Google Workspace Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Microsoft 365 Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Product Integration</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Marketplace</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Browser Extentions</a>
+              </p>
             </div>
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
@@ -74,13 +133,31 @@ const Footer = () => {
               products
             </div>
             <div className="collapse-content">
-            <p className="mb-5 ml-1"><a className="text-base-content text-lg">Branding</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Mobile Apps</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Google Workspace Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Microsoft 365 Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Product Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Marketplace</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Browser Extentions</a></p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Branding</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Mobile Apps</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Google Workspace Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Microsoft 365 Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Product Integration</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Marketplace</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Browser Extentions</a>
+              </p>
             </div>
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
@@ -89,13 +166,31 @@ const Footer = () => {
               Company
             </div>
             <div className="collapse-content">
-            <p className="mb-5 ml-1"><a className="text-base-content text-lg">Branding</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Mobile Apps</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Google Workspace Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Microsoft 365 Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Product Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Marketplace</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Browser Extentions</a></p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Branding</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Mobile Apps</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Google Workspace Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Microsoft 365 Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Product Integration</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Marketplace</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Browser Extentions</a>
+              </p>
             </div>
           </div>
           <div className="collapse collapse-arrow join-item border border-base-300">
@@ -104,30 +199,54 @@ const Footer = () => {
               Security and Privacy
             </div>
             <div className="collapse-content">
-            <p className="mb-5 ml-1"><a className="text-base-content text-lg">Branding</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Mobile Apps</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Google Workspace Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Microsoft 365 Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Product Integration</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Marketplace</a></p>
-              <p className="mb-5 ml-1"><a className="text-base-content text-lg">Browser Extentions</a></p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Branding</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Mobile Apps</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Google Workspace Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">
+                  Microsoft 365 Integration
+                </a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Product Integration</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Marketplace</a>
+              </p>
+              <p className="mb-5 ml-1">
+                <a className="text-base-content text-lg">Browser Extentions</a>
+              </p>
             </div>
           </div>
         </div>
         <div className="footer p-10 justify-between hidden md:flex ">
           <div>
-            <h2 className="text-2xl mb-3">Apps and Extensions</h2>
+            <h2 className="text-2xl mb-3 text-base-content">Apps and Extensions</h2>
             <a className="text-base-content text-lg">Branding</a>
             <a className="text-base-content text-lg">Mobile Apps</a>
-            <a className="text-base-content text-lg">Google Workspace Integration</a>
-            <a className="text-base-content text-lg">Microsoft 365 Integration</a>
+            <a className="text-base-content text-lg">
+              Google Workspace Integration
+            </a>
+            <a className="text-base-content text-lg">
+              Microsoft 365 Integration
+            </a>
             <a className="text-base-content text-lg">Product Integration</a>
             <a className="text-base-content text-lg">Marketplace</a>
             <a className="text-base-content text-lg">Browser Extentions</a>
           </div>
           <div>
-            <h2 className="text-2xl mb-3">Learn</h2>
-            <a className="text-base-content text-lg">Training & Certification</a>
+            <h2 className="text-2xl mb-3 text-base-content">Learn</h2>
+            <a className="text-base-content text-lg">
+              Training & Certification
+            </a>
             <a className="text-base-content text-lg">Academy</a>
             <a className="text-base-content text-lg">Blog</a>
             <a className="text-base-content text-lg">Zia</a>
@@ -135,24 +254,24 @@ const Footer = () => {
             <a className="text-base-content text-lg">The Long Game</a>
           </div>
           <div>
-            <h2 className="text-2xl mb-3">Commujnity</h2>
+            <h2 className="text-2xl mb-3 text-base-content">Commujnity</h2>
             <a className="text-base-content text-lg">User Community</a>
             <a className="text-base-content text-lg">Influence</a>
             <a className="text-base-content text-lg">Partner with Us</a>
             <a className="text-base-content text-lg">Affiliate Program</a>
           </div>
           <div>
-            <h2 className="text-2xl mb-3" >Company</h2>
+            <h2 className="text-2xl mb-3 text-base-content">Company</h2>
             <a className=" text-base-content text-lg">About Us</a>
             <a className=" text-base-content text-lg">Press</a>
             <a className=" text-base-content text-lg">Events</a>
             <a className=" text-base-content text-lg">Newsroom</a>
-            <a className=" text-base-content text-lg">Branding Assets</a> 
-            <a className=" text-base-content text-lg">InfoNexus Schools</a> 
-            <a className=" text-base-content text-lg">Service Status</a> 
-          </div> 
-        </div> 
-        <div> 
+            <a className=" text-base-content text-lg">Branding Assets</a>
+            <a className=" text-base-content text-lg">InfoNexus Schools</a>
+            <a className=" text-base-content text-lg">Service Status</a>
+          </div>
+        </div>
+        <div>
           <div className="flex gap-5 justify-center items-center mt-12 mb-6">
             <span className="text-4xl text-[#ED2201]">
               <FaYoutube />
@@ -168,21 +287,40 @@ const Footer = () => {
             </span>
           </div>
           <div className="text-center text-sm md:block hidden text-base-content">
-            <span className="border-e pl-2 border-gray-400"><a href="/">InfoNexus Home</a>   </span>
-            <span className="border-e pl-2 border-gray-400"> <a href="/link#Contact">Contact Us</a>   </span>
-            <span className="border-e pl-2 border-gray-400"><a href="/link#Security">Security</a>   </span>
-            <span className="border-e pl-2 border-gray-400"><a href="/link#Complaints">IPR Complaints</a>   </span>
-            <span className="border-e pl-2 border-gray-400">Anti-spam Policy  </span>
-            <span className="border-e pl-2 border-gray-400">Terms of Service  </span>
+            <span className="border-e pl-2 border-gray-400">
+              <a href="/">InfoNexus Home</a>{" "}
+            </span>
+            <span className="border-e pl-2 border-gray-400">
+              {" "}
+              <Link href="/link#Contact">Contact Us</Link>{" "}
+            </span>
+            <span className="border-e pl-2 border-gray-400">
+              <Link href="/link#Security">Security</Link>{" "}
+            </span>
+            <span className="border-e pl-2 border-gray-400">
+              <Link href="/link#Complaints">IPR Complaints</Link>{" "}
+            </span>
+            <span className="border-e pl-2 border-gray-400">
+              Anti-spam Policy{" "}
+            </span>
+            <span className="border-e pl-2 border-gray-400">
+              Terms of Service{" "}
+            </span>
             <span className="pl-2">Privacy Policy</span>
           </div>
           <div className="text-center text-base-content text-sm md:hidden pb-12">
-            <span className="border-e pl-2 border-gray-400">InfoNexus Home  </span>
-            <span className="pl-2"> Contact Us  </span>
+            <span className="border-e pl-2 border-gray-400">
+              InfoNexus Home{" "}
+            </span>
+            <span className="pl-2"> Contact Us </span>
           </div>
           <div className="text-center text-base-content pb-12 mt-3 text-sm md:block hidden">
-            <span className="border-e pl-2 border-gray-400">Cookie Policy </span>
-            <span className="border-e pl-2 border-gray-400">GDPR Compliance  </span>
+            <span className="border-e pl-2 border-gray-400">
+              Cookie Policy{" "}
+            </span>
+            <span className="border-e pl-2 border-gray-400">
+              GDPR Compliance{" "}
+            </span>
             <span className="pl-2">Abuse Policy</span>
           </div>
         </div>
@@ -190,7 +328,9 @@ const Footer = () => {
       <footer className="footer footer-center p-10 bg-[#0B0D1F] text-primary-content">
         <div>
           <Image className="w-1/5" src={logo} alt="" />
-          <p className="text-white">© 2023, infonexus Corporation Pvt. Ltd. All Rights Reserved.</p>
+          <p className="text-white">
+            © 2023, infonexus Corporation Pvt. Ltd. All Rights Reserved.
+          </p>
         </div>
       </footer>
     </div>
