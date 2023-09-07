@@ -6,6 +6,10 @@ import Image from 'next/image';
 // import axios from 'axios';
 
 import { getPurchase } from '../utils/getPurchase';
+// import Link from 'next/link';
+// import Details from '../purchase-details/Details';
+import DetailsButton from './DetailsButton';
+
 
 const MyService = () => {
     const [carts, setCarts] = useState([]);
@@ -26,19 +30,14 @@ const MyService = () => {
         fetchData();
     }, []);
 
+
     const filteredCarts = carts.filter((carts) => carts.email === user?.email);
 
-    const handleDelete = async (cartId) => {
-        try {
-            // Call your deleteCart function here with the cartId
-            await deleteCart(cartId);
 
-            // Update the state to reflect the removed cart item
-            setCarts((prevCarts) => prevCarts.filter((cart) => cart._id !== cartId));
-        } catch (error) {
-            console.error("Error deleting cart item:", error);
-        }
-    };
+
+
+
+
     const singlecart = carts.filter(u => u.email === user?.email);
 
     console.log("users cart", singlecart)
@@ -61,20 +60,20 @@ const MyService = () => {
                         <table className="table">
                             {/* head */}
                             <thead>
-                                <tr className='text-[#222324] text-base'>
+                                <tr className='text-[#c8def4] text-base'>
                                     <th>Index</th>
 
                                     <th>Service Name</th>
 
                                     <th>Image</th>
-                                    <th>Delete</th>
+                                    <th>Details</th>
                                 </tr>
                             </thead>
                             <tbody className=''>
                                 {/* rows */}
                                 {Array.isArray(filteredCarts) ? (
                                     filteredCarts.map((c, index) => (
-                                        <tr className=' rounded-lg border-2  border-black ' key={c._id}>
+                                        <tr className=' text-[#c8def4] rounded-lg border-2  ' key={c._id}>
                                             <th>{index + 1}</th>
                                             <td>{c?.name}</td>
                                             <Image
@@ -82,24 +81,11 @@ const MyService = () => {
                                                 src={c?.image}
                                                 height={40}
                                                 width={40}
-                                                alt={`${c.name}'s Profile Photo`}
+                                                alt={`${c}'s Profile Photo`}
                                             />
 
                                             <td>
-                                                <button
-                                                    className="btn btn-circle btn-outline btn-error"
-                                                    onClick={() => handleDelete(c._id)}
-                                                >
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        className="h-6 w-6"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                    >
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                                                    </svg>
-                                                </button>
+                                                <DetailsButton cartData={c}></DetailsButton>
                                             </td>
                                             {/* Other table cells */}
                                         </tr>

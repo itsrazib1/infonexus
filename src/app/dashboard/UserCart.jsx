@@ -1,18 +1,17 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { getCarts } from '../utils/getCarts';
+import { getCarts, deleteCart } from '../utils/getCarts'; // Import getCarts and deleteCart from your API or service
 import { UserAuth } from '../Context/AuthContext';
 import Image from 'next/image';
 import { checkout } from '@/checkout';
-import axios from 'axios';
-import RemoveBtn from './RemoveBtn';
+import DeleteUserCart from './DeleteUserCart';
+
 
 const UserCart = () => {
     const [carts, setCarts] = useState([]);
 
 
     const { user } = UserAuth();
-
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,7 +26,10 @@ const UserCart = () => {
 
         fetchData();
     }, []);
+
     const filteredCarts = carts.filter((carts) => carts.email === user?.email);
+
+
     const singlecart = carts.filter(u => u.email === user?.email);
     const cartQuantity = filteredCarts.length;
     console.log("users cart", singlecart)
@@ -79,9 +81,7 @@ const UserCart = () => {
                                 <h2 className="card-title">Service Name: {c?.name}</h2>
                                 <p>User Email: {c?.email}</p>
                                 <div className="card-actions mt-5">
-
-                                    <RemoveBtn id={c._id}></RemoveBtn>
-
+                                    <DeleteUserCart id={c._id} />
                                 </div>
                             </div>
                         </div>))
