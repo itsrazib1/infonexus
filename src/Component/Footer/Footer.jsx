@@ -229,7 +229,7 @@ const Footer = () => {
         </div>
         <div className="footer p-10 justify-between hidden md:flex ">
           <div>
-            <h2 className="text-2xl mb-3">Apps and Extensions</h2>
+            <h2 className="text-2xl mb-3 text-base-content">Apps and Extensions</h2>
             <a className="text-base-content text-lg">Branding</a>
             <a className="text-base-content text-lg">Mobile Apps</a>
             <a className="text-base-content text-lg">
@@ -243,7 +243,7 @@ const Footer = () => {
             <a className="text-base-content text-lg">Browser Extentions</a>
           </div>
           <div>
-            <h2 className="text-2xl mb-3">Learn</h2>
+            <h2 className="text-2xl mb-3 text-base-content">Learn</h2>
             <a className="text-base-content text-lg">
               Training & Certification
             </a>
@@ -254,14 +254,14 @@ const Footer = () => {
             <a className="text-base-content text-lg">The Long Game</a>
           </div>
           <div>
-            <h2 className="text-2xl mb-3">Commujnity</h2>
+            <h2 className="text-2xl mb-3 text-base-content">Commujnity</h2>
             <a className="text-base-content text-lg">User Community</a>
             <a className="text-base-content text-lg">Influence</a>
             <a className="text-base-content text-lg">Partner with Us</a>
             <a className="text-base-content text-lg">Affiliate Program</a>
           </div>
           <div>
-            <h2 className="text-2xl mb-3">Company</h2>
+            <h2 className="text-2xl mb-3 text-base-content">Company</h2>
             <a className=" text-base-content text-lg">About Us</a>
             <a className=" text-base-content text-lg">Press</a>
             <a className=" text-base-content text-lg">Events</a>
@@ -292,13 +292,13 @@ const Footer = () => {
             </span>
             <span className="border-e pl-2 border-gray-400">
               {" "}
-              <a href="/link#Contact">Contact Us</a>{" "}
+              <Link href="/link#Contact">Contact Us</Link>{" "}
             </span>
             <span className="border-e pl-2 border-gray-400">
-              <a href="/link#Security">Security</a>{" "}
+              <Link href="/link#Security">Security</Link>{" "}
             </span>
             <span className="border-e pl-2 border-gray-400">
-              <a href="/link#Complaints">IPR Complaints</a>{" "}
+              <Link href="/link#Complaints">IPR Complaints</Link>{" "}
             </span>
             <span className="border-e pl-2 border-gray-400">
               Anti-spam Policy{" "}

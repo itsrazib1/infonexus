@@ -38,7 +38,7 @@ const Contact = () => {
           <p className="text-xl">We are here to help.</p>
           <div className="accessed-app-header-line p-4 mt-8"></div>
         </div>
-        <div className="bg-white md:p-8 p-3 md:absolute  grid grid-cols-1 md:grid-cols-4 h-auto md:gap-0 gap-5  mx-auto w-10/12 border-solid shadow-xl mt-12 left-0 right-0 top-32  ">
+        <div className="bg-white md:p-8 p-3 md:absolute  grid grid-cols-1 md:grid-cols-2 md:gap-5  lg:grid-cols-4 h-auto lg:gap-0 gap-5  mx-auto w-10/12 border-solid shadow-xl mt-12 left-0 right-0 lg:top-32 md:top-48 ">
           <div className="card-side md:mr-5 border-2 bg-[#F6F9FD] border-[#e0eaf7]">
             <div className="card-body">
               <div className="w-10 ">
@@ -46,7 +46,7 @@ const Contact = () => {
                   <Image className="" src={product} alt="Movie" />
                 </figure>
               </div>
-              <p className="h-[120px]">
+              <p className="h-[120px] text-black">
                 Looking for a demo, or have questions about our products and
                 pricing?
               </p>
@@ -60,7 +60,7 @@ const Contact = () => {
                   <Image className="" src={help} alt="Movie" />
                 </figure>
               </div>
-              <p className="h-[120px]">
+              <p className="h-[120px] text-black">
                 Need help with adding licenses, changing plans, or additional
                 services?
               </p>
@@ -74,7 +74,7 @@ const Contact = () => {
                   <Image className="" src={renew} alt="Movie" />
                 </figure>
               </div>
-              <p className="h-[120px]">
+              <p className="h-[120px] text-black">
                 Want to renew your subscription or need details about your
                 current plan?
               </p>
@@ -88,7 +88,7 @@ const Contact = () => {
                   <Image className="" src={cancel} alt="Movie" />
                 </figure>
               </div>
-              <p className="h-[120px]">
+              <p className="h-[120px] text-black">
                 Need to cancel or downgrade your subscription? We are sad to see
                 you go, but ready to help.
               </p>
@@ -97,16 +97,16 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#F6F9FD] md:py-16 py-8">
+      <div className="bg-[#F6F9FD] md:py-16 py-8 md:mt-96 lg:mt-0">
         <div className="md:flex md:gap-8 md:w-2/3 mx-auto justify-between">
           <div className="md:w-2/5 p-8">
             <p className="text-green-600">
               <small className="uppercase">I am new here</small>
             </p>
-            <h2 className="text-3xl my-3">
+            <h2 className="text-3xl my-3 text-black">
               Interested in a product? Talk to our sales team
             </h2>
-            <p>
+            <p className="text-black">
               From questions about pricing to one-on-one personalized demos, we
               would love to connect and help get you started.
             </p>
@@ -127,10 +127,10 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="join join-vertical w-full mt-3  bg-white p-8">
+            <div className="join join-vertical w-full mt-3  bg-white p-">
               <div className="collapse collapse-arrow join-item border-b-[1px] border-base-300">
                 <input type="radio" name="my-accordion-4" checked="checked" />
-                <div className="collapse-title text-xl font-medium text-base-content">
+                <div className="collapse-title text-xl font-medium text-black">
                   Canada
                 </div>
                 <div className="collapse-content">
@@ -139,7 +139,7 @@ const Contact = () => {
                       <Image className="w-8" src={canada} alt="" />
                     </div>
                     <div className="text-blue-500">
-                      <p className="font-semibold text-lg text-black">US</p>
+                      <p className="font-semibold text-lg text-black">Canada</p>
                       <p>+1 877 834 4428</p>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ const Contact = () => {
               </div>
               <div className="collapse collapse-arrow join-item border-b-[1px] border-base-300">
                 <input type="radio" name="my-accordion-4" />
-                <div className="collapse-title text-xl font-medium text-base-content">
+                <div className="collapse-title text-xl font-medium text-black">
                   Latin America
                 </div>
                 <div className="collapse-content">
@@ -197,7 +197,7 @@ const Contact = () => {
               </div>
               <div className="collapse collapse-arrow join-item border-b-[1px] border-base-300">
                 <input type="radio" name="my-accordion-4" />
-                <div className="collapse-title text-xl font-medium text-base-content ">
+                <div className="collapse-title text-xl font-medium text-black ">
                   Asia pacific
                 </div>
                 <div className="collapse-content">
@@ -247,7 +247,7 @@ const Contact = () => {
               </div>
               <div className="collapse collapse-arrow join-item border-b-[1px] border-base-300">
                 <input type="radio" name="my-accordion-4" />
-                <div className="collapse-title text-xl font-medium text-base-content">
+                <div className="collapse-title text-xl font-medium text-black">
                   Middle East
                 </div>
                 <div className="collapse-content">
@@ -297,7 +297,7 @@ const Contact = () => {
               </div>
               <div className="collapse collapse-arrow join-item border-b-[1px] border-base-300">
                 <input type="radio" name="my-accordion-4" />
-                <div className="collapse-title text-xl font-medium text-base-content">
+                <div className="collapse-title text-xl font-medium text-black">
                   Africa
                 </div>
                 <div className="collapse-content">
@@ -347,7 +347,7 @@ const Contact = () => {
               </div>
               <div className="collapse collapse-arrow join-item border-b-[1px] border-base-300">
                 <input type="radio" name="my-accordion-4" />
-                <div className="collapse-title text-xl font-medium text-base-content">
+                <div className="collapse-title text-xl font-medium text-black">
                   Europe
                 </div>
                 <div className="collapse-content">

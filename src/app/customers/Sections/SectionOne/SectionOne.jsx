@@ -33,28 +33,28 @@ const SectionOne = () => {
       </div>
       <div className="mt-12">
         <ul className="grid md:grid-cols-6 grid-cols-3">
-            <li className=" md:p-16 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={fossil} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#E8FDF6] flex justify-center items-center"><Image className="zoom-image" src={nike} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#FBE0E6] flex justify-center items-center"><Image className="zoom-image" src={vodaphone} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#DFFBDB] flex justify-center items-center"><Image className="zoom-image" src={netflix} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={goorey} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#F7F7E3] flex justify-center items-center"><Image className="zoom-image" src={addidas} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={fossil} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#E8FDF6] flex justify-center items-center"><Image className="zoom-image" src={nike} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#FBE0E6] flex justify-center items-center"><Image className="zoom-image" src={vodaphone} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#DFFBDB] flex justify-center items-center"><Image className="zoom-image" src={netflix} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={goorey} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#F7F7E3] flex justify-center items-center"><Image className="zoom-image" src={addidas} alt="brand-logo"/></li>
         </ul>
         <ul className="grid md:grid-cols-6 grid-cols-3">
             <li className=" md:p-16 p-4 bg-[#F7F7E3] flex justify-center items-center"><Image className="zoom-image" src={amazon} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={hotstar} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#DFFBDB] flex justify-center items-center"><Image className="zoom-image" src={oneplus} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#FBE0E6] flex justify-center items-center"><Image className="zoom-image" src={mcfee} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#E8FDF6] flex justify-center items-center"><Image className="zoom-image" src={medlife} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={jaguar} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={hotstar} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#DFFBDB] flex justify-center items-center"><Image className="zoom-image" src={oneplus} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#FBE0E6] flex justify-center items-center"><Image className="zoom-image" src={mcfee} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#E8FDF6] flex justify-center items-center"><Image className="zoom-image" src={medlife} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={jaguar} alt="brand-logo"/></li>
         </ul>
         <ul className="grid md:grid-cols-6 grid-cols-3">
-            <li className=" md:p-16 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={bata} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#E8FDF6] flex justify-center items-center"><Image className="zoom-image" src={mi} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#FBE0E6] flex justify-center items-center"><Image className="zoom-image" src={levis} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#DFFBDB] flex justify-center items-center"><Image className="zoom-image" src={siemens} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={hp} alt="brand-logo"/></li>
-            <li className=" md:p-16 p-4 bg-[#F7F7E3] flex justify-center items-center"><Image className="zoom-image" src={phillips} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={bata} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#E8FDF6] flex justify-center items-center"><Image className="zoom-image" src={mi} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#FBE0E6] flex justify-center items-center"><Image className="zoom-image" src={levis} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#DFFBDB] flex justify-center items-center"><Image className="zoom-image" src={siemens} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#F0F0F0] flex justify-center items-center"><Image className="zoom-image" src={hp} alt="brand-logo"/></li>
+            <li className=" md:p-8 p-4 bg-[#F7F7E3] flex justify-center items-center"><Image className="zoom-image" src={phillips} alt="brand-logo"/></li>
         </ul>
       </div>
     </>
