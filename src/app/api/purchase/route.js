@@ -16,19 +16,14 @@ export async function GET() {
 
 
 export async function POST(req) {
-    const filteredCarts = await req.json();
+    const userLode = await req.json();
 
     try {
         await mongoose.connect(uri);
-
-        // Assuming "filteredCarts" is an array, you can save each item individually
-        for (const cart of filteredCarts) {
-            const CartsDataLode = new purchase(cart);
-            await CartsDataLode.save();
-        }
-
-        console.log('Users saved');
-        return NextResponse.json({ message: 'Users saved' }, { status: 201 });
+        const userDataLode = new purchase(userLode);
+        const result = await userDataLode.save();
+        console.log('User saved:', result);
+        return NextResponse.json(result, { status: 201 });
     } catch (error) {
         console.error('Error saving user data:', error);
         return NextResponse.json({ error: 'Error saving user data' }, { status: 500 });
