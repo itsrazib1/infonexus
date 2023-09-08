@@ -138,11 +138,11 @@ const Navbar = () => {
                         </li>
                         <Link href="/customers"><li>Customers</li></Link>
                         <li className="flex items-center space-x-1">
-                           <a href="/all-product">All Product</a>
+                           <Link href="/all-product">All Product</Link>
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         <li className="flex items-center space-x-1">
-                           <a href="#">Live Chat</a>
+                           <Link href="/chats">Live Chat</Link>
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         {/* <FaEllipsisH className="w-[50px] h-[20px]" /> */}
