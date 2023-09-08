@@ -1,7 +1,5 @@
 import { uri } from '@/services/DbConnect';
 import { tryNow } from '@/services/model/trynow';
-// import { users } from '@/services/model/users';
-// import { Sales } from '@/services/model/sales';
 import mongoose from 'mongoose';
 import { NextResponse } from 'next/server';
 
