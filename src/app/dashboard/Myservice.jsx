@@ -78,7 +78,7 @@ const MyService = () => {
                                             <th>{index + 1}</th>
                                             <td>{c?.name}</td>
                                             <Image
-                                                className='rounded-full mt-5'
+                                                className='rounded-full bg-white mt-5'
                                                 src={c?.image}
                                                 height={40}
                                                 width={40}
