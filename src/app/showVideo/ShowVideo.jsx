@@ -8,7 +8,7 @@ const ShowVideo = () => {
             <h1 className='font-serif text-xl md:text-2xl text-center text-gradient font-bold flex justify-center'>
                 <span className='text-gradient me-3'>Info-Nexus</span>
                 <Typical
-                    steps={['Information !!!', 800, 'Videos !!!', 900]}
+                    steps={['Information !!!', 1000, 'Videos !!!', 900]}
                     loop={Infinity}
                     wrapper="span"
                 />
