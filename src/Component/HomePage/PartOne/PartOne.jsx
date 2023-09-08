@@ -10,9 +10,10 @@ import React from 'react';
 import BannerSection from './BannerSection';
 import Brand from './Brand';
 import Buttonp1 from './buttonp1';
+import Link from 'next/link';
 
 const PartOne = () => {
-    
+
     return (
         <div className='mt-20'>
             <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-4 lg:px-14 pb-14 gap-4 lg:container lg:mx-auto'>
@@ -32,86 +33,97 @@ const PartOne = () => {
                 <div className="bg-base-100 border border-[#e7ebf0] px-6 lg:w-full lg:px-8">
                     <p className='text-base font-bold mt-6'>FEATURED APPS</p>
                     <div className='mt-8'>
-                        <div className='flex justify-center items-center'>
-                            <Image
-                                src={CRM}
-                                alt="Image"
-                                className='w-10 h-auto'
-                            />
-                            <div className='ms-3'>
-                                <h1 className='text-2xl font-semibold'>CRM</h1>
-                                <p>Convert leads and close sales deals faster.</p>
+                        <Link href='/all-product'>
+                            <div className='flex justify-center items-center'>
+                                <Image
+                                    src={CRM}
+                                    alt="Image"
+                                    className='w-10 h-auto'
+                                />
+                                <div className='ms-3'>
+                                    <h1 className='text-2xl font-semibold'>CRM</h1>
+                                    <p>Convert leads and close sales deals faster.</p>
+                                </div>
+                                <Image
+                                    src={Arrow}
+                                    alt="Image"
+                                    className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                                />
                             </div>
-                            <Image
-                                src={Arrow}
-                                alt="Image"
-                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
-                            />
-                        </div>
-                        <div className='flex justify-center items-center mt-6'>
-                            <Image
-                                src={Mail}
-                                alt="Image"
-                                className='w-10 h-auto'
-                            />
-                            <div className='ms-3'>
-                                <h1 className='text-2xl font-semibold'>Mail</h1>
-                                <p>Secure email service for your business.</p>
+                        </Link>
+                        <Link href='/all-product'>
+                            <div className='flex justify-center items-center mt-6'>
+                                <Image
+                                    src={Mail}
+                                    alt="Image"
+                                    className='w-10 h-auto'
+                                />
+                                <div className='ms-3'>
+                                    <h1 className='text-2xl font-semibold'>Mail</h1>
+                                    <p>Secure email service for your business.</p>
+                                </div>
+                                <Image
+                                    src={Arrow}
+                                    alt="Image"
+                                    className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                                />
                             </div>
-                            <Image
-                                src={Arrow}
-                                alt="Image"
-                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
-                            />
-                        </div>
-                        <div className='flex justify-center items-center mt-6'>
-                            <Image
-                                src={Books}
-                                alt="Image"
-                                className='w-8 h-auto'
-                            />
-                            <div className='ms-3'>
-                                <h1 className='text-2xl font-semibold'>Books</h1>
-                                <p>Powerful financial platform for growing businesses.</p>
+                        </Link>
+                        <Link href='/all-product'>
+                            <div className='flex justify-center items-center mt-6'>
+                                <Image
+                                    src={Books}
+                                    alt="Image"
+                                    className='w-8 h-auto'
+                                />
+                                <div className='ms-3'>
+                                    <h1 className='text-2xl font-semibold'>Books</h1>
+                                    <p>Powerful financial platform for growing businesses.</p>
+                                </div>
+                                <Image
+                                    src={Arrow}
+                                    alt="Image"
+                                    className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                                />
                             </div>
-                            <Image
-                                src={Arrow}
-                                alt="Image"
-                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
-                            />
-                        </div>
-                        <div className='flex justify-center items-center mt-6'>
-                            <Image
-                                src={Desk}
-                                alt="Image"
-                                className='w-10 h-auto'
-                            />
-                            <div className='ms-3'>
-                                <h1 className='text-2xl font-semibold'>Desk</h1>
-                                <p>Helpdesk software to deliver great customer support.</p>
+                        </Link>
+                        <Link href='/all-product'>
+                            <div className='flex justify-center items-center mt-6'>
+                                <Image
+                                    src={Desk}
+                                    alt="Image"
+                                    className='w-10 h-auto'
+                                />
+                                <div className='ms-3'>
+                                    <h1 className='text-2xl font-semibold'>Desk</h1>
+                                    <p>Helpdesk software to deliver great customer support.</p>
+                                </div>
+                                <Image
+                                    src={Arrow}
+                                    alt="Image"
+                                    className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                                />
                             </div>
-                            <Image
-                                src={Arrow}
-                                alt="Image"
-                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
-                            />
-                        </div>
-                        <div className='flex justify-center items-center mt-6'>
-                            <Image
-                                src={Campaigns}
-                                alt="Image"
-                                className='w-10 h-auto hover:translate-x-[10px] transition-transform duration-1000'
-                            />
-                            <div className='ms-3'>
-                                <h1 className='text-2xl font-semibold'>Campaigns</h1>
-                                <p>Create, send, and track targeted email campaigns that drive sales.</p>
+                        </Link>
+                        <Link href='/all-product'>
+                            <div className='flex justify-center items-center mt-6'>
+                                <Image
+                                    src={Campaigns}
+                                    alt="Image"
+                                    className='w-10 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                                />
+                                <div className='ms-3'>
+                                    <h1 className='text-2xl font-semibold'>Campaigns</h1>
+                                    <p>Create, send, and track targeted email campaigns that drive sales.</p>
+                                </div>
+                                <Image
+                                    src={Arrow}
+                                    alt="Image"
+                                    className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                                />
                             </div>
-                            <Image
-                                src={Arrow}
-                                alt="Image"
-                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
-                            />
-                        </div>
+                        </Link>
+
                     </div>
                     <div className='mt-14 text-center bg-base mb-2 border border-[#e7ebf0] px-4 lg:px-10 py-6'>
                         <a className='flex justify-between text-blue-500 font-bold' href="#">
