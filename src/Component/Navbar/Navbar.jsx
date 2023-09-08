@@ -16,6 +16,7 @@ import img1 from "../../../public/logo.png";
 import NavbarTwo from "./Navbar2";
 import useTheme from "@/hooks/useTheme";
 import LiveTime from "../Livetime/Livietime";
+import VideoImg from '../../../public/video.png'
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +51,7 @@ const Navbar = () => {
             <div className={`flex items-center justify-between`}>
                <div className="flex items-center">
                   <Link href="/">
-                     <Image src={img1} alt="Image"  className="h-[60px] w-[60px]" />
+                     <Image src={img1} alt="Image" className="h-[60px] w-[60px]" />
                   </Link>
                   <div className="hidden md:block">
                      <ul className="md:flex md:ml-9 md:space-x-9 md:items-center">
@@ -142,7 +143,15 @@ const Navbar = () => {
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         <li className="flex items-center space-x-1">
-                           <Link href="/chats">Live Chat</Link>
+                           <Link href="/chats">Chat For Help</Link>
+                           {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
+                        </li>
+                        <li className="flex items-center space-x-1">
+                           <Link href="/showVideo"><Image
+                              src={VideoImg}
+                              alt="Image"
+                              className='w-10 h-auto'
+                           /></Link>
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         {/* <FaEllipsisH className="w-[50px] h-[20px]" /> */}
@@ -251,95 +260,95 @@ const Navbar = () => {
                   <div className="border-b border-gray-400 pb-5 pt-2">
                      {/* First accordion */}
                      <div className="font-semibold p-3"><div
-                           className="text-slate-600 flex items-center cursor-pointer"
-                           onClick={toggleAccordion}>
-                           <div className="flex-grow font-semibold">
-                              Products
+                        className="text-slate-600 flex items-center cursor-pointer"
+                        onClick={toggleAccordion}>
+                        <div className="flex-grow font-semibold">
+                           Products
+                        </div>
+                        {/* Accordion arrow */}
+                        <svg
+                           className={`w-6 h-6 transition-transform ${isAccordionOpen ? "rotate-180" : ""
+                              }`}
+                           fill="none"
+                           stroke="currentColor"
+                           viewBox="0 0 24 24"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                     </div>
+                        {isAccordionOpen && (
+                           <div className=" bg-white  border-black absolute ml-0 rounded-lg border px-3 mt-2 duration-300">
+                              <Link
+                                 href="/all-product#sales"
+                                 className="block py-1   hover:text-blue-400 duration-500 ">
+                                 Sales
+                              </Link>
+                              <Link
+                                 href="/all-product#Marketing"
+                                 className="block py-1  hover:text-blue-400 duration-500">
+                                 Marketing
+                              </Link>
+                              <Link
+                                 href="/all-product#Service"
+                                 className="block py-1  hover:text-blue-400 duration-500">
+                                 Service
+                              </Link>
+                              <Link
+                                 href="/all-product#Finance"
+                                 className="block py-1  hover:text-blue-400 duration-500">
+                                 Finance
+                              </Link>
+                              <Link
+                                 href="/all-product#Email"
+                                 className="block py-1  hover:text-blue-400 duration-500">
+                                 Email & Collaboration
+                              </Link>
+                              <Link
+                                 href="/all-product#HR"
+                                 className="block py-1  hover:text-blue-400 duration-500">
+                                 HR
+                              </Link>
+                              <Link
+                                 href="/all-product#Legal"
+                                 className="block py-1  hover:text-blue-400 duration-500">
+                                 Legal
+                              </Link>
+
                            </div>
-                           {/* Accordion arrow */}
-                           <svg
-                              className={`w-6 h-6 transition-transform ${isAccordionOpen ? "rotate-180" : ""
-                                 }`}
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                 strokeLinecap="round"
-                                 strokeLinejoin="round"
-                                 strokeWidth="2"
-                                 d="M19 9l-7 7-7-7"></path>
-                           </svg>
-                        </div>
-                           {isAccordionOpen && (
-                              <div className=" bg-white  border-black absolute ml-0 rounded-lg border px-3 mt-2 duration-300">
-                                 <Link
-                                    href="/all-product#sales"
-                                    className="block py-1   hover:text-blue-400 duration-500 ">
-                                    Sales
-                                 </Link>
-                                 <Link
-                                    href="/all-product#Marketing"
-                                    className="block py-1  hover:text-blue-400 duration-500">
-                                    Marketing
-                                 </Link>
-                                 <Link
-                                    href="/all-product#Service"
-                                    className="block py-1  hover:text-blue-400 duration-500">
-                                    Service
-                                 </Link>
-                                 <Link
-                                    href="/all-product#Finance"
-                                    className="block py-1  hover:text-blue-400 duration-500">
-                                    Finance
-                                 </Link>
-                                 <Link
-                                    href="/all-product#Email"
-                                    className="block py-1  hover:text-blue-400 duration-500">
-                                    Email & Collaboration
-                                 </Link>
-                                 <Link
-                                    href="/all-product#HR"
-                                    className="block py-1  hover:text-blue-400 duration-500">
-                                    HR
-                                 </Link>
-                                 <Link
-                                    href="/all-product#Legal"
-                                    className="block py-1  hover:text-blue-400 duration-500">
-                                    Legal
-                                 </Link>
-                                 
-                              </div>
-                           )}
-                        </div>
+                        )}
+                     </div>
                      <Link href="/customers" className="font-semibold p-3">
                         Customers
                      </Link>
-                     
+
 
                      {/* Second accordion */}
                      <div className="p-3">
                         <div
                            className="flex items-center cursor-pointer"
-                          >
+                        >
                            <div className="flex-grow font-semibold">
-                           <Link href="/all-product" className="font-semibold ">
-                     All Product
-                     </Link>
+                              <Link href="/all-product" className="font-semibold ">
+                                 All Product
+                              </Link>
                            </div>
-                           
+
                         </div>
-                       
+
                      </div>
                      <div className="p-3">
                         <div
                            className="flex items-center cursor-pointer"
-                          >
+                        >
                            <div className="flex-grow font-semibold">
-                           <Link href="/chats">Live Chat</Link>
+                              <Link href="/chats">Live Chat</Link>
                            </div>
                            {/* Accordion arrow */}
-                           
+
                         </div>
                         {isMonsurAccordionOpen && (
                            <div className="ml-6 mt-2 cursor-pointer">
