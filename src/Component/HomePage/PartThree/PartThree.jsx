@@ -6,6 +6,7 @@ import handshake from '../../../../public/handshake.png';
 import target from '../../../../public/target.png';
 import care from '../../../../public/social-care.png';
 import arrow from '../../../../public/right-arrow.png';
+import Link from 'next/link';
 
 const PartThree = () => {
     return (
@@ -65,7 +66,7 @@ const PartThree = () => {
                             </div>
                             <div className='justify-center items-center flex'>
                                 <div className=' flex '>
-                                    <div> <button className="bg-blue-700 text-white px-4 py-3 ">READ OUR STORY  </button></div>
+                                    <Link href='/link'> <button className="bg-blue-700 text-white px-4 py-3 ">READ OUR STORY  </button></Link>
 
                                     <div className='bg-blue-700 pr-4 '><Image
                                         src={arrow}
@@ -103,7 +104,7 @@ const PartThree = () => {
 
                             <div className=' flex'>
                                 <div className=' flex border-2 py-2 border-blue-700  text-blue-600 px-4'>
-                                    <div> <button className="pr-2 font-semibold">MORE ON FORBES</button></div>
+                                    <Link href='/link'> <button className="pr-2 font-semibold">MORE ON FORBES</button></Link>
 
                                     <div className=' mt-[4px] '><Image
                                         src={arrow}

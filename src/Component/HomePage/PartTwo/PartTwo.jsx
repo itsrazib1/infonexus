@@ -71,7 +71,7 @@ const PartTwo = () => {
             scale.
           </p>
           <button className="touch-btn">
-            <Link className="flex gap-2" href="#">
+            <Link className="flex gap-2" href="/all-product">
               GET IN TOUCH
               <Image
                 src={Arrow}
@@ -134,6 +134,7 @@ const PartTwo = () => {
               </p>
             </div>
             <div>
+              <Link href='/link'>
               <button className="about-btn flex gap-2 items-center justify-center px-[25px] py-[20px]">
                 More about Infonexu 
                 <Image
@@ -141,7 +142,7 @@ const PartTwo = () => {
                   alt="Image"
                   className="w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000"
                 />
-              </button>
+              </button> </Link>
             </div>
           </div>
         </div>

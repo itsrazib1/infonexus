@@ -1,7 +1,6 @@
 "use client"
 import { checkout } from '@/checkout';
 import React from 'react';
-import { UserAuth } from '../Context/AuthContext';
 
 const PostAndDeleteBtn = ({id, name, email, image}) => {
     const itemId = id;
@@ -30,7 +29,7 @@ const PostAndDeleteBtn = ({id, name, email, image}) => {
     };
 
     return (
-        <button onClick={handleCheckoutClick} className='btn btn-secondary'>Pay Now</button> 
+        <button onClick={handleCheckoutClick} className='btn btn-outline btn-success'>Pay Now</button> 
     );
 };
 

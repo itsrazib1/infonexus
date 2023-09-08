@@ -66,7 +66,7 @@ const UserCart = () => {
                             <div key={c._id} className="card w-64 glass">
                                 <figure className="px-10 pt-10">
                                     <Image
-                                        className="rounded-full mt-2"
+                                        className="rounded-full mt-2 bg-white"
                                         src={c?.image}
                                         height={50}
                                         width={50}
@@ -76,7 +76,7 @@ const UserCart = () => {
                                 <p className="bg-[#2d778a] mt-4 text-xl">{index + 1}</p>
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">Service Name: {c?.name}</h2>
-                                    <p>User Email: {c?.email}</p>
+                                    {/* <p>User Email: {c?.email}</p> */}
                                     <div className="card-actions mt-5">
                                         <DeleteUserCart id={c._id} />
                                         <PostAndDeleteBtn id={c._id} name={c.name} email={c.email} image={c.image} />
