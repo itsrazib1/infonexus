@@ -2,19 +2,23 @@ import React, { useEffect, useState } from 'react';
 import { format } from 'date-fns';
 
 const LiveTime = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTime(new Date());
+      setCurrentDateTime(new Date());
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const formattedDate = format(currentDateTime, 'dd/MM/yyyy');
+  const formattedTime = format(currentDateTime, 'HH:mm:ss');
+
   return (
-    <div>
-      <p className='font-bold'>{format(currentTime, 'HH:mm:ss')}</p>
+    <div className='text-center'>
+      <p className='font-bold'>{formattedDate}</p>
+      <p className='font-bold'>{formattedTime}</p>
     </div>
   );
 };

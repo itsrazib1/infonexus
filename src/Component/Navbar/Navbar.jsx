@@ -78,70 +78,74 @@ const Navbar = () => {
                         </div>
                            {isAccordionOpen && (
                               <div className=" bg-white border-black absolute ml-0 rounded-lg border px-3 mt-2 duration-300">
-                                 <a
+                                 <Link
                                     href="/all-product#sales"
                                     className="block py-1   hover:text-blue-400 duration-500 ">
                                     Sales
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#Marketing"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     Marketing
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#Service"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     Service
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#Finance"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     Finance
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#Email"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     Email & Collaboration
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#HR"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     HR
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#Legal"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     Legal
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#Security"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     Security & IT Management
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#BI"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     BI & Analytics
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#Project"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     Project Management
-                                 </a>
-                                 <a
+                                 </Link>
+                                 <Link
                                     href="/all-product#Developer"
                                     className="block py-1  hover:text-blue-400 duration-500">
                                     Developer Platforms
-                                 </a>
+                                 </Link>
                               </div>
                            )}
                         </li>
-                        <li><a href="/customer">Customers</a></li>
+                        <Link href="/customers"><li>Customers</li></Link>
                         <li className="flex items-center space-x-1">
-                           <a href="/all-product">All Product</a>
+                           <Link href="/all-product">All Product</Link>
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
-                        <FaEllipsisH className="w-[50px] h-[20px]" />
+                        <li className="flex items-center space-x-1">
+                           <Link href="/chats">Live Chat</Link>
+                           {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
+                        </li>
+                        {/* <FaEllipsisH className="w-[50px] h-[20px]" /> */}
                      </ul>
                   </div>
                </div>
@@ -246,12 +250,11 @@ const Navbar = () => {
 
                   <div className="border-b border-gray-400 pb-5 pt-2">
                      {/* First accordion */}
-                     <div className="p-3">
-                        <div
-                           className="flex items-center cursor-pointer"
+                     <div className="font-semibold p-3"><div
+                           className="text-slate-600 flex items-center cursor-pointer"
                            onClick={toggleAccordion}>
                            <div className="flex-grow font-semibold">
-                              Product
+                              Products
                            </div>
                            {/* Accordion arrow */}
                            <svg
@@ -268,75 +271,98 @@ const Navbar = () => {
                                  d="M19 9l-7 7-7-7"></path>
                            </svg>
                         </div>
-                        {isAccordionOpen && (
-                           <div className="ml-6 mt-2 duration-300">
-                              <a
-                                 href="#"
-                                 className="block py-2   hover:text-blue-400 duration-500 ">
-                                 App
-                              </a>
-                              <a
-                                 href="#"
-                                 className="block py-2  hover:text-blue-400 duration-500">
-                                 Suites
-                              </a>
-                              <a
-                                 href="#"
-                                 className="block py-2  hover:text-blue-400 duration-500">
-                                 Platform
-                              </a>
-                           </div>
-                        )}
-                     </div>
-                     <a href="#" className="font-semibold p-3">
+                           {isAccordionOpen && (
+                              <div className=" bg-white  border-black absolute ml-0 rounded-lg border px-3 mt-2 duration-300">
+                                 <Link
+                                    href="/all-product#sales"
+                                    className="block py-1   hover:text-blue-400 duration-500 ">
+                                    Sales
+                                 </Link>
+                                 <Link
+                                    href="/all-product#Marketing"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Marketing
+                                 </Link>
+                                 <Link
+                                    href="/all-product#Service"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Service
+                                 </Link>
+                                 <Link
+                                    href="/all-product#Finance"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Finance
+                                 </Link>
+                                 <Link
+                                    href="/all-product#Email"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Email & Collaboration
+                                 </Link>
+                                 <Link
+                                    href="/all-product#HR"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    HR
+                                 </Link>
+                                 <Link
+                                    href="/all-product#Legal"
+                                    className="block py-1  hover:text-blue-400 duration-500">
+                                    Legal
+                                 </Link>
+                                 
+                              </div>
+                           )}
+                        </div>
+                     <Link href="/customers" className="font-semibold p-3">
                         Customers
-                     </a>
+                     </Link>
+                     
 
                      {/* Second accordion */}
                      <div className="p-3">
                         <div
                            className="flex items-center cursor-pointer"
-                           onClick={toggleMonsurAccordion}>
+                          >
                            <div className="flex-grow font-semibold">
-                              <a href="/all-product">Company</a>
+                           <Link href="/all-product" className="font-semibold ">
+                     All Product
+                     </Link>
+                           </div>
+                           
+                        </div>
+                       
+                     </div>
+                     <div className="p-3">
+                        <div
+                           className="flex items-center cursor-pointer"
+                          >
+                           <div className="flex-grow font-semibold">
+                           <Link href="/chats">Live Chat</Link>
                            </div>
                            {/* Accordion arrow */}
-                           <svg
-                              className={`w-6 h-6 transition-transform ${isMonsurAccordionOpen ? "rotate-180" : ""
-                                 }`}
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                 strokeLinecap="round"
-                                 strokeLinejoin="round"
-                                 strokeWidth="2"
-                                 d="M19 9l-7 7-7-7"></path>
-                           </svg>
+                           
                         </div>
                         {isMonsurAccordionOpen && (
                            <div className="ml-6 mt-2 cursor-pointer">
-                              <a
+                              <Link
                                  href="#"
                                  className="block py-2 hover:text-blue-400 duration-500">
                                  About us
-                              </a>
-                              <a
+                              </Link>
+                              <Link
                                  href="#"
                                  className="block py-2 hover:text-blue-400 duration-500">
                                  Our story
-                              </a>
-                              <a
+                              </Link>
+                              <Link
                                  href="#"
                                  className="block py-2 hover:text-blue-400 duration-500">
                                  Rural revival
-                              </a>
-                              <a
+                              </Link>
+                              <Link
                                  href="#"
                                  className="block py-2 hover:text-blue-400 duration-500">
                                  Press
-                              </a>
+                              </Link>
                            </div>
                         )}
                      </div>
@@ -345,7 +371,6 @@ const Navbar = () => {
                      <Link href="/singin" className="text-orange-600">
                         Sign in
                      </Link>
-                     <p className="py-2">All nexus products</p>
                   </div>
                </div>
             </div>

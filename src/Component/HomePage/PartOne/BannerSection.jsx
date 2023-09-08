@@ -6,6 +6,7 @@ import One from '../../../../public/One.png'
 import Icon from '../../../../public/left-quotes.png'
 import Dolan from '../../../../public/partonetambuli.png'
 import React from 'react';
+import Link from 'next/link';
 
 const BannerSection = () => {
     return (
@@ -29,14 +30,16 @@ const BannerSection = () => {
                         </div>
                         <div className='text-center'>
                             <h3 className='text-xl'>Business email, chat, files, and meetings—in one place.</h3>
-                            <button className='flex justify-between text-white bg-[#056cb8] px-8 py-4 mt-5 mx-auto lg:mx-0'>
-                                <p>TRY FOR FREE </p>
-                                <Image
-                                    src={Arrow}
-                                    alt="Image"
-                                    className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
-                                />
-                            </button>
+                            <Link href='/all-product'>
+                                <button className='flex justify-between text-white bg-[#056cb8] px-8 py-4 mt-5 mx-auto lg:mx-0'>
+                                    <p>TRY FOR FREE </p>
+                                    <Image
+                                        src={Arrow}
+                                        alt="Image"
+                                        className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                                    />
+                                </button>
+                            </Link>
                         </div>
                         <div>
                             <Image
@@ -62,14 +65,15 @@ const BannerSection = () => {
                                 <h1 className='text-5xl'>Info-Nexus One</h1>
                                 <p className='text-lg'>The operating system for business</p>
                                 <p className='font-normal mt-10'>Run your entire business on InfoNexus with our unified cloud <br /> software, designed to help you break down silos between <br /> departments and increase organizational efficiency.</p>
-                                <button className='flex justify-between text-white bg-[#f60014] px-5 py-3 mt-10 mx-auto lg:mx-0'>
-                                    <p>TRY INFO-NEXUS ONE </p>
-                                    <Image
-                                        src={Arrow}
-                                        alt="Image"
-                                        className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
-                                    />
-                                </button>
+                                <Link href='/all-product'>
+                                    <button className='flex justify-between text-white bg-[#f60014] px-5 py-3 mt-10 mx-auto lg:mx-0'>
+                                        <p>TRY INFO-NEXUS ONE </p>
+                                        <Image
+                                            src={Arrow}
+                                            alt="Image"
+                                            className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                                        />
+                                    </button></Link>
                             </div>
                         </div>
                         <div>

@@ -33,11 +33,6 @@ const DynamicButton = ({ name, image, description, id }) => {
         "content-type": "application/json",
       },
       body: JSON.stringify(cartItem),
-
-      // fetch("/api/trynow", {
-      //   method: "POST",
-
-      //   body: formData,
     })
       .then(() => {
         setClicked(true);

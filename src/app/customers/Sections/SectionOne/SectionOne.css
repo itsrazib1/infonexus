@@ -1,0 +1,19 @@
+.text-gradient {
+    background: -webkit-linear-gradient(45deg,#2627fa,#ff544f 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.zoom-image {
+    animation: zoomInAndOut 5s infinite; /* 10s delay and infinite repetition */
+}
+
+/* Define the keyframes for the zoom out animation */
+@keyframes zoomInAndOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Zoom in to 1.5 times original size */
+    }
+}

@@ -6,7 +6,7 @@ import ThemeProvider from "./ThemeProvider";
 const Providers = ({ children }) => {
   return (
     <ThemeProvider>
-      <AuthContextProvider>{children}</AuthContextProvider>
+        <AuthContextProvider>{children}</AuthContextProvider>      
     </ThemeProvider>
   );
 };
