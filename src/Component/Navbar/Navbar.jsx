@@ -17,6 +17,7 @@ import NavbarTwo from "./Navbar2";
 import useTheme from "@/hooks/useTheme";
 import LiveTime from "../Livetime/Livietime";
 import VideoImg from '../../../public/video.png'
+import chatImg from '../../../public/chaticon.png'
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +30,6 @@ const Navbar = () => {
       setIsAccordionOpen(!isAccordionOpen);
    };
 
-   const toggleMonsurAccordion = () => {
-      setIsMonsurAccordionOpen(!isMonsurAccordionOpen);
-   };
 
    const handleSearch = () => {
       setIsSearch(!isSearch);
@@ -143,7 +141,11 @@ const Navbar = () => {
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         <li className="flex items-center space-x-1">
-                           <Link href="/chats">Chat For Help</Link>
+                           <Link href="/chats"><Image
+                              src={chatImg}
+                              alt="Image"
+                              className='w-10 h-auto'
+                           /></Link>
                            {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                         </li>
                         <li className="flex items-center space-x-1">
@@ -344,37 +346,23 @@ const Navbar = () => {
                         <div
                            className="flex items-center cursor-pointer"
                         >
-                           <div className="flex-grow font-semibold">
-                              <Link href="/chats">Live Chat</Link>
+                           <div className="flex gap-8 font-semibold">
+                           <Link href="/showVideo"><Image
+                              src={VideoImg}
+                              alt="Image"
+                              className='w-7 h-auto'
+                           /></Link>
+                           <Link href="/chats"><Image
+                              src={chatImg}
+                              alt="Image"
+                              className='w-7 h-auto'
+                           /></Link>
                            </div>
-                           {/* Accordion arrow */}
 
                         </div>
-                        {isMonsurAccordionOpen && (
-                           <div className="ml-6 mt-2 cursor-pointer">
-                              <Link
-                                 href="#"
-                                 className="block py-2 hover:text-blue-400 duration-500">
-                                 About us
-                              </Link>
-                              <Link
-                                 href="#"
-                                 className="block py-2 hover:text-blue-400 duration-500">
-                                 Our story
-                              </Link>
-                              <Link
-                                 href="#"
-                                 className="block py-2 hover:text-blue-400 duration-500">
-                                 Rural revival
-                              </Link>
-                              <Link
-                                 href="#"
-                                 className="block py-2 hover:text-blue-400 duration-500">
-                                 Press
-                              </Link>
-                           </div>
-                        )}
+                        
                      </div>
+                     
                   </div>
                   <div className="p-3 font-semibold">
                      <Link href="/singin" className="text-orange-600">
