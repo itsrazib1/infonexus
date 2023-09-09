@@ -13,6 +13,7 @@ const ShowVideo = () => {
                     wrapper="span"
                 />
                 {/* <span className='text-red-500'>Videos</span> !!! */}
+                {/* <span className='text-red-500'>Videos</span> !!! */}
                 </h1>
             <div className='my-10 grid grid-cols-1 md:grid-cols-3 gap-y-8 justify-items-center'>
                 <div>
