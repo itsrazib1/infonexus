@@ -36,3 +36,29 @@ export async function POST(req) {
         return NextResponse.json({ error: 'Error saving user data' }, { status: 500 });
     }
 }
+export async function PUT(req) {
+    const { id, newRole } = await req.json();
+    
+    try {
+      // Assuming that 'users' is a valid Mongoose model
+      const updatedUser = await users.findByIdAndUpdate(
+        id,
+        { role: newRole },
+        { new: true }
+      );
+  
+      if (!updatedUser) {
+        return NextResponse.json({ error: "User not found" }, { status: 404 });
+      }
+  
+      console.log("User role updated:", updatedUser);
+      return NextResponse.json(updatedUser, { status: 200 });
+    } catch (error) {
+      console.error("Error updating user role:", error);
+      return NextResponse.json(
+        { error: "Error updating user role" },
+        { status: 500 }
+      );
+    }
+  }
+  

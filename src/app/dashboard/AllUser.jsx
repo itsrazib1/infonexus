@@ -26,7 +26,7 @@ const AllUser = () => {
                 <p className='text-[#c75633] font-serif font-bold text-3xl'>All User: {users.length} !!!</p>
                 <hr className='w-[70%] mx-auto mt-5' />
             </div>
-            <div className='w-5/6 mx-auto mt-20 box3 mb-10'>
+            <div className='w-full mx-auto mt-20 box3 mb-10'>
                 <div className="overflow-x-auto">
                     <table className="table">
                         <thead>

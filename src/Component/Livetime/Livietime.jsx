@@ -16,7 +16,7 @@ const LiveTime = () => {
   const formattedTime = format(currentDateTime, 'HH:mm:ss');
 
   return (
-    <div className='text-center'>
+    <div className='text-center text-sm'>
       <p className='font-bold'>{formattedDate}</p>
       <p className='font-bold'>{formattedTime}</p>
     </div>

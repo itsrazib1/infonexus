@@ -2,9 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { FaUserGraduate } from 'react-icons/fa';
 import { getusers } from '../utils/getusers';
+import { updateUserRole } from './updateUserRole';
 
 const UserManagement = () => {
     const [users, setUsers] = useState([]);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,6 +21,60 @@ const UserManagement = () => {
 
         fetchData();
     }, []);
+
+    
+    console.log("users", users)
+    const handleDeleteUser = async (userId) => {
+        try {
+            // Send an HTTP DELETE request to your API to delete the user
+            const response = await fetch(`/api/users/${userId}`, {
+                method: 'DELETE',
+            });
+
+            if (response.status === 200) {
+                // If the deletion is successful, update the local state to remove the deleted user
+                setUsers((prevUsers) =>
+                    prevUsers.filter((prevUser) => prevUser._id !== userId)
+                );
+
+                console.log("User deleted successfully:", userId);
+            } else {
+                // Handle errors here, such as displaying an error message to the user
+                console.error("Error deleting user. Status:", response.status);
+            }
+        } catch (error) {
+            console.error("Error deleting user:", error);
+        }
+    };
+    const handleMakeAdmin = async (userId) => {
+        try {
+          // Send a PUT request to update the user's role to "admin"
+          const response = await fetch(`/api/users/${userId}`, {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ newRole: 'admin' }),
+          });
+      
+          if (response.status === 200) {
+            // If the update is successful, update the local state to reflect the new role
+            setUsers((prevUsers) =>
+              prevUsers.map((prevUser) =>
+                prevUser._id === userId ? { ...prevUser, role: 'admin' } : prevUser
+              )
+            );
+      
+            console.log("User role updated to admin:", userId);
+          } else {
+            // Handle errors here, such as displaying an error message to the user
+            console.error("Error updating user role. Status:", response.status);
+          }
+        } catch (error) {
+          console.error("Error updating user role:", error);
+        }
+      };
+
     return (
         <div className='mt-28 box' id='userManagement'>
             <div className='shadow4'>
@@ -49,11 +105,17 @@ const UserManagement = () => {
                                             <td>{p?.name}</td>
                                             <td>{p?.email}</td>
                                             <td>{p.role === 'admin' ? 'admin' :
-                                        <button className="btn btn-warning rounded-full text-black"><FaUserGraduate /></button>
-                                    }</td>
-                                     <td><button className="btn btn-circle btn-outline btn-error">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                    </button></td>
+                                                <button
+                                                className="btn btn-warning rounded-full text-black"
+                                                onClick={() => handleMakeAdmin(p._id)}
+                                              >
+                                                <FaUserGraduate />
+                                              </button>
+                                            }</td>
+                                            <td><button className="btn btn-circle btn-outline btn-error"
+                                                onClick={() => handleDeleteUser(p._id)}>
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button></td>
                                             {/* Other table cells */}
                                         </tr>
                                     ))
