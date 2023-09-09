@@ -1,18 +1,16 @@
 "use client"
 import React from 'react';
-import Typical from 'react-typical';
 
 const ShowVideo = () => {
     return (
         <div className='mt-10'>
             <h1 className='font-serif text-xl md:text-2xl text-center text-gradient font-bold flex justify-center'>
                 <span className='text-gradient me-3'>Info-Nexus</span>
-                <Typical
+                {/* <Typical
                     steps={['Information !!!', 800, 'Videos !!!', 900]}
                     loop={Infinity}
                     wrapper="span"
-                />
-                {/* <span className='text-red-500'>Videos</span> !!! */}
+                /> */}
                 {/* <span className='text-red-500'>Videos</span> !!! */}
                 </h1>
             <div className='my-10 grid grid-cols-1 md:grid-cols-3 gap-y-8 justify-items-center'>
