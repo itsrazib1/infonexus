@@ -9,7 +9,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 const Sidebar = () => {
     const { user } = UserAuth();
     const [users, setUsers] = useState([]);
-    const [isOpen, setIsOpen] = useState(window.innerWidth >= 1024);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -34,7 +34,6 @@ const Sidebar = () => {
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
-        setIsOpen(!hidden);
     };
 
     return (
@@ -50,7 +49,7 @@ const Sidebar = () => {
                                 <FaTimes className="text-2xl"></FaTimes>
                             </button>
                         ) : (
-                            <button className="w-[50px] flex justify-center items-center  top-9 left-4 h-[50px] text-[#1add92]">
+                            <button className="w-[50px] flex justify-center items-center absolute top-4 left-5 h-[50px] text-[#1add92]">
                                 <FaBars className="text-[#1add92] text-2xl"></FaBars>
                             </button>
                         )}
