@@ -9,7 +9,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 const Sidebar = () => {
     const { user } = UserAuth();
     const [users, setUsers] = useState([]);
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(window.innerWidth >= 1024);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -39,9 +39,9 @@ const Sidebar = () => {
 
     return (
         <div className='fixed -top-4 left-9 md:left-0 z-50 md:mt-20'>
-            <div className='relative w-full'>
+            <div className='relative mx-3  w-full'>
 
-                <div className='flex justify-center items-center mt-4 box3'>
+                <div className='flex ps-3 gap-3 items-center mt-4 box3'>
                     <div
                         onClick={() => handleToggle(!isOpen)}
                         className="  top-5 left-3 ">
@@ -68,41 +68,41 @@ const Sidebar = () => {
             <hr className='mt-0' />
             {isOpen &&
                 <div>
-                    <div className='mx-0 box3 md:h-screen w-full'>
+                    <div className='mx-3 box3 md:h-screen w-full'>
                         {
-                            isAdmin ? (<ul className=' grid-cols-2 md:grid-cols-2 justify-items-center items-center md:text-base text-xs md:px-0 px-2 mr-2 gap-y-2 md:gap-y-0'>
+                            isAdmin ? (<ul className='text-start grid grid-cols-1 md:grid-cols-1  md:text-base text-xs md:px-0 px-2 mr-2  md:gap-y-0'>
 
 
                                 <>
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="/" smooth>Home</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><a href="/" >Home</a></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="dashHome" smooth>Admin Home</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="dashHome" smooth>Admin Home</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="dashAllUser" smooth>All User</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="dashAllUser" smooth>All User</Link></li>
 
-                                    <li className='rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto'><Link to="Sales" smooth>Sales</Link></li>
+                                    <li className='rounded-lg  hover:text-white px-2 my-2 mx-auto'><Link to="Sales" smooth>Sales</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Marketings" smooth>Marketings</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Marketings" smooth>Marketings</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="service" smooth>Service</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="service" smooth>Service</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Finances" smooth>Finances</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Finances" smooth>Finances</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="EmailCollaboration" smooth>Email Collaboration</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="EmailCollaboration" smooth>Email Collaboration</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Hr" smooth>HR</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Hr" smooth>HR</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Legal" smooth>Legal</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Legal" smooth>Legal</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="securityITManagement" smooth>Security IT Management</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="securityITManagement" smooth>Security IT Management</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="bianalytics" smooth>Bi Analytics</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="bianalytics" smooth>Bi Analytics</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="projectManagement" smooth>Project Management</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="projectManagement" smooth>Project Management</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="developerplatform" smooth>Developer Platform</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="developerplatform" smooth>Developer Platform</Link></li>
 
-                                    <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="userManagement" smooth>User Management</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="userManagement" smooth>User Management</Link></li>
 
                                 </>
 
@@ -110,11 +110,11 @@ const Sidebar = () => {
 
                             </ul>) : (<ul className='grid md:grid-cols-1 sm:grid-cols-1 text-center  md:text-base sm:text-xs md:px-0 sm:px-0 mr-2'>
 
-                                <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="/" smooth>Home</Link></li>
+                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><a href="/" >Home</a></li>
 
-                                <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="usercart" smooth>My Cart</Link></li>
+                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="usercart" smooth>My Cart</Link></li>
 
-                                <li className='mt-0 md:mt-5 rounded-lg hover:bg-[#b1b8b1] hover:text-black px-2 my-2 mx-auto md:text-base  text-xs'><Link to="myService" smooth>My Service</Link></li>
+                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="myService" smooth>My Service</Link></li>
 
 
                             </ul>)
