@@ -16,6 +16,7 @@ const MyService = () => {
     const [carts, setCarts] = useState([]);
 
     const { user } = UserAuth();
+    console.log(user)
 
     useEffect(() => {
         const fetchData = async () => {
