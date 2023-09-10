@@ -38,8 +38,8 @@ const Sidebar = () => {
     };
 
     return (
-        <div className='fixed -top-4 left-9 md:left-0 z-50 md:mt-20'>
-            <div className='relative mx-3  w-full'>
+        <div className='fixed -top-4 left-4 md:left-0 z-50 md:mt-20'>
+            <div className='relative md:mx-3 mx-0  w-full'>
 
                 <div className='flex ps-3 gap-3 items-center mt-4 box3'>
                     <div
@@ -68,7 +68,7 @@ const Sidebar = () => {
             <hr className='mt-0' />
             {isOpen &&
                 <div>
-                    <div className='mx-3 box3 md:h-screen w-full'>
+                    <div className='md:mx-3 mx-0 box3 md:h-screen w-full'>
                         {
                             isAdmin ? (<ul className='text-start grid grid-cols-1 md:grid-cols-1  md:text-base text-xs md:px-0 px-2 mr-2  md:gap-y-0'>
 
