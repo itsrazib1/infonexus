@@ -51,7 +51,7 @@
   border-radius: 6px;
   transition: 0.4s;
   border: 2px solid #191b1e;
-  padding: 20px 30px;
+  padding: 14px 51px;
   box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
   ;
   letter-spacing: 1px;
@@ -79,4 +79,18 @@
   background: -webkit-linear-gradient(45deg,#2627fa,#ff544f 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.zoom-video {
+  animation: zoomInAndOut 5s infinite; /* 10s delay and infinite repetition */
+}
+
+/* Define the keyframes for the zoom out animation */
+@keyframes zoomInAndOut {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1); /* Zoom in to 1.5 times original size */
+  }
 }
