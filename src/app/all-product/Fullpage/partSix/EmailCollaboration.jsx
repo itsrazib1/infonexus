@@ -32,7 +32,7 @@ const EmailCollaboration =  () => {
                 <div>Create, collaborate, and communicate with your teams and customers.</div>
             </div>
             <div className="flex flex-wrap ">
-                {EmailCollaboration.map(({ _id, name, description, btn, image }) => (
+                {EmailCollaboration.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -40,6 +40,7 @@ const EmailCollaboration =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>

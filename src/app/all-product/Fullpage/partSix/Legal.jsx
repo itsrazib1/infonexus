@@ -28,7 +28,7 @@ const Legal =  () => {
                 <div>Streamline contract processes, mitigate risks, and improve your legal operations efficiency.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Legal.map(({ _id, name, description, btn, image }) => (
+                {Legal.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -36,6 +36,7 @@ const Legal =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>

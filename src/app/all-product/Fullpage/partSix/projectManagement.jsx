@@ -29,7 +29,7 @@ const ProjectManagement =  () => {
                 <div>Choose a project management style that suits your business the best.</div>
             </div>
             <div className="flex flex-wrap ">
-                {ProjectManagement.map(({ _id, name, description, btn, image }) => (
+                {ProjectManagement.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -37,6 +37,7 @@ const ProjectManagement =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>
