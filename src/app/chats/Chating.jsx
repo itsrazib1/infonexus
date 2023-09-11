@@ -26,21 +26,16 @@ const Chating = () => {
 
     fetchData();
   }, []);
-
-  const handelSubmit = async (event) => {
-    event.preventDefault();
-
-<<<<<<< HEAD
+  
   const HandelToAllChatDelete = () =>{
     fetch ("/api/chats",{
       method:"DELETE"
     })
   }
 
-  const handelSubmit = event =>{
-    event.preventDefault()
-=======
->>>>>>> e25f20d6e5ae77ab7af1440b2c673e4178ddd9b2
+  const handelSubmit = async (event) => {
+    event.preventDefault();
+
     const message = event.target.message.value;
     const email = user.email;
     const name = user.displayName;
@@ -178,8 +173,8 @@ const Chating = () => {
 
           />
         </form>
-        <button onClick={HandelToAllChatDelete}>Delete all chat history</button>
       </div>
+        <button onClick={HandelToAllChatDelete}>Delete all chat history</button>
     </div>
 
 
