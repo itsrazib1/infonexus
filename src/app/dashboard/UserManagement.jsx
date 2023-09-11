@@ -79,7 +79,7 @@ const UserManagement = () => {
         <div className='mt-28 box' id='userManagement'>
             <div className='shadow4'>
                 <hr className='w-full mx-auto mt-5 mb-5' />
-                <p className='text-[#c75633] font-serif font-bold text-3xl'>User Management {users?.length} !!!</p>
+                <p className='text-[#c75633] font-serif font-bold text-2xl'>User Management {users?.length} !!!</p>
                 <hr className='w-full mx-auto mt-5' />
             </div>
             <div className='w-full mx-auto mt-16 box3 mb-10'>

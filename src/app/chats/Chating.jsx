@@ -12,7 +12,7 @@ const Chating = () => {
 
   const [chats, setchats] = useState([]);
 
-  console.log("Firebaseuser", chats)
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -123,7 +123,7 @@ const Chating = () => {
                 </div>
                 <div className="mt-2">{users?.name}</div>
               </td></>)}
-
+             
 
               <td
                 className={`text-start  ms-0 mx-auto inline-block px-3 py-2 rounded-lg shadow ${users.email === user?.email ? "text-end ms-[600px] me-0  inline-block px-3 py-2 rounded-lg bg-blue-500 text-white" : "bg-gray-200"

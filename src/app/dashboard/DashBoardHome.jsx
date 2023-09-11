@@ -143,7 +143,7 @@ const DashBoardHome = () => {
         <div className='mt-5 md:block box' id='dashHome'>
             <div className='shadow4'>
                 <hr className='w-[90%] mx-auto mt-5 mb-5' />
-                <p className='text-gradient font-serif font-bold md:text-4xl'><span className='text-[#df3737] md:me-4'>{user?.displayName}</span> Dashboard !!!
+                <p className='text-gradient font-serif font-bold md:text-4xl'><span className='text-[#df3737] md:me-4'>{user?.displayName}`S</span> Dashboard !!!
                 </p>
                 <hr className='w-[90%] mx-auto mt-5' />
             </div>
