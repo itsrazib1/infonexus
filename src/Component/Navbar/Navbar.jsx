@@ -7,7 +7,7 @@ import {
    FaSearch,
    FaTimes,
 } from "react-icons/fa";
-import {  GoSearch } from "react-icons/go";
+import { GoSearch } from "react-icons/go";
 import Link from "next/link";
 import Image from "next/image";
 import img1 from "../../../public/logo.png";
@@ -16,6 +16,7 @@ import useTheme from "@/hooks/useTheme";
 import LiveTime from "../Livetime/Livietime";
 import VideoImg from '../../../public/video.png'
 import chatImg from '../../../public/chaticon.png'
+import { getChats } from "@/app/utils/getChats";
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
    const [searchTerm, setSearchTerm] = useState("");
    const [filteredColleges, setFilteredColleges] = useState([]);
    const { theme, toggleTheme } = useTheme();
-
+   const [chats, setchats] = useState([]);
    const toggleAccordion = () => {
       setIsAccordionOpen(!isAccordionOpen);
    };
@@ -64,9 +65,21 @@ const Navbar = () => {
       // Whenever the search term changes, filter the colleges
       filterColleges();
    }, [filterColleges]);
-       
-    
 
+
+   useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const userData = await getChats();
+          // console.log("User data in component:", userData); 
+          setchats(userData);
+        } catch (error) {
+          console.error("Error fetching user data:", error);
+        }
+      };
+  
+      fetchData();
+    }, []);
 
 
 
@@ -169,11 +182,16 @@ const Navbar = () => {
                               {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                            </li>
                            <li className="flex items-center space-x-1">
-                              <Link href="/chats"><Image
+                              <Link href="/chats"><label tabIndex={0} className="btn btn-ghost btn-circle">
+                                 <div className="indicator">
+                                 <Image
                                  src={chatImg}
                                  alt="Image"
                                  className='w-10 h-auto'
-                              /></Link>
+                              />
+                                    <span className="badge bg-red-600 mt-2 text-white badge-sm indicator-item">{chats?.length}</span>
+                                 </div>
+                              </label></Link>
                               {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                            </li>
                            <li className="flex items-center space-x-1">
@@ -423,9 +441,9 @@ const Navbar = () => {
                            <p className="font-serif font-semibold">{item.description}</p>
                            <div className="card-actions">
                               <Link href='/all-product'>
-                              <button className="btn btn-accent">{item.btn}</button>
+                                 <button className="btn btn-accent">{item.btn}</button>
                               </Link>
-                              
+
                            </div>
                         </div>
                      </div>

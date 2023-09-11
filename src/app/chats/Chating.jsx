@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { UserAuth } from "../Context/AuthContext";
 import Image from "next/image";
 import { getChats } from "../utils/getChats";
+import { getusers } from "../utils/getusers";
 
 const Chating = () => {
   const { user } = UserAuth()
@@ -11,8 +12,27 @@ const Chating = () => {
   const [delMessage, setdelMessage] = useState("");
 
   const [chats, setchats] = useState([]);
+  const [users, setUsers] = useState([]);
 
-  console.log("Firebaseuser", chats)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const userData = await getusers();
+        console.log("User data in component:", userData);
+        // Add this line to log the user data from the database
+        console.log("DatabaseUser:", userData);
+        setUsers(userData);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  const adminUsers = users.filter(u => u.role === 'admin');
+  const isAdmin = adminUsers.some(u => u.email === user?.email);
+  console.log("isAdmin", isAdmin)
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,10 +46,10 @@ const Chating = () => {
 
     fetchData();
   }, []);
-  
-  const HandelToAllChatDelete = () =>{
-    fetch ("/api/chats",{
-      method:"DELETE"
+
+  const HandelToAllChatDelete = () => {
+    fetch("/api/chats", {
+      method: "DELETE"
     })
   }
 
@@ -93,16 +113,20 @@ const Chating = () => {
                 className={`mb-4 ${message.sender === "You" ? "text-right" : "text-left"
                   }`}
               >
+                
 
               </div>
+
             ))}
           </div>
         </div>
 
         <div>
           {chats.map((users, index) => (
+
             <tr className={`flex flex-col ${users.email === user?.email ? "text-end me-0  " : ""
               } `} key={users._id}>
+                
               {users?.email === user?.email ? (<> <td className={`flex flex-row-reverse gap-5`} >
                 <div className={`rounded-full `}>
                   <Image
@@ -115,7 +139,7 @@ const Chating = () => {
                   />
                 </div>
                 <div className="mt-2">{users?.name}</div>
-              </td></>):(<><td className={`flex gap-5`} >
+              </td></>) : (<><td className={`flex gap-5`} >
                 <div className={`rounded-full ${users.email === user?.email ? "text-end me-0  " : ""
                   }`}>
                   <Image
@@ -137,6 +161,9 @@ const Chating = () => {
               >
                 {users?.message}
               </td>
+              <td>
+              
+              </td>
             </tr>
           ))}
         </div>
@@ -145,6 +172,7 @@ const Chating = () => {
 
       </div>
       <div className="p-4">
+
         <form onSubmit={handelSubmit} className="flex space-x-2">
           <div className="relative flex-grow border border-black rounded-md p-2">
             <input
@@ -172,9 +200,18 @@ const Chating = () => {
             onClick={handleSendMessage}
 
           />
+          {
+            isAdmin ? (<input
+              type="submit"
+              value="Delete Chat"
+              className="bg-red-500 text-white px-4 py-2 rounded-md"
+              onClick={HandelToAllChatDelete}
+
+            />) : (<></>)
+          }
+
         </form>
       </div>
-        <button onClick={HandelToAllChatDelete}>Delete all chat history</button>
     </div>
 
 
