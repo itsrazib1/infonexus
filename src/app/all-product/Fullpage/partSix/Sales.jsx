@@ -31,7 +31,7 @@ const Sales =  () => {
                 <div>Help your sales team be more productive with tools they love.</div>
             </div>
             <div className="flex flex-wrap ">
-                {sales.map(({ _id, name, description, btn, image }) => (
+                {sales.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -39,6 +39,7 @@ const Sales =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>

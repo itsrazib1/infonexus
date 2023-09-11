@@ -31,7 +31,7 @@ const SecurityITManagement =  () => {
                 <div>Manage IT assets using ready tools or create a custom application to suit your needs.</div>
             </div>
             <div className="flex flex-wrap ">
-                {SecurityITManagement.map(({ _id, name, description, btn, image }) => (
+                {SecurityITManagement.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -39,6 +39,7 @@ const SecurityITManagement =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>

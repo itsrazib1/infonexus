@@ -29,7 +29,7 @@ const Marketing =  () => {
                 <div>Engage with prospects using multi-channel marketing tools that help you personalize experiences at scale.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Marketing.map(({ _id, name, description, btn, image }) => (
+                {Marketing.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -37,6 +37,7 @@ const Marketing =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>

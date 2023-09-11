@@ -31,7 +31,7 @@ const Hr =  () => {
                 <div>Hire new employees, run training sessions, and manage all HR operations with ease.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Hr.map(({ _id, name, description, btn, image }) => (
+                {Hr.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -39,6 +39,7 @@ const Hr =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>
