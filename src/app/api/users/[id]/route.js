@@ -1,34 +1,37 @@
+import { uri } from "@/services/DbConnect";
+import { users } from "@/services/model/users";
+import { request } from "express";
+import mongoose from "mongoose";
+import { NextResponse } from "next/server";
 
-import { uri } from '@/services/DbConnect';
-import { users } from '@/services/model/users';
-import mongoose from 'mongoose';
-import { NextResponse } from 'next/server';
-
-export async function  GET (req,content) {
-    mongoose.connect(uri)
-    const data = await users.find()
-    // console.log(data)
-    const usersId = content.params.id 
-    const singleData = data.filter((users)=> users.id == usersId)
-   return NextResponse.json(singleData)
-};
+export async function GET(req, content) {
+  mongoose.connect(uri);
+  const data = await users.find();
+  // console.log(data)
+  const usersId = content.params.id;
+  const singleData = data.filter((users) => users.id == usersId);
+  return NextResponse.json(singleData);
+}
 
 export async function DELETE(req, content) {
-    mongoose.connect(uri)
-    try {
-        const usersId = content.params.id;
+  mongoose.connect(uri);
+  try {
+    const usersId = content.params.id;
 
-        const deletedItem = await users.findOneAndDelete({ _id: usersId });
+    const deletedItem = await users.findOneAndDelete({ _id: usersId });
 
-        if (!deletedItem) {
-            return NextResponse.json({ result: "Item not found" }, { status: 404 });
-        }
-
-        return NextResponse.json({ result: "Item deleted" }, { status: 200 });
-    } catch (error) {
-        console.error(error);
-        return NextResponse.json({ result: "Internal error, please try again later", success: false }, { status: 500 });
+    if (!deletedItem) {
+      return NextResponse.json({ result: "Item not found" }, { status: 404 });
     }
+
+    return NextResponse.json({ result: "Item deleted" }, { status: 200 });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { result: "Internal error, please try again later", success: false },
+      { status: 500 }
+    );
+  }
 }
 export async function PUT(req) {
     const { id, newRole } = await req.json();
@@ -50,3 +53,21 @@ export async function PUT(req) {
       );
     }
   }
+
+// export async function PUT(req, res) {
+// try {
+//   await mongoose.connect(uri)
+//   const usersId = res.params.id;
+//   const filter = { _id: usersId };
+//   const payload = await req.json();
+//   const result = await users.findByIdAndUpdate(filter,payload)
+//   console.log(result);
+//   if (!payload.role) {
+//     return NextResponse.json({ result: "request data is not veiled" });
+//   }
+//   return NextResponse.json(result);
+// } catch (error) {
+//   console.log(error);
+//   return res.status(500).json({error:"Internal server error"})
+// }
+// }

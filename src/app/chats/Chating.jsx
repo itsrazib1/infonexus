@@ -26,6 +26,12 @@ const Chating = () => {
 
     fetchData();
   }, []);
+  
+  const HandelToAllChatDelete = () =>{
+    fetch ("/api/chats",{
+      method:"DELETE"
+    })
+  }
 
   const handelSubmit = async (event) => {
     event.preventDefault();
@@ -168,6 +174,7 @@ const Chating = () => {
           />
         </form>
       </div>
+        <button onClick={HandelToAllChatDelete}>Delete all chat history</button>
     </div>
 
 
