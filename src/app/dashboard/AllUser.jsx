@@ -20,10 +20,10 @@ const AllUser = () => {
         fetchData();
     }, []); 
     return (
-        <div className='mt-28 box' id='dashAllUser'>
+        <div className='md:mt-28 box' id='dashAllUser'>
             <div className=' shadow4'>
                 <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                <p className='text-[#c75633] font-serif font-bold text-3xl'>All User: {users.length} !!!</p>
+                <p className='text-[#c75633] font-serif font-bold md:text-3xl'>All User: {users.length} !!!</p>
                 <hr className='w-[70%] mx-auto mt-5' />
             </div>
             <div className='w-full mx-auto mt-20 box3 mb-10'>

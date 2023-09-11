@@ -5,11 +5,11 @@ import Sidebar from './sidebar';
 const page = () => {
 
     return (
-        <div className='flex text-center mb-96'>
-            <div className='w-[25%] bg text-[#00e7a2] h-screen fixed pt-12 top-0'>
+        <div className='md:flex text-center mb-96'>
+            <div className='md:w-[25%] bg text-[#00e7a2] md:h-screen md:fixed md:pt-12 md:top-0'>
                 <Sidebar />
             </div>
-            <div className='w-[75%] bg right-0 absolute pb-20'>
+            <div className='md:w-[75%] bg md:right-0 md:absolute pb-20'>
                 <Dashboard />
             </div>
         </div>
