@@ -98,7 +98,7 @@ const Chating = () => {
     }
   };
   return (
-    <div className="w-[70%] mx-auto  border-black m-5 border-2" >
+    <div className=" sm:w-[75%] md:w-[70%] mx-auto  border-black m-5 border-2" >
       <header className="bg-blue-500 text-white py-2 text-center">
         <h1 className="text-xl font-semibold">Message for Help</h1>
       </header>
@@ -113,7 +113,7 @@ const Chating = () => {
                 className={`mb-4 ${message.sender === "You" ? "text-right" : "text-left"
                   }`}
               >
-                
+
 
               </div>
 
@@ -126,7 +126,7 @@ const Chating = () => {
 
             <tr className={`flex flex-col ${users.email === user?.email ? "text-end me-0  " : ""
               } `} key={users._id}>
-                
+
               {users?.email === user?.email ? (<> <td className={`flex flex-row-reverse gap-5`} >
                 <div className={`rounded-full `}>
                   <Image
@@ -156,13 +156,13 @@ const Chating = () => {
 
 
               <td
-                className={`text-start  ms-0 mx-auto inline-block px-3 py-2 rounded-lg shadow ${users.email === user?.email ? "text-end ms-[600px] me-0  inline-block px-3 py-2 rounded-lg bg-blue-500 text-white" : "bg-gray-200"
+                className={`text-start  ms-0 mx-auto inline-block px-3 py-2 rounded-lg shadow ${users.email === user?.email ? "text-end ms-10 md:ms-[600px] me-0  inline-block px-3 py-2 rounded-lg bg-blue-500 text-white" : "bg-gray-200"
                   }`}
               >
                 {users?.message}
               </td>
               <td>
-              
+
               </td>
             </tr>
           ))}
