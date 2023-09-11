@@ -8,6 +8,12 @@ const Chating = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
+  const HandelToAllChatDelete = () =>{
+    fetch ("/api/chats",{
+      method:"DELETE"
+    })
+  }
+
   const handelSubmit = event =>{
     event.preventDefault()
     const message = event.target.message.value;
@@ -78,6 +84,7 @@ const Chating = () => {
             onClick={handleSendMessage}
           />
         </form>
+        <button onClick={HandelToAllChatDelete}>Delete all chat history</button>
       </div>
     </div>
   );
