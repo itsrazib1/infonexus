@@ -27,7 +27,7 @@ const Developerplatform =  () => {
                 <div>Automate business processes, manage custom workflows, and build apps with a choice of no, low, and pro-code tools.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Developerplatform.map(({ _id, name, description, btn, image }) => (
+                {Developerplatform.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -35,6 +35,7 @@ const Developerplatform =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>

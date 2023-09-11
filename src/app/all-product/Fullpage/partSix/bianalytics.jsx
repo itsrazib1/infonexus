@@ -28,7 +28,7 @@ const Bianalytics =  () => {
                 <div>Bring data to life with appealing visuals and insightful dashboards.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Bianalytics.map(({ _id, name, description, btn, image }) => (
+                {Bianalytics.map(({ _id, name, description, btn, image,services }) => (
 
                     <UserCard
                         key={_id}
@@ -37,6 +37,7 @@ const Bianalytics =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
 
                 ))}

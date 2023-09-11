@@ -40,7 +40,7 @@ const Navbar = () => {
       setIsOpen(!isOpen);
    };
    const fetchCollegesData = async () => {
-      fetch("/api/sales",)
+      fetch("/api/alldata",)
          .then((response) => response.json())
          .then((data) => {
             setColleges(data);
