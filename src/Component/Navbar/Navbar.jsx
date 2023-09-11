@@ -189,7 +189,7 @@ const Navbar = () => {
                                  alt="Image"
                                  className='w-10 h-auto'
                               />
-                                    <span className="badge bg-purple-900 mt-2 text-white badge-sm indicator-item">{chats?.length}</span>
+                                    <span className="badge bg-red-600 mt-2 text-white badge-sm indicator-item">{chats?.length}</span>
                                  </div>
                               </label></Link>
                               {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
