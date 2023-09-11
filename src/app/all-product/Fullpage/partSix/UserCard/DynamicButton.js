@@ -4,7 +4,7 @@ import { UserAuth } from "@/app/Context/AuthContext";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-const DynamicButton = ({ name, image, description, id,services }) => {
+const DynamicButton = ({ name, image, description, id, services }) => {
 
   const { user } = UserAuth();
   const [clicked, setClicked] = useState(false);
@@ -22,8 +22,9 @@ const DynamicButton = ({ name, image, description, id,services }) => {
     // formData.append("id", id);
     // formData.append("image", image);
 
-    const cartItem = { name, image, description, id, email,services };
+    const cartItem = { name, image, description, id, email, services };
     console.log('cartItem:', cartItem);
+    console.log(services)
 
 
     fetch("/api/trynow", {

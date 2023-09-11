@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 const alldataModel = new mongoose.Schema({
   image: String,
   name: String,
-  discription: String,
+  description: String,
+  services: String,
   btn: String,
 });
 
