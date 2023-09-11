@@ -5,7 +5,8 @@ const tryNowModel = new mongoose.Schema(
         email: String,
         image: String,
         description: String,
-        services:String,
+        services: String,
+
 
 
     }

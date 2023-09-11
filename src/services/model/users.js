@@ -3,6 +3,8 @@ const usersModel = new mongoose.Schema(
     {
         name: String,
         email: String,
+        description: String,
+        services: String,
         photo: String,
     }
 );

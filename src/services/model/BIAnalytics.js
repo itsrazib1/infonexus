@@ -5,6 +5,7 @@ const bianalyticsSchema = new mongoose.Schema({
   image: String,
   name: String,
   description: String,
+  services: String,
   btnRoute: String,
   btn: String,
 });

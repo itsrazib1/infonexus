@@ -5,6 +5,8 @@ const serviceMode = new mongoose.Schema(
     {
         name: String,
         email: String,
+        description: String,
+        services: String,
         image: String,
 
     }
