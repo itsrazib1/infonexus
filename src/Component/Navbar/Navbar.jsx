@@ -180,7 +180,7 @@ const Navbar = () => {
                               <Link href="/showVideo"><Image
                                  src={VideoImg}
                                  alt="Image"
-                                 className='w-10 h-auto'
+                                 className='w-9 h-auto'
                               /></Link>
                               {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                            </li>
