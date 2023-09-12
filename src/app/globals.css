@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 
+@keyframes fireAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.fire-border {
+  background: linear-gradient(45deg, #ff6a00, #ff0000, #ff6a00);
+  animation: fireAnimation 1s linear infinite;
+}
+
 .shadow3 {
 
 
