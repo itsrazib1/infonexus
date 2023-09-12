@@ -1,0 +1,8 @@
+.bg3{
+    background-image: url("../../../public/theme.jpg"); 
+    background-color: #cccccc; 
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

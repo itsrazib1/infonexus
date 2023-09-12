@@ -202,6 +202,10 @@ const Navbar = () => {
                               /></Link>
                               {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                            </li>
+                           <li className="flex items-center space-x-1">
+                              <Link href="/allBrowsers">Browser</Link>
+                              {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
+                           </li>
                            {/* <FaEllipsisH className="w-[50px] h-[20px]" /> */}
                         </ul>
                      </div>
@@ -430,7 +434,7 @@ const Navbar = () => {
                className={`grid mt-10 grid-cols-1 md:grid-cols-4 gap-4 ${searchTerm.length === 0 ? "hidden" : "block"
                   }`}
             >
-               {filteredColleges.map((item) => (
+               {filteredColleges?.map((item) => (
                   <li key={item._id}>
                      <div className="card h-[370px] bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
