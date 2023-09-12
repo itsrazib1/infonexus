@@ -4,6 +4,10 @@ const tryNowModel = new mongoose.Schema(
         name: String,
         email: String,
         image: String,
+        description: String,
+        services: String,
+
+
 
     }
 );

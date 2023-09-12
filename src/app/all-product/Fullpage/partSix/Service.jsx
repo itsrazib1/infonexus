@@ -29,7 +29,7 @@ const Service =  () => {
                 <div>Empower your customer and field service teams to deliver happiness and win trust.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Service.map(({ _id, name, description, btn, image }) => (
+                {Service.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -37,6 +37,7 @@ const Service =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>

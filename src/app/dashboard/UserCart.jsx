@@ -10,6 +10,7 @@ import PostAndDeleteBtn from "./PostAndDeleteBtn";
 const UserCart = () => {
     const [carts, setCarts] = useState([]);
 
+
     const { user } = UserAuth();
 
     useEffect(() => {
@@ -27,8 +28,9 @@ const UserCart = () => {
 
     const filteredCarts = carts.filter((carts) => carts.email === user?.email);
 
+
     const singlecart = carts.filter((u) => u.email === user?.email);
-    console.log("users cart", singlecart);
+    // console.log("users cart", singlecart);
     const cartQuantity = filteredCarts.length;
 
     const handlePayment = async () => {
@@ -79,7 +81,7 @@ const UserCart = () => {
                                     {/* <p>User Email: {c?.email}</p> */}
                                     <div className="card-actions mt-5">
                                         <DeleteUserCart id={c._id} />
-                                        <PostAndDeleteBtn id={c._id} name={c.name} email={c.email} image={c.image} />
+                                        <PostAndDeleteBtn id={c._id} name={c.name} email={c.email} image={c.image} services={c.services} description={c.description} />
 
                                     </div>
                                 </div>

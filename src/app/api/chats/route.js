@@ -31,3 +31,15 @@ export async function POST(req) {
         return NextResponse.json({ error: 'Error saving user data' }, { status: 500 });
     }
 }
+
+export async function DELETE(req, res) {
+      try {
+        await mongoose.connect(uri);
+        await chats.deleteMany({});
+        res.status(200).json({ message: 'All data deleted successfully' });
+      } catch (error) {
+        console.error(error);
+        req.status(500).json({ error: 'An error occurred while deleting data' });
+      }
+   
+  };

@@ -70,7 +70,7 @@ const AllServices = () => {
 
         fetchData();
     }, []);
-    
+
     return (
         <div className='mt-28'>
             <div className='box' id='Sales'>
@@ -79,46 +79,39 @@ const AllServices = () => {
                     <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>Sales Services: {Sales?.length} !!!</p>
                     <hr className='w-[70%] mx-auto mt-5' />
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
-                    <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    Sales?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
-                    </div>
+                <div className='w-full mx-auto mt-16 box3 mb-10 overflow-x-auto'>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                Sales?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                 </div>
+
             </div>
             <div className='box mt-28' id='Marketings'>
                 <div className='mt-10 shadow4'>
@@ -132,19 +125,18 @@ const AllServices = () => {
                             {/* head */}
                             <thead>
                                 <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
+                                    <th className="hidden md:table-cell">Index</th>
+                                    <th className="">Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
+                                    <th className="hidden md:table-cell">Description</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {/* row 1 */}
                                 {
                                     Marketings?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
+                                        <td className="hidden md:table-cell">{index + 1}</td>
+                                        <td className="">
                                             <Image
                                                 src={p?.image}
                                                 width={45}
@@ -154,12 +146,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
+                                        <td className="hidden md:table-cell">{p?.description}</td>
                                     </tr>)
                                 }
                             </tbody>
@@ -175,42 +162,36 @@ const AllServices = () => {
                 </div>
                 <div className='w-full mx-auto mt-16 box3 mb-10'>
                     <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    service?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                service?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
@@ -222,42 +203,36 @@ const AllServices = () => {
                 </div>
                 <div className='w-full mx-auto mt-16 box3 mb-10'>
                     <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    Finances?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                Finances?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
@@ -269,42 +244,36 @@ const AllServices = () => {
                 </div>
                 <div className='w-full mx-auto mt-16 box3 mb-10'>
                     <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    EmailCollaboration?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                EmailCollaboration?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
@@ -316,42 +285,36 @@ const AllServices = () => {
                 </div>
                 <div className='w-full mx-auto mt-16 box3 mb-10'>
                     <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    Hr?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                Hr?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
@@ -363,42 +326,36 @@ const AllServices = () => {
                 </div>
                 <div className='w-full mx-auto mt-16 box3 mb-10'>
                     <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    Legal?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                Legal?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
@@ -410,42 +367,36 @@ const AllServices = () => {
                 </div>
                 <div className='w-full mx-auto mt-16 box3 mb-10'>
                     <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    securityITManagement?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                securityITManagement?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
@@ -457,42 +408,36 @@ const AllServices = () => {
                 </div>
                 <div className='w-full mx-auto mt-16 box3 mb-10'>
                     <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    bianalytics?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                bianalytics?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
@@ -504,42 +449,36 @@ const AllServices = () => {
                 </div>
                 <div className='w-full mx-auto mt-16 box3 mb-10'>
                     <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    projectManagement?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                projectManagement?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
@@ -551,42 +490,36 @@ const AllServices = () => {
                 </div>
                 <div className='w-full mx-auto mt-16 box3 mb-10'>
                     <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr className='text-[#d8d65e] text-base'>
-                                    <th>Index</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* row 1 */}
-                                {
-                                    developerplatform?.map((p, index) => <tr key={p._id}>
-                                        <th>{index + 1}</th>
-                                        <td>
-                                            <Image
-                                                src={p?.image}
-                                                width={45}
-                                                height={45}
-                                                className="rounded-full cursor-pointer me-2"
-                                                alt={`${p?.name} Icon`}
-                                            />
-                                        </td>
-                                        <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
-                                        <td>
-                                            <button className="btn btn-circle btn-outline btn-error">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                            </button>
-                                        </td>
-                                    </tr>)
-                                }
-                            </tbody>
-                        </table>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th className="hidden md:table-cell">Index</th>
+                                <th className="">Image</th>
+                                <th>Name</th>
+                                <th className="hidden md:table-cell">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            {
+                                developerplatform?.map((p, index) => <tr key={p._id}>
+                                    <td className="hidden md:table-cell">{index + 1}</td>
+                                    <td className="">
+                                        <Image
+                                            src={p?.image}
+                                            width={45}
+                                            height={45}
+                                            className="rounded-full cursor-pointer me-2"
+                                            alt={`${p?.name} Icon`}
+                                        />
+                                    </td>
+                                    <td>{p?.name}</td>
+                                    <td className="hidden md:table-cell">{p?.description}</td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
