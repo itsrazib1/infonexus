@@ -187,7 +187,7 @@ const Navbar = () => {
                                  <Image
                                  src={chatImg}
                                  alt="Image"
-                                 className='w-10 h-auto'
+                                 className='w-9 h-auto'
                               />
                                     <span className="badge bg-red-600 mt-2 text-white badge-sm indicator-item">{chats?.length}</span>
                                  </div>
