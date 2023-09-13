@@ -10,7 +10,7 @@ import {
 import { GoSearch } from "react-icons/go";
 import Link from "next/link";
 import Image from "next/image";
-import img1 from "../../../public/logo.png";
+import img1 from "../../../public/infonexus.jpg";
 import NavbarTwo from "./Navbar2";
 import useTheme from "@/hooks/useTheme";
 import LiveTime from "../Livetime/Livietime";
@@ -90,7 +90,7 @@ const Navbar = () => {
                <div className={`flex items-center justify-between`}>
                   <div className="flex items-center">
                      <Link href="/">
-                        <Image src={img1} alt="Image" className="h-[60px] w-[60px]" />
+                        <Image src={img1} alt="Image" className="h-[40px] w-[72px] border border-black rounded-xl " />
                      </Link>
                      <div className="hidden md:block">
                         <ul className="md:flex md:ml-9 md:space-x-9 md:items-center">
