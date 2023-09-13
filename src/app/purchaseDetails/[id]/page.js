@@ -38,6 +38,7 @@ export default function Page({ params }) {
                             width={300}
                             alt={`${c.name}'s Profile Photo`}
                         />
+                        {console.log("filteredCarts",filteredCarts)}
                     </div>
                 </div>))
             }
