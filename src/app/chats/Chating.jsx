@@ -99,9 +99,9 @@ const Chating = () => {
     }
   };
   return (
-    <div className="  w-[95%] md:w-[70%] mx-auto  border-black m-5 border-2" >
-      <header className="bg-blue-500 text-white py-2 text-center">
-        <h1 className="text-xl font-semibold">Message for Help</h1>
+    <div className="w-[95%] md:w-[50%] mx-auto  border-black m-5 border-2" >
+      <header className="bg-blue-500 text-white py-2">
+        <h1 className="text-xl font-semibold">Chats for Help</h1>
       </header>
       <div className="flex flex-col carousel carousel-vertical w-[95%] mx-auto rounded h-screen border-black m-5 border-2 p-5">
 
