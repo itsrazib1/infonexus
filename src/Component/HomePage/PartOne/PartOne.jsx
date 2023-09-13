@@ -27,10 +27,10 @@ const PartOne = () => {
                     <Image
                         src={Banner}
                         alt="Image"
-                        className='lg:max-w-5xl h-auto lg:-ms-44'
+                        className='lg:max-w-5xl bg-white h-auto lg:-ms-20 mt-2 '
                     />
                 </div>
-                <div className="bg-base-100 border border-[#e7ebf0] px-6 lg:w-full lg:px-8">
+                <div className="bg-[#37a8ff] rounded-tl-3xl border border-[#e7ebf0] px-6 lg:w-full lg:px-8">
                     <p className='text-base font-bold mt-6'>FEATURED APPS</p>
                     <div className='mt-8'>
                         <Link href='/all-product'>
@@ -125,13 +125,13 @@ const PartOne = () => {
                         </Link>
 
                     </div>
-                    <div className='mt-14 text-center bg-base mb-2 border border-[#e7ebf0] px-4 lg:px-10 py-6'>
-                        <a className='flex justify-between text-blue-500 font-bold' href="#">
+                    <div className='mt-14 rounded-lg text-center bg-base mb-2 border border-[#e7ebf0] px-4 lg:px-10 py-6'>
+                        <a className='flex justify-between text-black font-bold' href="#">
                             <h1>EXPLORE ALL PRODUCTS</h1>
                             <Image
                                 src={Arrow}
                                 alt="Image"
-                                className='w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000'
+                                className='w-6  h-auto hover:translate-x-[10px] transition-transform duration-1000'
                             />
                         </a>
                     </div>
