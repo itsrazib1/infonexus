@@ -37,7 +37,7 @@ const Sidebar = () => {
     };
 
     return (
-        <div className='fixed -top-4 left-4 md:left-0 z-50 md:mt-20'>
+        <div className='fixed -top-1 left-4 md:left-0 z-50 md:mt-20'>
             <div className='relative md:mx-3 mx-0  w-full'>
 
                 <div className='flex ps-3 gap-3 items-center mt-4 box3'>

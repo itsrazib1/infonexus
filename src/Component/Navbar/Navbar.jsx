@@ -85,7 +85,7 @@ const Navbar = () => {
 
    return (
       <div>
-         <nav className="bg-base-200 md:sticky z-50 top-0 left-0 right-0 text-base">
+         <nav className="bg-[#37a8ff]  rounded-full mx-4 mt-2  md:sticky z-50 top-0 left-0 right-0 text-black">
             <div className="max-w-7xl mx-auto px-4 py-4 md:py-2">
                <div className={`flex items-center justify-between`}>
                   <div className="flex items-center">
@@ -96,7 +96,7 @@ const Navbar = () => {
                         <ul className="md:flex md:ml-9 md:space-x-9 md:items-center">
 
                            <li><div
-                              className="text-slate-600 flex items-center cursor-pointer"
+                              className=" flex items-center cursor-pointer"
                               onClick={toggleAccordion}>
                               <div className="flex-grow font-semibold">
                                  Products
@@ -117,7 +117,7 @@ const Navbar = () => {
                               </svg>
                            </div>
                               {isAccordionOpen && (
-                                 <div className=" bg-white border-black absolute ml-0 rounded-lg border px-3 mt-2 duration-300">
+                                 <div className=" bg-white text-black border-black absolute ml-0 rounded-lg border px-3 mt-2 duration-300">
                                     <Link
                                        href="/all-product#sales"
                                        className="block py-1   hover:text-blue-400 duration-500 ">
@@ -181,7 +181,7 @@ const Navbar = () => {
                               <Link href="/all-product">All Product</Link>
                               {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                            </li>
-                           <li className="flex items-center space-x-1">
+                           <li className="flex items-center  space-x-1">
                               <Link href="/chats"><label tabIndex={0} className="btn btn-ghost btn-circle">
                                  <div className="indicator">
                                  <Image
@@ -194,7 +194,7 @@ const Navbar = () => {
                               </label></Link>
                               {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                            </li>
-                           <li className="flex items-center space-x-1">
+                           <li className="flex items-center  rounded-md px-2 space-x-1">
                               <Link href="/showVideo"><Image
                                  src={VideoImg}
                                  alt="Image"
