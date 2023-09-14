@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import Work from '../../../../public/work.png'
 import Workplace from '../../../../public/workplace.png'
@@ -8,7 +9,17 @@ import Dolan from '../../../../public/partonetambuli.png'
 import React from 'react';
 import Link from 'next/link';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 const BannerSection = () => {
+    useEffect(() => {
+        AOS.init({
+             duration: 800,
+             once: false,
+           })
+     }, [])
     return (
         <div className='lg:mt-40'>
             <div className='lg:relative'>
@@ -52,7 +63,7 @@ const BannerSection = () => {
                 </div>
                 <div className=' bg-[#37a8ff] text-black'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center items-start gap-9 pb-28 pt-10 lg:pt-60 mt-10'>
-                        <div className='lg:flex justify-center text-center lg:text-left'>
+                        <div className='lg:flex justify-center text-center lg:text-left' data-aos="zoom-in-down">
                             <div>
                                 <Image
                                     src={One}
@@ -76,7 +87,7 @@ const BannerSection = () => {
                                     </button></Link>
                             </div>
                         </div>
-                        <div>
+                        <div data-aos="zoom-out-up">
                             <Image
                                 src={Icon}
                                 alt="Image"

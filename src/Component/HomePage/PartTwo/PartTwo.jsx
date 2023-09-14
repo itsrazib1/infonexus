@@ -11,13 +11,22 @@ import imgThree from "../../../../public/part-2-img-3.png";
 import imgFour from "../../../../public/part-2-img-4.png";
 import imgFive from "../../../../public/part-2-img-5.png";
 import imgSix from "../../../../public/part-2-img-6.png";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const PartTwo = () => {
+  useEffect(() => {
+    AOS.init({
+         duration: 1000,
+         once: false,
+       })
+ }, [])
   return (
-    <div className="">
+    <div>
       {/* 1st part for part two */}
       <div className="main-body flex md:flex-row flex-col-reverse md:text-start text-center justify-center items-center container m-auto ">
-        <div>
+        <div data-aos="fade-left">
           <div className="relative">
             <Image
               className="z-0"
@@ -59,7 +68,7 @@ const PartTwo = () => {
             </div>
           </div>
         </div>
-        <div className="right-site">
+        <div className="right-site" data-aos="fade-right">
           <h1 className="header">
             Infonexu for <br /> Enterprises
           </h1>
@@ -83,7 +92,7 @@ const PartTwo = () => {
         </div>
       </div>
       {/* 2nd part for part two */}
-      <div className="bg-[#0a73c0] grid md:grid-cols-5 grid-row-2 items-center md:p-0 p-7">
+      <div className="bg-[#0a73c0] grid md:grid-cols-5 grid-row-2 items-center md:p-0 p-7 md:py-4">
         <div></div>
         <div className="text-white md:col-start-2 col-span-2">
           <h1 className="md:text-[50px] text-[30px]">

@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import Arrow from '../../../../public/icons8-right-arrow-dark-100.png'
 import Banner from '../../../../public/zh-homev2-banner.webp'
@@ -12,12 +13,22 @@ import Brand from './Brand';
 import Buttonp1 from './buttonp1';
 import Link from 'next/link';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 const PartOne = () => {
+    useEffect(() => {
+        AOS.init({
+             duration: 1000,
+             once: false,
+           })
+     }, [])
 
     return (
         <div className='mt-20'>
             <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-start px-4 lg:px-14 pb-14 gap-4 lg:container lg:mx-auto'>
-                <div className='col-span-2 leading-tight'>
+                <div className='col-span-2 leading-tight' data-aos="fade-down">
                     <h1 className='text-3xl lg:text-5xl leading-normal'>Your life is work, <br />
                         powered by our life is work</h1>
 
@@ -30,7 +41,7 @@ const PartOne = () => {
                         className='lg:max-w-5xl bg-white h-auto lg:-ms-20 mt-2 '
                     />
                 </div>
-                <div className="bg-[#37a8ff] rounded-tl-3xl border border-[#e7ebf0] px-6 lg:w-full lg:px-8">
+                <div className="bg-[#37a8ff] rounded-tl-3xl border border-[#e7ebf0] px-6 pb-6 lg:w-full lg:px-8" data-aos="fade-up">
                     <p className='text-base font-bold mt-6'>FEATURED APPS</p>
                     <div className='mt-8'>
                         <Link href='/all-product'>
