@@ -23,7 +23,7 @@ const BannerSection = () => {
     return (
         <div className='lg:mt-40'>
             <div className='lg:relative'>
-                <div className='lg:absolute lg:-top-28 lg:left-0 lg:right-0'>
+                <div className='lg:absolute text-black lg:-top-28 lg:left-0 lg:right-0'>
                     <div className='bg-[#fff] border border-[#e7ebf0] w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-3 justify-items-center items-center gap-9 relative'>
                         <div>
                             <div className='text-white bg-green-700 px-2 text-sm absolute top-0 left-0'>
