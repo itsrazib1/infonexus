@@ -11,6 +11,7 @@ import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import { motion } from 'framer-motion';
 
 const PartThree = () => {
     useEffect(() => {
@@ -101,13 +102,13 @@ const PartThree = () => {
             <div className=" md:mt-0  bg-slate-100  md:h-[650px]">
                 <div className="hero  min-h-screen bg-base-200">
                     <div className="hero-content  flex-col md:flex-row-reverse">
-                        <div className='w-1/3'>
-                            <Image
-                                src={Image2}
-                                alt="Image"
-                                className=' sm:w-full md:w-5/5 '
-                            />
-                        </div>
+                            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}  className='w-1/3' data-aos="flip-right">
+                                <Image
+                                    src={Image2}
+                                    alt="Image"
+                                    className=' sm:w-full md:w-5/5 '
+                                />
+                            </motion.div>
 
                         <div className='sm:w-4/5 md:w-2/3'>
                             <div data-aos="flip-left">
@@ -131,7 +132,7 @@ const PartThree = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -12,6 +12,7 @@ import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import { motion } from 'framer-motion';
 
 const BannerSection = () => {
     useEffect(() => {
@@ -20,10 +21,11 @@ const BannerSection = () => {
              once: false,
            })
      }, [])
+     
     return (
         <div className='lg:mt-40'>
             <div className='lg:relative'>
-                <div className='lg:absolute text-black lg:-top-28 lg:left-0 lg:right-0'>
+                <div className='lg:absolute text-black lg:-top-28 lg:left-0 lg:right-0' data-aos="fade-up">
                     <div className='bg-[#fff] border border-[#e7ebf0] w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-3 justify-items-center items-center gap-9 relative'>
                         <div>
                             <div className='text-white bg-green-700 px-2 text-sm absolute top-0 left-0'>
@@ -95,13 +97,13 @@ const BannerSection = () => {
                             />
                             <h1 className='text-2xl mt-8'>InfoNexus One has brought our <br /> company closer together.</h1>
                             <div className='flex justify-between items-center mt-10'>
-                                <div>
+                                <motion.div whileHover={{ scale: 1.4 }} whileTap={{ scale: 0.8 }}>
                                     <Image
                                         src={Dolan}
                                         alt="Image"
                                         className='w-24 h-auto '
                                     />
-                                </div>
+                                </motion.div>
                                 <div>
                                     <h1 className='text-xl font-medium'>Shrabon Tambuli</h1>
                                     <p>Head of CRM, Purolite</p>

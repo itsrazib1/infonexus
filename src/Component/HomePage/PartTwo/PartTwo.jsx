@@ -14,14 +14,15 @@ import imgSix from "../../../../public/part-2-img-6.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const PartTwo = () => {
   useEffect(() => {
     AOS.init({
-         duration: 1000,
-         once: false,
-       })
- }, [])
+      duration: 1000,
+      once: false,
+    })
+  }, [])
   return (
     <div>
       {/* 1st part for part two */}
@@ -53,12 +54,16 @@ const PartTwo = () => {
                   collective memory of Selectras entire business."
                 </p>
                 <div>
-                  <Image width={105} height={124} src={imgFive} alt="" />
-                  <button className="flex items-center text-[14px] gap-2 mt-3 watch-btn-img">
-                    {" "}
-                    <Image width={35} height={35} src={imgSix} alt="" /> Watch
-                    Video
-                  </button>
+                  <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
+                    <Image width={105} height={124} src={imgFive} alt="" />
+                  </motion.div>
+                  <Link href="/showVideo">
+                    <button className="flex items-center text-[14px] gap-2 mt-5 watch-btn-img">
+                      {" "}
+                      <Image width={35} height={35} src={imgSix} alt="" /> Watch
+                      Video
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -92,7 +97,7 @@ const PartTwo = () => {
         </div>
       </div>
       {/* 2nd part for part two */}
-      <div className="bg-[#0a73c0] grid md:grid-cols-5 grid-row-2 items-center md:p-0 p-7 md:py-4">
+      <div className="bg-[#0a73c0] grid md:grid-cols-5 grid-row-2 items-center md:p-0 p-7 md:py-8">
         <div></div>
         <div className="text-white md:col-start-2 col-span-2">
           <h1 className="md:text-[50px] text-[30px]">
@@ -144,14 +149,14 @@ const PartTwo = () => {
             </div>
             <div>
               <Link href='/link'>
-              <button className="about-btn flex gap-2 items-center justify-center px-[25px] py-[20px]">
-                More about Infonexu 
-                <Image
-                  src={Arrow}
-                  alt="Image"
-                  className="w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000"
-                />
-              </button> </Link>
+                <button className="about-btn flex gap-2 items-center justify-center px-[25px] py-[20px]">
+                  More about Infonexu
+                  <Image
+                    src={Arrow}
+                    alt="Image"
+                    className="w-6 h-auto hover:translate-x-[10px] transition-transform duration-1000"
+                  />
+                </button> </Link>
             </div>
           </div>
         </div>
@@ -165,7 +170,7 @@ const PartTwo = () => {
         </div>
       </div>
       {/* 3nd part for part three */}
-      <div className="md:pt-[130px] pt-[50px] md:pb-[160px] pb-[80px]">
+      <div className="md:pt-[130px] pt-[50px] md:pb-[160px] pb-[80px]" data-aos="zoom-in">
         <Image className="m-auto" width={59} height={70} src={imgTwo} alt="" />
         <div className="text-center">
           <h1 className="text-[44px] mb-[15px]">
@@ -177,10 +182,12 @@ const PartTwo = () => {
             advertising-based business models. The only way we make money is
             from the software license fees you pay us.
           </p>
-          <button className="flex items-center text-[14px] m-auto gap-2 mt-3 video-btn watch-btn-img">
-            {" "}
-            <Image width={35} height={35} src={imgSix} alt="" /> Watch Video
-          </button>
+          <Link href="/showVideo">
+            <button className="flex items-center text-[14px] m-auto gap-2 mt-3 video-btn watch-btn-img">
+              {" "}
+              <Image width={35} height={35} src={imgSix} alt="" /> Watch Video
+            </button>
+          </Link>
           {/* <button className="video-btn flex items-center m-auto watch-btn-img">
             <Image
               className=""
