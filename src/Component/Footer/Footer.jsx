@@ -3,12 +3,12 @@ import logo from "../../../public/logo.png";
 import rightArrow from "../../../public/icons8-right-arrow-90.png";
 import instagram from "../../../public/instagram.png";
 import Image from "next/image";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-base-100 sm:pt-[500px] md:pt-1 text-base-100">
+      <footer className="bg-base-100  text-base-100">
         <div className="text-center mb-14 pt-12 px-2">
           <h1 className="md:text-[44px] mb-1 md:mb-2 text-[25px] text-base-content">
             Ready to do your best work?

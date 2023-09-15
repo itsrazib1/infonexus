@@ -204,7 +204,7 @@ const PartTwo = () => {
         </div>
       </div>
       {/* 2nd part for part two.2 */}
-      <div className="main-body flex md:flex-row-reverse  md:text-start text-center justify-center items-center container m-auto ">
+      <div className="main-body flex md:flex-row-reverse flex-col-reverse md:text-start text-center justify-center items-center container m-auto ">
         <div data-aos="fade-left">
           <div className="relative">
             <Image

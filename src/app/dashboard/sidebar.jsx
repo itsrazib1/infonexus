@@ -114,7 +114,7 @@ const Sidebar = () => {
                                 <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="userdata" smooth>User Data</Link></li>
                                 <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="usercart" smooth>My Cart</Link></li>
 
-                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="myService" smooth>My Service</Link></li>
+                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="myservice" smooth>My Service</Link></li>
 
 
                             </ul>)
