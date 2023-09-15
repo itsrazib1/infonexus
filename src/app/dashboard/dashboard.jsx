@@ -54,9 +54,7 @@ const Dashboard = () => {
 
                     </> :
                     <>
-                        <div  >
-                            <DashBoardHome />
-                        </div>
+                        
                         <div  >
                             <Mydata />
                         </div>

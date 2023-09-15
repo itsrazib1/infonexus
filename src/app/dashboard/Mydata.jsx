@@ -7,8 +7,8 @@ const Mydata = () => {
     const { user } = UserAuth();
     console.log("userw",user)
     return (
-        <div>
-            <div className="hero h-[400px]" style={{ backgroundImage: 'url(https://i.ibb.co/Dz50Zbz/abstract-fluid-background-with-colorful-gradient-747896-4664.jpg)' }}>
+        <div className="pt-10" id="userdata">
+            <div className=" hero h-[400px]" style={{ backgroundImage: 'url(https://i.ibb.co/Dz50Zbz/abstract-fluid-background-with-colorful-gradient-747896-4664.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
