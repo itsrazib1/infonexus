@@ -85,7 +85,7 @@ const Navbar = () => {
 
    return (
       <div>
-         <nav className="bg-[#37a8ff]   md:sticky z-50 top-0 left-0 right-0 text-black">
+         <nav className="bg-slate-300  md:sticky z-50 top-0 left-0 right-0 text-black">
             <div className="max-w-7xl mx-auto px-4 py-4 md:py-2">
                <div className={`flex items-center justify-between`}>
                   <div className="flex items-center">
