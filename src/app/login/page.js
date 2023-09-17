@@ -1,10 +1,10 @@
 'use client'
 import Image from "next/image";
 import React from "react";
-import Image4 from "../../../public/zoho-logo-web.png";
+import Image4 from "../../../public/logo.png";
 import Image5 from "../../../public/social.jpg";
-import Image6 from "../../../public/images.png";
-import Image7 from "../../../public/lock.png";
+import Image6 from "../../../public/password.png";
+import Image7 from "../../../public/security.png";
 import Link from "next/link";
 import LoginPage2 from "./login";
 import AOS from 'aos';
@@ -12,7 +12,9 @@ import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
 const LoginPage = () => {
-  
+
+
+
   // const handleLogin = event => {
   //   event.preventDefault();
   //   const form = event.target;
@@ -38,10 +40,11 @@ const LoginPage = () => {
 
   useEffect(() => {
     AOS.init({
-         duration: 1000,
-         once: false,
-       })
- }, [])
+      duration: 1000,
+      once: false,
+    })
+  }, [])
+
 
   return (
     <div>
@@ -59,8 +62,8 @@ const LoginPage = () => {
                 </div>
 
                 <h1 className="text-2xl mt-4">Sign in </h1>
-                 <h1>to access InfoNexus Home</h1>
-               <LoginPage2></LoginPage2>
+                <h1>to access InfoNexus Home</h1>
+                <LoginPage2></LoginPage2>
                 <div className=""><span className="text-sm">Dont have a InfoNexus account?</span> <Link className="text-sm text-sky-400 font-semibold" href='/singin' >Sign Up Now</Link></div>
               </div>
 
@@ -94,7 +97,9 @@ const LoginPage = () => {
               </div>
               <div id="item3" className="carousel-item w-full">
                 <div>
-                  <Image src={Image7} className="h-80 w-full" alt="Image" />
+                  <div className="">
+                    <Image src={Image7} className="h-80 py-12 mx-auto" alt="Image" />
+                  </div>
                   <h1 className="text-center text-xl mt-9">Enhanced sign-in security</h1>
                   <h1 className="text-center px-6 mt-3">Using only a password to sign in? To strengthen the security of your account, we are introducing additional verification for any unusual sign-in attempt.</h1>
                   <div className="flex flex-col items-center justify-center mt-4">

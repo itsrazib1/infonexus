@@ -20,10 +20,10 @@ import { useEffect } from "react";
 const PartOne = () => {
     useEffect(() => {
         AOS.init({
-             duration: 1000,
-             once: false,
-           })
-     }, [])
+            duration: 1000,
+            once: false,
+        })
+    }, [])
 
     return (
         <div className='mt-20'>
@@ -137,7 +137,7 @@ const PartOne = () => {
 
                     </div>
                     <div className='mt-14 rounded-lg text-center bg-base mb-2 border border-[#e7ebf0] px-4 lg:px-10 py-6'>
-                        <a className='flex justify-between text-black font-bold' href="#">
+                        <a className='flex justify-between text-black font-bold' href="/all-product">
                             <h1>EXPLORE ALL PRODUCTS</h1>
                             <Image
                                 src={Arrow}
