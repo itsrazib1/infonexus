@@ -37,7 +37,7 @@ const Sidebar = () => {
     };
 
     return (
-        <div className='fixed -top-1 left-4 md:left-0 z-50 md:mt-20'>
+        <div className='fixed md:-top-7 -top-5  left-4 md:left-0 z-50 md:mt-20'>
             <div className='relative md:mx-3 mx-0  w-full'>
 
                 <div className='flex ps-3 gap-3 items-center mt-4 box3'>
@@ -111,9 +111,10 @@ const Sidebar = () => {
 
                                 <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><a href="/" >Home</a></li>
 
+                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="userdata" smooth>User Data</Link></li>
                                 <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="usercart" smooth>My Cart</Link></li>
 
-                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="myService" smooth>My Service</Link></li>
+                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="myservice" smooth>My Service</Link></li>
 
 
                             </ul>)

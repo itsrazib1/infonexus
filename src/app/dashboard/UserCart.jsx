@@ -82,7 +82,7 @@ const UserCart = () => {
                                     <div className="card-actions mt-5">
                                         <DeleteUserCart id={c._id} />
                                         <PostAndDeleteBtn id={c._id} name={c.name} email={c.email} image={c.image} services={c.services} description={c.description} />
-
+{console.log('cx',c)}
                                     </div>
                                 </div>
                             </div>

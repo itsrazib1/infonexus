@@ -7,6 +7,8 @@ import Social from "../../../../../public/Social.png"
 import Arrow from "../../../../../public/icons8-right-arrow-90-2.png"
 import Analytics from "../../../../../public/analytics.jpg"
 import Image from 'next/image';
+// import Link from 'next/link';
+// import { Link } from 'react-scroll';
 
 const PartOne = () => {
     return (
@@ -27,8 +29,9 @@ const PartOne = () => {
                     <div className="card-body">
                         <h2 className="card-title">CRM</h2>
                         <p>Coverts leads and close   sales deals faster</p>
-                        <div>
+                        <div >
                             <button className='flex text-[#0060B4] py-6'>
+
                                 <p className='text-[#0060B4] text-xs'>TRY NOW </p>
                                 <Image
                                     src={Arrow}

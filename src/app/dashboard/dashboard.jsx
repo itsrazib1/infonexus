@@ -8,6 +8,7 @@ import { UserAuth } from '../Context/AuthContext';
 import { getusers } from '../utils/getusers';
 import UserCart from './UserCart';
 import MyService from './Myservice';
+import Mydata from './Mydata';
 
 const Dashboard = () => {
     const { user } = UserAuth();
@@ -53,8 +54,9 @@ const Dashboard = () => {
 
                     </> :
                     <>
+                        
                         <div  >
-                            <DashBoardHome />
+                            <Mydata />
                         </div>
                         <div>
                             <UserCart />

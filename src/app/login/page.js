@@ -1,4 +1,4 @@
-
+'use client'
 import Image from "next/image";
 import React from "react";
 import Image4 from "../../../public/logo.png";
@@ -7,8 +7,44 @@ import Image6 from "../../../public/password.png";
 import Image7 from "../../../public/security.png";
 import Link from "next/link";
 import LoginPage2 from "./login";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const LoginPage = () => {
+
+
+
+  // const handleLogin = event => {
+  //   event.preventDefault();
+  //   const form = event.target;
+  //   const email = form.email.value;
+  //   const password = form.password.value;
+  //   console.log(email, password);
+  //   signIn(email, password)
+  //     .then(result => {
+  //       const user = result.user;
+  //       console.log(user);
+  //       Swal.fire({
+  //         title: 'User Login Successful.',
+  //         showClass: {
+  //           popup: 'animate__animated animate__fadeInDown'
+  //         },
+  //         hideClass: {
+  //           popup: 'animate__animated animate__fadeOutUp'
+  //         }
+  //       });
+  //       navigate(from, { replace: true });
+  //     })
+  // }
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    })
+  }, [])
+
 
   return (
     <div>
@@ -16,7 +52,7 @@ const LoginPage = () => {
         <div className="hero-content  flex-col lg:flex-row">
           {/* Caucel section  */}
 
-          <div className="card w-full h-screen flex-shrink-0  max-w-md shadow-2xl bg-base-100">
+          <div className="card w-full h-screen flex-shrink-0  max-w-md shadow-2xl bg-base-100" data-aos="fade-left">
             <div className="card-body">
               <div className="form-control">
                 <div className="flex justify-between">
@@ -35,7 +71,7 @@ const LoginPage = () => {
 
             </div>
           </div>
-          <div className=" card md:w-2/6 h-screen text-center  lg:text-left shadow-2xl bg-base-100">
+          <div className=" card md:w-2/6 h-screen text-center  lg:text-left shadow-2xl bg-base-100" data-aos="fade-right">
             <div className="carousel w-full">
               <div id="item1" className="carousel-item w-full">
                 <div>

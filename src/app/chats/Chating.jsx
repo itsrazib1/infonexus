@@ -20,6 +20,7 @@ const Chating = () => {
         const userData = await getusers();
         console.log("User data in component:", userData);
         // Add this line to log the user data from the database
+        // Add this line to log the user data from the database
         console.log("DatabaseUser:", userData);
         setUsers(userData);
       } catch (error) {
@@ -98,11 +99,11 @@ const Chating = () => {
     }
   };
   return (
-    <div className="  w-[95%] md:w-[70%] mx-auto  border-black m-5 border-2" >
-      <header className="bg-blue-500 text-white py-2 text-center">
-        <h1 className="text-xl font-semibold">Message for Help</h1>
+    <div className="  bg w-[95%] md:w-[70%] mx-auto  border-black m-5 border rounded-2xl" >
+      <header className="bg-[#2b3595] rounded-t-2xl text-white py-3 md:py-5">
+        <h1 className="md:text-xl font-semibold ms-4 md:ms-8">Chats for Help</h1>
       </header>
-      <div className="flex flex-col carousel carousel-vertical w-[95%] mx-auto rounded h-screen border-black m-5 border-2 p-5">
+      <div className="flex flex-col carousel carousel-vertical w-[95%] mx-auto rounded m-5 p-5">
 
 
         <div className="flex-grow p-4">
@@ -156,7 +157,7 @@ const Chating = () => {
 
 
               <td
-                className={`text-start  ms-0 mx-auto inline-block px-3 py-2 rounded-lg shadow ${users.email === user?.email ? "text-end ms-10 md:ms-[600px] me-0  inline-block px-3 py-2 rounded-lg bg-blue-500 text-white" : "bg-gray-200"
+                className={`text-start  ms-0 mx-auto inline-block px-3 py-3 my-3 rounded-lg shadow ${users.email === user?.email ? "text-end ms-10 md:ms-[600px] me-0  inline-block px-3 py-2 rounded-lg bg-[#2b3595] text-white" : "bg-gray-200"
                   }`}
               >
                 {users?.message}
@@ -171,9 +172,48 @@ const Chating = () => {
 
 
       </div>
-      <div className="p-4">
+      <div>
+        <header className="bg-[#2b3595] rounded-b-2xl text-white py-3 md:py-5">
+          <form onSubmit={handelSubmit} className="flex space-x-2 px-5">
+            <div className="relative flex-grow  rounded-md p-2">
+              <input
+                type="text"
+                name="message"
+                className="w-full h-full rounded-lg px-4 py-2 md:py-4 outline-none text-black"
+                placeholder="Type your message....."
+                onChange={(e) => setNewMessage(e.target.value)}
+                onKeyPress={handleKeyPress}
+              />
+              {delMessage && (
+                <button
+                  className="absolute top-0 right-0 px-2 h-full bg-gray-200 hover:bg-gray-300 text-gray-600"
+                  onClick={() => setdelMessage("")}
+                >
+                  Clear
+                </button>
+              )}
+            </div>
 
-        <form onSubmit={handelSubmit} className="flex space-x-2">
+            <input
+              type="submit"
+              value="Send"
+              className="bg-blue-500 text-white font-semibold px-4 rounded-md"
+              onClick={handleSendMessage}
+
+            />
+            {
+              isAdmin ? (<input
+                type="submit"
+                value="Delete Chat"
+                className="bg-red-500 text-white px-2 rounded-md"
+                onClick={HandelToAllChatDelete}
+
+              />) : (<></>)
+            }
+
+          </form>
+        </header>
+        {/* <form onSubmit={handelSubmit} className="flex space-x-2">
           <div className="relative flex-grow border border-black rounded-md p-2">
             <input
               type="text"
@@ -210,7 +250,7 @@ const Chating = () => {
             />) : (<></>)
           }
 
-        </form>
+        </form> */}
       </div>
     </div>
 
