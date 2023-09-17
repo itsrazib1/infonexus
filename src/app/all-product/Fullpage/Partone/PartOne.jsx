@@ -1,4 +1,6 @@
+'use client'
 import React from 'react';
+
 import CRM from "../../../../../public/crm.png"
 import Mail from "../../../../../public/mail.png"
 import Desk from "../../../../../public/desk.png"
@@ -7,8 +9,9 @@ import Social from "../../../../../public/Social.png"
 import Arrow from "../../../../../public/icons8-right-arrow-90-2.png"
 import Analytics from "../../../../../public/analytics.jpg"
 import Image from 'next/image';
-// import Link from 'next/link';
-// import { Link } from 'react-scroll';
+import { Link } from 'react-scroll';
+
+
 
 const PartOne = () => {
     return (
@@ -30,15 +33,18 @@ const PartOne = () => {
                         <h2 className="card-title">CRM</h2>
                         <p>Coverts leads and close   sales deals faster</p>
                         <div >
-                            <button className='flex text-[#0060B4] py-6'>
+                            <Link className='hover:text-blue-500' to="sales" smooth>
+                                <button className='flex text-[#0060B4] py-6'>
+                                    <p className='text-[#0060B4] text-xs'>TRY NOW </p>
+                                    <Image
+                                        src={Arrow}
+                                        alt="Image"
+                                        className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
+                                    />
+                                </button>
 
-                                <p className='text-[#0060B4] text-xs'>TRY NOW </p>
-                                <Image
-                                    src={Arrow}
-                                    alt="Image"
-                                    className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
-                                />
-                            </button>
+                            </Link>
+
                         </div>
 
 
@@ -54,14 +60,20 @@ const PartOne = () => {
                         <h2 className="card-title">Mail</h2>
                         <p>secure Email service for   teams of all sizes </p>
                         <div>
-                            <button className='flex text-[#0060B4] py-6'>
-                                <p className='text-[#0060B4] text-xs'>TRY NOW </p>
-                                <Image
-                                    src={Arrow}
-                                    alt="Image"
-                                    className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
-                                />
-                            </button>
+                            <Link to="Email" smooth>
+                                <button className='flex text-[#0060B4] py-6'>
+                                    <p className='text-[#0060B4] text-xs'>TRY NOW </p>
+                                    <Image
+                                        src={Arrow}
+                                        alt="Image"
+                                        className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
+                                    />
+                                </button>
+
+                            </Link>
+
+
+
                         </div>
 
 
@@ -77,14 +89,18 @@ const PartOne = () => {
                         <h2 className="card-title">Desk</h2>
                         <p>Coverts leads and close   sales deals faster</p>
                         <div>
-                            <button className='flex text-[#0060B4] py-6'>
-                                <p className='text-[#0060B4] text-xs'>TRY NOW </p>
-                                <Image
-                                    src={Arrow}
-                                    alt="Image"
-                                    className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
-                                />
-                            </button>
+                            <Link to="Service" smooth>
+                                <button className='flex text-[#0060B4] py-6'>
+                                    <p className='text-[#0060B4] text-xs'>TRY NOW </p>
+                                    <Image
+                                        src={Arrow}
+                                        alt="Image"
+                                        className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
+                                    />
+                                </button>
+
+                            </Link>
+
                         </div>
 
 
@@ -100,14 +116,18 @@ const PartOne = () => {
                         <h2 className="card-title">Assist</h2>
                         <p>Remote support and unattended  remote access  software</p>
                         <div>
-                            <button className='flex text-[#0060B4] py-6'>
-                                <p className='text-[#0060B4] text-xs'>TRY NOW </p>
-                                <Image
-                                    src={Arrow}
-                                    alt="Image"
-                                    className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
-                                />
-                            </button>
+                            <Link to="Service" smooth>
+                                <button className='flex text-[#0060B4] py-6'>
+                                    <p className='text-[#0060B4] text-xs'>TRY NOW </p>
+                                    <Image
+                                        src={Arrow}
+                                        alt="Image"
+                                        className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
+                                    />
+                                </button>
+
+                            </Link>
+
                         </div>
 
 
@@ -124,14 +144,18 @@ const PartOne = () => {
                         <h2 className="card-title">Books</h2>
                         <p>Powerful financial platform  for growing businesses</p>
                         <div>
-                            <button className='flex text-[#0060B4] py-6'>
-                                <p className='text-[#0060B4] text-xs'>TRY NOW </p>
-                                <Image
-                                    src={Arrow}
-                                    alt="Image"
-                                    className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
-                                />
-                            </button>
+                            <Link to="Finance" smooth>
+                                <button className='flex text-[#0060B4] py-6'>
+                                    <p className='text-[#0060B4] text-xs'>TRY NOW </p>
+                                    <Image
+                                        src={Arrow}
+                                        alt="Image"
+                                        className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
+                                    />
+                                </button>
+
+                            </Link>
+
                         </div>
 
 
@@ -148,14 +172,18 @@ const PartOne = () => {
                         <h2 className="card-title">Analytics</h2>
                         <p>Create customs reports and  dashboards from any data set</p>
                         <div>
-                            <button className='flex text-[#0060B4] py-6'>
-                                <p className='text-[#0060B4] text-xs'>TRY NOW </p>
-                                <Image
-                                    src={Arrow}
-                                    alt="Image"
-                                    className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
-                                />
-                            </button>
+                            <Link to="BI" smooth>
+                                <button className='flex text-[#0060B4] py-6'>
+                                    <p className='text-[#0060B4] text-xs'>TRY NOW </p>
+                                    <Image
+                                        src={Arrow}
+                                        alt="Image"
+                                        className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
+                                    />
+                                </button>
+
+                            </Link>
+
                         </div>
 
 
@@ -172,14 +200,18 @@ const PartOne = () => {
                         <h2 className="card-title">Creator</h2>
                         <p>Build custom app for  yours business needs</p>
                         <div>
-                            <button className='flex text-[#0060B4] py-6'>
-                                <p className='text-[#0060B4] text-xs'>TRY NOW </p>
-                                <Image
-                                    src={Arrow}
-                                    alt="Image"
-                                    className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
-                                />
-                            </button>
+                            <Link to="Security" smooth>
+                                <button className='flex text-[#0060B4] py-6'>
+                                    <p className='text-[#0060B4] text-xs'>TRY NOW </p>
+                                    <Image
+                                        src={Arrow}
+                                        alt="Image"
+                                        className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
+                                    />
+                                </button>
+
+                            </Link>
+
                         </div>
 
 
@@ -196,14 +228,18 @@ const PartOne = () => {
                         <h2 className="card-title">Social</h2>
                         <p>The all in one social media management software  dashboards from any data set</p>
                         <div>
-                            <button className='flex text-[#0060B4] py-6'>
-                                <p className='text-[#0060B4] text-xs'>TRY NOW </p>
-                                <Image
-                                    src={Arrow}
-                                    alt="Image"
-                                    className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
-                                />
-                            </button>
+                            <Link to="Marketing" smooth>
+                                <button className='flex text-[#0060B4] py-6'>
+                                    <p className='text-[#0060B4] text-xs'>TRY NOW </p>
+                                    <Image
+                                        src={Arrow}
+                                        alt="Image"
+                                        className='w-4 h-auto ms-3 hover:translate-x-[10px] transition-transform duration-400'
+                                    />
+                                </button>
+
+                            </Link>
+
                         </div>
 
 
