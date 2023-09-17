@@ -29,7 +29,7 @@ const NavbarTwo = () => {
             // console.log(error);
         }
     };
-    const addTodatabase  = async () => {
+    const addTodatabase = async () => {
         try {
             const userData = {
                 name: user.displayName,
@@ -65,19 +65,19 @@ const NavbarTwo = () => {
         };
         checkAuthentication();
     }, [user]);
-    console.log("NAv2",user)
+    console.log("NAv2", user)
     return (
         <div className=" ">
 
 
             {loading ? null : !user ? (
                 <ul className="flex gap-4">
-                    <li><Link href="/login" className="hidden border px-3 hover:bg-[#3ddc9f] py-1 md:block pt-1">
+                    <li><Link href="/login" className="hidden border px-3 hover:text-blue-400 py-1 md:block pt-1">
                         Sign in
                     </Link></li>
                     <li><Link href='/singin'
                         className={`fixed md:text-[14px] bottom-0 h-[50px] md:h-[35px] flex items-center justify-center
-                       md:border md:text-[#3ddc9f]  font-semibold z-50 left-0 w-full md:w-[90px] md:relative p-2 md:border-[#3ddc9f]  bg-[#3ddc9f] md:bg-transparent hover:text-white hover:bg-[#3ddc9f] duration-500 ${isMobile ? "mobile" : "desktop"
+                       md:border md:text-[#ee5b4b]  font-semibold z-50 left-0 w-full md:w-[90px] md:relative p-2  md:border-[#ee5b4b]  bg-[#ee5b4b] md:bg-transparent hover:text-white hover:bg-[#e34938] duration-500 ${isMobile ? "mobile" : "desktop"
                             }`}>
                         {isMobile ? "Sign up for free" : "Sign up"}
                     </Link></li>

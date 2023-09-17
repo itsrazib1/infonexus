@@ -69,23 +69,23 @@ const Navbar = () => {
 
    useEffect(() => {
       const fetchData = async () => {
-        try {
-          const userData = await getChats();
-          // console.log("User data in component:", userData); 
-          setchats(userData);
-        } catch (error) {
-          console.error("Error fetching user data:", error);
-        }
+         try {
+            const userData = await getChats();
+            // console.log("User data in component:", userData); 
+            setchats(userData);
+         } catch (error) {
+            console.error("Error fetching user data:", error);
+         }
       };
-  
+
       fetchData();
-    }, []);
+   }, []);
 
 
 
    return (
       <div>
-         <nav className="bg-[#37a8ff]   md:sticky z-50 top-0 left-0 right-0 text-black">
+         <nav className="bg-base-300 fixed  md:sticky z-50 top-0 left-0 right-0 text-black">
             <div className="max-w-7xl mx-auto px-4 py-4 md:py-2">
                <div className={`flex items-center justify-between`}>
                   <div className="flex items-center">
@@ -184,11 +184,11 @@ const Navbar = () => {
                            <li className="flex items-center  space-x-1">
                               <Link href="/chats"><label tabIndex={0} className="btn btn-ghost btn-circle">
                                  <div className="indicator">
-                                 <Image
-                                 src={chatImg}
-                                 alt="Image"
-                                 className='w-9 h-auto'
-                              />
+                                    <Image
+                                       src={chatImg}
+                                       alt="Image"
+                                       className='w-9 h-auto'
+                                    />
                                     <span className="badge bg-red-600 mt-2 text-white badge-sm indicator-item">{chats?.length}</span>
                                  </div>
                               </label></Link>
