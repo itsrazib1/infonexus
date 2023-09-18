@@ -16,6 +16,7 @@ import useTheme from "@/hooks/useTheme";
 import LiveTime from "../Livetime/Livietime";
 import VideoImg from '../../../public/video.png'
 import chatImg from '../../../public/chaticon.png'
+import Brawser from '../../../public/brawser.jpg'
 import { getChats } from "@/app/utils/getChats";
 
 const Navbar = () => {
@@ -88,7 +89,7 @@ const Navbar = () => {
 
          <nav className="bg-base-200  md:sticky z-50 top-0 left-0 right-0 text-black">
 
-            <nav className="bg-base-300  md:sticky py-2 z-50 top-0 left-0 right-0 text-black">
+            <nav className="bg-base-300  md:sticky  z-50 top-0 left-0 right-0 text-black">
 
                <div className="max-w-7xl mx-auto px-4 py-4 md:py-2">
                   <div className={`flex items-center justify-between`}>
@@ -207,7 +208,11 @@ const Navbar = () => {
                                  {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                               </li>
                               <li className="flex items-center space-x-1">
-                                 <Link href="/allBrowsers">Browser</Link>
+                                 <Link href="/allBrowsers"><Image
+                                    src={Brawser}
+                                    alt="Image"
+                                    className='w-9 h-auto'
+                                 /></Link>
                                  {/* <GoChevronDown className="mt-[4px] w-[20px] h-[22px]" /> */}
                               </li>
                               {/* <FaEllipsisH className="w-[50px] h-[20px]" /> */}

@@ -24,7 +24,7 @@ const PartThree = () => {
         <div>
             <div className=" sm:h-[1980px] md:h-[950px] bg-base-100  ">
 
-                <div className="w-full  ">
+                <div className="mx-auto w-[95%]  ">
                     <Image
                         src={Image1}
                         alt="Image"
