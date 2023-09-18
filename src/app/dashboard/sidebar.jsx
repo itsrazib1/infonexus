@@ -75,35 +75,34 @@ const Sidebar = () => {
 
 
                                 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><a href="/" >Home</a></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><a href="/" >Home</a></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="dashHome" smooth>Admin Home</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="dashHome" smooth>Admin Home</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="userManagement" smooth>User Management</Link></li>
+                                    
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="Sales" smooth>Sales</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="dashAllUser" smooth>All User</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="Marketings" smooth>Marketings</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Sales" smooth>Sales</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="service" smooth>Service</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Marketings" smooth>Marketings</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="Finances" smooth>Finances</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="service" smooth>Service</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="EmailCollaboration" smooth>Email Collaboration</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Finances" smooth>Finances</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="Hr" smooth>HR</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="EmailCollaboration" smooth>Email Collaboration</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="Legal" smooth>Legal</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Hr" smooth>HR</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="securityITManagement" smooth>Security IT Management</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Legal" smooth>Legal</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="bianalytics" smooth>Bi Analytics</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="securityITManagement" smooth>Security IT Management</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="projectManagement" smooth>Project Management</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="bianalytics" smooth>Bi Analytics</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1  text-xs ' style={{transition:"0.4s"}}><Link to="developerplatform" smooth>Developer Platform</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="projectManagement" smooth>Project Management</Link></li>
-
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="developerplatform" smooth>Developer Platform</Link></li>
-
-                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="userManagement" smooth>User Management</Link></li>
+                                    
 
                                 
 
@@ -113,11 +112,11 @@ const Sidebar = () => {
                             ) : (
                             <ul className='grid md:grid-cols-1 sm:grid-cols-1 text-start pt-3 md:text-base sm:text-xs md:px-0 sm:px-0 mr-2'>
 
-                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2 text-xs' style={{transition:"0.4s"}}><a href="/" className='flex items-center' ><IoIosHome className='pr-3 w-[30px] h-[30px]'/>Home</a></li>
+                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1 text-xs' style={{transition:"0.4s"}}><a href="/" className='flex items-center' ><IoIosHome className='pr-3 w-[30px] h-[30px]'/>Home</a></li>
 
-                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2 text-xs' style={{transition:"0.4s"}}><Link to="usercart" className='flex items-center'  smooth><FaCartPlus  className='pr-3 w-[30px] h-[30px]'/>My Cart</Link></li>
+                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1 text-xs' style={{transition:"0.4s"}}><Link to="usercart" className='flex items-center'  smooth><FaCartPlus  className='pr-3 w-[30px] h-[30px]'/>My Cart</Link></li>
 
-                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2 text-xs' style={{transition:"0.4s"}}><Link to="myService" className='flex items-center' smooth><LuBaggageClaim className='pr-3 w-[30px] h-[30px]'/>My Service</Link></li>
+                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1 text-xs' style={{transition:"0.4s"}}><Link to="myService" className='flex items-center' smooth><LuBaggageClaim className='pr-3 w-[30px] h-[30px]'/>My Service</Link></li>
 
 
                             </ul>
