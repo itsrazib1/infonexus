@@ -76,13 +76,13 @@ const UserManagement = () => {
       };
 
     return (
-        <div className='mt-28 box' id='userManagement'>
-            <div className='shadow4'>
+        <div className='mt-28' id='userManagement'>
+            <div className=''>
                 <hr className='w-full mx-auto mt-5 mb-5' />
-                <p className='text-[#c75633] font-serif font-bold text-3xl'>User Management {users?.length} !!!</p>
+                <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>User Management</p>
                 <hr className='w-full mx-auto mt-5' />
             </div>
-            <div className='w-full mx-auto mt-16 box3 mb-10'>
+            <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}

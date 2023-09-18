@@ -4,7 +4,9 @@ import { Link } from 'react-scroll';
 import { UserAuth } from '../Context/AuthContext';
 import { getusers } from '../utils/getusers';
 import { useEffect, useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes,FaCartPlus } from 'react-icons/fa';
+import { IoIosHome } from 'react-icons/io';
+import { LuBaggageClaim } from 'react-icons/lu';
 
 const Sidebar = () => {
     const { user } = UserAuth();
@@ -37,20 +39,20 @@ const Sidebar = () => {
     };
 
     return (
-        <div className='fixed -top-4 left-4 md:left-0 z-50 md:mt-20'>
+        <div className='fixed -top-4 md:left-0 z-50 w-[100%] md:w-[15%] md:mt-20'>
             <div className='relative md:mx-3 mx-0  w-full'>
 
-                <div className='flex ps-3 gap-3 items-center mt-4 box3'>
+                <div className='flex ps-3 gap-3 py-4 bg-violet-600 items-center mt-4'>
                     <div
                         onClick={() => handleToggle(!isOpen)}
-                        className="  top-5 left-3 ">
-                        {isOpen ? (
-                            <button className="w-[50px] flex justify-center items-center absolute top-4 left-5 h-[50px] text-[#1add92]">
+                        className="md:hidden visible">
+                        {!isOpen ? (
+                            <button className="w-[50px] flex justify-center items-center top-4 left-5 h-[50px] text-white">
                                 <FaTimes className="text-2xl"></FaTimes>
                             </button>
                         ) : (
-                            <button className="w-[50px] flex justify-center items-center absolute top-4 left-5 h-[50px] text-[#1add92]">
-                                <FaBars className="text-[#1add92] text-2xl"></FaBars>
+                            <button className="w-[50px] flex justify-center items-center top-4 left-5 h-[50px] text-white">
+                                <FaBars className="text-2xl"></FaBars>
                             </button>
                         )}
                     </div>
@@ -63,66 +65,70 @@ const Sidebar = () => {
                     />
                     <h1 className='text-xl'>{isAdmin ? "Admin Panel" : "User Panel"}</h1>
                 </div>
-            </div>
+
             <hr className='mt-0' />
-            {isOpen &&
+            {!isOpen &&
                 <div>
-                    <div className='md:mx-3 mx-0 box3 md:h-screen w-full'>
-                        {
-                            isAdmin ? (<ul className='text-start grid grid-cols-1 md:grid-cols-1  md:text-base text-xs md:px-0 px-2 mr-2  md:gap-y-0'>
+                    <div className='md:mx-3 bg-violet-600 mx-0 md:h-screen  w-full'>
+                        { isAdmin ? (
+                        <ul className='text-start grid grid-cols-1 md:grid-cols-1  pt-3 md:text-base text-xs md:px-0 px-2 mr-2  md:gap-y-0'>
 
 
-                                <>
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><a href="/" >Home</a></li>
+                                
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><a href="/" >Home</a></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="dashHome" smooth>Admin Home</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="dashHome" smooth>Admin Home</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="dashAllUser" smooth>All User</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="dashAllUser" smooth>All User</Link></li>
 
-                                    <li className='rounded-lg  hover:text-white px-2 my-2 mx-auto'><Link to="Sales" smooth>Sales</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Sales" smooth>Sales</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Marketings" smooth>Marketings</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Marketings" smooth>Marketings</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="service" smooth>Service</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="service" smooth>Service</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Finances" smooth>Finances</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Finances" smooth>Finances</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="EmailCollaboration" smooth>Email Collaboration</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="EmailCollaboration" smooth>Email Collaboration</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Hr" smooth>HR</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Hr" smooth>HR</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="Legal" smooth>Legal</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="Legal" smooth>Legal</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="securityITManagement" smooth>Security IT Management</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="securityITManagement" smooth>Security IT Management</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="bianalytics" smooth>Bi Analytics</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="bianalytics" smooth>Bi Analytics</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="projectManagement" smooth>Project Management</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="projectManagement" smooth>Project Management</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="developerplatform" smooth>Developer Platform</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="developerplatform" smooth>Developer Platform</Link></li>
 
-                                    <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="userManagement" smooth>User Management</Link></li>
+                                    <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2  text-xs ' style={{transition:"0.4s"}}><Link to="userManagement" smooth>User Management</Link></li>
 
-                                </>
+                                
 
                                 {/* user */}
 
-                            </ul>) : (<ul className='grid md:grid-cols-1 sm:grid-cols-1 text-center  md:text-base sm:text-xs md:px-0 sm:px-0 mr-2'>
+                            </ul>
+                            ) : (
+                            <ul className='grid md:grid-cols-1 sm:grid-cols-1 text-start pt-3 md:text-base sm:text-xs md:px-0 sm:px-0 mr-2'>
 
-                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><a href="/" >Home</a></li>
+                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2 text-xs' style={{transition:"0.4s"}}><a href="/" className='flex items-center' ><IoIosHome className='pr-3 w-[30px] h-[30px]'/>Home</a></li>
 
-                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="usercart" smooth>My Cart</Link></li>
+                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2 text-xs' style={{transition:"0.4s"}}><Link to="usercart" className='flex items-center'  smooth><FaCartPlus  className='pr-3 w-[30px] h-[30px]'/>My Cart</Link></li>
 
-                                <li className='mt-0  rounded-lg  hover:text-white px-2 my-2 mx-auto md:text-base  text-xs'><Link to="myService" smooth>My Service</Link></li>
+                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2 my-2 md:text-base py-2 text-xs' style={{transition:"0.4s"}}><Link to="myService" className='flex items-center' smooth><LuBaggageClaim className='pr-3 w-[30px] h-[30px]'/>My Service</Link></li>
 
 
-                            </ul>)
+                            </ul>
+                            )
                         }
 
 
                     </div>
                 </div>
-            }
+                }
+            </div>
         </div>
     );
 };

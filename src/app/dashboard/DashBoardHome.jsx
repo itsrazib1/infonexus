@@ -140,41 +140,47 @@ const DashBoardHome = () => {
 
 
     return (
-        <div className='mt-5 md:block box' id='dashHome'>
-            <div className='shadow4'>
-                <hr className='w-[90%] mx-auto mt-5 mb-5' />
-                <p className='text-gradient font-serif font-bold md:text-4xl'><span className='text-[#df3737] md:me-4'>{user?.displayName}</span> Dashboard !!!
+        <div className='md:block' id='dashHome'>
+            <div className='shadow4 brd md:w-[300px]'>
+                <p className='font-serif font-bold md:text-4xl py-5'><span className='md:me-4 text-violet-600'>{user?.displayName}</span>
                 </p>
-                <hr className='w-[90%] mx-auto mt-5' />
             </div>
             <div className='mt-20 pb-10'>
-                <div className="stats shadow box3 text-[#e4da4b] w-full">
+                <div className="stats justify-evenly text-white w-full">
 
-                    <div className="stat">
+                    <div className="stat border rounded-2xl bg-violet-600 w-[330px] border-solid gap-x-14">
                         <div className="stat-figure text-secondary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
-                        <div className="text2">All Services</div>
+                        <div className="text-2xl font-semibold">All Services</div>
                         <div className="stat-value">{total}</div>
-                        <div className="text2">Jan 1st 2023 - Present</div>
+                        <div className="">Jan 1st 2023 - Present</div>
                     </div>
 
-                    <div className="stat">
+                    <div className="stat border rounded-2xl bg-violet-600  w-[330px] border-solid gap-x-14">
                         <div className="stat-figure text-secondary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                         </div>
-                        <div className="text2">All Users</div>
+                        <div className="text-2xl font-semibold">All Users</div>
                         <div className="stat-value">{users?.length}</div>
-                        <div className="text2">↗︎ 400 (22%)</div>
+                        <div className="">↗︎ 400 (22%)</div>
                     </div>
 
-                    <div className="stat">
+                    <div className="stat border rounded-2xl bg-violet-600 border-solid  w-[330px] gap-x-14">
                         <div className="stat-figure text-secondary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
                         </div>
-                        <div className="text2">New Registers</div>
+                        <div className="text-2xl font-semibold">New Registers</div>
                         <div className="stat-value">1,200</div>
-                        <div className="text2">↘︎ 90 (14%)</div>
+                        <div className="">↘︎ 90 (14%)</div>
+                    </div>
+                    <div className="stat border rounded-2xl bg-violet-600 border-solid  w-[330px] gap-x-14">
+                        <div className="stat-figure text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                        </div>
+                        <div className="text-2xl font-semibold">Productivity</div>
+                        <div className="stat-value">1,200</div>
+                        <div className="">Active Working 70%</div>
                     </div>
 
                 </div>

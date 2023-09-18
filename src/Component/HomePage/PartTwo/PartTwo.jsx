@@ -27,7 +27,7 @@ const PartTwo = () => {
               alt=""
             />
             <Image
-              className="bg-black md:p-4 p-2 md:w-[54px] w-[30px]  rounded-full z-10 md:left-[51px] left-[28px] absolute md:bottom-[-25px] bottom-[-15px]"
+              className="bg-black md:p-4 p-2 md:w-[54px] w-[30px] rounded-full z-10 md:left-[51px] left-[28px] absolute md:bottom-[-25px] bottom-[-15px]"
               // width={52}
               // height={52}
               src={imgFour}

@@ -52,9 +52,7 @@ const MyService = () => {
         <div className='  ' id="myservice" >
             <div className='mt-16  ' id='userManagement'>
                 <div>
-                    <hr className='w-full  mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold text-3xl'>MY Service {filteredCarts.length} !!!</p>
-                    <hr className='w-full mx-auto mt-5' />
+                    <p className='text-pink-100 font-serif font-bold md:text-2xl text-center bg-violet-600 md:w-[500px] m-auto p-4 rounded-2xl ngh'>MY Service {filteredCarts.length}</p>
                 </div>
                 <div className='w-5/6   mx-auto mt-20'>
                     <div className="overflow-x-auto">
@@ -74,7 +72,7 @@ const MyService = () => {
                                 {/* rows */}
                                 {Array.isArray(filteredCarts) ? (
                                     filteredCarts.map((c, index) => (
-                                        <tr className=' text-[#1b1b1c] rounded-lg border-2  ' key={c._id}>
+                                        <tr className=' text-[#1b1b1c] rounded-lg border-2' key={c._id}>
                                             <th>{index + 1}</th>
                                             <td>{c?.name}</td>
                                             <Image
