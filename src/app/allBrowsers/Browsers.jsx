@@ -14,7 +14,7 @@ import NetFront from '../../../public/netfronthighmemmodbeta4.webp'
 const Browsers = () => {
     return (
         <div className='bg3 min-h-screen'>
-            <div className='text-center md:pt-16 font-serif font-bold text-gradient text-3xl'>
+            <div className='text-center md:pt-16 font-serif font-bold text-black text-3xl'>
                 <h1>!!! Find information from your favorite browser !!!</h1>
             </div>
             <div className='bg-black opacity-60 h-[72vh] md:h-80 w-11/12 mx-auto rounded-2xl '>
