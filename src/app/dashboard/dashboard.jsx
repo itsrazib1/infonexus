@@ -8,7 +8,9 @@ import { UserAuth } from '../Context/AuthContext';
 import { getusers } from '../utils/getusers';
 import UserCart from './UserCart';
 import MyService from './Myservice';
-import Mydata from './Mydata';
+import ProductChart from './ProductChart';
+import UserAdminChart from './UserAdminChart';
+import Selected from './Selected';
 
 const Dashboard = () => {
     const { user } = UserAuth();
@@ -41,22 +43,27 @@ const Dashboard = () => {
                         <div>
                             <DashBoardHome />
                         </div>
+                        <div className='md:flex gap-4 md:w-[90%] m-auto'>
+                            <ProductChart className="md:w-1/2 ngh"/>
+                            <UserAdminChart className="md:w-1/2 ngh"/>
+                        </div>
                         <div>
                             <AllUser />
                         </div>
                         <div>
-                            <AllServices />
-                        </div>
-                        <div>
                             <UserManagement />
                         </div>
-
-
+                        <div>
+                            <AllServices />
+                        </div>
                     </> :
                     <>
-                        
                         <div  >
-                            <Mydata />
+                            <DashBoardHome />
+                        </div>
+                        <div className='md:flex gap-4 md:w-[90%] m-auto'>
+                            <Selected className="md:w-1/2 ngh"/>
+                            <UserAdminChart className="md:w-1/2 ngh"/>
                         </div>
                         <div>
                             <UserCart />

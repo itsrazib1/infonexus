@@ -1,16 +1,24 @@
 "use client"
 import React from 'react';
+import  { useRouter,useSearchParams } from 'next/navigation';
 import { UserAuth } from '../Context/AuthContext';
 import Image from 'next/image';
 import Image1 from "../../../public/google-logo.png";
 import Image2 from "../../../public/github2.png";
 import Image3 from "../../../public/facebook-logo.png";
+import tokenJWT from '../utils/tokenJWT';
 
 const LoginPage2 = () => {
     const {  googleSignIn, gitHubSignIn , FbSignIn } = UserAuth();
+    const search = useSearchParams();
+    const from =  search.get("redirectUrl") || "/";
+    const { replace } = useRouter()
   const handleSignIn = async () => {
     try {
-       await googleSignIn();
+      const {user} = await googleSignIn();
+      await tokenJWT({email: user.email})
+      replace(from)
+      console.log(tokenJWT)
     } catch (error) {
     }
 };

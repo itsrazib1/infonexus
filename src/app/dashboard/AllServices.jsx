@@ -70,73 +70,79 @@ const AllServices = () => {
 
         fetchData();
     }, []);
-
+    
     return (
         <div className='mt-28'>
-            <div className='box' id='Sales'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>Sales Services: {Sales?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+            <div className='' id='Sales'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Sales Services</p>
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10 overflow-x-auto'>
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                Sales?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-            <div className='box mt-28' id='Marketings'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>Marketings Services: {Marketings?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
-                </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
                             <thead>
                                 <tr className='text-[#d8d65e] text-base'>
-                                    <th className="hidden md:table-cell">Index</th>
-                                    <th className="">Image</th>
+                                    <th>Index</th>
+                                    <th>Image</th>
                                     <th>Name</th>
-                                    <th className="hidden md:table-cell">Description</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    Sales?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-xl bg-white h-[45px] cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <hr className='w-[90%] mx-auto mt-5' />
+            <div className='mt-28' id='Marketings'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Marketings Services</p>
+                    
+                </div>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto">
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {/* row 1 */}
                                 {
                                     Marketings?.map((p, index) => <tr key={p._id}>
-                                        <td className="hidden md:table-cell">{index + 1}</td>
-                                        <td className="">
+                                        <th>{index + 1}</th>
+                                        <td>
                                             <Image
                                                 src={p?.image}
                                                 width={45}
@@ -146,7 +152,12 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td className="hidden md:table-cell">{p?.description}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
                                     </tr>)
                                 }
                             </tbody>
@@ -154,372 +165,419 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-            <div className='box mt-28' id='service'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>All Services: {service?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+                    <hr className='w-[90%] mx-auto mt-5' />
+            <div className='mt-28' id='service'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>All Services</p>
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                service?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    service?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-full cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div className='box mt-28' id='Finances'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>Finances Services: {Finances?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+                    <hr className='w-[90%] mx-auto mt-5 mb-5 py-1' />
+            <div className='mt-28' id='Finances'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Finances Services</p>
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                Finances?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    Finances?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-full cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div className='box mt-28' id='EmailCollaboration'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>Email Collaboration Services: {EmailCollaboration?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+                    <hr className='w-[90%] mx-auto mt-5' />
+            <div className=' mt-28' id='EmailCollaboration'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Email Collaboration Services</p>
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                EmailCollaboration?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    EmailCollaboration?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-xl bg-white h-[45px] cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div className='box mt-28' id='Hr'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>HR  Services: {Hr?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <div className=' mt-28' id='Hr'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>HR  Services</p>
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                Hr?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    Hr?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-xl bg-white h-[45px] cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div className='box mt-28' id='Legal'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>Legal  Services: {Legal?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <div className='mt-28' id='Legal'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Legal  Services</p>
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                Legal?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    Legal?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-xl bg-white h-[45px] cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div className='box mt-28' id='securityITManagement'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base' >Security IT Management  Services: {securityITManagement?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <div className=' mt-28' id='securityITManagement'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]' >Security IT Management Services</p>
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                securityITManagement?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    securityITManagement?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-xl bg-white h-[45px] cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div className='box mt-28' id='bianalytics'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>Bianalytics  Services: {bianalytics?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <div className='mt-28' id='bianalytics'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Bianalytics  Services</p>
+
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                bianalytics?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    bianalytics?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-xl bg-white h-[45px] cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div className='box mt-28' id='projectManagement'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>ProjectManagement  Services: {projectManagement?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <div className='mt-28' id='projectManagement'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>ProjectManagement  Services</p>
+
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                projectManagement?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    projectManagement?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-xl bg-white h-[45px] cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div className='box mt-28' id='developerplatform'>
-                <div className='mt-10 shadow4'>
-                    <hr className='w-[70%] mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold md:text-3xl sm:text-base'>Developer Platform  Services: {developerplatform?.length} !!!</p>
-                    <hr className='w-[70%] mx-auto mt-5' />
+                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <div className='mt-28' id='developerplatform'>
+                <div className='mt-10'>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Developer Platform  Services</p>
                 </div>
-                <div className='w-full mx-auto mt-16 box3 mb-10'>
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr className='text-[#d8d65e] text-base'>
-                                <th className="hidden md:table-cell">Index</th>
-                                <th className="">Image</th>
-                                <th>Name</th>
-                                <th className="hidden md:table-cell">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            {
-                                developerplatform?.map((p, index) => <tr key={p._id}>
-                                    <td className="hidden md:table-cell">{index + 1}</td>
-                                    <td className="">
-                                        <Image
-                                            src={p?.image}
-                                            width={45}
-                                            height={45}
-                                            className="rounded-full cursor-pointer me-2"
-                                            alt={`${p?.name} Icon`}
-                                        />
-                                    </td>
-                                    <td>{p?.name}</td>
-                                    <td className="hidden md:table-cell">{p?.description}</td>
-                                </tr>)
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table">
+                            {/* head */}
+                            <thead>
+                                <tr className='text-[#d8d65e] text-base'>
+                                    <th>Index</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {/* row 1 */}
+                                {
+                                    developerplatform?.map((p, index) => <tr key={p._id}>
+                                        <th>{index + 1}</th>
+                                        <td>
+                                            <Image
+                                                src={p?.image}
+                                                width={45}
+                                                height={45}
+                                                className="rounded-xl bg-white h-[45px] cursor-pointer me-2"
+                                                alt={`${p?.name} Icon`}
+                                            />
+                                        </td>
+                                        <td>{p?.name}</td>
+                                        <td>{p?.description}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline btn-error">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

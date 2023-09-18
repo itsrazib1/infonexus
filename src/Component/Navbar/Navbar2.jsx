@@ -65,7 +65,7 @@ const NavbarTwo = () => {
         };
         checkAuthentication();
     }, [user]);
-    console.log("NAv2", user)
+
     return (
         <div className=" ">
 

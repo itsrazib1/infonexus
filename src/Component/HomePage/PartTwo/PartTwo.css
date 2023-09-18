@@ -17,7 +17,6 @@
 .touch-btn{
     background: #0060B4;
     padding: 17px 30px;
-    /* font-size: 14px; */
     border-radius: 2px;
     color: white;
 }
@@ -31,13 +30,9 @@
     border-radius: 2px;
     margin-top: 15px;
 }
-.users-section-img{
-   /* width: 500px; */
-    
-}
+
 .about-btn{
     border: 1px solid white;
-    
 }
 
 .watch-btn-img img{
