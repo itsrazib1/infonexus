@@ -116,7 +116,7 @@ const Sidebar = () => {
 
                                 <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1 text-xs' style={{transition:"0.4s"}}><Link to="usercart" className='flex items-center'  smooth><FaCartPlus  className='pr-3 w-[30px] h-[30px]'/>My Cart</Link></li>
 
-                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1 text-xs' style={{transition:"0.4s"}}><Link to="myService" className='flex items-center' smooth><LuBaggageClaim className='pr-3 w-[30px] h-[30px]'/>My Service</Link></li>
+                                <li className='mt-0  rounded-lg  hover:bg-purple-900 px-2  md:text-base py-1 text-xs' style={{transition:"0.4s"}}><Link to="myservice" className='flex items-center' smooth><LuBaggageClaim className='pr-3 w-[30px] h-[30px]'/>My Service</Link></li>
 
 
                             </ul>
