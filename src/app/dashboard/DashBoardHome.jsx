@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import { UserAuth } from '../Context/AuthContext';
-import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts';
 import { getusers } from '../utils/getusers';
 import { getSales } from '../utils/getsales';
 import { getMarketings } from '../utils/getMarketings';
@@ -166,14 +165,7 @@ const DashBoardHome = () => {
                         <div className="">↗︎ 400 (22%)</div>
                     </div>
 
-                    <div className="stat border rounded-2xl bg-violet-600 border-solid  w-[330px] gap-x-14">
-                        <div className="stat-figure text-secondary">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
-                        </div>
-                        <div className="text-2xl font-semibold">New Registers</div>
-                        <div className="stat-value">1,200</div>
-                        <div className="">↘︎ 90 (14%)</div>
-                    </div>
+                    
                     <div className="stat border rounded-2xl bg-violet-600 border-solid  w-[330px] gap-x-14">
                         <div className="stat-figure text-secondary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
