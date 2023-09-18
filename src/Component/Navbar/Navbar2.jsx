@@ -29,7 +29,7 @@ const NavbarTwo = () => {
             // console.log(error);
         }
     };
-    const addTodatabase  = async () => {
+    const addTodatabase = async () => {
         try {
             const userData = {
                 name: user.displayName,
@@ -65,19 +65,19 @@ const NavbarTwo = () => {
         };
         checkAuthentication();
     }, [user]);
-    // console.log("NAv2",user)
+
     return (
         <div className=" ">
 
 
             {loading ? null : !user ? (
                 <ul className="flex gap-4">
-                    <li><Link href="/login" className="hidden md:block pt-1">
+                    <li><Link href="/login" className="hidden border px-3 hover:text-blue-400 py-1 md:block pt-1">
                         Sign in
                     </Link></li>
                     <li><Link href='/singin'
                         className={`fixed md:text-[14px] bottom-0 h-[50px] md:h-[35px] flex items-center justify-center
-                       md:border md:text-[#f72637]  font-semibold z-50 left-0 w-full md:w-[90px] md:relative p-2 md:border-[#f72637]  bg-[#f72637] md:bg-transparent hover:text-white hover:bg-[#f72637] duration-500 ${isMobile ? "mobile" : "desktop"
+                       md:border md:text-[#ee5b4b]  font-semibold z-50 left-0 w-full md:w-[90px] md:relative p-2  md:border-[#ee5b4b]  bg-[#ee5b4b] md:bg-transparent hover:text-white hover:bg-[#e34938] duration-500 ${isMobile ? "mobile" : "desktop"
                             }`}>
                         {isMobile ? "Sign up for free" : "Sign up"}
                     </Link></li>
@@ -96,17 +96,17 @@ const NavbarTwo = () => {
                                 src={user.photoURL}
                                 width={40}
                                 height={40}
-                                className="rounded-full cursor-pointer"
+                                className="rounded-full  cursor-pointer"
                                 alt=""
                             />
 
                             {isHovered && (
                                 <>
-                                    <div class="absolute px-4 pt-1 top-0 -left-20 bg-white border-black border -ms-10 max-w-xs  shadow-lg">
+                                    <div class="absolute px-4 pt-1  top-0 -left-20 text-black bg-white border-black border -ms-10 max-w-xs  shadow-lg">
                                         <div className="flex gap-4 p-2">
                                             <div><Image width={40} height={40}
                                                 src={user.photoURL} alt="user"></Image></div>
-                                            <div className="text-xs font-semibold">{user.displayName}</div>
+                                            <div className="text-xs  font-semibold">{user.displayName}</div>
                                         </div>
 
                                         <div class="    flex flex-row ">

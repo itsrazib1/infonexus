@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Img from '../../../public/skygif.gif';
+import Img from '../../../public/radar_cox.gif';
 import Image from 'next/image';
 
 const Weather = () => {
@@ -42,11 +42,11 @@ const Weather = () => {
                 objectFit="cover"
             />
             <div className="absolute  inset-0  "></div>
-            <div className="relative object-center w-full  mx-auto pt-36 md:ps-96 sm:ps-5  z-10 text-black">
+            <div className="relative object-center w-full  mx-auto pt-16 md:ps-96 sm:ps-5  z-10 text-white">
                 <h2 className="text-4xl  font-bold mb-4 text-[#ffffff]">Weather Information</h2>
                 <form className="mb-4">
                     <div className="flex items-center space-x-2">
-                        <label htmlFor="cityInput" className="text-gray-700 font-bold">
+                        <label htmlFor="cityInput" className="text-white font-bold">
                             Enter City:
                         </label>
                         <input
@@ -78,6 +78,7 @@ const Weather = () => {
                     </p>
                 )}
             </div>
+           { console.log("weatherData",weatherData)}
         </div>
     );
 };

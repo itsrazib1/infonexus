@@ -2,34 +2,34 @@
 import { checkout } from '@/checkout';
 import React from 'react';
 
-const PostAndDeleteBtn = ({id, name, email, image}) => {
+const PostAndDeleteBtn = ({ id, name, email, image, services, description }) => {
     const itemId = id;
-    const addToServices = {name, email, image}
+    const addToServices = { name, email, image, services, description }
     console.log(addToServices)
 
-    const handleCheckoutClick = async() => {
+    const handleCheckoutClick = async () => {
         fetch("api/purchase", {
             method: "POST",
             headers: {
-              "content-type": "application/json",
+                "content-type": "application/json",
             },
             body: JSON.stringify(addToServices),
-          })
+        })
         try {
-        let result = await fetch(`/api/trynow/${itemId}`, {
-            method: "DELETE",
-        });
-        result = await result.json();
+            let result = await fetch(`/api/trynow/${itemId}`, {
+                method: "DELETE",
+            });
+            result = await result.json();
         } catch (error) {
-        console.error(error);
+            console.error(error);
         }
-     checkout({
-            lineItems: [{ price: "price_1NlwH8DjTTkFwOYO5XypvHUW", quantity: 1   }]
+        checkout({
+            lineItems: [{ price: "price_1NlwH8DjTTkFwOYO5XypvHUW", quantity: 1 }]
         });
     };
 
     return (
-        <button onClick={handleCheckoutClick} className='btn btn-outline btn-success'>Pay Now</button> 
+        <button onClick={handleCheckoutClick} className='btn btn-outline btn-success ms-8'>Pay Now</button>
     );
 };
 

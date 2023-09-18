@@ -29,7 +29,7 @@ const Finance =  () => {
                 <div>Keep a tab on your expenses and manage your back office operations smoothly.</div>
             </div>
             <div className="flex flex-wrap ">
-                {Finance.map(({ _id, name, description, btn, image }) => (
+                {Finance.map(({ _id, name, description, btn, image,services }) => (
                     <UserCard
                         key={_id}
                         id={_id}
@@ -37,6 +37,7 @@ const Finance =  () => {
                         description={description}
                         btn={btn}
                         image={image}
+                        services={services}
                     />
                 ))}
             </div>

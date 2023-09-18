@@ -4,7 +4,7 @@ import { UserAuth } from "@/app/Context/AuthContext";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-const DynamicButton = ({ name, image, description, id }) => {
+const DynamicButton = ({ name, image, description, id, services }) => {
 
   const { user } = UserAuth();
   const [clicked, setClicked] = useState(false);
@@ -22,9 +22,9 @@ const DynamicButton = ({ name, image, description, id }) => {
     // formData.append("id", id);
     // formData.append("image", image);
 
-    const cartItem = { name, image, description, id, email };
-    console.log(image)
-    console.log(description)
+    const cartItem = { name, image, description, id, email, services };
+    console.log('cartItem:', cartItem);
+    console.log(services)
 
 
     fetch("/api/trynow", {
@@ -59,7 +59,7 @@ const DynamicButton = ({ name, image, description, id }) => {
       onClick={handelAddToCart}
       className={`${clicked
         ? "text-white mt-3 font-semibold opacity-50 bg-blue-500 rounded-lg py-[8px] px-[20px]"
-        : "text-blue-500 mt-3 font-semibold rounded-lg border-solid border-2 border-blue-500 py-[8px] px-[20px]"
+        : "text-blue-500 hover:bg-blue-500 hover:text-white mt-3 font-semibold rounded-lg border-solid border-2 border-blue-500 py-[8px] px-[20px]"
         }`}
       disabled={clicked}
       aria-label={clicked ? "Added to Cart" : "Try Now"}
