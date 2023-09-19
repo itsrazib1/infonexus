@@ -43,13 +43,11 @@ const Dashboard = () => {
                         <div>
                             <DashBoardHome />
                         </div>
-                        <div className='md:flex gap-4 md:w-[90%] m-auto'>
-                            <ProductChart className="md:w-1/2 ngh"/>
-                            <UserAdminChart className="md:w-1/2 ngh"/>
+                        <div className='gap-4 md:w-[90%] m-auto'>
+                            <ProductChart className="px-5 ngh"/>
+                            <UserAdminChart className=" ngh"/>
                         </div>
-                        <div>
-                            <AllUser />
-                        </div>
+                        
                         <div>
                             <UserManagement />
                         </div>
