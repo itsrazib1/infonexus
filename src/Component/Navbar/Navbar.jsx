@@ -87,9 +87,9 @@ const Navbar = () => {
    return (
       <div>
 
-         <nav className="bg-base-200  md:sticky z-50 top-0 left-0 right-0 text-black">
+         <nav className="bg-base-200  md:sticky z-50 top-0 left-0 right-0 text-base">
 
-            <nav className="bg-base-300  md:sticky  z-50 top-0 left-0 right-0 text-black">
+            <nav className="bg-base-300  md:sticky  z-50 top-0 left-0 right-0 text-base">
 
                <div className="max-w-7xl mx-auto px-4 py-4 md:py-2">
                   <div className={`flex items-center justify-between`}>
@@ -192,7 +192,7 @@ const Navbar = () => {
                                        <Image
                                           src={chatImg}
                                           alt="Image"
-                                          className='w-9 h-auto'
+                                          className='w-9 h-auto '
                                        />
                                        <span className="badge bg-red-600 mt-2 text-white badge-sm indicator-item">{chats?.length}</span>
                                     </div>
