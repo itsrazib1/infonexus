@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 // Your w eb app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDxxfmf_Zv_v3ryi46YV-o3vLTaqmAQovc",
-  authDomain: "info-nexus.firebaseapp.com",
-  projectId: "info-nexus",
-  storageBucket: "info-nexus.appspot.com",
-  messagingSenderId: "633224935788",
-  appId: "1:633224935788:web:3ecb735aa3706eec635b49"
+  apiKey: process.env.NEXT_PUBLIC_apiKey,
+  authDomain: process.env.NEXT_PUBLIC_authDomain,
+  projectId: process.env.NEXT_PUBLIC_projectId,
+  storageBucket: process.env.NEXT_PUBLIC_storageBucket,
+  messagingSenderId: process.env.NEXT_PUBLIC_messagingSenderId,
+  appId: process.env.NEXT_PUBLIC_appId
 };
 
 // Initialize Firebase
