@@ -443,7 +443,7 @@ const Navbar = () => {
                   className={`grid mt-10 grid-cols-1 md:grid-cols-4 gap-4 ${searchTerm.length === 0 ? "hidden" : "block"
                      }`}
                >
-                  {filteredColleges?.map((item) => (
+                  {filteredColleges.map((item) => (
                      <li key={item._id}>
                         <div className="card h-[370px] bg-base-100 shadow-xl">
                            <figure className="px-10 pt-10">
