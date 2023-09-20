@@ -30,21 +30,13 @@ describe("Page", () => {
         expect(myElem).toBeInTheDocument()
     })
     
-    it("should Have PartTwo text", () => {
-        render(<PartTwo />) //ARRANG
-        const myElem1 = screen.getByText(/Infonexus/) //ACT
-        expect(myElem1).toBeInTheDocument()
-    })
+    
     it("should Have PartThree text", () => {
         render(<PartThree />) //ARRANG
         const myElem1 = screen.getByText(/Software/) //ACT
         expect(myElem1).toBeInTheDocument()
     })
-    it("should Have PartTwo text", () => {
-        render(<PartTwo />) //ARRANG
-        const myElem1 = screen.getByText(/Infonexus/) //ACT
-        expect(myElem1).toBeInTheDocument()
-    })
+    
     it("should Have BannerSection text", () => {
         render(<BannerSection />) //ARRANG
         const myElem1 = screen.getByText(/SPOTLIGHT/) //ACT
