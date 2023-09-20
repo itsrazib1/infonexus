@@ -31,33 +31,33 @@ const Footer = () => {
           <div className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name="my-accordion-4" checked="checked" />
             <div className="collapse-title text-xl font-medium text-base-content">
-              Apps and Extentions
+              Apps and Extention
             </div>
             <div className="collapse-content">
               <p className="mb-5 ml-1">
                 <a href="/customers" className="text-base-content  text-lg">Branding</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Mobile Apps</a>
+                <a href="/all-product#Mobile" className="text-base-content text-lg">Mobile Apps</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Mobile" className="text-base-content text-lg">
                   Google Workspace Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Mobile" className="text-base-content text-lg">
                   Microsoft 365 Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Product Integration</a>
+                <a href="/all-product" className="text-base-content text-lg">Product Integration</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Marketplace</a>
+                <a href="/all-product#Marketplace" className="text-base-content text-lg">Marketplace</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Browser Extentions</a>
+                <a href="/all-product#Browser" className="text-base-content text-lg">Browser Extentions</a>
               </p>
             </div>
           </div>
@@ -68,18 +68,18 @@ const Footer = () => {
             </div>
             <div className="collapse-content">
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Branding</a>
+                <a href="/all-product#Mobile" className="text-base-content text-lg">Branding</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Mobile Apps</a>
+                <a href="/all-product#Mobile" className="text-base-content text-lg">Mobile Apps</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Mobile" className="text-base-content text-lg">
                   Google Workspace Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Mobile" className="text-base-content text-lg">
                   Microsoft 365 Integration
                 </a>
               </p>
@@ -87,10 +87,10 @@ const Footer = () => {
                 <a className="text-base-content text-lg">Product Integration</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Marketplace</a>
+                <a href="/all-product#Marketplace" className="text-base-content text-lg">Marketplace</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Browser Extentions</a>
+                <a href="/all-product#Browser" className="text-base-content text-lg">Browser Extentions</a>
               </p>
             </div>
           </div>
@@ -101,29 +101,29 @@ const Footer = () => {
             </div>
             <div className="collapse-content">
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Branding</a>
+                <a href="/allBrowsers" className="text-base-content text-lg">Branding</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Mobile Apps</a>
+                <a href="/all-product#Mobile" className="text-base-content text-lg">Mobile Apps</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Browser" className="text-base-content text-lg">
                   Google Workspace Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Browser" className="text-base-content text-lg">
                   Microsoft 365 Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Product Integration</a>
+                <a href="/all-product" className="text-base-content text-lg">Product Integration</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Marketplace</a>
+                <a href="/all-product#Marketplace" className="text-base-content text-lg">Marketplace</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Browser Extentions</a>
+                <a href="/all-product#Browser" className="text-base-content text-lg">Browser Extentions</a>
               </p>
             </div>
           </div>

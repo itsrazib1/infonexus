@@ -9,11 +9,15 @@ const DetailsButton = ({ cartData }) => {
 
     return (
         <div>
-            <button className='btn btn-accent rounded-full font-bold btn-outline'>
+            <button className='btn btn-primary rounded-full font-bold btn-outline'>
                 <Link href={{
                     pathname: `/purchaseDetails/${id}`
                 }}>
-                GO
+
+
+
+                    GO
+
                 </Link>
 
 

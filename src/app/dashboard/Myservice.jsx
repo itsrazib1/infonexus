@@ -50,9 +50,9 @@ const MyService = () => {
 
     return (
         <div className='  ' id="myservice" >
-            <div className='mt-16  ' id='userManagement'>
+            <div className='mt-6  ' id='userManagement'>
                 <div>
-                    <p className='text-pink-100 font-serif font-bold md:text-2xl text-center bg-violet-600 md:w-[500px] m-auto p-4 rounded-2xl ngh'>MY Service {filteredCarts.length}</p>
+                    <p className='text-pink-100 font-serif font-bold md:text-2xl text-center bg-gradient-to-r from-cyan-500 to-blue-500 md:w-[500px] m-auto p-4 rounded-2xl ngh'>MY Service {filteredCarts.length}</p>
                 </div>
                 <div className='w-5/6   mx-auto mt-20'>
                     <div className="overflow-x-auto">
@@ -68,7 +68,7 @@ const MyService = () => {
                                     <th>Details</th>
                                 </tr>
                             </thead>
-                            <tbody className=''>
+                            <tbody className=' bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% '>
                                 {/* rows */}
                                 {Array.isArray(filteredCarts) ? (
                                     filteredCarts.map((c, index) => (
