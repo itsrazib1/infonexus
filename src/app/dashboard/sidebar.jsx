@@ -39,8 +39,8 @@ const Sidebar = () => {
     };
 
     return (
-        <div className='fixed -top-4 md:left-0 z-50 w-[100%] md:w-[15%] md:mt-20'>
-            <div className='relative md:mx-3 mx-0  w-full'>
+        <div className='fixed -top-4 md:left-0 z-50 w-[100%] md:w-[18%] md:mt-20'>
+            <div className='relative md:mx-3 mx-0 bg-gradient-to-r  from-blue-600 to-cyan-500 py-3  w-full'>
 
                 <div className='flex ps-3 gap-3 py-4  items-center mt-4'>
                     <div
