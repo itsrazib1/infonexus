@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import { UserAuth } from '../Context/AuthContext';
-import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts';
 import { getusers } from '../utils/getusers';
 import { getSales } from '../utils/getsales';
 import { getMarketings } from '../utils/getMarketings';
@@ -141,14 +140,14 @@ const DashBoardHome = () => {
 
     return (
         <div className='md:block' id='dashHome'>
-            <div className='shadow4 brd md:w-[300px]'>
-                <p className='font-serif font-bold md:text-4xl py-5'><span className='md:me-4 text-violet-600'>{user?.displayName}</span>
+            <div className=' shadow-indigo-500/50  md:w-[300px]'>
+                <p className='font-serif font-bold  text-white bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  shadow4  md:w-[300px] md:text-4xl py-5 '><span className='md:me-4  '>{user?.displayName}</span>
                 </p>
             </div>
             <div className='mt-20 pb-10'>
                 <div className="stats justify-evenly text-white w-full">
 
-                    <div className="stat border rounded-2xl bg-violet-600 w-[330px] border-solid gap-x-14">
+                    <div className="stat border rounded-2xl    bg-gradient-to-r  from-blue-600 to-cyan-500 w-[330px] border-solid gap-x-14">
                         <div className="stat-figure text-secondary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
@@ -157,7 +156,7 @@ const DashBoardHome = () => {
                         <div className="">Jan 1st 2023 - Present</div>
                     </div>
 
-                    <div className="stat border rounded-2xl bg-violet-600  w-[330px] border-solid gap-x-14">
+                    <div className="stat border rounded-2xl  bg-gradient-to-r from-blue-600 to-cyan-500  w-[330px] border-solid gap-x-14 ">
                         <div className="stat-figure text-secondary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                         </div>
@@ -166,15 +165,8 @@ const DashBoardHome = () => {
                         <div className="">↗︎ 400 (22%)</div>
                     </div>
 
-                    <div className="stat border rounded-2xl bg-violet-600 border-solid  w-[330px] gap-x-14">
-                        <div className="stat-figure text-secondary">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
-                        </div>
-                        <div className="text-2xl font-semibold">New Registers</div>
-                        <div className="stat-value">1,200</div>
-                        <div className="">↘︎ 90 (14%)</div>
-                    </div>
-                    <div className="stat border rounded-2xl bg-violet-600 border-solid  w-[330px] gap-x-14">
+
+                    <div className="stat border rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 border-solid  w-[330px] gap-x-14">
                         <div className="stat-figure text-secondary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
                         </div>

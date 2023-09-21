@@ -70,15 +70,15 @@ const AllServices = () => {
 
         fetchData();
     }, []);
-    
+
     return (
         <div className='mt-28'>
             <div className='' id='Sales'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Sales Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500  rounded-2xl md:w-[500px]'>Sales Services</p>
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -121,11 +121,11 @@ const AllServices = () => {
             <hr className='w-[90%] mx-auto mt-5' />
             <div className='mt-28' id='Marketings'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Marketings Services</p>
-                    
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl md:w-[500px]'>Marketings Services</p>
+
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -165,13 +165,13 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-                    <hr className='w-[90%] mx-auto mt-5' />
+            <hr className='w-[90%] mx-auto mt-5' />
             <div className='mt-28' id='service'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>All Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl md:w-[500px]'>All Services</p>
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -211,13 +211,13 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-                    <hr className='w-[90%] mx-auto mt-5 mb-5 py-1' />
+            <hr className='w-[90%] mx-auto mt-5 mb-5 py-1' />
             <div className='mt-28' id='Finances'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Finances Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl md:w-[500px]'>Finances Services</p>
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -257,13 +257,13 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-                    <hr className='w-[90%] mx-auto mt-5' />
+            <hr className='w-[90%] mx-auto mt-5' />
             <div className=' mt-28' id='EmailCollaboration'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Email Collaboration Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl md:w-[500px]'>Email Collaboration Services</p>
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -303,13 +303,13 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <hr className='w-[90%] mx-auto mt-5 mb-5' />
             <div className=' mt-28' id='Hr'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>HR  Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500  rounded-2xl md:w-[500px]'>HR  Services</p>
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -349,13 +349,13 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <hr className='w-[90%] mx-auto mt-5 mb-5' />
             <div className='mt-28' id='Legal'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Legal  Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500  rounded-2xl md:w-[500px]'>Legal  Services</p>
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -395,13 +395,13 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <hr className='w-[90%] mx-auto mt-5 mb-5' />
             <div className=' mt-28' id='securityITManagement'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]' >Security IT Management Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500  rounded-2xl md:w-[500px]' >Security IT Management Services</p>
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -441,14 +441,14 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <hr className='w-[90%] mx-auto mt-5 mb-5' />
             <div className='mt-28' id='bianalytics'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Bianalytics  Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500  rounded-2xl md:w-[500px]'>Bianalytics  Services</p>
 
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -488,14 +488,14 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <hr className='w-[90%] mx-auto mt-5 mb-5' />
             <div className='mt-28' id='projectManagement'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>ProjectManagement  Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500  rounded-2xl md:w-[500px]'>ProjectManagement  Services</p>
 
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -535,13 +535,13 @@ const AllServices = () => {
                     </div>
                 </div>
             </div>
-                    <hr className='w-[90%] mx-auto mt-5 mb-5' />
+            <hr className='w-[90%] mx-auto mt-5 mb-5' />
             <div className='mt-28' id='developerplatform'>
                 <div className='mt-10'>
-                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Developer Platform  Services</p>
+                    <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500  rounded-2xl md:w-[500px]'>Developer Platform  Services</p>
                 </div>
-                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto">
+                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
