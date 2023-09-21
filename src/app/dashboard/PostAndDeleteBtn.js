@@ -29,7 +29,7 @@ const PostAndDeleteBtn = ({ id, name, email, image, services, description }) => 
     };
 
     return (
-        <button onClick={handleCheckoutClick} className='btn btn-outline btn-success ms-8'>Pay Now</button>
+        <button onClick={handleCheckoutClick} className='btn btn-outline btn-success md:ms-8'>Pay Now</button>
     );
 };
 

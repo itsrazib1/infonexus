@@ -82,7 +82,7 @@ const UserManagement = () => {
                 <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>User Management</p>
                 <hr className='w-full mx-auto mt-5' />
             </div>
-            <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+            <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
@@ -90,7 +90,7 @@ const UserManagement = () => {
                             <tr className='text-[#d8d65e] text-base'>
                                 <th>Index</th>
                                 <th>Name</th>
-                                <th>Email</th>
+                                <th className="md:block hidden">Email</th>
                                 <th>Role</th>
                                 <th>Delete</th>
                             </tr>
@@ -103,7 +103,7 @@ const UserManagement = () => {
                                         <tr key={p._id}>
                                             <th>{index + 1}</th>
                                             <td>{p?.name}</td>
-                                            <td>{p?.email}</td>
+                                            <td  className="md:block hidden">{p?.email}</td>
                                             <td>{p.role === 'admin' ? 'admin' :
                                                 <button
                                                 className="btn btn-warning rounded-full text-black"

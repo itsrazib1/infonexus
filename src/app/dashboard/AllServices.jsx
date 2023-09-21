@@ -77,7 +77,7 @@ const AllServices = () => {
                 <div className='mt-10'>
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Sales Services</p>
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -86,7 +86,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -105,7 +105,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -124,7 +124,7 @@ const AllServices = () => {
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Marketings Services</p>
                     
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -133,7 +133,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -152,7 +152,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -170,7 +170,7 @@ const AllServices = () => {
                 <div className='mt-10'>
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>All Services</p>
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -179,7 +179,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -198,7 +198,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -216,7 +216,7 @@ const AllServices = () => {
                 <div className='mt-10'>
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Finances Services</p>
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -225,7 +225,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -244,7 +244,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -262,7 +262,7 @@ const AllServices = () => {
                 <div className='mt-10'>
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Email Collaboration Services</p>
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -271,7 +271,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -290,7 +290,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -308,7 +308,7 @@ const AllServices = () => {
                 <div className='mt-10'>
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>HR  Services</p>
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -317,7 +317,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -336,7 +336,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -354,7 +354,7 @@ const AllServices = () => {
                 <div className='mt-10'>
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Legal  Services</p>
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -363,7 +363,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -382,7 +382,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -400,7 +400,7 @@ const AllServices = () => {
                 <div className='mt-10'>
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]' >Security IT Management Services</p>
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -409,7 +409,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -428,7 +428,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -447,7 +447,7 @@ const AllServices = () => {
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Bianalytics  Services</p>
 
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -456,7 +456,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -475,7 +475,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -494,7 +494,7 @@ const AllServices = () => {
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>ProjectManagement  Services</p>
 
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -503,7 +503,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -522,7 +522,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -540,7 +540,7 @@ const AllServices = () => {
                 <div className='mt-10'>
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>Developer Platform  Services</p>
                 </div>
-                <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
+                <div className='md:w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
@@ -549,7 +549,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -568,7 +568,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
