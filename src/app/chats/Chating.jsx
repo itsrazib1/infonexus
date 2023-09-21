@@ -13,9 +13,10 @@ const Chating = () => {
 
   const [chats, setchats] = useState([]);
   const [users, setUsers] = useState([]);
+  console.log(users);
 
   // data fetch
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,6 +33,7 @@ const Chating = () => {
 
     fetchData();
   }, []);
+
   const adminUsers = users.filter(u => u.role === 'admin');
   const isAdmin = adminUsers.some(u => u.email === user?.email);
   console.log("isAdmin", isAdmin)
@@ -54,6 +56,18 @@ const Chating = () => {
     fetch("/api/chats", {
       method: "DELETE"
     })
+
+    const fetchData = async () => {
+      try {
+        const userData = await getChats();
+        // console.log("User data in component:", userData); 
+        setchats(userData);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchData();
   }
 
   const handelSubmit = async (event) => {
@@ -74,11 +88,29 @@ const Chating = () => {
         body: JSON.stringify(chatData)
       });
 
+      
+
       if (response.ok) {
         // Message sent successfully
         console.log("Message sent successfully");
         // Clear the input field after sending the message
+        
         setNewMessage("");
+
+
+        const fetchData = async () => {
+          try {
+            const userData = await getChats();
+            // console.log("User data in component:", userData); 
+            setchats(userData);
+          } catch (error) {
+            console.error("Error fetching user data:", error);
+          }
+        };
+
+        fetchData();
+
+
       } else {
         // Handle errors here, e.g., display an error message
         console.error("Error sending message:", response.statusText);
@@ -95,11 +127,13 @@ const Chating = () => {
       setNewMessage("");
     }
   };
+
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleSendMessage();
     }
   };
+
   return (
     <div className="  bg w-[95%] md:w-[70%] mx-auto  border-black m-5 border rounded-2xl" >
       <header className="bg-[#2b3595] rounded-t-2xl text-white py-3 md:py-5">
