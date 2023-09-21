@@ -141,7 +141,7 @@ const DashBoardHome = () => {
     return (
         <div className='md:block' id='dashHome'>
             <div className=' shadow-indigo-500/50  md:w-[300px]'>
-                <p className='font-serif font-bold  text-white bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  shadow4  md:w-[300px] md:text-4xl py-5 '><span className='md:me-4  '>{user?.displayName}</span>
+                <p className='font-serif font-bold  mt-8 text-white bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  shadow4  md:w-[300px] md:text-4xl py-5 '><span className='md:me-4  '>{user?.displayName}</span>
                 </p>
             </div>
             <div className='mt-20 pb-10'>
