@@ -14,6 +14,8 @@ const Chating = () => {
   const [chats, setchats] = useState([]);
   const [users, setUsers] = useState([]);
 
+  // data fetch
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
