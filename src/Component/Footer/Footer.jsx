@@ -3,12 +3,12 @@ import logo from "../../../public/logo.png";
 import rightArrow from "../../../public/icons8-right-arrow-90.png";
 import instagram from "../../../public/instagram.png";
 import Image from "next/image";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-base-100 sm:pt-[500px] md:pt-1 text-base-100">
+      <footer className="bg-base-100  text-base-100">
         <div className="text-center mb-14 pt-12 px-2">
           <h1 className="md:text-[44px] mb-1 md:mb-2 text-[25px] text-base-content">
             Ready to do your best work?
@@ -31,33 +31,33 @@ const Footer = () => {
           <div className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name="my-accordion-4" checked="checked" />
             <div className="collapse-title text-xl font-medium text-base-content">
-              Apps and Extentions
+              Apps and Extention
             </div>
             <div className="collapse-content">
               <p className="mb-5 ml-1">
-                <a className="text-base-content  text-lg">Branding</a>
+                <a href="/customers" className="text-base-content  text-lg">Branding</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Mobile Apps</a>
+                <a href="/all-product#Mobile" className="text-base-content text-lg">Mobile Apps</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Mobile" className="text-base-content text-lg">
                   Google Workspace Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Mobile" className="text-base-content text-lg">
                   Microsoft 365 Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Product Integration</a>
+                <a href="/all-product" className="text-base-content text-lg">Product Integration</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Marketplace</a>
+                <a href="/all-product#Marketplace" className="text-base-content text-lg">Marketplace</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Browser Extentions</a>
+                <a href="/all-product#Browser" className="text-base-content text-lg">Browser Extentions</a>
               </p>
             </div>
           </div>
@@ -68,18 +68,18 @@ const Footer = () => {
             </div>
             <div className="collapse-content">
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Branding</a>
+                <a href="/all-product#Mobile" className="text-base-content text-lg">Branding</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Mobile Apps</a>
+                <a href="/all-product#Mobile" className="text-base-content text-lg">Mobile Apps</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Mobile" className="text-base-content text-lg">
                   Google Workspace Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Mobile" className="text-base-content text-lg">
                   Microsoft 365 Integration
                 </a>
               </p>
@@ -87,10 +87,10 @@ const Footer = () => {
                 <a className="text-base-content text-lg">Product Integration</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Marketplace</a>
+                <a href="/all-product#Marketplace" className="text-base-content text-lg">Marketplace</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Browser Extentions</a>
+                <a href="/all-product#Browser" className="text-base-content text-lg">Browser Extentions</a>
               </p>
             </div>
           </div>
@@ -101,29 +101,29 @@ const Footer = () => {
             </div>
             <div className="collapse-content">
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Branding</a>
+                <a href="/allBrowsers" className="text-base-content text-lg">Branding</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Mobile Apps</a>
+                <a href="/all-product#Mobile" className="text-base-content text-lg">Mobile Apps</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Browser" className="text-base-content text-lg">
                   Google Workspace Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">
+                <a href="/all-product#Browser" className="text-base-content text-lg">
                   Microsoft 365 Integration
                 </a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Product Integration</a>
+                <a href="/all-product" className="text-base-content text-lg">Product Integration</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Marketplace</a>
+                <a href="/all-product#Marketplace" className="text-base-content text-lg">Marketplace</a>
               </p>
               <p className="mb-5 ml-1">
-                <a className="text-base-content text-lg">Browser Extentions</a>
+                <a href="/all-product#Browser" className="text-base-content text-lg">Browser Extentions</a>
               </p>
             </div>
           </div>
@@ -228,47 +228,47 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer p-10 justify-between hidden md:flex ">
-          <div>
-            <h2 className="text-2xl mb-3 text-base-content">Apps and Extensions</h2>
-            <a className="text-base-content text-lg">Branding</a>
-            <a className="text-base-content text-lg">Mobile Apps</a>
-            <a className="text-base-content text-lg">
+          <div className="">
+            <h2 className="text-2xl mb-3 hover:text-blue-500 text-base-content">Apps and Extensions</h2>
+            <a href="/customers" className="text-base-content text-lg hover:text-blue-500">Branding</a>
+            <a href="/all-product" className="text-base-content text-lg hover:text-blue-500">Mobile Apps</a>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">
               Google Workspace Integration
             </a>
-            <a className="text-base-content text-lg">
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">
               Microsoft 365 Integration
             </a>
-            <a className="text-base-content text-lg">Product Integration</a>
-            <a className="text-base-content text-lg">Marketplace</a>
-            <a className="text-base-content text-lg">Browser Extentions</a>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">Product Integration</a>
+            <a href="/customers" className="text-base-content text-lg hover:text-blue-500">Marketplace</a>
+            <a href="/customers" className="text-base-content text-lg hover:text-blue-500">Browser Extentions</a>
           </div>
           <div>
-            <h2 className="text-2xl mb-3 text-base-content">Learn</h2>
-            <a className="text-base-content text-lg">
+            <h2 href="/customers" className="text-2xl mb-3 text-base-content hover:text-blue-500">Learn</h2>
+            <a href="/customers" className="text-base-content text-lg hover:text-blue-500">
               Training & Certification
             </a>
-            <a className="text-base-content text-lg">Academy</a>
-            <a className="text-base-content text-lg">Blog</a>
-            <a className="text-base-content text-lg">Zia</a>
-            <a className="text-base-content text-lg">Humans of infonexus</a>
-            <a className="text-base-content text-lg">The Long Game</a>
+            <a href="/customers" className="text-base-content text-lg hover:text-blue-500">Academy</a>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">Blog</a>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">Zia</a>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">Humans of infonexus</a>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">The Long Game</a>
           </div>
           <div>
-            <h2 className="text-2xl mb-3 text-base-content">Commujnity</h2>
-            <a className="text-base-content text-lg">User Community</a>
-            <a className="text-base-content text-lg">Influence</a>
-            <a className="text-base-content text-lg">Partner with Us</a>
-            <a className="text-base-content text-lg">Affiliate Program</a>
+            <h2 className="text-2xl mb-3 text-base-content hover:text-blue-500">Commujnity</h2>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">User Community</a>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">Influence</a>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">Partner with Us</a>
+            <a href="/link" className="text-base-content text-lg hover:text-blue-500">Affiliate Program</a>
           </div>
           <div>
-            <h2 className="text-2xl mb-3 text-base-content">Company</h2>
-            <a className=" text-base-content text-lg">About Us</a>
-            <a className=" text-base-content text-lg">Press</a>
-            <a className=" text-base-content text-lg">Events</a>
-            <a className=" text-base-content text-lg">Newsroom</a>
-            <a className=" text-base-content text-lg">Branding Assets</a>
-            <a className=" text-base-content text-lg">InfoNexus Schools</a>
-            <a className=" text-base-content text-lg">Service Status</a>
+            <h2 href="/link" className="text-2xl mb-3 text-base-content hover:text-blue-500">Company</h2>
+            <a href="/link" className=" text-base-content text-lg hover:text-blue-500">About Us</a>
+            <a href="/link" className=" text-base-content text-lg hover:text-blue-500">Press</a>
+            <a href="/link" className=" text-base-content text-lg hover:text-blue-500">Events</a>
+            <a href="/link" className=" text-base-content text-lg hover:text-blue-500">Newsroom</a>
+            <a href="/link" className=" text-base-content text-lg hover:text-blue-500">Branding Assets</a>
+            <a href="/link" className=" text-base-content text-lg hover:text-blue-500">InfoNexus Schools</a>
+            <a href="/link" className=" text-base-content text-lg hover:text-blue-500">Service Status</a>
           </div>
         </div>
         <div>

@@ -20,44 +20,41 @@ const AllUser = () => {
         fetchData();
     }, []); 
     return (
-        <div className='md:mt-28 box' id='dashAllUser'>
-    <div className='shadow4'>
-        <hr className='w-[70%] mx-auto mt-5 mb-5' />
-        <p className='text-[#c75633] font-serif font-bold md:text-3xl'>All User: {users.length} !!!</p>
-        <hr className='w-[70%] mx-auto mt-5' />
-    </div>
-    <div className='w-full mx-auto mt-20 box3 mb-10'>
-        <div className="table-responsive">
-            <table className="table mx-auto ">
-                <thead>
-                    <tr className='text-[#d8d65e] text-base'>
-                        <th>Index</th>
-                        <th>Name</th>
-                        <th>Photo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {users.map((user, index) => (
-                        <tr key={user._id}>
-                            <th>{index + 1}</th>
-                            <td>{user?.name}</td>
-                            <td className="ps-4">
-                                <Image
-                                    className='rounded-full '
-                                    src={user.photo}
-                                    height={40}
-                                    width={40}
-                                    alt={`${user.name}'s Profile Photo`}
-                                />
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+        <div className='md:mt-28' id='dashAllUser'>
+                <p className='text-white font-serif font-bold md:text-3xl ngh m-auto p-4 bg-violet-600 rounded-2xl md:w-[500px]'>All User</p>
+            <div className='w-4/5 text-white bg-violet-600 rounded-xl mx-auto mt-20 mb-10'>
+                <div className="overflow-x-auto">
+                    <table className="table">
+                        <thead>
+                            <tr className='text-[#d8d65e] text-base'>
+                                <th>Index</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Photo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {users.map((user, index) => (
+                                <tr key={user._id}>
+                                    <th>{index + 1}</th>
+                                    <td>{user?.name}</td>
+                                    <td>{user?.email}</td>
+                                    <td>
+                                        <Image
+                                            className='rounded-full'
+                                            src={user.photo}
+                                            height={40}
+                                            width={40}
+                                            alt={`${user.name}'s Profile Photo`}
+                                        />
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-
     );
 };
 

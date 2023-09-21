@@ -4,8 +4,8 @@ import React from 'react';
 const ShowVideo = () => {
     return (
         <div className='mt-12'>
-            <h1 className='font-serif text-xl md:text-2xl text-center text-gradient font-bold flex justify-center'>
-                <span className='text-gradient me-3'>Info-Nexus Service Information Videos!!!</span>
+            <h1 className='font-serif text-xl md:text-2xl text-center  font-bold flex justify-center'>
+                <span className='text-black me-3'>Info-Nexus Service Information Videos!!!</span>
                 {/* <Typical
                     steps={['Information !!!', 800, 'Videos !!!', 900]}
                     loop={Infinity}

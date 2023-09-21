@@ -112,7 +112,7 @@ const PartTwo = () => {
   };
   return (
     <div>
-      
+
       <div className="accessed-app-fill-container">
         <h1 className="accessed-app-header">Apps you Have accessed</h1>
         <div className="accessed-app-header-line"></div>
@@ -174,8 +174,8 @@ const PartTwo = () => {
         ))} */}
       </div>
       <div>
-      <h1 className='text-center text-5xl p-12'>Or, choose from over 55+ different <br /> business applications</h1>
-    </div>
+        <h1 className='text-center text-5xl p-12'>Or, choose from over 55+ different <br /> business applications</h1>
+      </div>
     </div>
 
   );

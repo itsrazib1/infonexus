@@ -16,32 +16,32 @@ const PartThree = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay text-2xl md:ms-12"></label>
                     <div className='ms-8 menu text-base'>
                         <ul>
-                            <li><>App</></li>
+                            <li className='hover:text-blue-500'><>App</></li>
                         </ul>
                     </div>
 
 
-                    <ul className="menu md:ms-14 p-4 w-64 h-auto bg-base-100 text-base-content">
+                    <ul className="menu md:ms-14 p-4 w-64 h-auto bg-base-100  text-base-content">
                         {/* Sidebar content here */}
-                        <li><Link to="sales" smooth>Sales</Link></li>
-                        <li><Link to="Marketing" smooth>Marketing</Link></li>
-                        <li><Link to="Service" smooth>Service</Link></li>
-                        <li><Link to="Finance" smooth>Finance</Link></li>
-                        <li><Link to="Email" smooth>Email & Collaboration</Link></li>
-                        <li><Link to="HR" smooth>HR</Link></li>
-                        <li><Link to="Legal" smooth>Legal</Link></li>
-                        <li><Link to="Security" smooth>Security & IT Management</Link></li>
-                        <li><Link to="BI" smooth>BI & Analytics</Link></li>
-                        <li><Link to="Project" smooth>Project Management</Link></li>
-                        <li><Link to="Developer" smooth>Developer Platforms</Link></li>
+                        <li><Link className='hover:text-blue-500' to="sales" smooth>Sales</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Marketing" smooth>Marketing</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Service" smooth>Service</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Finance" smooth>Finance</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Email" smooth>Email & Collaboration</Link></li>
+                        <li><Link className='hover:text-blue-500' to="HR" smooth>HR</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Legal" smooth>Legal</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Security" smooth>Security & IT Management</Link></li>
+                        <li><Link className='hover:text-blue-500' to="BI" smooth>BI & Analytics</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Project" smooth>Project Management</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Developer" smooth>Developer Platforms</Link></li>
                     </ul>
                     {/* <label htmlFor="my-drawer-2" className="drawer-overlay text-xl md:ms-12">Suites</label> */}
                     <ul className='menu ms-8 text-base'>
-                        <li>Suites</li>
-                        <li><Link to="InfoNexus" smooth>InfoNexus One</Link></li>
-                        <li><Link to="Marketplace" smooth>Marketplace</Link></li>
-                        <li><Link to="Mobile" smooth>Mobile Apps</Link></li>
-                        <li><Link to="Browser" smooth>Browser Extensions</Link></li>
+                        <li className='hover:text-blue-500'>Suites</li>
+                        <li><Link className='hover:text-blue-500' to="InfoNexus" smooth>InfoNexus One</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Marketplace" smooth>Marketplace</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Mobile" smooth>Mobile Apps</Link></li>
+                        <li><Link className='hover:text-blue-500' to="Browser" smooth>Browser Extensions</Link></li>
                     </ul>
 
 

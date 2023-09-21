@@ -20,10 +20,10 @@ import { useEffect } from "react";
 const PartOne = () => {
     useEffect(() => {
         AOS.init({
-             duration: 1000,
-             once: false,
-           })
-     }, [])
+            duration: 1000,
+            once: false,
+        })
+    }, [])
 
     return (
         <div className='mt-20'>
@@ -41,7 +41,7 @@ const PartOne = () => {
                         className='lg:max-w-5xl bg-white h-auto lg:-ms-20 mt-2 '
                     />
                 </div>
-                <div className="bg-[#37a8ff] text-black rounded-tl-3xl border border-[#e7ebf0] px-6 pb-6 lg:w-full lg:px-8" data-aos="fade-up">
+                <div className=" text-black bg-[#37a8ff] rounded-tl-3xl border border-[#e7ebf0] px-6 pb-6 lg:w-full lg:px-8" data-aos="fade-up">
                     <p className='text-base font-bold mt-6'>FEATURED APPS</p>
                     <div className='mt-8'>
                         <Link href='/all-product'>
@@ -137,7 +137,7 @@ const PartOne = () => {
 
                     </div>
                     <div className='mt-14 rounded-lg text-center bg-base mb-2 border border-[#e7ebf0] px-4 lg:px-10 py-6'>
-                        <a className='flex justify-between text-black font-bold' href="#">
+                        <a className='flex justify-between text-black font-bold' href="/all-product">
                             <h1>EXPLORE ALL PRODUCTS</h1>
                             <Image
                                 src={Arrow}

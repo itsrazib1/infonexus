@@ -33,41 +33,37 @@ export async function DELETE(req, content) {
     );
   }
 }
-export async function PUT(req) {
-    const { id, newRole } = await req.json();
+// export async function PUT(req) {
+//     const { id, newRole } = await req.json();
   
-    try {
-      const updatedUser = await users.findByIdAndUpdate(
-        id,
-        { role: newRole },
-        { new: true }
-      );
+//     try {
+//       const updatedUser = await users.findByIdAndUpdate(
+//         id,
+//         { role: newRole },
+//         { new: true }
+//       );
   
-      console.log("User role updated:", updatedUser);
-      return NextResponse.json(updatedUser, { status: 200 });
-    } catch (error) {
-      console.error("Error updating user role:", error);
-      return NextResponse.json(
-        { error: "Error updating user role" },
-        { status: 500 }
-      );
-    }
-  }
-
-// export async function PUT(req, res) {
-// try {
-//   await mongoose.connect(uri)
-//   const usersId = res.params.id;
-//   const filter = { _id: usersId };
-//   const payload = await req.json();
-//   const result = await users.findByIdAndUpdate(filter,payload)
-//   console.log(result);
-//   if (!payload.role) {
-//     return NextResponse.json({ result: "request data is not veiled" });
+//       console.log("User role updated:", updatedUser);
+//       return NextResponse.json(updatedUser, { status: 200 });
+//     } catch (error) {
+//       console.error("Error updating user role:", error);
+//       return NextResponse.json(
+//         { error: "Error updating user role" },
+//         { status: 500 }
+//       );
+//     }
 //   }
-//   return NextResponse.json(result);
-// } catch (error) {
-//   console.log(error);
-//   return res.status(500).json({error:"Internal server error"})
-// }
-// }
+export default async function PATCH(req, content) {
+  mongoose.connect(uri);
+try {
+  const id = content.params.id;
+  const updateResult = await users.updateOne({ _id: id }, { role: 'admin' });
+
+  return res.status(200).json({ message: 'User role updated successfully', result: updateResult });
+} catch (error) {
+  console.error(error);
+  return res.status(500).json({ message: 'An error occurred while updating the user role' });
+}
+};
+
+

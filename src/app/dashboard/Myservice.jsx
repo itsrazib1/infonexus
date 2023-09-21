@@ -16,7 +16,6 @@ const MyService = () => {
     const [carts, setCarts] = useState([]);
 
     const { user } = UserAuth();
-    // console.log(carts)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -51,18 +50,16 @@ const MyService = () => {
 
     return (
         <div className='  ' id="myservice" >
-            <div className='box mt-28' id='userManagement'>
-                <div className='shadow4'>
-                    <hr className='w-full  mx-auto mt-5 mb-5' />
-                    <p className='text-[#c75633] font-serif font-bold text-3xl'>MY Service {filteredCarts.length} !!!</p>
-                    <hr className='w-full mx-auto mt-5' />
+            <div className='mt-6  ' id='userManagement'>
+                <div>
+                    <p className='text-pink-100 font-serif font-bold md:text-2xl text-center bg-gradient-to-r from-cyan-500 to-blue-500 md:w-[500px] m-auto p-4 rounded-2xl ngh'>MY Service {filteredCarts.length}</p>
                 </div>
-                <div className='w-5/6  box3 mx-auto mt-20'>
+                <div className='w-5/6   mx-auto mt-20'>
                     <div className="overflow-x-auto">
                         <table className="table">
                             {/* head */}
                             <thead>
-                                <tr className='text-[#d8d65e] text-base'>
+                                <tr className='text-[#101010] text-base'>
                                     <th>Index</th>
 
                                     <th>Service Name</th>
@@ -71,11 +68,11 @@ const MyService = () => {
                                     <th>Details</th>
                                 </tr>
                             </thead>
-                            <tbody className=''>
+                            <tbody className=' bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% '>
                                 {/* rows */}
                                 {Array.isArray(filteredCarts) ? (
                                     filteredCarts.map((c, index) => (
-                                        <tr className=' rounded-lg border-2  ' key={c._id}>
+                                        <tr className=' text-[#1b1b1c] rounded-lg border-2' key={c._id}>
                                             <th>{index + 1}</th>
                                             <td>{c?.name}</td>
                                             <Image
