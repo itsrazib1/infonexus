@@ -103,15 +103,15 @@ const NavbarTwo = () => {
 
                             {isHovered && (
                                    <>
-                                   <div class="absolute px-4 pt-1 top-0 -left-20 bg-white rounded-lg border -ms-10 max-w-xs  shadow-lg">
+                                   <div class="absolute px-4 pt-1 top-0 -left-28 bg-white rounded-lg border -ms-10 max-w-xs  shadow-lg">
                                        <div className="flex items-center gap-4 p-2">
                                            <div><Image className="rounded-full" width={40} height={45}
                                                src={user.photoURL} alt="user"></Image></div>
                                            <div className="text-xs font-semibold">{user.displayName}</div>
                                        </div>
                                        <div class=" flex flex-row gap-1 py-2">
-                                           <h2><p className="md:btn-sm text-blue-500 cursor-pointer rounded-[5px] px-2 py-1 hover:bg-blue-400 hover:text-white transition-btn border-blue-400 border">
-                                               <a onClick={addTodatabase} href="/dashboard">Dashboard</a>
+                                           <h2><p className="md:btn-sm btn-accent  btn-outline cursor-pointer rounded-[5px] px-2 py-1 hover:bg-blue-400 hover:text-white transition-btn border-blue-400 border">
+                                               <a  onClick={addTodatabase} href="/dashboard">Dashboard</a>
                                            </p>
                                            </h2>
                                            <h2>
