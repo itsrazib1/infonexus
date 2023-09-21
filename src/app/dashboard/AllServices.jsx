@@ -86,7 +86,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -105,7 +105,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -133,7 +133,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -152,7 +152,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -179,7 +179,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -198,7 +198,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -225,7 +225,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -244,7 +244,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -263,7 +263,7 @@ const AllServices = () => {
                     <p className='text-white font-serif font-bold md:text-3xl sm:text-base ngh m-auto p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl md:w-[500px]'>Email Collaboration Services</p>
                 </div>
                 <div className='w-4/5 text-white colorGRD rounded-xl mx-auto mt-16 mb-10'>
-                    <div className="overflow-x-auto  bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+                    <div className="overflow-x-auto bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -271,7 +271,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -290,7 +290,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -317,7 +317,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -336,7 +336,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -363,7 +363,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -382,7 +382,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -409,7 +409,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -428,7 +428,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -456,7 +456,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -475,7 +475,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -503,7 +503,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -522,7 +522,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -549,7 +549,7 @@ const AllServices = () => {
                                     <th>Index</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th  className="md:block hidden">Description</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -568,7 +568,7 @@ const AllServices = () => {
                                             />
                                         </td>
                                         <td>{p?.name}</td>
-                                        <td>{p?.description}</td>
+                                        <td className="md:block hidden">{p?.description}</td>
                                         <td>
                                             <button className="btn btn-circle btn-outline btn-error">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>

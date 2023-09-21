@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { UserAuth } from "@/app/Context/AuthContext";
 import Image from "next/image";
+import "./Nevber.css"
 
 const NavbarTwo = () => {
     const { user, logOut } = UserAuth();
@@ -101,31 +102,30 @@ const NavbarTwo = () => {
                             />
 
                             {isHovered && (
-                                <>
-                                    <div class="absolute px-4 pt-1  top-0 -left-20 text-black bg-white border-black border -ms-10 max-w-xs  shadow-lg">
-                                        <div className="flex gap-4 p-2">
-                                            <div><Image width={40} height={40}
-                                                src={user.photoURL} alt="user"></Image></div>
-                                            <div className="text-xs  font-semibold">{user.displayName}</div>
-                                        </div>
+                                   <>
+                                   <div class="absolute px-4 pt-1 top-0 -left-20 bg-white rounded-lg border -ms-10 max-w-xs  shadow-lg">
+                                       <div className="flex items-center gap-4 p-2">
+                                           <div><Image className="rounded-full" width={40} height={45}
+                                               src={user.photoURL} alt="user"></Image></div>
+                                           <div className="text-xs font-semibold">{user.displayName}</div>
+                                       </div>
+                                       <div class=" flex flex-row gap-1 py-2">
+                                           <h2><p className="md:btn-sm text-blue-500 cursor-pointer rounded-[5px] px-2 py-1 hover:bg-blue-400 hover:text-white transition-btn border-blue-400 border">
+                                               <a onClick={addTodatabase} href="/dashboard">Dashboard</a>
+                                           </p>
+                                           </h2>
+                                           <h2>
+                                               <p
+                                                   className="md:btn-sm text-red-500 cursor-pointer rounded-[5px] hover:bg-red-400 hover:text-white transition-btn px-2 py-1 border-red-400 border"
+                                                   onClick={handleSignOut}
+                                               >
+                                                   <span>Logout</span>
+                                               </p>
+                                           </h2>
+                                       </div>
+                                   </div>
 
-                                        <div class="    flex flex-row ">
-                                            <h2 ><p
-                                                className=" md:btn-sm text-blue-500 cursor-pointer text-xs px-2 py-1 ">
-                                                <a onClick={addTodatabase} href="/dashboard">Dashboard</a>
-                                            </p></h2>
-                                            <h2>
-                                                <p
-                                                    className=" bottom-0  font-bold text-red-500   cursor-pointer text-xs px-2 py-1 "
-                                                    onClick={handleSignOut}
-                                                >
-                                                    <span className="text-xs ">Logout</span>
-                                                </p>
-                                            </h2>
-                                        </div>
-                                    </div>
-
-                                </>
+                               </>
 
                             )}
                         </div>
