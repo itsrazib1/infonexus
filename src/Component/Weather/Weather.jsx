@@ -55,7 +55,7 @@ const Weather = () => {
                             value={city}
                             onChange={handleCityChange}
                             placeholder="Enter city name"
-                            className="border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-300"
+                            className="border text-black rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-300"
                         />
 
                     </div>
