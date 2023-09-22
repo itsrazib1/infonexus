@@ -43,9 +43,9 @@ const PartOne = () => {
                 </div>
                 <div className=" text-black bg-[#37a8ff] rounded-tl-3xl border border-[#e7ebf0] px-6 pb-6 lg:w-full lg:px-8" data-aos="fade-up">
                     <p className='text-base font-bold mt-6'>FEATURED APPS</p>
-                    <div className='mt-8'>
+                    <div className='mt-8 w-[98%]'>
                         <Link href='/all-product'>
-                            <div className='flex justify-center items-center'>
+                            <div className='flex border border-black px-3 rounded-t-lg justify-center items-center'>
                                 <Image
                                     src={CRM}
                                     alt="Image"
@@ -63,7 +63,7 @@ const PartOne = () => {
                             </div>
                         </Link>
                         <Link href='/all-product'>
-                            <div className='flex justify-center items-center mt-6'>
+                            <div className='flex border border-black px-3  justify-center items-center '>
                                 <Image
                                     src={Mail}
                                     alt="Image"
@@ -81,7 +81,7 @@ const PartOne = () => {
                             </div>
                         </Link>
                         <Link href='/all-product'>
-                            <div className='flex justify-center items-center mt-6'>
+                            <div className='flex border border-black px-3  justify-center items-center mt-6'>
                                 <Image
                                     src={Books}
                                     alt="Image"
@@ -99,7 +99,7 @@ const PartOne = () => {
                             </div>
                         </Link>
                         <Link href='/all-product'>
-                            <div className='flex justify-center items-center mt-6'>
+                            <div className='flex border border-black px-3  justify-center items-center mt-6'>
                                 <Image
                                     src={Desk}
                                     alt="Image"
@@ -117,7 +117,7 @@ const PartOne = () => {
                             </div>
                         </Link>
                         <Link href='/all-product'>
-                            <div className='flex justify-center items-center mt-6'>
+                            <div className='flex border border-black px-3 rounded-b-lg justify-center items-center mt-6'>
                                 <Image
                                     src={Campaigns}
                                     alt="Image"
