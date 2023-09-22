@@ -33,7 +33,6 @@ const SectionOne = () => {
         const fetchData = async () => {
           try {
             const data = await getPurchase();
-            console.log("Fetched data:", data); // Log the fetched data
             setPurchaseData(data);
           } catch (error) {
             console.error('Error fetching BI & Analytics data:', error);

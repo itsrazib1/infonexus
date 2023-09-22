@@ -9,8 +9,7 @@ const AllUser = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const userData = await getusers();
-                // console.log("User data in component:", userData); 
+                const userData = await getusers(); 
                 setUsers(userData);
             } catch (error) {
                 console.error("Error fetching user data:", error);

@@ -13,7 +13,7 @@ const Chating = () => {
 
   const [chats, setchats] = useState([]);
   const [users, setUsers] = useState([]);
-  console.log(users);
+  
 
   // data fetch
 
@@ -21,10 +21,8 @@ const Chating = () => {
     const fetchData = async () => {
       try {
         const userData = await getusers();
-        console.log("User data in component:", userData);
         // Add this line to log the user data from the database
         // Add this line to log the user data from the database
-        console.log("DatabaseUser:", userData);
         setUsers(userData);
       } catch (error) {
         console.error("Error fetching user data:", error);
@@ -36,13 +34,12 @@ const Chating = () => {
 
   const adminUsers = users.filter(u => u.role === 'admin');
   const isAdmin = adminUsers.some(u => u.email === user?.email);
-  console.log("isAdmin", isAdmin)
+  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const userData = await getChats();
-        // console.log("User data in component:", userData); 
         setchats(userData);
       } catch (error) {
         console.error("Error fetching user data:", error);
@@ -59,8 +56,7 @@ const Chating = () => {
 
     const fetchData = async () => {
       try {
-        const userData = await getChats();
-        // console.log("User data in component:", userData); 
+        const userData = await getChats(); 
         setchats(userData);
       } catch (error) {
         console.error("Error fetching user data:", error);
@@ -78,7 +74,6 @@ const Chating = () => {
     const name = user.displayName;
     const photo = user.photoURL;
     const chatData = { message, email, name, photo };
-    console.log("Chat Data:", chatData);
     try {
       const response = await fetch("/api/chats", {
         method: "POST",
@@ -92,7 +87,6 @@ const Chating = () => {
 
       if (response.ok) {
         // Message sent successfully
-        console.log("Message sent successfully");
         // Clear the input field after sending the message
         
         setNewMessage("");
@@ -101,7 +95,6 @@ const Chating = () => {
         const fetchData = async () => {
           try {
             const userData = await getChats();
-            // console.log("User data in component:", userData); 
             setchats(userData);
           } catch (error) {
             console.error("Error fetching user data:", error);

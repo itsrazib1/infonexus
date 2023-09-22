@@ -23,8 +23,7 @@ const DynamicButton = ({ name, image, description, id, services }) => {
     // formData.append("image", image);
 
     const cartItem = { name, image, description, id, email, services };
-    console.log('cartItem:', cartItem);
-    console.log(services)
+   
 
 
     fetch("/api/trynow", {

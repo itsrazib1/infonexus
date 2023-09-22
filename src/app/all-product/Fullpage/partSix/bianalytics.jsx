@@ -11,7 +11,6 @@ const Bianalytics =  () => {
         const fetchData = async () => {
           try {
             const data = await getbianalytics();
-            console.log("Fetched data:", data); // Log the fetched data
             setBianalyticsData(data);
           } catch (error) {
             console.error('Error fetching BI & Analytics data:', error);

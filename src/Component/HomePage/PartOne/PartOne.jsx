@@ -63,7 +63,7 @@ const PartOne = () => {
                             </div>
                         </Link>
                         <Link href='/all-product'>
-                            <div className='flex border border-black px-3  justify-center items-center '>
+                            <div className='flex border border-black px-3  justify-center items-center mt-6 '>
                                 <Image
                                     src={Mail}
                                     alt="Image"

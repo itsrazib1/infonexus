@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 const Notfound = ({ error }) => {
     useEffect(() => {
-            // console.log(error);
         }, [error]
     );
     return (

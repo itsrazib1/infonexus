@@ -8,7 +8,6 @@ import React from 'react';
 const Buttonp1 = () => {
     const users = UserAuth();
     const user = users?.user;
-    console.log("MainUser",user)
     return (
         <div>
             

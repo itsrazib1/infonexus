@@ -5,7 +5,7 @@ import React from 'react';
 const PostAndDeleteBtn = ({ id, name, email, image, services, description }) => {
     const itemId = id;
     const addToServices = { name, email, image, services, description }
-    console.log(addToServices)
+    
 
     const handleCheckoutClick = async () => {
         fetch("api/purchase", {

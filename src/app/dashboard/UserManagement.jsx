@@ -12,7 +12,6 @@ const UserManagement = () => {
         const fetchData = async () => {
             try {
                 const userData = await getusers();
-                // console.log("User data in component:", userData); 
                 setUsers(userData);
             } catch (error) {
                 console.error("Error fetching user data:", error);
@@ -23,7 +22,6 @@ const UserManagement = () => {
     }, []);
 
 
-    console.log("users", users)
     const handleDeleteUser = async (userId) => {
         try {
             // Send an HTTP DELETE request to your API to delete the user
@@ -37,7 +35,6 @@ const UserManagement = () => {
                     prevUsers.filter((prevUser) => prevUser._id !== userId)
                 );
 
-                console.log("User deleted successfully:", userId);
             } else {
                 // Handle errors here, such as displaying an error message to the user
                 console.error("Error deleting user. Status:", response.status);
@@ -65,7 +62,6 @@ const UserManagement = () => {
                     )
                 );
 
-                console.log("User role updated to admin:", userId);
             } else {
                 // Handle errors here, such as displaying an error message to the user
                 console.error("Error updating user role. Status:", response.status);
