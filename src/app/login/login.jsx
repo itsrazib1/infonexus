@@ -18,7 +18,6 @@ const LoginPage2 = () => {
       const {user} = await googleSignIn();
       await tokenJWT({email: user.email})
       replace(from)
-      console.log(tokenJWT)
     } catch (error) {
     }
 };
@@ -26,14 +25,12 @@ const LoginPage2 = () => {
     try {
         await FbSignIn();
     } catch (error) {
-        // console.log(error);
     }
 };
 const handleGitSignIn = async () => {
     try {
         await gitHubSignIn();
     } catch (error) {
-        // console.log(error);
     }
 };
     return (

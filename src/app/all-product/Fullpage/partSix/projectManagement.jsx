@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 const ProjectManagement = () => {
 
   const [ProjectManagement, setMarketingData] = useState([]);
-  console.log(ProjectManagement)
 
   useEffect(() => {
     const fetchData = async () => {

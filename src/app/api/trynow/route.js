@@ -23,7 +23,6 @@ export async function POST(req) {
 
         const userDataLode = new tryNow(userLode);
         const result = await userDataLode.save();
-        console.log('User saved:', result);
         return NextResponse.json(result, { status: 201 });
     } catch (error) {
         console.error('Error saving user data:', error);

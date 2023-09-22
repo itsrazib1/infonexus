@@ -41,7 +41,6 @@ const MyService = () => {
 
     const singlecart = carts.filter(u => u.email === user?.email);
 
-    console.log("users cart", singlecart)
 
 
 

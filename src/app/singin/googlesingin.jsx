@@ -22,7 +22,6 @@ const Googlelogin = () => {
             await FbSignIn();
 
         } catch (error) {
-            // console.log(error);
         }
     };
     const handleGitSignIn = async () => {
@@ -30,7 +29,6 @@ const Googlelogin = () => {
             await gitHubSignIn();
 
         } catch (error) {
-            // console.log(error);
         }
     };
 

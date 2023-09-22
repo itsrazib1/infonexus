@@ -8,7 +8,7 @@ export async function GET() {
     
     try {
         const data = await chats.find();
-        // console.log(data);
+        
         return NextResponse.json(data);
     } catch (error) {
         console.error('Error fetching user data:', error);
@@ -24,7 +24,7 @@ export async function POST(req) {
 
         const chatDataLode = new chats(userLode);
         const result = await chatDataLode.save();
-        console.log('User saved:', result);
+        
         return NextResponse.json(result, { status: 201 });
     } catch (error) {
         console.error('Error saving user data:', error);

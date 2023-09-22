@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 const Sales = () => {
 
   const [sales, setSalesData] = useState([]);
-  console.log(sales)
+  
 
   useEffect(() => {
     const fetchData = async () => {

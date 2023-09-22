@@ -21,7 +21,6 @@ const Marketing = () => {
 
     fetchData();
   }, []);
-  console.log(Marketing)
 
   return (
     <div id="Marketing" className="container  mx-auto p-8">

@@ -78,7 +78,6 @@ const Weather = () => {
                     </p>
                 )}
             </div>
-           { console.log("weatherData",weatherData)}
         </div>
     );
 };

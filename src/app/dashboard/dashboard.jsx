@@ -20,9 +20,7 @@ const Dashboard = () => {
         const fetchData = async () => {
             try {
                 const userData = await getusers();
-                console.log("User data in component:", userData);
                 // Add this line to log the user data from the database
-                console.log("DatabaseUser:", userData);
                 setUsers(userData);
             } catch (error) {
                 console.error("Error fetching user data:", error);
@@ -33,7 +31,6 @@ const Dashboard = () => {
     }, []);
     const adminUsers = users.filter(u => u.role === 'admin');
     const isAdmin = adminUsers.some(u => u.email === user?.email);
-    console.log("Userdata", user, users, adminUsers, isAdmin)
     return (
         <div>
             <div></div>

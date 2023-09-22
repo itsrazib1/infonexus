@@ -6,7 +6,7 @@ const DynamicButton = dynamic(() => import("./DynamicButton"), {
 });
 
 const UserCard = ({ name, description, services, image, id }) => {
-  console.log(services)
+  
 
   return (
     <div className="md:w-1/3 sm:w-full p-4 ">

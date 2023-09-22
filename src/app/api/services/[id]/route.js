@@ -8,6 +8,5 @@ export async function GET(res, content) {
     const data = await services.find();
     const servicesId = content.params.id;
     const singleData = data.filter(services => services.id == servicesId)
-    // console.log(singleData)
     return NextResponse.json(singleData)
 }

@@ -19,7 +19,6 @@ export default function Page({ params }) {
 
         fetchData();
     }, []);
-    // console.log(carts)
 
     const filteredCarts = carts.filter((carts) => carts._id === id);
     return (
@@ -45,7 +44,6 @@ export default function Page({ params }) {
                         </div>
                         
                         
-                        {console.log("filteredCartsxx",filteredCarts)}
                     </div>
                 </div>))
             }

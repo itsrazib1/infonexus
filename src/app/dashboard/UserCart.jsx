@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { getCarts, deleteCart } from "../utils/getCarts"; // Import getCarts and deleteCart from your API or service
+import { getCarts } from "../utils/getCarts"; // Import getCarts and deleteCart from your API or service
 import { UserAuth } from "../Context/AuthContext";
 import Image from "next/image";
-import { checkout } from "@/checkout";
 import DeleteUserCart from "./DeleteUserCart";
 import PostAndDeleteBtn from "./PostAndDeleteBtn";
 
@@ -28,11 +27,9 @@ const UserCart = () => {
     const filteredCarts = carts.filter((carts) => carts.email === user?.email);
 
     const singlecart = carts.filter((u) => u.email === user?.email);
-    console.log("users cart", singlecart);
     const cartQuantity = filteredCarts.length;
 
     const handlePayment = async () => {
-        console.log("Filtered Carts:", filteredCarts);
         try {
             // Make a POST request to your API endpoint "/api/purchase"
             const response = await axios.post("/api/purchase", filteredCarts);
@@ -40,7 +37,6 @@ const UserCart = () => {
             // Check the response for success or handle it accordingly
             if (response.status === 201) {
                 // Payment successful, you can show a success message or perform other actions
-                console.log("Payment successful", response.data);
             } else {
                 // Handle other response status codes as needed
                 console.error("Payment failed");
